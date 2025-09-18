@@ -1,0 +1,47 @@
+---
+layout: null
+---
+{% raw %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endowment is not a piggy bank</title>
+    <style>
+      :root { --slate-200:#e2e8f0; --slate-300:#cbd5e1; --slate-600:#475569; --slate-800:#1f2937; --blue:#0ea5e9; --red:#ef4444; --amber:#f59e0b; }
+      body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color: var(--slate-800); background:#fafafa; overflow-x:hidden; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+      .grid { display: grid; gap: 24px; }
+      .grid-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+      .col-span-3 { grid-column: span 3; }
+      .col-span-2 { grid-column: span 2; }
+      .card { border:1px solid var(--slate-200); border-radius:16px; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,0.04); overflow: visible; }
+      .card-header { padding:16px 16px 0 16px; }
+      .card-title { font-size:20px; font-weight:700; margin:0 0 8px 0; }
+      .card-content { padding:16px; overflow: visible; }
+      .row { display:flex; align-items:center; gap:8px; }
+      .row-between { display:flex; justify-content:space-between; align-items:center; gap:8px; }
+      .muted { color: var(--slate-600); font-size: 14px; }
+      .btn { border:1px solid var(--slate-300); padding:8px 12px; border-radius:12px; background:#fff; cursor:pointer; }
+      .btn.secondary { background:#f8fafc; }
+      .progress { height:10px; background:var(--slate-200); border-radius:999px; overflow:hidden; }
+      .progress > div { height:100%; background:var(--blue); width:0; }
+      .danger { color: var(--red); }
+      .tabular { font-variant-numeric: tabular-nums; }
+      .divider { height:1px; background:var(--slate-200); margin:8px 0; }
+      .kv label { display:block; color: var(--slate-600); font-size: 14px; }
+      .kv div { font-size: 20px; }
+      @media (max-width: 900px) {
+        .grid-5 { grid-template-columns: 1fr; }
+        .col-span-3, .col-span-2 { grid-column: span 1; }
+      }
+    </style>
+    <script type="module" crossorigin src="/viz/endowment/assets/index-DA8_YdDP.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+{% endraw %}
