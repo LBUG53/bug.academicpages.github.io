@@ -18,9 +18,13 @@ main:
     url: /teaching/    
     
   - title: "Endowments Viz"
-    url: /portfolio/
+    url: /Endowment/
         
+<<<<<<< HEAD
   - title: "Grad Viz"
+=======
+  - title: "Map Viz"
+>>>>>>> f2bad0c (added endowments page and nav link)
     url: /year-archive/
     
   - title: "CV"
