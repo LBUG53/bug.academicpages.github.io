@@ -1,13 +1,10 @@
 # _data/navigation.yml
-Main:
-- title: "Home"
-  url: /
+main:
+  - title: "About"
+    url: /about/
 
-- title: "About"
-  url: /about/
+  - title: "Blog"
+    url: /year-archive/
 
-- title: "Map Viz"
-  url: /year-archive/
-
-- title: "Endowments Viz"
-  url: /endowment/
+  - title: "Endowments Viz"
+    url: /endowment/
