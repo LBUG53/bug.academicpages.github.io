@@ -1,11 +1,16 @@
 main:
   - title: "About"
     url: /about/
-
-  - title: "Blog"
-    url: /year-archive/
-  - title: "Grad Rate Viz"
-    url: /viz/Grad_Map/
-  - title: "Endowments Viz"
-    url: /endowment/
-    external: false
+  - title: "Research"
+    url: /posts/
+  - title: "Teaching"
+    url: /portfolio/
+  - title: "CV"
+    url: /cv/
+  - title: "Visualizations"
+    url: /viz/        # parent is clickable (goes to the landing page below)
+    children:
+      - title: "Grad Rate Viz"
+        url: /viz/Grad_Map/
+      - title: "Endowments Viz"
+        url: /endowment/
