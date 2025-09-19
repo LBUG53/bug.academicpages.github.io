@@ -4,7 +4,8 @@ main:
 
   - title: "Blog"
     url: /year-archive/
-
+  - title: "Grad Rate Viz"
+    url: /viz/Grad_Map/
   - title: "Endowments Viz"
     url: /endowment/
     external: false
