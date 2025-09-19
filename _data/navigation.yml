@@ -1,23 +1,18 @@
 main:
   - title: "About"
     url: /about/
-
   - title: "Scholarship"
-    url: /posts/          # your writing/research posts
-
+    url: /posts/
   - title: "Teaching"
-    url: /portfolio/      # reuse portfolio for teaching materials
-
+    url: /portfolio/
   - title: "Visualizations"
     url: /viz/
     children:
       - title: "Grad Rate Viz"
         url: /viz/Grad_Map/
-      - title: "Endowments Viz"
+      - title: "Endowment Viz"
         url: /endowment/
-
-  - title: "Consulting"
-    url: /consulting/     # make this page when ready (e.g., _pages/consulting.md)
-
+  - title: "Engagement"
+    url: /engagement/
   - title: "CV"
-    url: /cv/             # link to a page or PDF (e.g., /files/Lucian_Bessmer_CV.pdf)
+    url: /cv/
