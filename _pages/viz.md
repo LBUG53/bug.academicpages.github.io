@@ -1,3 +1,8 @@
+---
+layout: single
+title: "Visualizations"
+sidebar: false
+excerpt: "Higher-ed visualizations I wish existed—complex concepts, made clear and interactive."
 feature_row:
   - image_path: /images/grad_map_thumb.png
     alt: "Graduation rates by group"
@@ -13,3 +18,4 @@ feature_row:
     btn_label: "Open viz"
     btn_class: "btn--primary"
     excerpt: "See how restrictions and payout rules shape what universities can spend."
+---
