@@ -19,3 +19,7 @@ feature_row:
     btn_class: "btn--primary"
     excerpt: "See how restrictions and payout rules shape what universities can spend."
 ---
+
+These are higher education visualizations I wished existed but didn’t. They take complex ideas that usually live in reports and spreadsheets and break them down into something clear, intuitive, and interactive.
+
+{% include feature_row %}
