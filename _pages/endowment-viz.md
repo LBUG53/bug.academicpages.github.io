@@ -7,10 +7,6 @@ sidebar: false
 author_profile: false
 ---
 
-<!-- Optional headline/dek (can delete these two lines if you want) -->
-<p style="font-size:1.1rem; margin: 0 0 16px 0; color:#334155;">
-  Most funds are legally restricted. Try allocating this year’s payout and see how overspending affects the next decade.
-</p>
 
 <!-- Full-bleed, centered iframe -->
 <div class="viz-bleed">
