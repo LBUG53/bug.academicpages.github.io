@@ -1,47 +1,55 @@
-site_theme: "air"              # Academic Pages skin: "default" or "air"
-minimal_mistakes_skin: "air"   # Optional MM skin key (harmless if unused)
-plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
-  - jekyll-include-cache
-whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
-  - jekyll-include-cache
----
-layout: splash
-title: "Lucian Bessmer"
-subtitle: "Higher-ed strategy · Institutional analysis · Data storytelling"
-permalink: /
-header:
-  overlay_color: "#0B1220"
-  overlay_filter: 0.25
-  # overlay_image: /images/hero.jpg   # optional
-excerpt: "I help universities make clear, defensible decisions with evidence and compelling visuals."
-feature_row:
-  - title: "Research"
-    excerpt: "Writing, memos, and analysis."
-    url: "/posts/"
-    btn_label: "Read"
-    btn_class: "btn--primary"
-  - title: "Teaching"
-    excerpt: "Courses, materials, and notes."
-    url: "/portfolio/"
-    btn_label: "View"
-    btn_class: "btn--primary"
-  - title: "Visualizations"
-    excerpt: "Interactive tools that explain complex topics."
-    url: "/viz/"
-    btn_label: "Explore"
-    btn_class: "btn--primary"
-sidebar: false
----
-{% include feature_row %}
+# Welcome to Jekyll!
+
+# Basic Site Settings
+locale                   : "en-US"
+site_theme               : "air"   # Academic Pages supports "default" or "air"
+minimal_mistakes_skin    : "air"   # Extra key (used by Minimal Mistakes directly)
+title                    : "Lucian Bessmer, PhD"
+title_separator          : "-"
+name                     : &name "Lucian Bessmer, PhD"
+description              : &description "Higher-ed scholarship, strategy, and institutional analysis."
+url: "https://lucianbessmer.com"
+baseurl: ""                        # empty for a root-level custom domain
+repository: "LBUG53/bug.academicpages.github.io"
+
+# Site Author
+author:
+  name: "Lucian Bessmer"
+  avatar: "/images/avatar.jpg"     # add this file (square headshot)
+  bio: "Strategy & analysis for universities; I turn messy data into decisions."
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "lucianbessmer@gmail.com"
+
+# Publication Category
+publication_category:
+  Research:
+    title: 'Scholarship'
+  Teaching:
+    title: 'Teaching'    
+  Red Brick Analysts:
+    title: 'Consulting'
+
+# Site Settings
+teaser                   :  
+breadcrumbs              : false 
+words_per_minute         : 160
+future                   : true
+read_more                : "disabled"
+talkmap_link             : false
+comments:
+  provider               : 
+  disqus:
+    shortname            :
+  discourse:
+    server               : 
+  facebook:
+    appid                :
+    num_posts            : 
+    colorscheme          : 
+staticman:
+  allowedFields          : ['name', 'email', 'url', 'message']
+  branch                 : "gh-pages"
+  commitMessage          : "New comment."
+  filename               : comm
