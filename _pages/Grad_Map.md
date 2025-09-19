@@ -1,6 +1,6 @@
 ---
 title: "Grad Rate Viz"
-permalink: /Grad_Map/
+permalink: /viz/Grad_Map/
 layout: single
 author_profile: true
 classes: wide
