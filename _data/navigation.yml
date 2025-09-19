@@ -1,4 +1,3 @@
-# _data/navigation.yml
 main:
   - title: "About"
     url: /about/
@@ -8,3 +7,4 @@ main:
 
   - title: "Endowments Viz"
     url: /endowment/
+    external: false
