@@ -1,30 +1,23 @@
 ---
 layout: splash
-title: "Lucian Bessmer"
-subtitle: "Higher-ed strategy · Institutional analysis · Data storytelling"
+title: "Lucian Bessmer, PhD"
+subtitle: "Higher-ed scholarship, strategy, and institutional analysis"
 permalink: /
 header:
   overlay_color: "#0B1220"
   overlay_filter: 0.25
-excerpt: "I help universities make clear, defensible decisions with evidence and compelling visuals."
+excerpt: "Higher Ed Scholar, Strategist, and Consultant."
 feature_row:
-  - title: "Research"
-    excerpt: "Writing, memos, and analysis."
+  - title: "Scholarship"
+    excerpt: "Publications, essays, and analysis."
     url: "/posts/"
-    btn_label: "Read"
-    btn_class: "btn--primary"
   - title: "Teaching"
-    excerpt: "Courses, materials, and notes."
+    excerpt: "Courses, materials, and mentorship."
     url: "/portfolio/"
-    btn_label: "View"
-    btn_class: "btn--primary"
-  - title: "Visualizations"
-    excerpt: "Interactive tools that explain complex topics."
-    url: "/viz/"
-    btn_label: "Explore"
-    btn_class: "btn--primary"
+  - title: "Consulting"
+    excerpt: "Partnerships with universities and organizations."
+    url: "/consulting/"
 sidebar: false
 ---
 
 {% include feature_row %}
-
