@@ -5,15 +5,16 @@ title: "Visualizations"
 sidebar: false
 excerpt: "Higher-ed visualizations I wish existed—complex concepts, made clear and interactive."
 feature_row:
-  - image_path: /images/viz/grad_map_thumb.png   # optional thumbnail
+  - image_path: /images/viz/grad_map_thumb.png
     alt: "Graduation rates by group"
     title: "Graduation Rates by Group"
     url: /viz/Grad_Map/
     btn_label: "Open viz"
     btn_class: "btn--primary"
     excerpt: "Compare graduation rates for URM, non-resident, and Pell Grant students."
+  - image_path: /images/viz/endowment_thumb.png
     alt: "Endowment simulator"
-    title: "Endowments are not a piggy bank"
+    title: "Endowment Simulator"
     url: /endowment/
     btn_label: "Open viz"
     btn_class: "btn--primary"
