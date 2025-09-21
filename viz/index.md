@@ -1,7 +1,9 @@
 ---
-title: "Visualizations"
+title: "Higher Ed Issues"
 layout: single
-permalink: /viz/
+permalink: /higheredissues/
+redirect_from:
+  - /viz/
 sidebar: false
 ---
 

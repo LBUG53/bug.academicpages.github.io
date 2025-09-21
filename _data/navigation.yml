@@ -5,11 +5,11 @@ main:
     url: /posts/
   - title: "Teaching"
     url: /portfolio/
-  - title: "Visualizations"
-    url: /viz/
+  - title: "Higher Ed Issues"
+    url: /higheredissues/
     children:
       - title: "Grad Rate Viz"
-        url: /viz/Grad_Map/
+        url: /higheredissues/Grad_Map/
       - title: "Endowment Viz"
         url: /endowment/
   - title: "Engagement"
