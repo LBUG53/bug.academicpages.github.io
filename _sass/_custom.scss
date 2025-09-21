@@ -10,3 +10,8 @@
   color: inherit;
   text-decoration: underline;
 }
+
+/* On splash (landing) pages, hide the theme's default footer so we only show our custom one */
+.layout--splash .page__footer { display: none; }
+.site-footer-credit { font-size: 0.72rem; opacity: 0.45; text-align: center; margin: 2rem 0 1rem; line-height: 1.4; }
+.site-footer-credit a { color: inherit; text-decoration: underline; }
