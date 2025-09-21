@@ -1,10 +1,10 @@
 ---
-title: "Debugging with Generative AI: Building This Site"
+title: "Methods Note: Using GenAI While Building This Site"
 permalink: /viz/genai-debugging/
 layout: single
 sidebar: false
 ---
 
-This brief note describes how I used generative AI as a **debugging tool** while building this site—
-to troubleshoot build errors, scaffold templates, and speed up repetitive configuration.
+This brief note explains how I used generative AI for **debugging** and workflow support while building this site
+(e.g., troubleshooting build errors, scaffolding templates, and speeding up repetitive configuration).
 All analysis, design choices, and editorial decisions are my own.

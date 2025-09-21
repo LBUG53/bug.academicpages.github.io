@@ -17,6 +17,6 @@ Explains how restricted funds and payout policies affect spending—useful for b
 
 ---
 
-## Debugging with Generative AI: Building This Site
-A short note on how I used GenAI for debugging and tooling decisions while building this site.
-[Read the post →](/viz/genai-debugging/)
+## Methods Note: Using GenAI While Building This Site
+A short note on how I used generative AI for debugging and tooling decisions during site setup.
+[Read more →](/viz/genai-debugging/)
