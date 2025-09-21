@@ -16,30 +16,24 @@ repository               : "LBUG53/bug.academicpages.github.io"
 author:
   name    : "Lucian Bessmer"
   avatar  : "/images/avatar.jpg"                # add this file (square headshot)
-  bio     : "Higher Ed Scholar, Strategist, and Consultant."
+  bio     : "Higher Ed Scholar, Historian, and Strategist."
   links:
     - label: "Email"
       icon: "fas fa-envelope"
       url: "mailto:lucianbessmer@gmail.com"
-    # Add more links later if you want:
-    # - label: "GitHub"
-    #   icon: "fab fa-github"
-    #   url: "https://github.com/LBUG53"
-    # - label: "Bluesky"
-    #   icon: "fas fa-link"
-    #   url: "https://bsky.app/profile/yourhandle"
 
-# Publication Category (labels if you use the publications listing)
+
+# Publication Category
 publication_category:
   scholarship:
     title: "Scholarship"
   teaching:
     title: "Teaching"
   consulting:
-    title: "Consulting"
+    title: "Engagement"
 
 # Site Settings
-teaser                   :                      # default social teaser image in /images/ (optional)
+teaser                   :                      
 breadcrumbs              : false
 words_per_minute         : 160
 future                   : true
