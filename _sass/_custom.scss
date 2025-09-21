@@ -1,9 +1,10 @@
 /* Subtle footer credit */
 .site-footer-credit {
-  font-size: 0.8rem;
-  opacity: 0.6;
+  font-size: 0.75rem;   /* smaller */
+  opacity: 0.5;         /* slightly transparent */
   text-align: center;
   margin: 2rem 0 1rem;
+  line-height: 1.4;
 }
 .site-footer-credit a {
   color: inherit;
