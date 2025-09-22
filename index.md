@@ -4,10 +4,9 @@ title: "Lucian Bessmer, PhD"
 subtitle: "Higher-ed scholarship · Institutional analysis · Data storytelling"
 permalink: /
 header:
-  overlay_image: /images/hero_camping.jpg
+  overlay_image: /assets/images/hero_looking_wide.jpg
   overlay_color: "#3B82F6"   # lighter professional blue
   overlay_filter: 0.35
-  caption: "Photo: Norway, tent above the fjord"
 excerpt: "Higher Ed Scholar, Historian, and Strategist."
 feature_row:
   - title: "Scholarship"
