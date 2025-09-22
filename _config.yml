@@ -6,8 +6,8 @@ site_theme               : "air"                # Academic Pages skin: "default"
 minimal_mistakes_skin    : "air"                # MM skin key (harmless if unused)
 title                    : "Lucian Bessmer, PhD"
 title_separator          : "-"
-name                     : &name "Lucian Bessmer, PhD"
-description              : &description "Higher-ed scholarship, strategy, and institutional analysis."
+name                     : &name "Home"
+description              : &description "Higher-ed scholarship, history, and strategy."
 url                      : "https://lucianbessmer.com"
 baseurl                  : ""
 repository               : "LBUG53/bug.academicpages.github.io"
@@ -15,7 +15,7 @@ repository               : "LBUG53/bug.academicpages.github.io"
 # Site Author
 author:
   name    : "Lucian Bessmer"
-  avatar  : "/images/avatar.jpg"                # add this file (square headshot)
+  avatar  : "/images/avatar_mountain.jpg"                # add this file (square headshot)
   bio     : "Higher Ed Scholar, Historian, and Strategist."
   links:
     - label: "Email"
@@ -247,3 +247,8 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+# --- site author avatar (added by setup) ---
+author:
+  name: "Lucian Bessmer"
+  avatar: "/images/avatar_mountain.jpg"

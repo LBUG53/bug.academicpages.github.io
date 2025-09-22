@@ -2,7 +2,7 @@ main:
   - title: "About"
     url: /about/
   - title: "Scholarship"
-    url: /posts/
+    url: /scholarship/
   - title: "Teaching"
     url: /portfolio/
   - title: "Higher Ed Issues"
