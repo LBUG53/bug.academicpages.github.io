@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo, useState } from "https://esm.sh/react@18";
-import { createRoot } from "https://esm.sh/react-dom@18/client";
-import { ComposableMap, Geographies, Geography } from "https://esm.sh/react-simple-maps@3";
+import React, { useEffect, useMemo, useState } from "https://esm.run/react@18";
+import { createRoot } from "https://esm.run/react-dom@18/client";
+import { ComposableMap, Geographies, Geography } from "https://esm.run/react-simple-maps@3";
 import Papa from "https://esm.sh/papaparse@5.4.1";
 
 const GEO_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";

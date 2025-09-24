@@ -49,4 +49,4 @@ sidebar: false
 </style>
 
 <link rel="preconnect" href="https://esm.sh" />
-<script type="module" src="/viz/Grad_Map/app.js?v=3"></script>
+<script type="module" src="/viz/Grad_Map/app.js?v=7"></script>
