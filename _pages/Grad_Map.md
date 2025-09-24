@@ -1,5 +1,3 @@
-
-<p style="display:none">build=20250924194422</p>
 ---
 title: "Which Local Colleges Graduate the Most Students?"
 layout: single
@@ -51,4 +49,4 @@ sidebar: false
 </style>
 
 <link rel="preconnect" href="https://esm.sh" />
-<script type="module" src="/viz/Grad_Map/app.js?v=1"></script>
+<script type="module" src="/viz/Grad_Map/app.js?v=3"></script>
