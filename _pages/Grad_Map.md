@@ -48,6 +48,7 @@ sidebar: false
   .clear-btn { font-size: .85rem; color: #2563EB; background: none; border: none; padding: 0; cursor: pointer; }
 </style>
 
-<link rel="preconnect" href="https://esm.sh" />
-<script type="module" src="/viz/Grad_Map/app.js?v=9"></script>
+<link rel="preconnect" href="https://cdn.skypack.dev" />
+<script type="module" src="{{ '/viz/Grad_Map/app.js?v=9' | relative_url }}"></script>
+
 
