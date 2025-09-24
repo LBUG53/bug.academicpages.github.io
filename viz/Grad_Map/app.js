@@ -3,10 +3,7 @@ import { createRoot } from "https://esm.run/react-dom@18/client";
 import { ComposableMap, Geographies, Geography } from "https://esm.run/react-simple-maps@3";
 import Papa from "https://esm.run/papaparse@5.4.1";
 
-
-
-
-
+const e = React.createElement;
 const GEO_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
 const STATE_NAME_TO_CODE = {
@@ -50,6 +47,20 @@ function App(){
     });
   },[]);
 
+  // Wire threshold buttons in the static HTML
+  useEffect(()=>{
+    const btns = Array.from(document.querySelectorAll(".threshold-btn"));
+    for(const b of btns){
+      const setActive = ()=>{
+        btns.forEach(x=>x.classList.remove("active"));
+        b.classList.add("active");
+      };
+      const t = parseInt(b.getAttribute("data-threshold"));
+      if(t===threshold) setActive();
+      b.addEventListener("click", ()=>{ setThreshold(t); setActive(); });
+    }
+  },[threshold]);
+
   const byState = useMemo(()=>{
     const map={};
     for(const r of data){
@@ -66,102 +77,110 @@ function App(){
 
   const tableRows = selectedState ? (byState[selectedState]||[]) : [];
 
-  // Wire the threshold buttons that live in the Jekyll page
-  useEffect(()=>{
-    const btns = Array.from(document.querySelectorAll(".threshold-btn"));
-    for(const b of btns){
-      const setActive = ()=>{
-        btns.forEach(x=>x.classList.remove("active"));
-        b.classList.add("active");
-      };
-      const t = parseInt(b.getAttribute("data-threshold"));
-      if(t===threshold) setActive();
-      b.addEventListener("click", ()=>{ setThreshold(t); setActive(); });
-    }
-  },[threshold]);
+  return e(
+    "div",
+    null,
 
-  return (
-    <div>
-      <ComposableMap projection="geoAlbersUsa" width={980} height={580} style={{width:"100%",height:"auto",background:"#fff"}}>
-        <Geographies geography={GEO_URL}>
-          {({ geographies }) =>
-            geographies.map((geo)=> {
-              const name = geo.properties.name;
-              const code = STATE_NAME_TO_CODE[name];
-              const count = (code && byState[code]) ? byState[code].length : 0;
-              const isActive = selectedState===code;
-              return (
-                <Geography
-                  key={geo.rsmKey}
-                  geography={geo}
-                  onMouseMove={(evt)=>{
-                    const x=evt.clientX, y=evt.clientY;
-                    setHover({ text: `${name}: ${count} institution${count===1?"":"s"}`, x, y });
-                  }}
-                  onMouseLeave={()=>setHover(null)}
-                  onClick={()=>setSelectedState(code||null)}
-                  style={{
-                    default:{ fill: isActive ? "#2563EB" : "#E5E7EB", outline:"none", stroke:"#9CA3AF", strokeWidth:.6 },
-                    hover:{ fill: isActive ? "#1D4ED8" : "#D1D5DB", outline:"none", stroke:"#6B7280", strokeWidth:.8 },
-                    pressed:{ fill:"#1D4ED8", outline:"none" }
-                  }}
-                />
-              );
-            })
-          }
-        </Geographies>
-      </ComposableMap>
+    // Map
+    e(
+      ComposableMap,
+      { projection: "geoAlbersUsa", width: 980, height: 580, style: { width: "100%", height: "auto", background: "#fff" } },
+      e(
+        Geographies,
+        { geography: GEO_URL },
+        ({ geographies }) =>
+          geographies.map((geo) => {
+            const name = geo.properties.name;
+            const code = STATE_NAME_TO_CODE[name];
+            const count = (code && byState[code]) ? byState[code].length : 0;
+            const isActive = selectedState === code;
 
-      {hover && (
-        <div className="tooltip" style={{ left: hover.x, top: hover.y }}>
-          {hover.text}
-        </div>
-      )}
+            return e(Geography, {
+              key: geo.rsmKey,
+              geography: geo,
+              onMouseMove: (evt) => {
+                const x = evt.clientX, y = evt.clientY;
+                setHover({ text: `${name}: ${count} institution${count===1?"":"s"}`, x, y });
+              },
+              onMouseLeave: () => setHover(null),
+              onClick: () => setSelectedState(code || null),
+              style: {
+                default: { fill: isActive ? "#2563EB" : "#E5E7EB", outline: "none", stroke: "#9CA3AF", strokeWidth: .6 },
+                hover: { fill: isActive ? "#1D4ED8" : "#D1D5DB", outline: "none", stroke: "#6B7280", strokeWidth: .8 },
+                pressed: { fill: "#1D4ED8", outline: "none" }
+              }
+            });
+          })
+      )
+    ),
 
-      <div>
-        {selectedState ? (
-          <div className="state-summary">
-            {codeToName(selectedState)} — {tableRows.length} institution{tableRows.length===1?"":"s"} at {threshold}%+{" "}
-            <button className="clear-btn" onClick={()=>setSelectedState(null)}>(clear)</button>
-          </div>
-        ) : (
-          <div className="state-summary" style={{fontWeight:400}}>
-            Select a state to see institutions with total six-year graduation rates at or above the chosen threshold.
-          </div>
-        )}
-      </div>
+    // Hover tooltip
+    hover && e("div", { className: "tooltip", style: { left: hover.x, top: hover.y } }, hover.text),
 
-      {selectedState && (
-        <div className="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Institution</th>
-                <th className="num">Total</th>
-                <th className="num">Non-resident</th>
-                <th className="num">Pell</th>
-                <th className="num">URM</th>
-              </tr>
-            </thead>
-            <tbody>
-              {tableRows.length>0 ? tableRows.map((r,i)=>(
-                <tr key={i}>
-                  <td>{r["institution name"]}</td>
-                  <td className="num"><strong>{fmtPct(r.tot_grad)}</strong></td>
-                  <td className="num">{fmtPct(r.nonres_grad)}</td>
-                  <td className="num">{fmtPct(r.pell_grad)}</td>
-                  <td className="num">{fmtPct(r.urm_grad)}</td>
-                </tr>
-              )):(
-                <tr><td colSpan="5" style={{textAlign:"center",color:"#6B7280",padding:"1rem"}}>No institutions meet the {threshold}% threshold in this state.</td></tr>
-              )}
-            </tbody>
-          </table>
-        </div>
-      )}
-    </div>
+    // State summary
+    e(
+      "div",
+      null,
+      selectedState
+        ? e(
+            "div",
+            { className: "state-summary" },
+            `${codeToName(selectedState)} — ${tableRows.length} institution${tableRows.length===1?"":"s"} at ${threshold}%+ `,
+            e("button", { className: "clear-btn", onClick: () => setSelectedState(null) }, "(clear)")
+          )
+        : e("div", { className: "state-summary", style: { fontWeight: 400 } },
+            "Select a state to see institutions with total six-year graduation rates at or above the chosen threshold."
+          )
+    ),
+
+    // Table
+    selectedState &&
+      e(
+        "div",
+        { className: "table-wrap" },
+        e(
+          "table",
+          null,
+          e(
+            "thead",
+            null,
+            e(
+              "tr",
+              null,
+              e("th", null, "Institution"),
+              e("th", { className: "num" }, "Total"),
+              e("th", { className: "num" }, "Non-resident"),
+              e("th", { className: "num" }, "Pell"),
+              e("th", { className: "num" }, "URM")
+            )
+          ),
+          e(
+            "tbody",
+            null,
+            tableRows.length > 0
+              ? tableRows.map((r, i) =>
+                  e(
+                    "tr",
+                    { key: i },
+                    e("td", null, r["institution name"]),
+                    e("td", { className: "num" }, e("strong", null, fmtPct(r.tot_grad))),
+                    e("td", { className: "num" }, fmtPct(r.nonres_grad)),
+                    e("td", { className: "num" }, fmtPct(r.pell_grad)),
+                    e("td", { className: "num" }, fmtPct(r.urm_grad))
+                  )
+                )
+              : e(
+                  "tr",
+                  null,
+                  e("td", { colSpan: 5, style: { textAlign: "center", color: "#6B7280", padding: "1rem" } },
+                    `No institutions meet the ${threshold}% threshold in this state.`
+                  )
+                )
+          )
+        )
+      )
   );
 }
 
 const root = createRoot(document.getElementById("us-gradrate-map"));
-root.render(<App />);
+root.render(e(App));

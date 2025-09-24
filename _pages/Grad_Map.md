@@ -19,7 +19,7 @@ sidebar: false
   <p class="footnote">
     Data: IPEDS 2022 (six-year graduation rates). Columns used: <code>tot_grad</code> (Total),
     <code>nonres_grad</code> (Non-resident), <code>pell_grad</code> (Pell), <code>urm_grad</code> (URM).
-    Values show percent of first-time, full-time undergraduates completing within 150% of program time.
+    Values show percent of first-time, full-time undergraduates completing within 6 years.
   </p>
 </div>
 
@@ -49,4 +49,5 @@ sidebar: false
 </style>
 
 <link rel="preconnect" href="https://esm.sh" />
-<script type="module" src="/viz/Grad_Map/app.js?v=7"></script>
+<script type="module" src="/viz/Grad_Map/app.js?v=8"></script>
+
