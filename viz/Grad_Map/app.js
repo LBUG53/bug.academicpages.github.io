@@ -1,7 +1,8 @@
-import React, { useEffect, useMemo, useState } from "https://esm.run/react@18";
-import { createRoot } from "https://esm.run/react-dom@18/client";
-import { ComposableMap, Geographies, Geography } from "https://esm.run/react-simple-maps@3";
-import Papa from "https://esm.run/papaparse@5.4.1";
+// All imports from ONE CDN (Skypack) so React & ReactDOM share the same instance.
+import React, { useEffect, useMemo, useState } from "https://cdn.skypack.dev/react@18";
+import { createRoot } from "https://cdn.skypack.dev/react-dom@18/client";
+import { ComposableMap, Geographies, Geography } from "https://cdn.skypack.dev/react-simple-maps@3";
+import Papa from "https://cdn.skypack.dev/papaparse@5.4.1";
 
 const e = React.createElement;
 const GEO_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
@@ -182,5 +183,6 @@ function App(){
   );
 }
 
-const root = createRoot(document.getElementById("us-gradrate-map"));
+const mount = document.getElementById("us-gradrate-map");
+const root = createRoot(mount);
 root.render(e(App));
