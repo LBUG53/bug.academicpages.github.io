@@ -10,6 +10,7 @@ header:
 
 excerpt: "Higher Ed Scholar, Historian, and Strategist."
 
+# cards under the hero
 feature_row:
   - title: "Scholarship"
     excerpt: "Publications, essays, and research agenda."
@@ -23,8 +24,11 @@ feature_row:
 
 sidebar: false
 ---
-{% include feature_row %}
+
+{% include feature_row id="feature_row" %}
 
 <hr>
 
 ### About
+
+Short intro goes here. You can add a paragraph or two describing your focus and link to key sections above.
