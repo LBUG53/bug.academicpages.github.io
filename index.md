@@ -6,9 +6,9 @@ permalink: /
 
 header:
   overlay_image: "https://lucianbessmer.com/images/hero_looking_wide.jpg?v=2"  # bump v=#
-  overlay_filter: 0.55
+  overlay_filter: 0.30
 
-excerpt: "Higher Ed Scholar, Historian, and Strategist."
+excerpt: "Higher Ed Scholar | Historian | Strategist"
 
 feature_row:
   - title: "Scholarship"

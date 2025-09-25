@@ -1,45 +1,39 @@
 /* =========
-   Homepage hero tuning
+   Homepage hero tuning (no pill, lighter overall)
    ========= */
 
 /* Taller hero and better crop */
 .page__hero--overlay {
   /* Show more of the image; use 100vh for full-screen */
   min-height: 90vh;
-  background-size: cover;          /* fill without distortion */
-  /* Shift the visible slice: increase/decrease the second value to reframe */
-  background-position: center 35%;
+  background-size: cover;
+  /* Shift the visible slice: adjust second value as needed */
+  background-position: center 30%;
 }
 
-/* Add a soft backdrop behind the title + subtitle for contrast */
+/* Remove any backdrop “pill” behind text (in case it was cached) */
 .page__hero--overlay .wrapper {
-  display: inline-block;
-  padding: 0.4rem 0.7rem;
-  background: rgba(0, 0, 0, 0.28);
-  border-radius: 0.6rem;
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
 }
 
-/* Stronger text edges so white text reads over bright clouds */
+/* Subtle text contrast without darkening the whole page */
 .page__title,
 .page__lead {
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+  /* layered, soft edge — much lighter than before */
+  text-shadow:
+    0 1px 2px rgba(0,0,0,0.35),
+    0 2px 6px rgba(0,0,0,0.25);
 }
 
-/* Slight breathing room above the tiles below the hero */
-.feature__wrapper {
-  margin-top: 0.5rem;
-}
+/* Gentle spacing above tiles */
+.feature__wrapper { margin-top: 0.5rem; }
 
-/* Mobile adjustments */
+/* Mobile tweaks */
 @media (max-width: 768px) {
   .page__hero--overlay {
-    /* Keep tall but not overwhelming on phones */
     min-height: 60vh;
     background-position: center 35%;
-  }
-
-  .page__hero--overlay .wrapper {
-    padding: 0.35rem 0.6rem;
-    border-radius: 0.5rem;
   }
 }
