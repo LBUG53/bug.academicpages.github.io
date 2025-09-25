@@ -1,6 +1,6 @@
-/* Taller hero and better crop */
+/* Taller hero + nicer crop */
 .page__hero--overlay {
-  min-height: 60vh;           /* try 50–70vh; increase to show more */
-  background-size: cover;     /* fill area without distortion */
-  background-position: center top; /* bias crop toward top of photo */
+  min-height: 60vh;           /* try 50–70vh; bump to 100vh for full screen */
+  background-size: cover;
+  background-position: center top;  /* adjust to center center or center 30% to taste */
 }
