@@ -4,8 +4,10 @@ title: "Lucian Bessmer, PhD"
 subtitle: "Higher-ed scholarship · Institutional analysis · Data storytelling"
 permalink: /
 
+# Force the exact image URL so nothing auto-prefixes it
 header:
   overlay_image: "https://lucianbessmer.com/images/hero_looking_wide.jpg"
+  image: "https://lucianbessmer.com/images/hero_looking_wide.jpg"
   overlay_filter: 0.35
 
 excerpt: "Higher Ed Scholar, Historian, and Strategist."
