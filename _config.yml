@@ -11,7 +11,7 @@ description              : &description "Higher-ed scholarship, history, and str
 url                      : "https://lucianbessmer.com"
 baseurl                  : ""
 repository               : "LBUG53/bug.academicpages.github.io"
-image_path: "/images"
+image_path: ""
 
 # Site Author
 author:
@@ -71,7 +71,7 @@ atom_feed:
   path                   :
 
 # SEO / Social
-og_image                 : favicon.png   # add this file (512×512 recommended)
+og_image: "https://lucianbessmer.com/images/favicon.png"
 og_description           :
 social:
   type                   : Person
