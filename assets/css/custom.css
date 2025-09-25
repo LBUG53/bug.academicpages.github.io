@@ -1,8 +1,8 @@
 /* Homepage hero tuning */
 .page__hero--overlay {
-  min-height: 60vh;          /* show more of the image (try 50–70vh or 100vh) */
-  background-size: cover;    /* fill without distortion */
-  background-position: center 25%; /* adjust crop: e.g., center top, center 30% */
+  min-height: 90vh;          /* taller hero; use 100vh for full-screen */
+  background-size: cover;
+  background-position: center 25%; /* adjust crop (e.g., center 15% / center top) */
 }
 
 /* Improve title/subtitle legibility on bright images */
@@ -11,13 +11,10 @@
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
-/* Slight breathing room above the tiles */
-.feature__wrapper { margin-top: 0.5rem; }
-
-/* Mobile: reduce height a bit so content is visible without scrolling forever */
+/* Mobile: keep tall but not overwhelming */
 @media (max-width: 768px) {
   .page__hero--overlay {
-    min-height: 48vh;
+    min-height: 60vh;
     background-position: center 35%;
   }
 }
