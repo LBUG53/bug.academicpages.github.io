@@ -1,6 +1,23 @@
-/* Taller hero + nicer crop */
+/* Homepage hero tuning */
 .page__hero--overlay {
-  min-height: 60vh;           /* try 50–70vh; bump to 100vh for full screen */
-  background-size: cover;
-  background-position: center top;  /* adjust to center center or center 30% to taste */
+  min-height: 60vh;          /* show more of the image (try 50–70vh or 100vh) */
+  background-size: cover;    /* fill without distortion */
+  background-position: center 25%; /* adjust crop: e.g., center top, center 30% */
+}
+
+/* Improve title/subtitle legibility on bright images */
+.page__title,
+.page__lead {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* Slight breathing room above the tiles */
+.feature__wrapper { margin-top: 0.5rem; }
+
+/* Mobile: reduce height a bit so content is visible without scrolling forever */
+@media (max-width: 768px) {
+  .page__hero--overlay {
+    min-height: 48vh;
+    background-position: center 35%;
+  }
 }
