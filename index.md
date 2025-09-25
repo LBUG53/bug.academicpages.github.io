@@ -4,22 +4,11 @@ title: "Lucian Bessmer, PhD"
 subtitle: "Higher-ed scholarship · Institutional analysis · Data storytelling"
 permalink: /
 header:
-  overlay_image: /files/hero_looking_wide.jpg
-  overlay_color: "#3B82F6"   # lighter professional blue
-  overlay_filter: 0.35
+  overlay_image: /images/hero_looking_wide.jpg   # <-- plain path here
+  overlay_filter: 0.25
 excerpt: "Higher Ed Scholar, Historian, and Strategist."
-feature_row:
-  - title: "Scholarship"
-    excerpt: "Publications, essays, and research agenda."
-    url: "/posts/"
-  - title: "Teaching"
-    excerpt: "Courses, materials, and mentorship."
-    url: "/portfolio/"
-  - title: "Services"
-    excerpt: "Applied research and advising for institutions."
-    url: "/engagement/"
-sidebar: false
 ---
+
 
 {% include feature_row %}
 
