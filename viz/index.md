@@ -1,10 +1,11 @@
 ---
 title: "Higher Ed Issues"
-layout: single
+layout: splash
 permalink: /higheredissues/
-redirect_from:
-  - /viz/
-sidebar: false
+header:
+  overlay_image: "{{ '/images/hero_looking_wide.jpg' | relative_url }}"
+  overlay_filter: 0.25   # optional: darken the banner
+  caption: ""            # optional: credit text/markdown
 ---
 
 ## Graduation Rates by Group
