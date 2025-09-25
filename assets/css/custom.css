@@ -1,0 +1,6 @@
+/* Taller hero and better crop */
+.page__hero--overlay {
+  min-height: 60vh;           /* try 50–70vh; increase to show more */
+  background-size: cover;     /* fill area without distortion */
+  background-position: center top; /* bias crop toward top of photo */
+}
