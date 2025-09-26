@@ -3,21 +3,21 @@ title: "Higher Ed Issues"
 layout: splash
 permalink: /higheredissues/
 header:
-  # Use a plain path here; Liquid in front matter won't render
+  # Use a plain path (no Liquid) so the hero renders correctly
   overlay_image: "/images/hero_looking_wide.jpg"
   overlay_filter: 0.25
   caption: ""
 ---
 
 <style>
-  /* This page only (inline), so it's safe to target the generic classes */
+  /* Shrink the hero and tighten spacing — unscoped so it actually applies here */
   .page__hero--overlay {
-    min-height: 24vh !important;   /* shrink from ~90vh */
-    margin-bottom: 0.75rem !important;
+    min-height: 18vh !important;   /* reduce from ~90vh */
+    margin-bottom: 0.5rem !important;
   }
   .page__hero--overlay .wrapper {
-    padding-top: 1.25rem !important;
-    padding-bottom: 1.25rem !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
   }
   .page__content {
     margin-top: 0 !important;
