@@ -1,12 +1,18 @@
-/* US Grad Map (vanilla D3 + topojson) — hover fix, coloring fix, pro table */
+/* US Grad Map v6 (vanilla D3 + topojson)
+   - hover & coloring fixed
+   - table isolated from theme
+   - robust CSV header parsing
+   - console banner & debug helper
+*/
 (() => {
+  console.log("%c[Grad_Map] v6 loaded", "color:#2563eb;font-weight:bold");
   const mount = document.getElementById("us-gradrate-map");
   if (!mount) return console.error("Missing #us-gradrate-map");
 
   const GEO_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
   const CSV_URL = "./ipeds_gradrate.csv";
 
-  let benchmark = 60;            // start at 60 so you see matches quickly
+  let benchmark = 60; // start at 60 for visibility
   let selectedState = null;
   let institutions = [];
   let topology = null;
@@ -39,15 +45,13 @@
     return STATE_NAME_TO_CODE[nameKey] || null;
   };
 
-  // Containers
+  // SVG & neighbors
   const svg = d3.select(mount).append("svg")
     .attr("width", "100%")
     .style("display","block")
-    .style("background", "#fff");
+    .style("background","#fff");
   const g = svg.append("g");
   const tooltip = d3.select("body").append("div").attr("class","tooltip").style("display","none");
-
-  // Layout neighbors
   const parent = mount.parentElement;
   const stateSummary = d3.select(parent).append("div").attr("class","state-summary");
   const tableWrap = d3.select(parent).append("div").attr("class","table-wrap");
@@ -70,27 +74,21 @@
   });
   syncButtons();
 
-  // Load data
+  // Load
   Promise.all([
     fetch(GEO_URL).then(r=>r.json()),
     new Promise((resolve) => {
-      Papa.parse(CSV_URL, {
-        download: true, header: true, skipEmptyLines: true,
-        complete: (res) => resolve(res.data || [])
-      });
+      Papa.parse(CSV_URL, { download: true, header: true, skipEmptyLines: true,
+        complete: (res) => resolve(res.data || []) });
     })
   ]).then(([topo, rows]) => {
     topology = topo;
 
-    // Build flexible header map
+    // Header map
     const sample = rows[0] || {};
     const headerMap = {};
     Object.keys(sample).forEach(k => headerMap[normKey(k)] = k);
-
-    const pick = (cands) => {
-      for (const c of cands) { const hk = headerMap[normKey(c)]; if (hk) return hk; }
-      return null;
-    };
+    const pick = (cands) => { for (const c of cands) { const hk = headerMap[normKey(c)]; if (hk) return hk; } return null; };
 
     const nameKey = pick(["institution name","instnm","name","college","institution"]);
     const stateKey = pick(["stabbr","state","state abbr","state code","statepostal","stateusps","stateuscode"]);
@@ -99,7 +97,8 @@
     const pellKey  = pick(["pell_grad","pell completion","pell"]);
     const urmKey   = pick(["urm_grad","underrepresented minority grad","minority grad","urm"]);
 
-    // Normalize rows
+    console.log("[Grad_Map] headers:", { nameKey, stateKey, totKey, nonresKey, pellKey, urmKey });
+
     institutions = rows.map(r => {
       const name = (nameKey ? r[nameKey] : (r.INSTNM||r.name||r.college||"")) || "";
       const rawState = (stateKey ? r[stateKey] : (r.state||r.STABBR||r.State||"")) || "";
@@ -114,25 +113,35 @@
       };
     }).filter(d => d.name && d.state);
 
-    // Draw + first render
+    // Debug helper
+    window.gradMapDebug = {
+      institutions,
+      counts: () => {
+        const c = {};
+        institutions.forEach(r => {
+          if (Number.isFinite(r.tot) && r.tot >= benchmark) (c[r.state] ??= 0, c[r.state]++);
+        });
+        return c;
+      }
+    };
+    console.log("[Grad_Map] sample counts @", benchmark, "%:", window.gradMapDebug.counts());
+
     drawMap();
     render();
-
-    // Responsive
     window.addEventListener("resize", () => { drawMap(); render(); });
   }).catch(err => {
     console.error(err);
     d3.select(mount).append("div").style("color","#b91c1c").text("Failed to load map or data.");
   });
 
-  // Helpers
   function containerSize() {
     const w = Math.max(320, mount.clientWidth || mount.getBoundingClientRect().width || 980);
     const h = Math.round(w * 0.6);
     return { w, h };
   }
-  function features() { return topojson.feature(topology, topology.objects.states).features; }
-
+  function features() {
+    return topojson.feature(topology, topology.objects.states).features;
+  }
   function byState() {
     const out = {};
     for (const r of institutions) {
@@ -159,7 +168,7 @@
         .attr("fill", "#E5E7EB")      // start gray
         .attr("stroke", "#9CA3AF")
         .attr("stroke-width", 0.6)
-        .style("pointer-events","all") // ensure hover works
+        .style("pointer-events","all")
         .on("mousemove", (event, d) => {
           const code = STATE_NAME_TO_CODE[d.properties.name];
           const count = (byState()[code] || []).length;
@@ -203,7 +212,7 @@
         .text("Select a state to see institutions with total six-year graduation rates at or above the chosen threshold.");
     }
 
-    // Table (clean, professional)
+    // Table
     tableWrap.html("");
     if (selectedState) {
       const table = tableWrap.append("table").attr("class","grad-table");
