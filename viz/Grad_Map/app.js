@@ -1,14 +1,20 @@
-/* UMD (no imports) version — expects these globals already loaded:
-   React, ReactDOM, ReactSimpleMaps, Papa
-   See the script tags list right below this code in my note.
-*/
+/* ====== US Grad Map (vanilla D3 + topojson) ====== */
 (() => {
-  const { useEffect, useMemo, useState } = React;
-  const { createRoot } = ReactDOM;
-  const { ComposableMap, Geographies, Geography } = ReactSimpleMaps;
+  const mount = document.getElementById("us-gradrate-map");
+  if (!mount) return console.error("Missing #us-gradrate-map");
 
+  // Config
+  const WIDTH = Math.min(980, mount.clientWidth || 980);
+  const HEIGHT = Math.round(WIDTH * 0.6);
   const GEO_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
+  const CSV_URL = "./ipeds_gradrate.csv"; // same folder as this file
 
+  // State
+  let benchmark = 70;
+  let selectedState = null;
+  let institutions = []; // { name, state, tot, nonres, pell, urm }
+
+  // Helpers
   const STATE_NAME_TO_CODE = {
     Alabama:"AL", Alaska:"AK", Arizona:"AZ", Arkansas:"AR", California:"CA", Colorado:"CO",
     Connecticut:"CT", Delaware:"DE", "District of Columbia":"DC", Florida:"FL", Georgia:"GA",
@@ -20,186 +26,175 @@
     "South Dakota":"SD", Tennessee:"TN", Texas:"TX", Utah:"UT", Vermont:"VT", Virginia:"VA",
     Washington:"WA", "West Virginia":"WV", Wisconsin:"WI", Wyoming:"WY"
   };
+  const codeToName = (code) => Object.entries(STATE_NAME_TO_CODE).find(([,v])=>v===code)?.[0] || code;
+  const num = (v) => {
+    if (v === null || v === undefined || v === "") return NaN;
+    const n = typeof v === "number" ? v : Number(String(v).replace(/[% ,]/g,""));
+    return Number.isFinite(n) ? n : NaN;
+  };
+  const fmtPct = (v) => Number.isFinite(v) ? `${Math.round(v)}%` : "—";
 
-  function num(v){ if(v===null||v===undefined||v==="") return NaN; const n=typeof v==="number"?v:parseFloat(String(v)); return Number.isFinite(n)?n:NaN; }
-  function toNum(v){ const n=num(v); return Number.isFinite(n)?n:null; }
-  function fmtPct(v){ const n=num(v); return Number.isFinite(n)?`${Math.round(n)}%`:"—"; }
-  function codeToName(code){ for(const [k,v] of Object.entries(STATE_NAME_TO_CODE)) if(v===code) return k; return code; }
+  // Build containers
+  const svg = d3.select(mount).append("svg")
+    .attr("width", "100%")
+    .attr("viewBox", `0 0 ${WIDTH} ${HEIGHT}`)
+    .style("background", "#fff");
 
-  function App(){
-    const [data,setData]=useState([]);
-    const [threshold,setThreshold]=useState(70);
-    const [selectedState,setSelectedState]=useState(null);
-    const [hover,setHover]=useState(null); // {text,x,y}
+  const g = svg.append("g");
+  const tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("display", "none");
 
-    // Load CSV from same folder as this file
-    useEffect(()=>{
-      const url = "./ipeds_gradrate.csv";
-      Papa.parse(url, {
+  const tableWrap = d3.select(mount.parentElement).append("div").attr("class","table-wrap");
+  const stateSummary = d3.select(mount.parentElement).insert("div", ":scope > .table-wrap")
+    .attr("class", "state-summary");
+
+  // Wire buttons
+  const syncButtons = () => {
+    document.querySelectorAll(".threshold-btn").forEach(b => {
+      const t = parseInt(b.getAttribute("data-threshold"),10);
+      b.classList.toggle("active", t === benchmark);
+    });
+  };
+  document.querySelectorAll(".threshold-btn").forEach(b => {
+    b.addEventListener("click", () => {
+      const t = parseInt(b.getAttribute("data-threshold"),10);
+      if (!Number.isFinite(t)) return;
+      benchmark = t;
+      syncButtons();
+      render();
+    });
+  });
+  syncButtons();
+
+  // Load data
+  Promise.all([
+    fetch(GEO_URL).then(r=>r.json()),
+    new Promise((resolve) => {
+      Papa.parse(CSV_URL, {
         download: true, header: true, skipEmptyLines: true,
-        complete: (res)=>{
-          const rows=(res.data||[]).map(r=>({
-            ...r,
-            tot_grad: toNum(r.tot_grad),
-            nonres_grad: toNum(r.nonres_grad),
-            pell_grad: toNum(r.pell_grad),
-            urm_grad: toNum(r.urm_grad),
-          }));
-          setData(rows);
-        },
-        error: ()=> setData([])
+        complete: (res) => resolve(res.data || [])
       });
-    },[]);
-
-    // Wire threshold buttons in the static HTML
-    useEffect(()=>{
-      const btns = Array.from(document.querySelectorAll(".threshold-btn"));
-      const onClick = (b) => {
-        const t = parseInt(b.getAttribute("data-threshold"),10);
-        if (!Number.isFinite(t)) return;
-        setThreshold(t);
-        btns.forEach(x=>x.classList.toggle("active", x===b));
+    })
+  ]).then(([topology, rows]) => {
+    // Normalize institutions
+    institutions = rows.map(r => {
+      const name = r["institution name"] || r.INSTNM || r.name || r.college || "";
+      const state = r.state || r.STABBR || r.State || "";
+      return {
+        name: String(name).trim(),
+        state: String(state).trim().toUpperCase(),
+        tot: num(r.tot_grad ?? r.GRAD_RATE ?? r.graduation_rate ?? r.grad_rate ?? r.C150_4_POOLED ?? r.C150_L4_POOLED),
+        nonres: num(r.nonres_grad),
+        pell: num(r.pell_grad),
+        urm: num(r.urm_grad)
       };
-      // initialize active state
-      btns.forEach(b=>{
-        const t = parseInt(b.getAttribute("data-threshold"),10);
-        b.classList.toggle("active", t===threshold);
-        b.__handler && b.removeEventListener("click", b.__handler);
-        b.__handler = ()=>onClick(b);
-        b.addEventListener("click", b.__handler);
+    }).filter(d => d.name && d.state);
+
+    // Draw map
+    const states = topojson.feature(topology, topology.objects.states);
+    const projection = d3.geoAlbersUsa().fitSize([WIDTH, HEIGHT], states);
+    const path = d3.geoPath(projection);
+
+    g.selectAll("path.state")
+      .data(states.features)
+      .join("path")
+      .attr("class","state")
+      .attr("d", path)
+      .attr("fill", d => {
+        const code = STATE_NAME_TO_CODE[d.properties.name];
+        const count = byState()[code]?.length || 0;
+        return count > 0 ? "#2563EB" : "#E5E7EB";
+      })
+      .attr("stroke", "#9CA3AF")
+      .attr("stroke-width", 0.6)
+      .on("mousemove", (event, d) => {
+        const code = STATE_NAME_TO_CODE[d.properties.name];
+        const count = byState()[code]?.length || 0;
+        tooltip.style("display","block")
+          .style("left", (event.clientX + 12) + "px")
+          .style("top", (event.clientY + 12) + "px")
+          .text(`${d.properties.name}: ${count} institution${count===1?"":"s"}`);
+      })
+      .on("mouseleave", () => tooltip.style("display","none"))
+      .on("click", (event, d) => {
+        selectedState = STATE_NAME_TO_CODE[d.properties.name] || null;
+        render();
       });
-      return ()=> btns.forEach(b=>{
-        if (b.__handler) b.removeEventListener("click", b.__handler);
-      });
-    },[threshold]);
 
-    const byState = useMemo(()=>{
-      const map={};
-      for(const r of data){
-        const code=STATE_NAME_TO_CODE[r.state] || r.STABBR || r.State || r.state_abbr;
-        const g=typeof r.tot_grad==="number"?r.tot_grad:NaN;
-        if(!code||Number.isNaN(g)) continue;
-        if(g>=threshold){ (map[code]??=[]).push(r); }
+    render();
+  }).catch(err => {
+    console.error(err);
+    d3.select(mount).append("div").style("color","#b91c1c").text("Failed to load map or data.");
+  });
+
+  // Derived
+  function byState() {
+    const out = {};
+    for (const r of institutions) {
+      if (Number.isFinite(r.tot) && r.tot >= benchmark) {
+        (out[r.state] ??= []).push(r);
       }
-      for(const k of Object.keys(map)){
-        map[k].sort((a,b)=>(num(b.tot_grad)-num(a.tot_grad)) ||
-          String(a["institution name"]||a.INSTNM||a.name).localeCompare(String(b["institution name"]||b.INSTNM||b.name)));
-      }
-      return map;
-    },[data,threshold]);
-
-    const tableRows = selectedState ? (byState[selectedState]||[]) : [];
-
-    return React.createElement(
-      "div",
-      null,
-
-      // Map
-      React.createElement(
-        ComposableMap,
-        { projection: "geoAlbersUsa", width: 980, height: 580, style: { width: "100%", height: "auto", background: "#fff" } },
-        React.createElement(
-          Geographies,
-          { geography: GEO_URL },
-          ({ geographies }) =>
-            geographies.map((geo) => {
-              const name = geo.properties.name;
-              const code = STATE_NAME_TO_CODE[name];
-              const count = (code && byState[code]) ? byState[code].length : 0;
-              const isActive = selectedState === code;
-
-              return React.createElement(Geography, {
-                key: geo.rsmKey,
-                geography: geo,
-                onMouseMove: (evt) => {
-                  const x = evt.clientX, y = evt.clientY;
-                  setHover({ text: `${name}: ${count} institution${count===1?"":"s"}`, x, y });
-                },
-                onMouseLeave: () => setHover(null),
-                onClick: () => setSelectedState(code || null),
-                style: {
-                  default: { fill: isActive ? "#2563EB" : "#E5E7EB", outline: "none", stroke: "#9CA3AF", strokeWidth: .6 },
-                  hover: { fill: isActive ? "#1D4ED8" : "#D1D5DB", outline: "none", stroke: "#6B7280", strokeWidth: .8 },
-                  pressed: { fill: "#1D4ED8", outline: "none" }
-                }
-              });
-            })
-        )
-      ),
-
-      // Hover tooltip
-      hover && React.createElement("div", { className: "tooltip", style: { left: hover.x, top: hover.y } }, hover.text),
-
-      // State summary
-      React.createElement(
-        "div",
-        null,
-        selectedState
-          ? React.createElement(
-              "div",
-              { className: "state-summary" },
-              `${codeToName(selectedState)} — ${tableRows.length} institution${tableRows.length===1?"":"s"} at ${threshold}%+ `,
-              React.createElement("button", { className: "clear-btn", onClick: () => setSelectedState(null) }, "(clear)")
-            )
-          : React.createElement("div", { className: "state-summary", style: { fontWeight: 400 } },
-              "Select a state to see institutions with total six-year graduation rates at or above the chosen threshold."
-            )
-      ),
-
-      // Table
-      selectedState &&
-        React.createElement(
-          "div",
-          { className: "table-wrap" },
-          React.createElement(
-            "table",
-            null,
-            React.createElement(
-              "thead",
-              null,
-              React.createElement(
-                "tr",
-                null,
-                React.createElement("th", null, "Institution"),
-                React.createElement("th", { className: "num" }, "Total"),
-                React.createElement("th", { className: "num" }, "Non-resident"),
-                React.createElement("th", { className: "num" }, "Pell"),
-                React.createElement("th", { className: "num" }, "URM")
-              )
-            ),
-            React.createElement(
-              "tbody",
-              null,
-              tableRows.length > 0
-                ? tableRows.map((r, i) =>
-                    React.createElement(
-                      "tr",
-                      { key: i },
-                      React.createElement("td", null, r["institution name"] || r.INSTNM || r.name),
-                      React.createElement("td", { className: "num" }, React.createElement("strong", null, fmtPct(r.tot_grad))),
-                      React.createElement("td", { className: "num" }, fmtPct(r.nonres_grad)),
-                      React.createElement("td", { className: "num" }, fmtPct(r.pell_grad)),
-                      React.createElement("td", { className: "num" }, fmtPct(r.urm_grad))
-                    )
-                  )
-                : React.createElement(
-                    "tr",
-                    null,
-                    React.createElement("td", { colSpan: 5, style: { textAlign: "center", color: "#6B7280", padding: "1rem" } },
-                      `No institutions meet the ${threshold}% threshold in this state.`
-                    )
-                  )
-            )
-          )
-        )
-    );
+    }
+    for (const k of Object.keys(out)) {
+      out[k].sort((a,b) => (b.tot - a.tot) || a.name.localeCompare(b.name));
+    }
+    return out;
   }
 
-  const mount = document.getElementById("us-gradrate-map");
-  if (!mount) {
-    console.error("Mount element #us-gradrate-map not found.");
-    return;
+  // Render table + summary + state fill updates
+  function render() {
+    // update fills based on current threshold
+    g.selectAll("path.state").attr("fill", d => {
+      const code = STATE_NAME_TO_CODE[d.properties.name];
+      const count = byState()[code]?.length || 0;
+      const active = selectedState && code === selectedState;
+      return active ? "#1D4ED8" : (count > 0 ? "#2563EB" : "#E5E7EB");
+    });
+
+    const rows = selectedState ? (byState()[selectedState] || []) : [];
+
+    // summary
+    stateSummary.html("");
+    if (selectedState) {
+      const name = codeToName(selectedState);
+      const wrap = stateSummary.append("div");
+      wrap.text(`${name} — ${rows.length} institution${rows.length===1?"":"s"} at ${benchmark}%+ `);
+      wrap.append("button")
+        .attr("class","clear-btn")
+        .text("(clear)")
+        .on("click", () => { selectedState = null; render(); });
+    } else {
+      stateSummary
+        .style("font-weight", 400)
+        .text("Select a state to see institutions with total six-year graduation rates at or above the chosen threshold.");
+    }
+
+    // table
+    tableWrap.html("");
+    if (selectedState) {
+      const table = tableWrap.append("table");
+      const thead = table.append("thead").append("tr");
+      ["Institution","Total","Non-resident","Pell","URM"].forEach((h,i)=>{
+        thead.append("th").attr("class", i===0?"":"num").text(h);
+      });
+      const tbody = table.append("tbody");
+      if (rows.length === 0) {
+        const tr = tbody.append("tr");
+        tr.append("td")
+          .attr("colspan",5)
+          .style("text-align","center")
+          .style("color","#6B7280")
+          .style("padding","1rem")
+          .text(`No institutions meet the ${benchmark}% threshold in this state.`);
+      } else {
+        const tr = tbody.selectAll("tr").data(rows).join("tr");
+        tr.append("td").text(d => d.name);
+        tr.append("td").attr("class","num").html(d => `<strong>${fmtPct(d.tot)}</strong>`);
+        tr.append("td").attr("class","num").text(d => fmtPct(d.nonres));
+        tr.append("td").attr("class","num").text(d => fmtPct(d.pell));
+        tr.append("td").attr("class","num").text(d => fmtPct(d.urm));
+      }
+    }
   }
-  const root = createRoot(mount);
-  root.render(React.createElement(App));
 })();

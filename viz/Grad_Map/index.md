@@ -4,7 +4,7 @@ title: "Which Colleges in My State Have High Graduation Rates?"
 permalink: /viz/Grad_Map/
 ---
 
-<!-- Mount node for the React app -->
+<!-- Mount node -->
 <div id="us-gradrate-map"></div>
 
 <!-- Threshold buttons -->
@@ -18,18 +18,12 @@ permalink: /viz/Grad_Map/
   Data: IPEDS 2022. Values show percent of first-time, full-time undergraduates completing within 6 years.
 </p>
 
-<!-- Styles -->
-<link rel="stylesheet" href="./app.css?v=4" />
+<link rel="stylesheet" href="./app.css?v=5" />
 
-<!-- React (must be first) -->
-<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-
-<!-- React Simple Maps (UMD build defines window.ReactSimpleMaps) -->
-<script src="https://unpkg.com/react-simple-maps@3/dist/react-simple-maps.min.js"></script>
-
-<!-- PapaParse for CSV loading -->
+<!-- D3 + TopoJSON + PapaParse (no React, no react-simple-maps) -->
+<script src="https://unpkg.com/d3@7/dist/d3.min.js"></script>
+<script src="https://unpkg.com/topojson-client@3"></script>
 <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
 
-<!-- Your app (UMD/no imports) -->
-<script defer src="./app.js?v=4"></script>
+<!-- Your vanilla JS app -->
+<script defer src="./app.js?v=5"></script>
