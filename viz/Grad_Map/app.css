@@ -1,0 +1,82 @@
+/* Basic layout */
+.controls {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.controls button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f8f9fa;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.controls button.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #1d4ed8;
+}
+
+.state-summary {
+  margin: 1rem 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.clear-btn {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.table-wrap {
+  margin: 1rem auto;
+  max-width: 800px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+th {
+  background: #f3f4f6;
+  text-align: left;
+}
+
+td.num {
+  text-align: right;
+}
+
+.note {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Tooltip that follows mouse */
+.tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  z-index: 1000;
+}
