@@ -1,18 +1,13 @@
-/* US Grad Map v6 (vanilla D3 + topojson)
-   - hover & coloring fixed
-   - table isolated from theme
-   - robust CSV header parsing
-   - console banner & debug helper
-*/
+/* US Grad Map v7 — default gray states, selectable blue, scrollable table w/ sticky header */
 (() => {
-  console.log("%c[Grad_Map] v6 loaded", "color:#2563eb;font-weight:bold");
+  console.log("%c[Grad_Map] v7 loaded", "color:#2563eb;font-weight:bold");
   const mount = document.getElementById("us-gradrate-map");
   if (!mount) return console.error("Missing #us-gradrate-map");
 
   const GEO_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
   const CSV_URL = "./ipeds_gradrate.csv";
 
-  let benchmark = 60; // start at 60 for visibility
+  let benchmark = 60; // keep 60; easier to see results after selection
   let selectedState = null;
   let institutions = [];
   let topology = null;
@@ -54,7 +49,7 @@
   const tooltip = d3.select("body").append("div").attr("class","tooltip").style("display","none");
   const parent = mount.parentElement;
   const stateSummary = d3.select(parent).append("div").attr("class","state-summary");
-  const tableWrap = d3.select(parent).append("div").attr("class","table-wrap");
+  const tableWrap = d3.select(parent).append("div").attr("class","table-wrap");   // scroll container
 
   // Buttons
   const syncButtons = () => {
@@ -97,7 +92,7 @@
     const pellKey  = pick(["pell_grad","pell completion","pell"]);
     const urmKey   = pick(["urm_grad","underrepresented minority grad","minority grad","urm"]);
 
-    console.log("[Grad_Map] headers:", { nameKey, stateKey, totKey, nonresKey, pellKey, urmKey });
+    console.log("[Grad_Map v7] headers:", { nameKey, stateKey, totKey });
 
     institutions = rows.map(r => {
       const name = (nameKey ? r[nameKey] : (r.INSTNM||r.name||r.college||"")) || "";
@@ -112,19 +107,6 @@
         urm: toNum(urmKey ? r[urmKey] : r.urm_grad)
       };
     }).filter(d => d.name && d.state);
-
-    // Debug helper
-    window.gradMapDebug = {
-      institutions,
-      counts: () => {
-        const c = {};
-        institutions.forEach(r => {
-          if (Number.isFinite(r.tot) && r.tot >= benchmark) (c[r.state] ??= 0, c[r.state]++);
-        });
-        return c;
-      }
-    };
-    console.log("[Grad_Map] sample counts @", benchmark, "%:", window.gradMapDebug.counts());
 
     drawMap();
     render();
@@ -165,7 +147,7 @@
       enter => enter.append("path")
         .attr("class","state")
         .attr("d", path)
-        .attr("fill", "#E5E7EB")      // start gray
+        .attr("fill", "#E5E7EB")      // ALWAYS gray at draw time
         .attr("stroke", "#9CA3AF")
         .attr("stroke-width", 0.6)
         .style("pointer-events","all")
@@ -179,7 +161,9 @@
         })
         .on("mouseleave", () => tooltip.style("display","none"))
         .on("click", (event, d) => {
-          selectedState = STATE_NAME_TO_CODE[d.properties.name] || null;
+          const code = STATE_NAME_TO_CODE[d.properties.name] || null;
+          // toggle selection
+          selectedState = (selectedState === code) ? null : code;
           render();
         }),
       update => update.attr("d", path),
@@ -190,13 +174,12 @@
   function render() {
     const counts = byState();
 
-    // Recolor states (selected darker)
+    // Color ONLY the selected state blue; all others stay gray.
     g.selectAll("path.state")
       .attr("fill", d => {
         const code = STATE_NAME_TO_CODE[d.properties.name];
-        const count = (counts[code] || []).length;
         const active = selectedState && code === selectedState;
-        return active ? "#1D4ED8" : (count > 0 ? "#2563EB" : "#E5E7EB");
+        return active ? "#2563EB" : "#E5E7EB";
       });
 
     // Summary
@@ -212,10 +195,11 @@
         .text("Select a state to see institutions with total six-year graduation rates at or above the chosen threshold.");
     }
 
-    // Table
+    // Table (scrolls inside its own container; header sticks)
     tableWrap.html("");
     if (selectedState) {
-      const table = tableWrap.append("table").attr("class","grad-table");
+      const scroller = tableWrap.append("div").attr("class","table-scroll");
+      const table = scroller.append("table").attr("class","grad-table");
       const thead = table.append("thead").append("tr");
       ["Institution","Total","Non-resident","Pell","URM"].forEach((h,i)=> thead.append("th").attr("class", i===0?"":"num").text(h));
 
