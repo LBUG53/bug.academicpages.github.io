@@ -5,7 +5,7 @@ subtitle: "Higher-ed scholarship · Institutional analysis · Data storytelling"
 permalink: /
 
 header:
-  overlay_image: "https://lucianbessmer.com/images/hero_looking_wide.jpg?v=3"  # bump v=#
+  overlay_image: "https://lucianbessmer.com/images/hero_looking_wide.jpg?v=4"  # bump v=#
   overlay_filter: 0.10
 
 excerpt: "Higher Ed Scholar, Historian, Strategist"
