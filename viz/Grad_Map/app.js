@@ -1,20 +1,16 @@
-/* ====== US Grad Map (vanilla D3 + topojson) ====== */
+/* US Grad Map (vanilla D3 + topojson) — robust header parsing + responsive */
 (() => {
   const mount = document.getElementById("us-gradrate-map");
   if (!mount) return console.error("Missing #us-gradrate-map");
 
-  // Config
-  const WIDTH = Math.min(980, mount.clientWidth || 980);
-  const HEIGHT = Math.round(WIDTH * 0.6);
   const GEO_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
-  const CSV_URL = "./ipeds_gradrate.csv"; // same folder as this file
+  const CSV_URL = "./ipeds_gradrate.csv";
 
-  // State
-  let benchmark = 70;
+  let benchmark = 60;            // easier to see matches at first
   let selectedState = null;
-  let institutions = []; // { name, state, tot, nonres, pell, urm }
+  let institutions = [];
+  let topology = null;
 
-  // Helpers
   const STATE_NAME_TO_CODE = {
     Alabama:"AL", Alaska:"AK", Arizona:"AZ", Arkansas:"AR", California:"CA", Colorado:"CO",
     Connecticut:"CT", Delaware:"DE", "District of Columbia":"DC", Florida:"FL", Georgia:"GA",
@@ -27,29 +23,40 @@
     Washington:"WA", "West Virginia":"WV", Wisconsin:"WI", Wyoming:"WY"
   };
   const codeToName = (code) => Object.entries(STATE_NAME_TO_CODE).find(([,v])=>v===code)?.[0] || code;
-  const num = (v) => {
+
+  const normKey = (k) => String(k||"")
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g,"")
+      .replace(/[_\-\/%()]/g,"");
+
+  const toNum = (v) => {
     if (v === null || v === undefined || v === "") return NaN;
     const n = typeof v === "number" ? v : Number(String(v).replace(/[% ,]/g,""));
     return Number.isFinite(n) ? n : NaN;
   };
   const fmtPct = (v) => Number.isFinite(v) ? `${Math.round(v)}%` : "—";
 
-  // Build containers
+  const toStateCode = (s) => {
+    if (!s) return null;
+    const t = String(s).trim();
+    if (t.length === 2) return t.toUpperCase();
+    const nameKey = t.toLowerCase().replace(/\b\w/g,(m)=>m.toUpperCase());
+    return STATE_NAME_TO_CODE[nameKey] || null;
+  };
+
   const svg = d3.select(mount).append("svg")
     .attr("width", "100%")
-    .attr("viewBox", `0 0 ${WIDTH} ${HEIGHT}`)
+    .style("display","block")
     .style("background", "#fff");
-
   const g = svg.append("g");
-  const tooltip = d3.select("body").append("div")
-    .attr("class", "tooltip")
-    .style("display", "none");
+  const tooltip = d3.select("body").append("div").attr("class","tooltip").style("display","none");
 
-  const tableWrap = d3.select(mount.parentElement).append("div").attr("class","table-wrap");
-  const stateSummary = d3.select(mount.parentElement).insert("div", ":scope > .table-wrap")
-    .attr("class", "state-summary");
+  const parent = mount.parentElement;
+  const stateSummary = d3.select(parent).append("div").attr("class","state-summary");
+  const tableWrap = d3.select(parent).append("div").attr("class","table-wrap");
 
-  // Wire buttons
+  // Buttons
   const syncButtons = () => {
     document.querySelectorAll(".threshold-btn").forEach(b => {
       const t = parseInt(b.getAttribute("data-threshold"),10);
@@ -67,7 +74,7 @@
   });
   syncButtons();
 
-  // Load data
+  // Load
   Promise.all([
     fetch(GEO_URL).then(r=>r.json()),
     new Promise((resolve) => {
@@ -76,116 +83,147 @@
         complete: (res) => resolve(res.data || [])
       });
     })
-  ]).then(([topology, rows]) => {
-    // Normalize institutions
+  ]).then(([topo, rows]) => {
+    topology = topo;
+
+    // Build a header map once from the first row’s keys
+    const sample = rows[0] || {};
+    const headerMap = {};
+    Object.keys(sample).forEach(k => headerMap[normKey(k)] = k);
+
+    const pick = (candidates) => {
+      for (const c of candidates) {
+        const hk = headerMap[c];
+        if (hk) return hk;
+      }
+      return null;
+    };
+
+    // Candidate lists (normalized)
+    const nameKeys = ["institutionname","instnm","name","college","institution"];
+    const stateKeys = ["stabbr","state","stateabbr","statecode","statepostal","stateabbreviation","stateusps","stateuscode"];
+    const totGradKeys = [
+      "totgrad","totalgrad","gradrate","graduationrate","overallgradrate",
+      "c1504pooled","c150l4pooled","c1504","c150l4","c150all","c150"
+    ];
+    const nonresKeys = ["nonresgrad","nonresidentgrad","nonresident","nonrescompletion","nonres"];
+    const pellKeys   = ["pellgrad","pellcompletion","pell"];
+    const urmKeys    = ["urmgrad","underrepresentedminoritygrad","minoritygrad","urm"];
+
+    const nameKey = pick(nameKeys.map(normKey));
+    const stateKey = pick(stateKeys.map(normKey));
+    const totKey = pick(totGradKeys.map(normKey));
+    const nonresKey = pick(nonresKeys.map(normKey));
+    const pellKey = pick(pellKeys.map(normKey));
+    const urmKey = pick(urmKeys.map(normKey));
+
+    // Diagnostics (open console to see)
+    console.log("[Grad_Map] header map:", { nameKey, stateKey, totKey, nonresKey, pellKey, urmKey });
+
     institutions = rows.map(r => {
-      const name = r["institution name"] || r.INSTNM || r.name || r.college || "";
-      const state = r.state || r.STABBR || r.State || "";
+      const name = nameKey ? r[nameKey] : (r.INSTNM || r.name || r.college || "");
+      const rawState = stateKey ? r[stateKey] : (r.state || r.STABBR || r.State || "");
+      const state = toStateCode(rawState);
       return {
-        name: String(name).trim(),
-        state: String(state).trim().toUpperCase(),
-        tot: num(r.tot_grad ?? r.GRAD_RATE ?? r.graduation_rate ?? r.grad_rate ?? r.C150_4_POOLED ?? r.C150_L4_POOLED),
-        nonres: num(r.nonres_grad),
-        pell: num(r.pell_grad),
-        urm: num(r.urm_grad)
+        name: String(name || "").trim(),
+        state,
+        tot: toNum(totKey ? r[totKey] : (r.tot_grad ?? r.GRAD_RATE)),
+        nonres: toNum(nonresKey ? r[nonresKey] : r.nonres_grad),
+        pell: toNum(pellKey ? r[pellKey] : r.pell_grad),
+        urm: toNum(urmKey ? r[urmKey] : r.urm_grad)
       };
     }).filter(d => d.name && d.state);
 
-    // Draw map
-    const states = topojson.feature(topology, topology.objects.states);
-    const projection = d3.geoAlbersUsa().fitSize([WIDTH, HEIGHT], states);
-    const path = d3.geoPath(projection);
-
-    g.selectAll("path.state")
-      .data(states.features)
-      .join("path")
-      .attr("class","state")
-      .attr("d", path)
-      .attr("fill", d => {
-        const code = STATE_NAME_TO_CODE[d.properties.name];
-        const count = byState()[code]?.length || 0;
-        return count > 0 ? "#2563EB" : "#E5E7EB";
-      })
-      .attr("stroke", "#9CA3AF")
-      .attr("stroke-width", 0.6)
-      .on("mousemove", (event, d) => {
-        const code = STATE_NAME_TO_CODE[d.properties.name];
-        const count = byState()[code]?.length || 0;
-        tooltip.style("display","block")
-          .style("left", (event.clientX + 12) + "px")
-          .style("top", (event.clientY + 12) + "px")
-          .text(`${d.properties.name}: ${count} institution${count===1?"":"s"}`);
-      })
-      .on("mouseleave", () => tooltip.style("display","none"))
-      .on("click", (event, d) => {
-        selectedState = STATE_NAME_TO_CODE[d.properties.name] || null;
-        render();
-      });
-
+    drawMap();
     render();
+    window.addEventListener("resize", () => { drawMap(); render(); });
   }).catch(err => {
     console.error(err);
     d3.select(mount).append("div").style("color","#b91c1c").text("Failed to load map or data.");
   });
 
-  // Derived
+  function containerSize() {
+    const w = Math.max(320, mount.clientWidth || mount.getBoundingClientRect().width || 980);
+    const h = Math.round(w * 0.6);
+    return { w, h };
+  }
+  function features() { return topojson.feature(topology, topology.objects.states).features; }
+
   function byState() {
     const out = {};
     for (const r of institutions) {
-      if (Number.isFinite(r.tot) && r.tot >= benchmark) {
-        (out[r.state] ??= []).push(r);
-      }
+      if (Number.isFinite(r.tot) && r.tot >= benchmark) (out[r.state] ??= []).push(r);
     }
-    for (const k of Object.keys(out)) {
-      out[k].sort((a,b) => (b.tot - a.tot) || a.name.localeCompare(b.name));
-    }
+    for (const k of Object.keys(out)) out[k].sort((a,b) => (b.tot - a.tot) || a.name.localeCompare(b.name));
     return out;
   }
 
-  // Render table + summary + state fill updates
+  function drawMap() {
+    if (!topology) return;
+    const { w, h } = containerSize();
+    svg.attr("viewBox", `0 0 ${w} ${h}`);
+
+    const f = { type: "FeatureCollection", features: features() };
+    const projection = d3.geoAlbersUsa().fitSize([w, h], f);
+    const path = d3.geoPath(projection);
+
+    const sel = g.selectAll("path.state").data(f.features, d => d.id);
+    sel.join(
+      enter => enter.append("path").attr("class","state")
+        .attr("d", path)
+        .attr("fill", "#E5E7EB")
+        .attr("stroke", "#9CA3AF")
+        .attr("stroke-width", 0.6)
+        .on("mousemove", (event, d) => {
+          const code = STATE_NAME_TO_CODE[d.properties.name];
+          const count = (byState()[code] || []).length;
+          tooltip.style("display","block")
+            .style("left", (event.clientX + 12) + "px")
+            .style("top", (event.clientY + 12) + "px")
+            .text(`${d.properties.name}: ${count} institution${count===1?"":"s"}`);
+        })
+        .on("mouseleave", () => tooltip.style("display","none"))
+        .on("click", (event, d) => {
+          selectedState = STATE_NAME_TO_CODE[d.properties.name] || null;
+          render();
+        }),
+      update => update.attr("d", path),
+      exit => exit.remove()
+    );
+  }
+
   function render() {
-    // update fills based on current threshold
-    g.selectAll("path.state").attr("fill", d => {
-      const code = STATE_NAME_TO_CODE[d.properties.name];
-      const count = byState()[code]?.length || 0;
-      const active = selectedState && code === selectedState;
-      return active ? "#1D4ED8" : (count > 0 ? "#2563EB" : "#E5E7EB");
-    });
+    const counts = byState();
+    g.selectAll("path.state")
+      .attr("fill", d => {
+        const code = STATE_NAME_TO_CODE[d.properties.name];
+        const count = (counts[code] || []).length;
+        const active = selectedState && code === selectedState;
+        return active ? "#1D4ED8" : (count > 0 ? "#2563EB" : "#E5E7EB");
+      });
 
-    const rows = selectedState ? (byState()[selectedState] || []) : [];
+    const rows = selectedState ? (counts[selectedState] || []) : [];
 
-    // summary
     stateSummary.html("");
     if (selectedState) {
       const name = codeToName(selectedState);
       const wrap = stateSummary.append("div");
       wrap.text(`${name} — ${rows.length} institution${rows.length===1?"":"s"} at ${benchmark}%+ `);
-      wrap.append("button")
-        .attr("class","clear-btn")
-        .text("(clear)")
-        .on("click", () => { selectedState = null; render(); });
+      wrap.append("button").attr("class","clear-btn").text("(clear)").on("click", () => { selectedState = null; render(); });
     } else {
-      stateSummary
-        .style("font-weight", 400)
+      stateSummary.style("font-weight", 400)
         .text("Select a state to see institutions with total six-year graduation rates at or above the chosen threshold.");
     }
 
-    // table
     tableWrap.html("");
     if (selectedState) {
       const table = tableWrap.append("table");
       const thead = table.append("thead").append("tr");
-      ["Institution","Total","Non-resident","Pell","URM"].forEach((h,i)=>{
-        thead.append("th").attr("class", i===0?"":"num").text(h);
-      });
+      ["Institution","Total","Non-resident","Pell","URM"].forEach((h,i)=> thead.append("th").attr("class", i===0?"":"num").text(h));
       const tbody = table.append("tbody");
       if (rows.length === 0) {
-        const tr = tbody.append("tr");
-        tr.append("td")
-          .attr("colspan",5)
-          .style("text-align","center")
-          .style("color","#6B7280")
-          .style("padding","1rem")
+        tbody.append("tr").append("td")
+          .attr("colspan",5).style("text-align","center").style("color","#6B7280").style("padding","1rem")
           .text(`No institutions meet the ${benchmark}% threshold in this state.`);
       } else {
         const tr = tbody.selectAll("tr").data(rows).join("tr");

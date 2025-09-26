@@ -10,6 +10,7 @@ name                     : &name "Home"
 description              : &description "Higher-ed scholarship, history, and strategy."
 url                      : "https://lucianbessmer.com"
 baseurl                  : ""
+logo: /images/favicon.png
 repository               : "LBUG53/bug.academicpages.github.io"
 image_path: ""
 
