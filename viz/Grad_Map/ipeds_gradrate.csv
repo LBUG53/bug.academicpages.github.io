@@ -1,1160 +1,1122 @@
 UNITID,institution name,state,tot_grad,nonres_grad,pell_grad,urm_grad,ai_per,black_per,hispanic_per,pi_per,nonres_per,ai_grad,pi_grad,black_grad,hisp_grad
-100663,University of Alabama at Birmingham,Alabama,64,63,55,55.6875,0,25,7,0,3,55,100,57,51
-100690,Amridge University,Alabama,50,,,URM proportions reported; missing matching grad rates,0,66,3,0,0,,,,
-100706,University of Alabama in Huntsville,Alabama,63,68,50,50,1,9,7,0,1,33,,48,55
-100751,The University of Alabama,Alabama,73,73,59,62.47058824,0,11,6,0,1,58,57,60,67
+130794,Yale University,Connecticut,98,98,93,96.04347826,0,8,15,0,10,92,100,98,95
+166027,Harvard University,Massachusetts,98,96,97,98.42105263,0,8,11,0,14,100,,99,98
+186131,Princeton University,New Jersey,98,97,97,97.88888889,0,8,10,0,13,100,100,99,97
+147767,Northwestern University,Illinois,97,93,97,95.33333333,0,7,14,0,10,100,100,92,97
+198419,Duke University,North Carolina,97,90,96,95.85,0,9,11,0,10,77,,92,99
+131496,Georgetown University,District of Columbia,96,97,90,92.91666667,0,5,7,0,14,,,90,95
+144050,University of Chicago,Illinois,96,98,92,92.82608696,0,7,16,0,16,100,,97,91
+152080,University of Notre Dame,Indiana,96,94,93,95.58823529,0,4,13,0,7,,,91,97
+215062,University of Pennsylvania,Pennsylvania,96,95,93,93.11111111,0,8,10,0,14,100,,92,94
+121345,Pomona College,California,95,91,96,93.92307692,0,10,16,0,12,100,,89,97
+166683,Massachusetts Institute of Technology,Massachusetts,95,91,91,93.65217391,0,8,15,0,11,,,93,94
+168342,Williams College,Massachusetts,95,95,91,92.47058824,0,5,12,0,9,,,84,96
+182670,Dartmouth College,New Hampshire,95,91,92,93.29411765,1,6,10,0,14,56,100,90,99
+190150,Columbia University in the City of New York,New York,95,95,93,93.31818182,0,7,15,0,19,86,100,94,93
+190415,Cornell University,New York,95,95,93,92.04545455,0,7,15,0,10,71,100,90,93
+217156,Brown University,Rhode Island,95,96,90,89.89473684,0,8,11,0,14,67,100,87,92
+234076,University of Virginia-Main Campus,Virginia,95,93,92,91.5,0,7,7,0,5,100,100,88,95
+234207,Washington and Lee University,Virginia,95,92,85,96.66666667,0,4,8,0,6,,,100,95
+243744,Stanford University,California,95,95,90,93.22222222,1,8,18,0,11,89,100,92,94
+110404,California Institute of Technology,California,94,100,90,88.56,0,3,22,0,9,,,100,87
+110635,University of California-Berkeley,California,94,94,89,86.45454545,0,2,20,0,13,100,93,81,87
+161004,Bowdoin College,Maine,94,100,94,93.47368421,0,6,13,0,7,100,100,88,96
+162928,Johns Hopkins University,Maryland,94,95,91,92.93103448,0,9,20,0,14,67,80,95,92
+168148,Tufts University,Massachusetts,94,96,92,93.375,0,6,10,0,12,,,94,93
+179867,Washington University in St Louis,Missouri,94,93,91,93.14285714,0,9,12,0,8,100,,92,94
+216287,Swarthmore College,Pennsylvania,94,88,95,92.7826087,0,9,14,0,14,100,,94,92
+227757,Rice University,Texas,94,93,94,89.86956522,0,8,15,0,13,100,100,84,93
+230959,Middlebury College,Vermont,94,96,86,85.17647059,0,5,12,0,12,,,88,84
+441982,Franklin W Olin College of Engineering,Massachusetts,94,100,100,77,0,3,9,0,8,,,50,86
+130697,Wesleyan University,Connecticut,93,92,96,95.64705882,0,6,11,0,10,50,100,95,96
+139755,Georgia Institute of Technology-Main Campus,Georgia,93,96,88,86,0,8,8,0,10,100,,80,92
+160977,Bates College,Maine,93,91,89,86.78571429,0,5,9,0,9,,,90,85
+164580,Babson College,Massachusetts,93,96,94,88.05263158,0,4,15,0,30,,,92,87
+170976,University of Michigan-Ann Arbor,Michigan,93,94,86,86.66666667,0,4,8,0,9,100,75,82,89
+221999,Vanderbilt University,Tennessee,93,86,87,90.42857143,0,10,11,0,10,100,100,92,89
+110662,University of California-Los Angeles,California,92,91,89,89.28,0,3,22,0,9,81,80,84,90
+115409,Harvey Mudd College,California,92,100,93,85.22222222,0,6,21,0,10,,100,86,85
+123961,University of Southern California,California,92,90,92,89.2173913,0,6,17,0,14,67,100,87,90
+164465,Amherst College,Massachusetts,92,76,93,93.96296296,0,11,16,0,11,33,,91,96
+189097,Barnard College,New York,92,91,95,93.72222222,0,5,13,0,12,100,,93,94
+191515,Hamilton College,New York,92,90,92,91.84615385,0,3,10,0,7,,,88,93
+197133,Vassar College,New York,92,95,91,88.25,0,4,12,0,8,,,89,88
+198385,Davidson College,North Carolina,92,91,94,94.375,0,6,10,0,10,67,,95,94
+211440,Carnegie Mellon University,Pennsylvania,92,94,88,83.71428571,0,4,10,0,19,,0,88,82
+211893,Curtis Institute of Music,Pennsylvania,92,100,100,83.5,0,3,3,0,44,,,67,100
+112260,Claremont McKenna College,California,91,87,100,93.45454545,0,6,16,0,15,,,100,91
+164924,Boston College,Massachusetts,91,91,87,89.5,0,5,11,0,9,100,0,84,92
+166124,College of the Holy Cross,Massachusetts,91,90,92,88.5,0,4,12,0,3,,100,84,90
+167358,Northeastern University,Massachusetts,91,87,89,88.6875,0,5,11,0,14,50,,88,89
+173258,Carleton College,Minnesota,91,92,87,87.58823529,0,7,10,0,10,,,87,88
+190099,Colgate University,New York,91,92,87,91.57142857,0,5,9,0,9,,,89,93
+199120,University of North Carolina at Chapel Hill,North Carolina,91,88,88,89.55555556,0,8,10,0,5,85,,89,90
+212911,Haverford College,Pennsylvania,91,95,93,88.05555556,0,5,13,0,11,,,96,85
+213543,Lehigh University,Pennsylvania,91,94,91,86,0,5,10,0,8,100,100,82,88
+216597,Villanova University,Pennsylvania,91,96,90,87.70588235,0,6,11,0,2,,,89,87
+217493,Rhode Island School of Design,Rhode Island,91,91,87,85,0,4,8,0,34,100,,79,88
+231624,William & Mary,Virginia,91,81,84,88.6,0,6,9,0,4,100,,85,91
+134130,University of Florida,Florida,90,84,86,87.96551724,0,5,24,0,3,75,100,83,89
+139658,Emory University,Georgia,90,87,93,89.57894737,0,8,11,0,18,,,89,90
+164155,United States Naval Academy,Maryland,90,88,,85.5,0,6,14,0,1,100,75,75,90
+168218,Wellesley College,Massachusetts,90,89,92,89,0,7,15,0,14,,,89,89
+195030,University of Rochester,New York,90,93,86,85.46153846,0,5,8,0,24,100,100,83,87
+199847,Wake Forest University,North Carolina,90,84,93,88,0,6,9,0,9,50,100,91,86
+237057,Whitman College,Washington,90,93,83,73.5,0,3,9,0,12,100,100,57,79
+122931,Santa Clara University,California,89,79,93,90.42857143,0,3,18,0,6,100,100,93,90
+163286,University of Maryland-College Park,Maryland,89,87,82,83.86956522,0,13,10,0,4,80,100,83,85
+164988,Boston University,Massachusetts,89,89,86,85.33333333,0,5,10,0,23,100,100,88,84
+167835,Smith College,Massachusetts,89,98,86,83.17647059,0,5,12,0,14,,100,86,82
+168421,Worcester Polytechnic Institute,Massachusetts,89,87,83,86.25,0,3,9,0,7,57,,78,89
+192110,The Juilliard School,New York,89,92,89,91.42857143,0,6,8,0,25,,,80,100
+197221,Webb Institute,New York,89,,100,100,0,0,9,0,0,,,,100
+213385,Lafayette College,Pennsylvania,89,85,89,90.30769231,0,5,8,0,8,,,86,93
+240444,University of Wisconsin-Madison,Wisconsin,89,92,84,81.77777778,0,2,7,0,11,55,86,81,82
+110680,University of California-San Diego,California,88,86,84,81.38461538,0,2,24,0,14,43,92,74,82
+149781,Wheaton College,Illinois,88,77,85,79.81818182,0,3,8,0,3,100,,82,79
+153384,Grinnell College,Iowa,88,89,90,91.33333333,0,4,8,0,19,,,80,97
+161086,Colby College,Maine,88,84,90,86.84615385,0,5,8,0,10,100,100,85,88
+164739,Bentley University,Massachusetts,88,87,87,83.26666667,0,4,11,0,15,,50,84,83
+173902,Macalester College,Minnesota,88,91,85,83.29411765,0,6,10,1,13,0,100,76,86
+186867,Stevens Institute of Technology,New Jersey,88,78,78,82.94117647,0,2,15,0,3,,,75,84
+194666,Rabbinical College Bobover Yeshiva Bnei Zion,New York,88,,89,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
+197036,United States Military Academy,New York,88,93,,82.88,1,11,12,1,1,85,50,79,89
+204796,Ohio State University-Main Campus,Ohio,88,88,81,79.46153846,0,8,5,0,7,100,100,76,85
+228778,The University of Texas at Austin,Texas,88,87,81,82.3030303,0,5,28,0,5,79,80,84,82
+233374,University of Richmond,Virginia,88,88,83,89.125,0,6,10,0,12,,,91,88
+235316,Gonzaga University,Washington,88,91,82,80.57142857,0,1,13,0,4,90,100,75,81
+368443,Hussian College-Daymar College Clarksville,Tennessee,88,,92,74.13513514,2,29,8,1,1,,,67,100
+399911,Soka University of America,California,88,89,85,97.33333333,0,2,13,0,53,,100,80,100
+110653,University of California-Irvine,California,87,86,85,80.72413793,0,2,27,0,13,100,82,77,81
+130624,United States Coast Guard Academy,Connecticut,87,86,,85.85714286,0,3,11,0,3,,,78,88
+139959,University of Georgia,Georgia,87,84,82,85.53846154,0,6,7,0,1,67,75,85,86
+156408,Centre College,Kentucky,87,79,80,82.53846154,0,6,7,0,5,100,,82,83
+160755,Tulane University of Louisiana,Louisiana,87,88,83,83.0625,0,7,9,0,7,100,100,78,87
+165015,Brandeis University,Massachusetts,87,91,84,81.14285714,0,6,8,0,21,100,100,84,79
+170286,Hillsdale College,Michigan,87,,,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
+193900,New York University,New York,87,88,86,86,0,8,16,0,26,88,67,86,86
+203535,Kenyon College,Ohio,87,93,82,78.36363636,0,3,8,0,12,,,90,74
+211291,Bucknell University,Pennsylvania,87,86,83,84.45454545,0,4,7,0,5,,,80,87
+215637,Walnut Hill College,Pennsylvania,87,,98,72.25,0,27,9,0,0,,,63,100
+233921,Virginia Polytechnic Institute and State University,Virginia,87,77,83,82.25,0,6,10,0,5,75,100,81,83
+110644,University of California-Davis,California,86,85,81,79.84615385,0,2,24,0,13,100,76,78,80
+110705,University of California-Santa Barbara,California,86,84,82,81,0,2,25,0,12,86,85,81,81
+126678,Colorado College,Colorado,86,93,88,76.78571429,0,3,11,0,6,60,,87,74
+187134,The College of New Jersey,New Jersey,86,100,80,79.56521739,0,5,18,0,1,,,78,80
+199193,North Carolina State University at Raleigh,North Carolina,86,88,81,81.42857143,0,6,8,0,3,78,67,78,84
+201645,Case Western Reserve University,Ohio,86,79,84,88.23529412,0,6,11,0,14,100,0,96,84
+212577,Franklin and Marshall College,Pennsylvania,86,86,82,82.33333333,0,5,10,0,19,100,,79,84
+217402,Providence College,Rhode Island,86,72,82,81.28571429,0,4,10,0,2,100,100,82,81
+110422,California Polytechnic State University-San Luis Obispo,California,85,81,81,79.59090909,0,1,21,0,1,86,71,92,79
+121257,Pitzer College,California,85,68,92,86.05555556,0,5,13,0,7,,,94,83
+124292,Thomas Aquinas College,California,85,100,77,92,0,0,20,0,6,,,,92
+131469,George Washington University,District of Columbia,85,83,85,82.47619048,0,8,13,0,9,,100,80,84
+134097,Florida State University,Florida,85,77,83,86.25806452,0,8,23,0,2,62,100,87,86
+145637,University of Illinois Urbana-Champaign,Illinois,85,88,77,73.78947368,0,6,13,0,15,67,50,69,76
+174844,St Olaf College,Minnesota,85,85,84,73.75,0,3,9,0,10,,,67,76
+183239,Saint Anselm College,New Hampshire,85,100,83,80.8,0,1,4,0,1,0,,88,79
+157863,Union College,New York,85,83,86,86.15384615,0,4,9,0,10,,,82,88
+197708,Yeshiva University,New York,85,89,76,86,0,0,2,0,7,,,100,86
+202523,Denison University,Ohio,85,89,83,88.61538462,0,6,7,0,17,,,94,84
+217882,Clemson University,South Carolina,85,78,79,73.30769231,0,5,8,0,1,100,,69,76
+218070,Furman University,South Carolina,85,50,82,87.5,0,6,6,0,4,75,,90,85
+221351,Rhodes College,Tennessee,85,86,73,76.5,0,10,6,0,7,33,,78,74
+446604,Uta Mesivta of Kiryas Joel,New York,85,,100,URM proportions reported; missing matching grad rates,0,0,0,0,1,,,,67
+476601,Bais HaMedrash and Mesivta of Baltimore,Maryland,85,,100,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
+111948,Chapman University,California,84,75,80,83.9,0,2,18,0,3,100,,74,85
+121150,Pepperdine University,California,84,79,86,89.36363636,0,4,18,0,9,80,100,82,91
+123165,Scripps College,California,84,92,88,88.29411765,0,4,13,0,4,,100,86,89
+128902,Connecticut College,Connecticut,84,87,88,88,0,4,12,0,8,,,88,88
+129242,Fairfield University,Connecticut,84,74,75,76.375,0,1,7,0,2,0,,72,77
+130590,Trinity College,Connecticut,84,86,82,81.14285714,0,6,8,0,14,,,68,91
+135726,University of Miami,Florida,84,80,81,82.54545455,0,9,24,0,9,100,0,76,85
+174066,University of Minnesota-Twin Cities,Minnesota,84,85,75,77.57142857,0,8,6,0,5,50,80,78,77
+186380,Rutgers University-New Brunswick,New Jersey,84,84,80,76.59090909,0,7,15,0,7,50,84,80,75
+194824,Rensselaer Polytechnic Institute,New York,84,90,78,74.625,0,5,11,0,12,50,100,65,79
+195526,Skidmore College,New York,84,82,89,86.42857143,0,4,10,0,9,,,90,85
+212009,Dickinson College,Pennsylvania,84,90,84,80.90909091,0,4,7,0,13,100,100,86,78
+215293,University of Pittsburgh-Pittsburgh Campus,Pennsylvania,84,77,77,75.18181818,0,5,6,0,4,100,,79,72
+228723,Texas A & M University-College Station,Texas,84,88,75,77.48148148,0,2,25,0,1,95,67,71,78
+228875,Texas Christian University,Texas,84,87,76,79.71428571,0,4,17,0,5,82,33,70,82
+236948,University of Washington-Seattle Campus,Washington,84,89,79,77.18181818,0,3,8,0,12,74,74,75,78
+120254,Occidental College,California,83,69,82,76.71428571,0,4,17,0,5,,,84,75
+122436,University of San Diego,California,83,84,82,87.42857143,0,4,24,0,7,0,63,78,89
+129020,University of Connecticut,Connecticut,83,79,74,75,0,7,15,0,9,50,100,75,75
+166629,University of Massachusetts-Amherst,Massachusetts,83,81,78,77.30769231,0,5,8,0,7,75,100,81,75
+166939,Mount Holyoke College,Massachusetts,83,84,79,73.69230769,0,5,8,0,23,,,78,71
+177816,Kenrick Glennon Seminary,Missouri,83,,,No URM enrollment,,,,,,,,,100
+190372,The Cooper Union for the Advancement of Science and Art,New York,83,78,87,85.29411765,0,5,12,0,13,,,86,85
+191241,Fordham University,New York,83,75,86,80,0,6,18,0,7,100,,74,82
+194116,New York School of Interior Design,New York,83,0,100,100,0,5,14,0,11,,,,100
+195216,St Lawrence University,New York,83,89,76,68.33333333,0,3,6,0,10,0,,71,67
+196079,Binghamton University,New York,83,76,79,80.05555556,0,5,13,0,4,75,,75,82
+196413,Syracuse University,New York,83,78,79,80.10526316,1,7,11,0,13,36,100,85,81
+198516,Elon University,North Carolina,83,95,78,79.5,0,6,6,0,2,100,,77,82
+202073,Cleveland Institute of Music,Ohio,83,81,100,66.66666667,2,4,8,0,15,,,100,50
+204501,Oberlin College,Ohio,83,85,82,84,0,5,8,0,10,,,84,84
+211273,Bryn Mawr College,Pennsylvania,83,88,77,76.33333333,0,5,10,0,14,,,83,73
+214175,Muhlenberg College,Pennsylvania,83,74,92,81.86666667,0,4,11,0,1,,,87,80
+214777,Pennsylvania State University-Main Campus,Pennsylvania,83,84,73,73.33333333,0,4,8,0,11,63,50,68,76
+217165,Bryant University,Rhode Island,83,85,72,81.45454545,0,4,7,0,5,100,,77,84
+218973,Wofford College,South Carolina,83,100,71,83.84615385,0,7,6,0,2,,,76,93
+239105,Marquette University,Wisconsin,83,76,75,72.5,0,5,15,0,2,33,100,68,74
+243780,Purdue University-Main Campus,Indiana,83,86,76,78.11111111,0,2,7,0,11,100,56,82,77
+481058,Grace Mission University,California,83,,100,URM proportions reported; missing matching grad rates,0,0,19,0,0,,,,
+484844,Minerva University,California,83,84,,67,0,0,1,0,89,,,,67
+117946,Loyola Marymount University,California,82,78,84,81.77419355,0,7,24,0,10,,100,81,82
+126775,Colorado School of Mines,Colorado,82,85,78,75,0,1,12,0,3,50,100,75,75
+130943,University of Delaware,Delaware,82,79,69,74.4,0,6,9,0,6,63,100,72,76
+155177,Hesston College,Kansas,82,,80,50,2,8,14,0,18,,,,50
+167057,The New England Conservatory of Music,Massachusetts,82,89,87,78.2,0,2,3,0,37,,,83,75
+171100,Michigan State University,Michigan,82,79,73,65.92307692,0,7,6,0,6,65,100,65,67
+199184,University of North Carolina School of the Arts,North Carolina,82,100,82,89.5,0,10,14,0,3,100,,93,87
+212674,Gettysburg College,Pennsylvania,82,74,83,84.88235294,0,5,12,0,8,100,,87,84
+215770,Saint Joseph's University,Pennsylvania,82,80,73,72.875,0,7,9,0,2,100,80,65,79
+228246,Southern Methodist University,Texas,82,89,79,77.25,0,5,15,0,4,100,,69,80
 100858,Auburn University,Alabama,81,70,71,73,0,4,4,0,3,57,100,69,77
-100937,Birmingham-Southern College,Alabama,65,,60,50.57142857,0,15,6,0,2,,,44,67
-101435,Huntingdon College,Alabama,50,,46,54.12,0,19,6,0,0,,,51,64
-101480,Jacksonville State University,Alabama,52,49,43,37,0,24,0,0,2,29,0,37,60
-101709,University of Montevallo,Alabama,55,56,47,58.33333333,0,17,7,0,3,0,,56,64
-101879,University of North Alabama,Alabama,52,50,39,38.23529412,1,10,6,0,5,70,,31,45
+117557,Lincoln University,California,81,82,100,100,0,53,5,0,29,,,100,100
+123952,Southern California Institute of Architecture,California,81,93,0,50,0,2,12,0,56,,,,50
+151351,Indiana University-Bloomington,Indiana,81,85,70,74.66666667,0,4,8,0,5,83,100,68,78
+152318,Rose-Hulman Institute of Technology,Indiana,81,89,70,86.11111111,0,4,5,0,8,100,100,100,75
+179159,Saint Louis University,Missouri,81,65,72,76,0,6,6,0,3,60,,75,77
+192040,Jewish Theological Seminary of America,New York,81,,,100,0,0,5,0,2,,,,100
+192819,Marist College,New York,81,76,78,77.4,0,3,12,0,2,100,0,75,78
+202480,University of Dayton,Ohio,81,56,73,76.58333333,0,5,7,0,3,100,,76,77
+204024,Miami University-Oxford,Ohio,81,71,74,77.375,0,3,5,0,5,44,100,68,83
+212805,Grove City College,Pennsylvania,81,100,,88,0,0,1,0,1,,,100,88
+221519,The University of the South,Tennessee,81,83,84,78.4,0,4,6,0,5,100,,79,78
+223232,Baylor University,Texas,81,72,71,74.23809524,0,5,16,0,4,89,50,75,74
+232423,James Madison University,Virginia,81,71,26,78,0,4,8,0,1,100,100,78,78
+440396,New Saint Andrews College,Idaho,81,50,,URM proportions reported; missing matching grad rates,1,1,5,0,0,,,,
+168281,Wheaton College (Massachusetts),Massachusetts,80,75,76,79,0,6,7,0,4,,,79,79
+170301,Hope College,Michigan,80,78,71,59.33333333,0,4,8,0,3,,,50,64
+170532,Kalamazoo College,Michigan,80,74,78,77.23809524,0,5,16,0,5,,,78,77
+174914,University of St Thomas,Minnesota,80,44,71,66.85714286,0,6,8,0,4,67,,60,72
+202903,Gods Bible School and College,Ohio,80,80,83,100,0,5,5,0,10,,,100,
+209922,Reed College,Oregon,80,78,76,76.61538462,0,1,12,0,9,0,,60,78
+215929,University of Scranton,Pennsylvania,80,73,73,77.75,0,4,12,0,1,100,60,71,80
+113698,Dominican University of California,California,79,50,72,78.96969697,0,5,28,0,3,100,50,90,77
+131159,American University,District of Columbia,79,77,80,77.36842105,0,7,12,0,11,100,100,78,77
+145646,Illinois Wesleyan University,Illinois,79,81,77,76.875,0,7,9,0,5,,,78,76
+150163,Butler University,Indiana,79,64,66,73.4,0,4,6,0,1,100,100,74,73
+150400,DePauw University,Indiana,79,81,78,78,0,6,8,0,21,50,,70,84
+163046,Loyola University Maryland,Maryland,79,44,78,73.5,0,10,14,0,2,75,0,63,81
+166692,Massachusetts Maritime Academy,Massachusetts,79,100,75,65.83333333,1,1,5,0,1,,,40,71
+167996,Stonehill College,Massachusetts,79,80,73,71.08333333,0,5,7,0,2,,0,88,59
+182917,Magdalen College,New Hampshire,79,,100,67,0,2,2,0,0,,,,67
+192712,Manhattan School of Music,New York,79,88,44,91.17647059,0,6,11,0,36,,,75,100
+209825,University of Portland,Oregon,79,86,71,78.25,0,2,17,1,3,20,71,67,80
+230038,Brigham Young University,Utah,79,77,72,71.33333333,0,0,8,1,3,67,58,80,73
 102049,Samford University,Alabama,78,64,68,69.55555556,0,5,4,0,1,,,70,69
-102234,Spring Hill College,Alabama,62,43,45,62.22727273,1,13,9,0,9,,50,52,77
-102377,Tuskegee University,Alabama,67,,97,74.12903226,0,91,2,2,0,,,74,80
-104090,Brookline College-Phoenix,Arizona,63,,100,28.88888889,7,13,32,1,0,,,100,0
-104151,Arizona State University Campus Immersion,Arizona,67,75,60,58.96774194,1,4,26,0,7,46,44,49,61
-104179,University of Arizona,Arizona,68,71,60,61.60606061,1,4,28,0,5,45,50,56,63
+122409,San Diego State University,California,78,73,71,74.8974359,0,4,35,0,3,71,77,74,75
+136950,Rollins College,Florida,78,80,78,74.69565217,0,6,17,0,9,0,,71,76
+143084,Augustana College,Illinois,78,74,63,70.47058824,0,4,13,0,15,,100,72,70
+146481,Lake Forest College,Illinois,78,68,79,79.52173913,0,3,20,0,15,100,,83,79
+152530,Taylor University,Indiana,78,87,66,65,0,3,5,0,4,67,100,60,68
+165699,Endicott College,Massachusetts,78,85,72,67.83333333,0,1,5,0,1,50,100,42,73
+174747,College of Saint Benedict,Minnesota,78,43,70,52.25,0,3,9,0,3,75,100,38,57
+181002,Creighton University,Nebraska,78,64,71,60.83333333,0,2,10,0,2,100,33,75,58
+183044,University of New Hampshire-Main Campus,New Hampshire,78,63,76,72.4,0,1,4,0,1,83,,70,73
+196097,Stony Brook University,New York,78,72,80,74.71428571,0,6,15,0,10,50,100,74,75
+203368,John Carroll University,Ohio,78,77,71,71,0,5,5,0,2,50,,59,83
+212054,Drexel University,Pennsylvania,78,72,75,71,0,8,8,0,9,67,33,67,75
+213996,Messiah University,Pennsylvania,78,77,71,68.63636364,0,3,8,0,3,100,,57,73
+216339,Temple University,Pennsylvania,78,78,70,68.08,0,16,9,0,4,80,83,67,70
+218663,University of South Carolina-Columbia,South Carolina,78,79,67,76,0,9,6,0,3,60,71,74,79
+239017,Lawrence University,Wisconsin,78,86,66,73.2,0,4,11,0,12,0,100,71,74
+#N/A,Washington University of Science and Technology,Virginia,78,78,,URM proportions reported; missing matching grad rates,0,0,1,0,70,,,,
+110714,University of California-Santa Cruz,California,77,75,77,74.66666667,0,2,28,0,5,83,80,70,75
+127060,University of Denver,Colorado,77,79,75,73.47058824,0,3,14,0,3,100,,71,74
+130226,Quinnipiac University,Connecticut,77,68,66,66,0,4,11,0,2,100,,55,70
+136774,Ringling College of Art and Design,Florida,77,74,72,77.29411765,0,3,14,0,21,100,,88,75
+138600,Agnes Scott College,Georgia,77,78,76,77.93617021,0,33,14,0,3,,0,83,66
+148016,Principia College,Illinois,77,85,,75,0,3,6,0,39,,,,75
+163295,Maryland Institute College of Art,Maryland,77,78,69,74,0,10,10,0,24,,,71,77
+163976,St. John's College,Maryland,77,71,82,64.5,0,2,6,0,14,,,33,75
+165662,Emerson College,Massachusetts,77,77,77,78.125,0,5,11,0,16,,0,74,80
+169080,Calvin University,Michigan,77,80,69,65.5,0,4,4,0,12,0,,68,63
+179043,Rockhurst University,Missouri,77,100,60,58.71428571,0,8,13,0,2,67,,55,61
+197027,United States Merchant Marine Academy,New York,77,50,72,71.5,0,2,6,0,0,75,100,100,62
+234085,Virginia Military Institute,Virginia,77,67,75,70.26666667,0,7,8,0,2,60,50,74,67
+247773,Yeshiva Gedolah of Greater Detroit,Michigan,77,,100,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
+110671,University of California-Riverside,California,76,65,75,73.85714286,0,3,39,0,4,67,75,72,74
+121309,Point Loma Nazarene University,California,76,78,73,70.92857143,0,2,26,0,1,100,80,57,72
+131283,The Catholic University of America,District of Columbia,76,75,69,69.16,0,8,17,0,3,,,61,73
+132903,University of Central Florida,Florida,76,61,72,73.75,0,10,30,0,3,67,100,73,74
+143358,Bradley University,Illinois,76,65,71,66.86956522,0,9,14,0,2,100,,62,70
+165334,Clark University,Massachusetts,76,74,75,67.66666667,0,5,10,0,7,,,75,64
+173647,Gustavus Adolphus College,Minnesota,76,56,78,62.625,0,3,5,0,4,100,,57,66
+174792,Saint Johns University,Minnesota,76,85,64,58.66666667,1,4,7,0,3,100,100,46,60
+186876,Stockton University,New Jersey,76,,69,70.34482759,0,10,19,0,1,33,100,71,70
+188526,Albany College of Pharmacy and Health Sciences,New York,76,100,50,100,1,9,10,0,5,,,,100
+194578,Pratt Institute-Main,New York,76,86,67,61.33333333,0,4,11,0,32,,100,43,68
+195474,Siena College,New York,76,56,72,70.15384615,0,4,9,0,3,,50,66,72
+205957,Franciscan University of Steubenville,Ohio,76,50,71,71.75,0,1,19,0,1,50,,67,72
+207500,University of Oklahoma-Norman Campus,Oklahoma,76,74,68,69.9047619,3,5,13,0,3,63,100,66,73
+210401,Willamette University,Oregon,76,80,69,61.22222222,1,2,14,1,3,67,67,43,63
+212106,Duquesne University,Pennsylvania,76,65,76,66.5,0,5,5,0,2,50,100,57,76
+212197,Elizabethtown College,Pennsylvania,76,55,69,51.8,0,3,7,0,2,100,,70,44
+213826,Marywood University,Pennsylvania,76,67,66,78.25,0,3,9,0,1,,,43,90
+215798,Saint Vincent College,Pennsylvania,76,100,70,43,0,5,5,0,2,,100,40,46
+216278,Susquehanna University,Pennsylvania,76,100,67,70,0,6,6,0,1,0,,61,79
+217536,Salve Regina University,Rhode Island,76,73,71,59.54545455,0,2,9,0,3,,,71,57
+219000,Augustana University,South Dakota,76,77,67,60,1,3,4,0,10,50,,54,67
+229267,Trinity University,Texas,76,85,73,73.14285714,0,4,24,0,5,100,,62,75
+231174,University of Vermont,Vermont,76,63,72,67.66666667,0,1,5,0,1,,,71,67
+231712,Christopher Newport University,Virginia,76,71,70,70.5,0,8,8,0,0,67,100,72,69
+236328,University of Puget Sound,Washington,76,25,68,70.125,0,3,12,1,1,100,33,63,75
+237066,Whitworth University,Washington,76,88,72,70.9375,0,3,13,2,6,100,,62,73
+238324,Bellin College,Wisconsin,76,,100,URM proportions reported; missing matching grad rates,1,1,2,0,0,,,,
+496627,California Northstate University,California,76,,,100,0,4,1,0,1,,,,100
+109651,Art Center College of Design,California,75,77,81,77,0,1,10,0,44,,,67,78
+113582,Design Institute of San Diego,California,75,100,,0,2,9,20,0,0,,,,0
+126614,University of Colorado Boulder,Colorado,75,72,68,67,0,2,13,0,3,57,67,67,67
+145725,Illinois Institute of Technology,Illinois,75,72,74,73.2,0,5,20,0,19,,,74,73
+146427,Knox College,Illinois,75,78,75,74.84210526,0,6,13,0,18,,,68,78
+150455,Earlham College,Indiana,75,90,67,61.93333333,0,7,8,0,19,,,71,54
+152390,Saint Mary's College,Indiana,75,78,77,72.05882353,0,2,15,0,1,100,100,80,71
+152673,Wabash College,Indiana,75,91,65,59.26666667,0,4,11,0,5,,,60,59
+153269,Drake University,Iowa,75,70,66,59.38461538,0,6,7,0,4,50,,61,58
+167394,College of Our Lady of the Elms,Massachusetts,75,,64,59.31034483,0,11,18,0,1,,,50,65
+150145,Bethel University,Minnesota,75,33,65,45.83333333,0,5,7,0,0,100,100,40,50
+178396,University of Missouri-Columbia,Missouri,75,79,63,66.09090909,0,5,6,0,1,69,50,65,67
+196185,SUNY Oneonta,New York,75,67,66,66.18181818,0,5,17,0,0,80,100,60,68
+197869,Appalachian State University,North Carolina,75,82,73,70.27272727,0,3,8,0,1,46,100,71,70
+201654,Cedarville University,Ohio,75,100,64,61,0,1,3,0,2,100,,40,68
+214069,Misericordia University,Pennsylvania,75,,62,55.375,0,3,5,0,0,0,0,41,64
+232256,Hampden-Sydney College,Virginia,75,,63,58.85714286,0,8,6,0,0,50,,43,80
+451556,Southwest University at El Paso,Texas,75,,76,76.90217391,0,7,85,0,0,,0,100,75
+466930,Chamberlain University-Texas,Texas,75,,100,100,0,40,25,0,0,,,100,
+487375,Arizona College of Nursing-Las Vegas,Nevada,75,,100,100,1,16,31,3,0,,,,100
+122612,University of San Francisco,California,74,68,75,74.24137931,0,8,21,0,10,0,83,67,77
+125727,Westmont College,California,74,78,68,68.4,0,2,23,0,2,20,100,50,70
+137351,University of South Florida,Florida,74,79,74,72.26666667,0,8,22,0,9,100,71,73,72
+140447,Mercer University,Georgia,74,65,69,71.6,0,32,8,0,2,100,100,72,70
+141060,Spelman College,Georgia,74,100,73,73.88372093,1,85,0,0,0,64,,74,
+147129,Methodist College,Illinois,74,,67,URM proportions reported; missing matching grad rates,0,15,3,0,0,,,,
+153603,Iowa State University,Iowa,74,71,64,62.1,0,3,7,0,3,56,75,60,63
+153658,University of Iowa,Iowa,74,78,62,63.5,0,3,9,0,2,45,80,59,65
+153834,Luther College,Iowa,74,83,54,57.63636364,1,3,7,0,11,100,,31,63
+167783,Simmons University,Massachusetts,74,68,69,67.5,0,9,15,0,2,,,70,66
+173452,Martin Luther College,Minnesota,74,75,69,26.66666667,0,1,2,0,2,0,,0,40
+184348,Drew University,New Jersey,74,73,77,66.25,0,9,3,0,15,,,65,70
+185828,New Jersey Institute of Technology,New Jersey,74,70,74,66.42857143,0,10,25,0,6,100,,65,67
+190512,CUNY Bernard M Baruch College,New York,74,71,74,69.5,0,9,27,0,7,100,50,56,74
+191630,Hobart William Smith Colleges,New York,74,71,69,61.4375,0,7,9,0,8,100,100,53,68
+191968,Ithaca College,New York,74,76,64,65.66666667,0,5,10,0,3,50,,71,63
+195003,Rochester Institute of Technology,New York,74,71,70,70.57142857,0,5,9,0,4,50,100,68,72
+196088,University at Buffalo,New York,74,79,71,63.5,0,9,9,0,13,56,100,64,63
+196167,SUNY College at Geneseo,New York,74,54,71,62.90909091,0,4,7,0,1,,,61,64
+197151,School of Visual Arts,New York,74,84,62,54.25,0,3,9,0,54,,,61,52
+197735,Yeshivath Viznitz,New York,74,38,80,URM proportions reported; missing matching grad rates,0,0,0,0,2,,,,
+199218,University of North Carolina Wilmington,North Carolina,74,60,71,71,0,4,8,0,2,50,67,69,72
+206589,The College of Wooster,Ohio,74,74,78,73.375,0,10,6,0,15,,0,76,69
+206622,Xavier University,Ohio,74,68,68,55.94117647,0,11,6,0,1,,100,45,76
+216667,Washington & Jefferson College,Pennsylvania,74,88,70,62.58333333,0,7,5,0,2,0,,63,62
+231059,Saint Michael's College,Vermont,74,56,74,70.625,0,3,5,0,4,50,,70,71
+233295,Randolph-Macon College,Virginia,74,75,71,71.07142857,0,9,5,0,2,100,100,80,55
+236595,Seattle University,Washington,74,62,69,75.23809524,0,5,15,1,9,80,100,86,70
+241766,Puerto Rico Conservatory of Music,Puerto Rico,74,100,64,70,0,0,97,0,3,,,,70
+406033,Galen College of Nursing-San Antonio,Texas,74,,83,82.8125,0,11,53,0,0,,0,0,100
+100751,The University of Alabama,Alabama,73,73,59,62.47058824,0,11,6,0,1,58,57,60,67
+110413,California Lutheran University,California,73,58,74,74.33333333,0,5,40,0,3,100,50,61,76
+110583,California State University-Long Beach,California,73,66,70,69.40740741,0,4,50,0,3,71,40,62,70
+117751,The Master's University and Seminary,California,73,33,79,89.09090909,0,2,20,0,0,,0,60,92
+130253,Sacred Heart University,Connecticut,73,43,58,65.25,0,4,12,0,1,,,54,69
+139393,Covenant College,Georgia,73,75,70,85,1,1,0,0,3,100,,70,50
+140951,Savannah College of Art and Design,Georgia,73,76,64,61.7,1,12,7,0,17,55,67,58,69
+146719,Loyola University Chicago,Illinois,73,71,68,62.11111111,0,6,21,0,3,67,67,59,63
+167899,Springfield College,Massachusetts,73,83,58,54.78571429,0,5,9,0,4,67,,49,58
+169716,University of Detroit Mercy,Michigan,73,57,67,59.94444444,0,11,7,0,24,,100,58,63
+179265,University of Health Sciences and Pharmacy in St. Louis,Missouri,73,60,54,88.33333333,1,10,2,1,4,,,86,100
+180832,Clarkson College,Nebraska,73,,63,100,0,8,6,0,0,,,,100
+190044,Clarkson University,New York,73,71,61,52.66666667,0,3,6,0,5,0,,42,58
+195164,St Bonaventure University,New York,73,62,71,67.27272727,0,5,6,0,4,,,58,75
+196176,State University of New York at New Paltz,New York,73,80,70,73.4,0,7,23,0,1,,0,78,72
+196291,SUNY Maritime College,New York,73,100,63,67.5,0,5,15,0,2,,,42,76
+202046,Cleveland Institute of Art,Ohio,73,78,56,51.5,0,10,10,0,2,50,100,36,67
+209056,Lewis & Clark College,Oregon,73,100,77,74.85714286,0,3,11,0,5,56,80,78,74
+209551,University of Oregon,Oregon,73,80,65,66.5,0,3,15,0,2,62,58,59,68
+216524,Ursinus College,Pennsylvania,73,25,71,67,0,7,7,0,1,100,,76,58
+221759,The University of Tennessee-Knoxville,Tennessee,73,76,60,63.18181818,0,5,6,0,1,55,83,61,65
+222983,Austin College,Texas,73,71,74,68.35294118,1,7,26,0,1,67,100,81,65
+458210,West Coast University-Orange County,California,73,,100,52.77777778,0,3,32,1,0,,0,100,50
+462354,John Paul the Great Catholic University,California,73,100,65,65,0,1,31,1,0,,,,65
+110097,Biola University,California,72,80,64,60.52,0,3,22,0,7,67,67,35,64
+110370,California College of the Arts,California,72,83,52,65.15789474,0,4,15,0,36,0,100,47,70
+123554,Saint Mary's College of California,California,72,58,79,67.22222222,0,5,30,1,3,100,80,60,68
+164562,Assumption University,Massachusetts,72,25,64,64.33333333,0,5,10,0,1,,100,57,68
+180878,Bryan College of Health Sciences,Nebraska,72,,82,URM proportions reported; missing matching grad rates,1,3,3,0,0,,,,
+186584,Seton Hall University,New Jersey,72,72,64,60.91428571,0,11,24,0,1,100,,52,65
+189088,Bard College,New York,72,72,71,72,0,12,12,0,14,0,,71,73
+192323,Le Moyne College,New York,72,88,66,59.35294118,0,8,9,0,2,100,,53,65
+192703,Manhattan College,New York,72,52,86,65.65714286,0,6,29,0,3,,,64,66
+193973,Niagara University,New York,72,71,66,52.6,0,6,4,0,22,67,,51,55
+195304,Sarah Lawrence College,New York,72,79,72,68.42857143,0,4,10,0,6,,,72,67
+195720,St. John Fisher University,New York,72,,68,64.58333333,0,5,7,0,1,75,,57,70
+201885,University of Cincinnati-Main Campus,Ohio,72,75,59,63.66666667,0,8,4,0,5,50,50,62,67
+207971,University of Tulsa,Oklahoma,72,65,63,63.58333333,3,8,13,0,6,68,0,45,74
+215743,Saint Francis University,Pennsylvania,72,50,65,67,0,4,1,0,0,50,,68,63
+215947,Seton Hill University,Pennsylvania,72,67,56,44.81818182,0,7,4,0,2,,,47,41
+216764,West Chester University of Pennsylvania,Pennsylvania,72,80,63,57.38888889,0,11,7,0,0,,50,57,58
+219709,Belmont University,Tennessee,72,67,66,64.84615385,0,5,8,0,1,57,,63,66
+224323,University of Dallas,Texas,72,56,62,58.78571429,0,2,26,0,2,0,50,30,61
+228343,Southwestern University,Texas,72,33,61,67.81818182,0,6,27,0,2,17,100,67,68
+236230,Pacific Lutheran University,Washington,72,75,62,63.92,1,4,18,2,2,50,40,52,70
+239716,Saint Norbert College,Wisconsin,72,69,70,61.33333333,0,1,5,0,2,17,100,78,58
+163976,St. John's College,New Mexico,72,67,71,83,0,2,11,0,13,,,,83
 104586,Embry-Riddle Aeronautical University-Prescott,Arizona,71,74,64,60.42105263,1,2,15,1,9,67,100,33,61
-105330,Northern Arizona University,Arizona,59,50,52,51.71875,3,3,26,0,2,33,39,42,55
-105589,Prescott College,Arizona,55,100,50,72.22222222,1,4,4,0,1,50,,100,50
+107141,John Brown University,Arkansas,71,80,62,65.07692308,2,2,9,0,6,67,,50,68
+153108,Central College,Iowa,71,,70,56.25,0,3,5,0,0,50,,25,75
+163912,St. Mary's College of Maryland,Maryland,71,100,65,54.95,0,11,9,1,1,50,,59,50
+164216,Washington College,Maryland,71,56,68,66.7,1,11,9,0,4,,100,73,59
+166513,University of Massachusetts-Lowell,Massachusetts,71,76,65,60.81818182,0,8,14,0,3,,,64,59
+168740,Andrews University,Michigan,71,63,61,67.56756757,0,17,20,1,18,,,60,74
+178615,Truman State University,Missouri,71,54,59,71.33333333,0,2,4,0,8,89,50,62,76
+196103,SUNY College of Environmental Science and Forestry,New York,71,89,63,55.25,0,3,9,0,2,,0,50,57
+208822,George Fox University,Oregon,71,71,60,67.58823529,0,2,15,0,0,50,67,57,69
+209065,Linfield University,Oregon,71,89,73,63.7826087,1,1,20,1,2,67,60,0,67
+213251,Juniata College,Pennsylvania,71,63,66,66.66666667,0,4,8,0,11,,,38,81
+217484,University of Rhode Island,Rhode Island,71,67,61,58,0,5,11,0,1,57,0,58,58
+232186,George Mason University,Virginia,71,69,68,69,0,12,17,0,5,100,50,69,69
+233426,Roanoke College,Virginia,71,78,65,69.36363636,0,5,6,0,3,0,,65,73
+238333,Beloit College,Wisconsin,71,72,62,63.64,0,9,16,0,15,0,,63,64
+239318,Milwaukee School of Engineering,Wisconsin,71,31,69,60.75,0,3,9,0,4,,,36,69
+241331,Albizu University-San Juan,Puerto Rico,71,,70,71,0,0,99,0,0,,,,71
+412599,Remington College-Memphis Campus,Tennessee,71,,67,71,0,95,1,0,0,,,71,
+485768,Atlantis University,Florida,71,29,62,78.41269841,0,19,44,0,27,,,40,95
+120883,University of the Pacific,California,70,81,70,66.83333333,0,4,25,1,9,,100,45,69
+131520,Howard University,District of Columbia,70,86,65,65.45833333,1,65,6,0,4,0,33,69,38
+152600,Valparaiso University,Indiana,70,60,56,53.625,0,6,10,0,4,0,,53,54
+156213,Asbury University,Kentucky,70,93,61,59.72727273,0,4,7,0,5,,,33,75
+161518,Saint Joseph's College of Maine,Maine,70,,56,40.8,0,4,6,0,0,0,0,33,46
+163268,University of Maryland-Baltimore County,Maryland,70,68,62,65.40625,0,23,9,0,5,100,,64,69
+164076,Towson University,Maryland,70,55,69,66.5,0,30,10,0,2,20,100,67,65
+174491,University of Northwestern-St Paul,Minnesota,70,,63,36.5,0,4,4,0,1,50,0,29,44
+180106,Carroll College,Montana,70,25,66,34.16666667,0,1,5,0,1,0,,0,41
+183275,Thomas More College of Liberal Arts,New Hampshire,70,,70,100,2,0,6,0,2,,,,100
+186201,Ramapo College of New Jersey,New Jersey,70,57,62,66.51724138,0,6,23,0,1,71,,57,69
+193292,Molloy College,New York,70,0,58,59.28571429,0,10,25,0,1,33,100,45,65
+199139,University of North Carolina at Charlotte,North Carolina,70,71,66,69.74193548,0,17,14,0,2,60,100,72,67
+204936,Otterbein University,Ohio,70,75,56,64,0,9,6,1,0,100,,58,73
+209542,Oregon State University,Oregon,70,63,61,59.86666667,1,2,12,0,4,50,54,46,63
+212601,Gannon University,Pennsylvania,70,63,58,51.5,0,5,5,0,12,100,,50,53
+214157,Moravian University,Pennsylvania,70,58,58,59.25,0,5,15,0,1,100,,48,63
+217864,Citadel Military College of South Carolina,South Carolina,70,50,64,61.33333333,0,7,8,0,1,83,50,56,66
+220215,Freed-Hardeman University,Tennessee,70,47,56,53.6,1,4,0,0,2,100,100,42,80
+228787,The University of Texas at Dallas,Texas,70,37,69,61.2173913,0,5,18,0,4,50,67,62,61
+240329,University of Wisconsin-La Crosse,Wisconsin,70,71,60,52,0,0,4,0,1,100,,65,52
+475608,Criswell College,Texas,70,,67,URM proportions reported; missing matching grad rates,0,12,14,0,0,,,,
 106397,University of Arkansas,Arkansas,69,77,54,62.3125,1,4,11,0,2,56,20,62,63
-106458,Arkansas State University,Arkansas,51,29,43,42.94444444,0,13,5,0,6,43,,41,48
-106704,University of Central Arkansas,Arkansas,50,31,41,43.33333333,0,17,7,0,4,56,,41,49
 107044,Harding University,Arkansas,69,82,57,54,0,5,4,0,5,67,,42,69
 107080,Hendrix College,Arkansas,69,100,65,73.05555556,1,8,9,0,3,100,,81,63
-107141,John Brown University,Arkansas,71,80,62,65.07692308,2,2,9,0,6,67,,50,68
-107512,Ouachita Baptist University,Arkansas,65,86,53,46.76923077,1,6,6,0,2,50,,31,62
-109350,Antelope Valley Community College District,California,100,,,100,0,13,63,0,0,,,,100
-109651,Art Center College of Design,California,75,77,81,77,0,1,10,0,44,,,67,78
-109785,Azusa Pacific University,California,61,71,41,52.55555556,0,6,38,1,4,75,71,34,55
-110097,Biola University,California,72,80,64,60.52,0,3,22,0,7,67,67,35,64
-110361,California Baptist University,California,63,52,57,53.81632653,1,7,40,1,2,50,46,43,56
-110370,California College of the Arts,California,72,83,52,65.15789474,0,4,15,0,36,0,100,47,70
-110404,California Institute of Technology,California,94,100,90,88.56,0,3,22,0,9,,,100,87
-110413,California Lutheran University,California,73,58,74,74.33333333,0,5,40,0,3,100,50,61,76
-110422,California Polytechnic State University-San Luis Obispo,California,85,81,81,79.59090909,0,1,21,0,1,86,71,92,79
-110486,California State University-Bakersfield,California,50,48,46,48.66666667,0,4,68,0,1,50,0,43,49
-110495,California State University-Stanislaus,California,55,44,54,52.78461538,0,2,62,1,1,67,33,56,53
-110510,California State University-San Bernardino,California,54,56,53,53.40789474,0,5,71,0,2,50,0,45,54
-110529,California State Polytechnic University-Pomona,California,66,60,62,59.46428571,0,3,53,0,2,71,57,50,60
-110538,California State University-Chico,California,64,61,58,59.97560976,0,3,38,0,2,40,43,47,61
-110556,California State University-Fresno,California,56,49,54,56.0952381,0,3,60,0,2,56,33,38,57
 110565,California State University-Fullerton,California,69,65,66,65.88888889,0,2,52,0,2,60,57,63,66
-110583,California State University-Long Beach,California,73,66,70,69.40740741,0,4,50,0,3,71,40,62,70
-110592,California State University-Los Angeles,California,51,47,51,50.35,0,4,76,0,1,0,29,38,51
-110608,California State University-Northridge,California,56,53,53,52.01639344,0,5,56,0,3,25,57,41,53
-110617,California State University-Sacramento,California,54,57,52,51.80434783,0,6,39,1,2,13,58,43,53
-110635,University of California-Berkeley,California,94,94,89,86.45454545,0,2,20,0,13,100,93,81,87
-110644,University of California-Davis,California,86,85,81,79.84615385,0,2,24,0,13,100,76,78,80
-110653,University of California-Irvine,California,87,86,85,80.72413793,0,2,27,0,13,100,82,77,81
-110662,University of California-Los Angeles,California,92,91,89,89.28,0,3,22,0,9,81,80,84,90
-110671,University of California-Riverside,California,76,65,75,73.85714286,0,3,39,0,4,67,75,72,74
-110680,University of California-San Diego,California,88,86,84,81.38461538,0,2,24,0,14,43,92,74,82
-110705,University of California-Santa Barbara,California,86,84,82,81,0,2,25,0,12,86,85,81,81
-110714,University of California-Santa Cruz,California,77,75,77,74.66666667,0,2,28,0,5,83,80,70,75
+133951,Florida International University,Florida,69,70,70,69.93670886,0,12,67,0,7,33,100,64,71
+144740,DePaul University,Illinois,69,73,61,59.83333333,0,7,23,0,3,40,67,56,61
+149505,Trinity Christian College,Illinois,69,57,63,39.78125,0,13,19,0,7,50,,0,67
+150756,Hanover College,Indiana,69,50,68,68,1,5,3,0,5,0,100,84,64
+150941,Huntington University,Indiana,69,67,63,33.5,1,3,3,0,3,,,0,67
+155399,Kansas State University,Kansas,69,45,60,54.75,0,3,9,0,2,65,43,51,56
+157085,University of Kentucky,Kentucky,69,72,54,57.07692308,0,7,6,0,2,50,100,52,63
+157818,Transylvania University,Kentucky,69,0,60,61.5,0,5,5,0,1,,,73,50
+163851,Salisbury University,Maryland,69,71,61,64.33333333,0,14,7,0,1,29,67,62,69
+165936,Gordon College,Massachusetts,69,86,63,68.33333333,0,6,12,0,11,,,65,70
+168227,Wentworth Institute of Technology,Massachusetts,69,67,65,57.15789474,0,7,12,0,5,,100,66,52
+169983,Kettering University,Michigan,69,74,68,73.71428571,0,3,4,0,4,33,,80,69
+173300,Concordia College at Moorhead,Minnesota,69,44,53,48.75,1,4,3,0,7,33,,36,71
+173665,Hamline University,Minnesota,69,100,60,56.64,1,12,12,0,1,0,,59,59
+183071,University of New Hampshire at Manchester,New Hampshire,69,,62,38.46153846,0,3,10,0,0,,,0,50
+193308,Monroe College,New York,69,55,70,71.65822785,0,42,37,0,10,100,,74,69
+#N/A,Nazareth University,New York,69,60,60,56.25,0,5,7,0,1,,,58,55
+193654,The New School,New York,69,84,58,58.71428571,0,4,10,0,33,100,67,53,61
+195128,Russell Sage College,New York,69,100,60,55.54166667,1,11,12,0,1,100,,51,56
+195544,St. Joseph's University-New York,New York,69,,56,61.3,0,9,21,0,2,,100,55,64
+195809,St. John's University-New York,New York,69,62,62,65.33333333,0,10,20,0,2,71,75,60,68
+#N/A,State University of New York at Cortland,New York,69,100,66,66.22222222,0,5,13,0,1,33,,59,69
+196592,Touro University,New York,69,63,64,77.61904762,0,11,10,0,2,0,,100,53
+199412,Queens University of Charlotte,North Carolina,69,61,64,63.5,0,14,14,0,13,,100,59,68
+207458,Oklahoma City University,Oklahoma,69,77,63,57.45,2,5,13,0,4,67,,60,55
+212656,Geneva College,Pennsylvania,69,50,65,54.33333333,0,6,3,0,2,,,40,83
+217749,Bob Jones University,South Carolina,69,79,65,64.66666667,0,2,7,0,6,0,50,11,80
+219976,Lipscomb University,Tennessee,69,80,63,57.70588235,0,7,10,0,3,50,,63,54
+230816,Bennington College,Vermont,69,76,72,77.14285714,1,3,10,0,15,100,,100,68
+232681,University of Mary Washington,Virginia,69,50,64,59.2,0,8,12,0,2,,0,46,68
+377555,University of Washington-Bothell Campus,Washington,69,65,70,65,0,10,10,0,4,100,75,69,61
+104179,University of Arizona,Arizona,68,71,60,61.60606061,1,4,28,0,5,45,50,56,63
+122755,San Jose State University,California,68,70,66,58.2,0,4,31,0,4,25,64,52,59
+133492,Eckerd College,Florida,68,47,54,60.36363636,0,2,9,0,4,100,100,71,58
+134079,Florida Southern College,Florida,68,50,61,59.13636364,1,6,15,0,4,86,,45,63
+153250,Dordt University,Iowa,68,66,69,50.25,0,1,3,0,10,100,,33,56
+153825,Loras College,Iowa,68,75,51,64.66666667,0,5,10,0,4,,,64,65
+154712,Benedictine College,Kansas,68,50,55,60.35714286,0,3,11,0,1,50,0,25,70
+164748,Berklee College of Music,Massachusetts,68,74,56,56.66666667,0,6,12,0,29,0,,56,57
+166850,Merrimack College,Massachusetts,68,62,62,53.84615385,0,4,9,0,2,0,100,58,52
+171128,Michigan Technological University,Michigan,68,53,57,42.5,0,1,3,0,1,14,100,38,44
+176017,University of Mississippi,Mississippi,68,83,53,53.375,0,11,5,0,2,71,0,49,63
+183910,Caldwell University,New Jersey,68,85,55,53.58333333,0,17,31,0,15,,,51,55
+184782,Rowan University,New Jersey,68,53,61,54.5,0,11,13,0,2,50,100,48,60
+185572,Monmouth University,New Jersey,68,25,64,62.27272727,0,5,17,0,1,0,,53,65
+188429,Adelphi University,New York,68,71,60,55.51724138,0,9,20,0,6,0,,50,58
+191649,Hofstra University,New York,68,67,58,58.72,0,9,16,0,4,50,60,60,58
+194958,Roberts Wesleyan University,New York,68,65,60,57.39130435,1,14,9,0,3,,,57,58
+198695,High Point University,North Carolina,68,62,57,63,0,7,7,0,1,50,,62,64
+198950,Meredith College,North Carolina,68,75,60,55.82608696,1,9,13,0,1,50,,62,52
+204194,Mount Vernon Nazarene University,Ohio,68,100,60,57.6,0,2,3,0,1,,,54,60
+210669,Allegheny College,Pennsylvania,68,58,63,57.5,0,8,8,0,5,0,,53,62
+210739,DeSales University,Pennsylvania,68,0,60,52.44444444,0,5,13,0,0,,,38,58
+211556,Chatham University,Pennsylvania,68,0,66,62.5,0,5,5,0,4,,100,62,63
+213507,Lebanon Valley College,Pennsylvania,68,100,56,37,0,3,6,0,1,,100,25,43
+213987,Mercyhurst University,Pennsylvania,68,82,58,54.5,0,5,5,0,4,100,,46,63
+216366,Thomas Jefferson University,Pennsylvania,68,38,59,54.92307692,0,14,12,0,2,,,48,63
+216852,Widener University,Pennsylvania,68,55,58,51,0,18,6,0,2,50,,53,45
+217925,Columbia International University,South Carolina,68,100,66,25.73684211,0,17,2,0,5,,,17,100
+236133,Northwest University,Washington,68,80,61,61.21052632,0,5,13,1,10,50,50,64,61
+461148,New York Film Academy,California,68,,55,64.60869565,0,9,14,0,48,50,,50,74
+102377,Tuskegee University,Alabama,67,,97,74.12903226,0,91,2,2,0,,,74,80
+104151,Arizona State University Campus Immersion,Arizona,67,75,60,58.96774194,1,4,26,0,7,46,44,49,61
+121691,University of Redlands,California,67,82,63,67.46938776,1,5,42,1,1,29,57,56,70
+126818,Colorado State University-Fort Collins,Colorado,67,73,59,60.21052632,1,2,16,0,2,30,22,61,62
+127714,Nazarene Bible College,Colorado,67,,100,0,1,6,8,0,0,,,,0
+127918,Regis University,Colorado,67,50,57,65.93939394,0,5,28,0,2,100,100,60,67
+132842,Albizu University-Miami,Florida,67,,67,60,0,1,84,0,0,,,,60
+133881,Florida Institute of Technology,Florida,67,70,60,68.42105263,0,5,14,0,22,0,50,64,70
+143048,School of the Art Institute of Chicago,Illinois,67,77,57,65.06666667,0,4,11,0,30,,,68,64
+145691,Illinois College,Illinois,67,85,64,55.05263158,0,9,10,0,5,100,,44,65
+145813,Illinois State University,Illinois,67,53,53,50.5,0,11,13,0,1,50,50,44,56
+147828,Olivet Nazarene University,Illinois,67,56,51,50.77272727,0,9,12,1,2,,100,41,54
+154350,Simpson College,Iowa,67,50,59,53.38461538,0,4,9,0,2,,0,43,58
+154527,Wartburg College,Iowa,67,75,48,35,0,4,4,0,6,,,26,44
+155317,University of Kansas,Kansas,67,69,52,55.86666667,1,4,10,0,4,36,100,48,61
+156471,Galen College of Nursing-Louisville,Kentucky,67,,62,50,0,12,12,0,0,,,0,100
+159391,Louisiana State University and Agricultural & Mechanical College,Louisiana,67,79,54,59.18518519,1,17,9,0,2,61,57,56,65
+159656,Loyola University New Orleans,Louisiana,67,73,63,67.375,0,19,21,0,4,50,,70,65
+167598,Regis College,Massachusetts,67,100,55,56.27586207,0,10,19,0,1,,,53,58
+168254,Western New England University,Massachusetts,67,43,54,49,0,5,10,0,2,0,100,41,53
+174899,The College of Saint Scholastica,Minnesota,67,65,58,54.72727273,2,5,4,0,3,67,0,40,67
+178059,Maryville University of Saint Louis,Missouri,67,37,59,49.5,1,13,8,0,3,100,,49,44
+181543,Summit Christian College,Nebraska,67,,50,URM proportions reported; missing matching grad rates,0,0,5,0,0,,,,
+181604,College of Saint Mary,Nebraska,67,,56,44.53333333,0,7,23,0,2,50,,43,45
+186283,Rider University,New Jersey,67,43,60,59.25,0,14,18,0,4,67,,57,61
+196219,SUNY at Purchase College,New York,67,93,63,61.66666667,0,13,26,0,1,,50,71,57
+204635,Ohio Northern University,Ohio,67,100,61,44,0,3,0,0,2,0,,44,50
+213400,Lancaster Bible College,Pennsylvania,67,,52,48.69565217,0,20,3,0,0,,,50,40
+217518,Roger Williams University,Rhode Island,67,45,61,63.46153846,0,3,10,0,1,0,0,65,63
+221971,Union University,Tennessee,67,40,62,39,0,13,1,0,2,,,36,78
+226231,LeTourneau University,Texas,67,60,55,59,1,3,9,0,4,50,,38,67
+232557,Liberty University,Virginia,67,66,52,46.5625,0,9,7,0,1,43,17,40,55
+232566,Longwood University,Virginia,67,14,55,63.88888889,0,11,7,0,1,50,100,60,70
+238458,Carroll University,Wisconsin,67,42,62,52.76923077,0,2,11,0,2,100,100,35,56
+238616,Concordia University-Wisconsin,Wisconsin,67,69,62,40.42857143,0,8,6,0,7,,,43,37
+240338,Wisconsin Lutheran College,Wisconsin,67,,58,36,0,5,10,0,1,,,0,54
+386472,Herzing University-Orlando,Florida,67,,67,100,0,40,25,0,0,,,,100
+433004,American University of Health Sciences,California,67,,67,URM proportions reported; missing matching grad rates,3,10,31,4,0,,,,
+433420,California Aeronautical University,California,67,,,100,0,8,33,2,0,,,,100
+439701,The King's University,Texas,67,,75,50,2,9,13,0,1,,,,50
+445188,University of California-Merced,California,67,66,68,65.16666667,0,5,55,0,5,,75,78,64
+451103,Miami Regional University,Florida,67,,50,67,0,8,90,0,0,,,,67
+451866,Remington College-Shreveport Campus,Louisiana,67,,100,50,0,83,0,0,0,,,50,
+477039,West Coast University-Dallas,Texas,67,,0,47.27272727,1,29,26,0,3,,,0,100
+490081,America Evangelical University,California,67,67,100,URM proportions reported; missing matching grad rates,0,0,4,0,61,,,,
+490328,Mechon L'hoyroa,New York,67,,,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
+490504,Yeshiva Ohr Naftoli,New York,67,,50,URM proportions reported; missing matching grad rates,0,0,0,0,3,,,,
+110529,California State Polytechnic University-Pomona,California,66,60,62,59.46428571,0,3,53,0,2,71,57,50,60
+125763,Whittier College,California,66,33,65,67.48979592,0,5,44,0,8,100,50,63,68
+137847,The University of Tampa,Florida,66,68,58,53.2,0,3,12,0,5,100,,58,52
+141486,Chaminade University of Honolulu,Hawaii,66,,59,68.24,0,2,12,11,0,100,70,36,72
+146667,Lincoln Christian University,Illinois,66,100,56,36.64285714,0,11,3,0,3,,,33,50
+150677,Grace College and Theological Seminary,Indiana,66,75,56,47.8,0,3,7,0,4,,,31,55
+151801,Indiana Wesleyan University-Marion,Indiana,66,50,55,43.44444444,0,5,4,0,1,,0,39,49
+161299,Maine Maritime Academy,Maine,66,,61,40,1,2,4,0,1,,,0,60
+164270,McDaniel College,Maryland,66,,57,52.57142857,0,25,10,0,2,100,,52,54
+139630,Emmanuel College,Massachusetts,66,100,59,58.33333333,0,6,12,0,1,,,71,52
+166674,Massachusetts College of Art and Design,Massachusetts,66,74,69,60.64705882,0,3,14,0,4,50,,59,61
+170082,Grand Valley State University,Michigan,66,45,59,52.91666667,0,5,7,0,1,77,50,50,55
+186399,Rutgers University-Newark,New Jersey,66,71,64,60.28301887,0,19,34,0,2,0,33,59,61
+#N/A,Canisius University,New York,66,82,55,50.29411765,0,11,6,0,6,33,50,45,60
+#N/A,University at Albany,New York,66,60,64,66.75609756,0,22,19,0,3,17,25,70,63
+202763,The University of Findlay,Ohio,66,,56,25.6,0,4,1,0,3,0,,18,56
+204909,Ohio Wesleyan University,Ohio,66,75,61,66.91666667,0,7,5,0,7,,50,69,64
+209612,Pacific University,Oregon,66,100,64,55.2173913,0,2,19,2,2,33,60,43,56
+212832,Gwynedd Mercy University,Pennsylvania,66,,54,33.42857143,0,15,6,0,0,,,20,67
+#N/A,University of the Arts,Pennsylvania,66,65,63,68,0,21,14,0,2,100,,68,68
+216038,Slippery Rock University of Pennsylvania,Pennsylvania,66,25,57,51,0,4,3,0,2,17,100,45,59
+174914,University of St Thomas,Texas,66,54,67,66.125,0,7,49,0,4,0,,60,67
+455257,Yeshiva of Machzikai Hadas,New York,66,,69,URM proportions reported; missing matching grad rates,0,0,0,0,3,,,,
+100937,Birmingham-Southern College,Alabama,65,,60,50.57142857,0,15,6,0,2,,,44,67
+107512,Ouachita Baptist University,Arkansas,65,86,53,46.76923077,1,6,6,0,2,50,,31,62
+139144,Berry College,Georgia,65,67,66,71.88888889,0,8,10,0,0,,,73,71
+148584,University of St Francis,Illinois,65,20,48,61.63157895,0,9,29,0,3,50,,54,64
+150534,University of Evansville,Indiana,65,66,51,40.83333333,0,7,5,0,5,,,40,42
+152567,Trine University,Indiana,65,50,56,46,0,3,6,0,1,0,,32,53
+153144,Coe College,Iowa,65,75,55,53.91304348,0,10,13,0,3,100,,46,60
+163462,Mount St. Mary's University,Maryland,65,50,58,60.78787879,0,19,14,0,4,100,100,54,70
+164173,Stevenson University,Maryland,65,80,57,59.36842105,0,28,10,0,1,0,0,52,80
+170675,Lawrence Technological University,Michigan,65,85,49,42.35294118,0,13,4,0,11,,,36,63
+174817,Saint Mary's University of Minnesota,Minnesota,65,67,64,44.55555556,1,7,10,0,3,50,,36,50
+181297,Nebraska Methodist College of Nursing & Allied Health,Nebraska,65,,80,0,0,5,9,0,0,,,,0
+181464,University of Nebraska-Lincoln,Nebraska,65,72,52,51.25,0,3,9,0,4,54,100,46,53
+185590,Montclair State University,New Jersey,65,57,63,61.20408163,0,13,36,0,1,50,50,59,62
+186371,Rutgers University-Camden,New Jersey,65,63,58,53.525,0,19,21,0,2,100,100,53,54
+#N/A,State University of New York at Plattsburgh,New York,65,75,58,56.53846154,0,12,14,0,4,100,,56,57
+198464,East Carolina University,North Carolina,65,67,61,61.34615385,0,17,9,0,1,54,86,61,62
+201195,Baldwin Wallace University,Ohio,65,67,60,54,0,7,7,0,1,50,,47,61
+203517,Kent State University at Kent,Ohio,65,60,56,56.15384615,0,9,4,0,3,57,67,54,61
+204176,Mount Carmel College of Nursing,Ohio,65,,41,53.33333333,1,24,3,0,0,,,60,0
+204857,Ohio University-Main Campus,Ohio,65,57,56,59.6,0,6,4,0,1,40,,58,62
+207388,Oklahoma State University-Main Campus,Oklahoma,65,78,53,54.72222222,5,4,9,0,2,58,33,50,55
+213367,La Salle University,Pennsylvania,65,58,58,54.66666667,0,25,17,0,4,100,67,49,63
+215655,Robert Morris University,Pennsylvania,65,75,60,26.25,0,6,2,0,5,100,,35,0
+217819,College of Charleston,South Carolina,65,63,55,59.07692308,0,6,7,0,1,70,67,58,60
+227845,Saint Edward's University,Texas,65,70,70,66.41818182,0,4,51,0,7,100,100,59,67
+230764,University of Utah,Utah,65,72,54,56.4,0,1,14,0,6,44,33,62,56
+#N/A,Westminster University,Utah,65,75,62,67.125,0,2,13,1,5,40,0,56,74
+234030,Virginia Commonwealth University,Virginia,65,56,61,61.625,0,21,11,0,2,60,33,63,59
+236577,Seattle Pacific University,Washington,65,73,50,59.4,0,7,17,1,6,25,56,56,61
+237011,Western Washington University,Washington,65,80,55,60.84615385,0,2,11,0,1,54,43,60,61
+238476,Carthage College,Wisconsin,65,80,52,49,0,5,15,0,1,57,100,46,50
+240268,University of Wisconsin-Eau Claire,Wisconsin,65,50,56,50.8,0,1,4,0,2,80,,50,51
+451927,Patrick Henry College,Virginia,65,,,75,0,0,6,0,0,,,,75
+100663,University of Alabama at Birmingham,Alabama,64,63,55,55.6875,0,25,7,0,3,55,100,57,51
+110538,California State University-Chico,California,64,61,58,59.97560976,0,3,38,0,2,40,43,47,61
 111081,California Institute of the Arts,California,64,82,50,64,0,4,14,0,28,50,,50,68
+137546,Stetson University,Florida,64,60,59,57.96774194,0,12,19,0,7,,,69,51
+144962,Elmhurst University,Illinois,64,100,59,58.39393939,0,5,28,0,3,100,,27,64
+150136,Ball State University,Indiana,64,73,65,59.1875,0,9,7,0,1,,50,57,62
+150668,Goshen College,Indiana,64,100,54,42.32352941,0,5,29,0,11,0,,50,41
+151786,Marian University,Indiana,64,50,51,44.44444444,0,15,12,0,3,0,,40,50
+154095,University of Northern Iowa,Iowa,64,63,57,52.33333333,0,3,6,0,1,46,50,51,53
+154235,Saint Ambrose University,Iowa,64,67,50,46.33333333,0,5,10,0,3,100,,25,57
+164368,Hult International Business School,Massachusetts,64,,,URM proportions reported; missing matching grad rates,0,1,4,0,76,,,,
+169442,College for Creative Studies,Michigan,64,50,53,58.73684211,0,13,6,0,7,,,48,82
+175005,St Catherine University,Minnesota,64,50,59,60.07407407,0,14,13,0,0,,0,49,72
+177214,Drury University,Missouri,64,64,53,55.75,2,3,2,1,7,67,0,62,63
+179946,Westminster College,Missouri,64,83,45,58.5,1,7,4,0,2,0,,50,88
+196194,State University of New York at Oswego,New York,64,66,61,54.44,0,11,14,0,4,71,0,55,54
+200217,University of Mary,North Dakota,64,100,53,59.66666667,1,2,0,0,0,29,,75,60
+211088,Arcadia University,Pennsylvania,64,17,55,51.65217391,0,13,10,0,5,100,,46,59
+213668,Lycoming College,Pennsylvania,64,63,64,58.15384615,0,12,14,0,3,,,49,66
+217059,York College of Pennsylvania,Pennsylvania,64,100,55,57.71428571,0,6,8,0,1,,,60,56
+229115,Texas Tech University,Texas,64,70,57,59.02857143,0,6,29,0,2,62,38,64,58
+230852,Champlain College,Vermont,64,67,52,55.75,0,6,10,0,0,100,,47,61
+436836,University of Connecticut-Stamford,Connecticut,64,65,62,55.16326531,0,15,34,0,5,,,51,57
+458229,West Coast University-Ontario,California,64,,75,25,1,6,47,1,0,,,,25
+100706,University of Alabama in Huntsville,Alabama,63,68,50,50,1,9,7,0,1,33,,48,55
+104090,Brookline College-Phoenix,Arizona,63,,100,28.88888889,7,13,32,1,0,,,100,0
+110361,California Baptist University,California,63,52,57,53.81632653,1,7,40,1,2,50,46,43,56
 111188,California State University Maritime Academy,California,63,0,63,57.59259259,1,3,22,1,0,100,60,25,60
-111948,Chapman University,California,84,75,80,83.9,0,2,18,0,3,100,,74,85
 112075,Concordia University-Irvine,California,63,32,61,56.1,0,4,25,1,7,0,0,52,59
-112260,Claremont McKenna College,California,91,87,100,93.45454545,0,6,16,0,15,,,100,91
-113582,Design Institute of San Diego,California,75,100,,0,2,9,20,0,0,,,,0
-113616,Dharma Realm Buddhist University,California,100,,,No URM data submitted,,,,,,,,,
-113698,Dominican University of California,California,79,50,72,78.96969697,0,5,28,0,3,100,50,90,77
-114813,Fresno Pacific University,California,50,0,44,42.30434783,1,6,61,1,3,100,0,53,41
-115409,Harvey Mudd College,California,92,100,93,85.22222222,0,6,21,0,10,,100,86,85
-115728,Holy Names University,California,54,50,52,49.4375,0,19,29,2,5,,,44,53
-115773,Humphreys University-Stockton and Modesto Campuses,California,100,,100,100,1,6,43,1,14,,,,100
-116226,Interior Designers Institute,California,100,,,URM proportions reported; missing matching grad rates,1,4,15,0,3,,,,
-116846,American Jewish University,California,50,100,50,0,0,2,10,0,0,,,0,
 117140,University of La Verne,California,63,54,59,61.74285714,0,8,62,0,3,100,50,52,63
 117168,Laguna College of Art and Design,California,63,100,59,69.75,1,2,22,0,5,,0,100,67
-117557,Lincoln University,California,81,82,100,100,0,53,5,0,29,,,100,100
-117627,La Sierra University,California,54,59,50,47.36842105,0,6,51,0,9,,40,8,52
-117751,The Master's University and Seminary,California,73,33,79,89.09090909,0,2,20,0,0,,0,60,92
-117946,Loyola Marymount University,California,82,78,84,81.77419355,0,7,24,0,10,,100,81,82
-118693,Menlo College,California,57,58,56,59.10810811,1,4,31,2,22,,63,58,59
-119173,Mount Saint Mary's University,California,61,,62,61,0,7,56,0,1,,100,77,59
-120254,Occidental College,California,83,69,82,76.71428571,0,4,17,0,5,,,84,75
-120403,Otis College of Art and Design,California,62,62,66,70.76923077,0,6,20,0,26,33,,40,80
-120883,University of the Pacific,California,70,81,70,66.83333333,0,4,25,1,9,,100,45,69
-121150,Pepperdine University,California,84,79,86,89.36363636,0,4,18,0,9,80,100,82,91
-121257,Pitzer College,California,85,68,92,86.05555556,0,5,13,0,7,,,94,83
-121309,Point Loma Nazarene University,California,76,78,73,70.92857143,0,2,26,0,1,100,80,57,72
-121345,Pomona College,California,95,91,96,93.92307692,0,10,16,0,12,100,,89,97
-121691,University of Redlands,California,67,82,63,67.46938776,1,5,42,1,1,29,57,56,70
-122409,San Diego State University,California,78,73,71,74.8974359,0,4,35,0,3,71,77,74,75
-122436,University of San Diego,California,83,84,82,87.42857143,0,4,24,0,7,0,63,78,89
 122506,San Francisco Conservatory of Music,California,63,67,64,68.71428571,0,4,10,0,33,,,33,83
-122597,San Francisco State University,California,55,55,51,48.73333333,0,6,38,1,4,33,43,48,49
-122612,University of San Francisco,California,74,68,75,74.24137931,0,8,21,0,10,0,83,67,77
-122728,William Jessup University,California,52,17,41,41.57142857,1,8,24,2,3,67,50,41,40
-122755,San Jose State University,California,68,70,66,58.2,0,4,31,0,4,25,64,52,59
-122931,Santa Clara University,California,89,79,93,90.42857143,0,3,18,0,6,100,100,93,90
-123165,Scripps College,California,84,92,88,88.29411765,0,4,13,0,4,,100,86,89
-123280,Shasta Bible College and Graduate School,California,50,,100,URM proportions reported; missing matching grad rates,0,0,17,0,0,,,,
-123299,Shasta College,California,100,,100,100,2,2,19,0,0,,,100,
-123554,Saint Mary's College of California,California,72,58,79,67.22222222,0,5,30,1,3,100,80,60,68
+129774,Mitchell College,Connecticut,63,,58,66.64516129,0,14,17,0,0,0,0,48,82
+133553,Embry-Riddle Aeronautical University-Daytona Beach,Florida,63,62,58,54.66666667,0,4,11,0,9,,50,51,56
+136172,University of North Florida,Florida,63,67,63,62.57142857,0,12,16,0,2,33,100,66,60
+147660,North Central College,Illinois,63,89,55,56.47619048,0,5,16,0,5,,,58,56
+150604,Franklin College,Indiana,63,100,52,47,0,5,5,0,1,0,,44,50
+153162,Cornell College,Iowa,63,80,56,60.88235294,1,7,9,0,3,50,,43,76
+154101,Northwestern College,Iowa,63,67,51,39.11111111,0,2,7,0,4,100,,29,42
+170037,Cornerstone University,Michigan,63,89,56,37.61538462,0,7,6,0,7,,,21,57
+171492,Northwood University,Michigan,63,50,55,53.66666667,0,8,7,0,2,0,,28,83
+176080,Mississippi State University,Mississippi,63,65,47,46.3,1,15,4,0,1,38,75,44,57
+178697,College of the Ozarks,Missouri,63,100,61,70,1,1,5,0,2,100,0,40,70
+196121,SUNY Brockport,New York,63,63,58,53.28571429,0,12,9,0,1,50,0,55,51
+200280,University of North Dakota,North Dakota,63,39,53,51,1,2,5,0,4,40,,39,58
+200332,North Dakota State University-Main Campus,North Dakota,63,73,53,42,0,3,3,0,1,50,50,36,48
+207582,Oral Roberts University,Oklahoma,63,71,53,51.96428571,3,12,13,0,15,40,,56,51
+210775,Alvernia University,Pennsylvania,63,33,52,42.16,0,11,14,0,4,,0,36,47
+212133,Eastern University,Pennsylvania,63,50,56,49.23255814,0,28,15,0,3,,,44,59
+220613,Lee University,Tennessee,63,64,53,45.6,0,4,1,0,2,50,100,32,100
+225511,University of Houston,Texas,63,66,62,57.54166667,0,11,37,0,5,0,100,56,58
+232043,Eastern Mennonite University,Virginia,63,44,49,46.71428571,0,11,10,0,5,0,,41,53
+262129,New College of Florida,Florida,63,60,57,49.76190476,0,4,17,0,4,,,70,45
+376224,CEM College-Humacao,Puerto Rico,63,,60,63,0,0,100,0,0,,,,63
+486901,Milligan University,Tennessee,63,67,61,59.91666667,0,5,7,0,7,,,50,67
+102234,Spring Hill College,Alabama,62,43,45,62.22727273,1,13,9,0,9,,50,52,77
+120403,Otis College of Art and Design,California,62,62,66,70.76923077,0,6,20,0,26,33,,40,80
+129941,University of New Haven,Connecticut,62,64,54,51.63333333,0,11,19,0,2,100,50,51,52
+133669,Florida Atlantic University,Florida,62,57,62,65,0,18,29,0,3,33,100,65,65
+136215,Nova Southeastern University,Florida,62,59,54,58.10204082,0,15,34,0,5,100,,47,63
+139861,Georgia College & State University,Georgia,62,57,60,68,0,3,6,0,1,0,0,72,66
+141574,University of Hawaii at Manoa,Hawaii,62,73,59,45.52941176,0,1,14,2,4,13,46,38,46
+145600,University of Illinois Chicago,Illinois,62,68,58,52.54545455,0,8,36,0,8,,50,55,52
+146612,Lewis University,Illinois,62,67,55,48.96774194,0,7,24,0,2,,100,42,51
+156295,Berea College,Kentucky,62,93,60,62.36363636,0,18,15,0,8,,,56,70
+157289,University of Louisville,Kentucky,62,71,53,58.5,0,15,7,0,1,0,0,62,51
+157401,Murray State University,Kentucky,62,56,54,50.66666667,0,6,3,0,5,50,,49,54
+161457,University of New England,Maine,62,75,51,11.33333333,0,4,2,0,0,0,,17,0
+166656,MCPHS University,Massachusetts,62,53,52,48.5,0,12,12,0,14,,,43,54
+166911,Montserrat College of Art,Massachusetts,62,,57,65.6,1,3,12,0,1,,,60,67
+168591,Alma College,Michigan,62,100,56,43.5,0,4,4,0,3,50,,29,58
+169248,Central Michigan University,Michigan,62,67,51,50.25,1,10,5,0,2,29,29,51,53
+174233,University of Minnesota-Duluth,Minnesota,62,63,51,53.4,0,2,3,0,1,43,100,57,51
+176053,Mississippi College,Mississippi,62,32,46,47,0,15,3,0,4,50,50,43,67
+178411,Missouri University of Science and Technology,Missouri,62,57,49,57.5,0,3,5,0,2,50,,50,62
+179955,William Jewell College,Missouri,62,67,48,56.42105263,1,8,11,0,3,,100,46,64
+182290,University of Nevada-Reno,Nevada,62,46,53,58.4137931,1,4,24,0,1,62,47,60,58
+196112,SUNY Polytechnic Institute,New York,62,,54,51.33333333,0,8,10,0,1,,0,58,46
+199607,Salem College,North Carolina,62,50,55,59.0625,0,14,18,0,1,,,54,63
+204185,University of Mount Union,Ohio,62,40,53,33.3,0,7,3,0,3,33,50,27,48
+211468,Cedar Crest College,Pennsylvania,62,40,54,48,0,9,15,0,5,100,,53,45
+211583,Chestnut Hill College,Pennsylvania,62,100,52,52,0,28,13,0,3,,,52,52
+179946,Westminster College,Pennsylvania,62,50,51,48,0,6,4,0,0,67,,42,57
+220473,Johnson University,Tennessee,62,100,60,78.57142857,0,4,3,0,2,,,100,50
+221661,Southern Adventist University,Tennessee,62,83,48,56.81818182,0,6,27,0,6,,100,47,59
+232308,Hollins University,Virginia,62,83,53,50.25,0,15,9,0,8,67,100,33,79
+233541,Shenandoah University,Virginia,62,60,55,37.8,2,8,10,0,0,25,,37,41
+236896,Walla Walla University,Washington,62,71,52,64.04,0,3,22,0,7,25,50,57,65
+236939,Washington State University,Washington,62,64,53,53.04761905,1,3,16,1,3,47,40,49,55
+238661,Edgewood College,Wisconsin,62,50,56,65.4,0,4,11,0,1,,,50,71
+240189,University of Wisconsin-Whitewater,Wisconsin,62,43,52,48.15384615,0,4,9,0,1,0,0,35,54
+441229,Smith Chason College,California,62,,100,57,1,8,44,2,0,,,,57
+442426,St Louis College of Health Careers-Fenton,Missouri,62,,63,100,0,53,2,0,0,,,100,
+463056,University of Connecticut-Hartford Campus,Connecticut,62,89,61,48.66666667,0,14,19,0,2,50,,55,44
+109785,Azusa Pacific University,California,61,71,41,52.55555556,0,6,38,1,4,75,71,34,55
+119173,Mount Saint Mary's University,California,61,,62,61,0,7,56,0,1,,100,77,59
+126669,Colorado Christian University,Colorado,61,,57,47.37037037,1,12,14,0,0,33,,42,53
+130314,University of Saint Joseph,Connecticut,61,80,51,48.75862069,0,11,18,0,1,0,,50,48
+142285,University of Idaho,Idaho,61,74,53,60.07692308,1,1,11,0,4,63,25,36,62
+162760,Hood College,Maryland,61,67,57,56.10344828,0,17,12,0,2,,,47,69
+166391,Lasell University,Massachusetts,61,55,58,49.44,0,11,14,0,2,,,50,49
+166452,Lesley University,Massachusetts,61,71,59,62.75,1,10,17,0,3,100,,62,61
+168786,Aquinas College,Michigan,61,63,60,55.2,0,3,7,0,5,100,,44,60
+177339,Evangel University,Missouri,61,0,53,60.41666667,1,5,7,0,2,,,54,65
+181020,Doane University,Nebraska,61,75,49,35.875,0,5,11,0,3,,100,29,39
+184694,Fairleigh Dickinson University-Florham Campus,New Jersey,61,67,57,54,0,10,25,0,0,100,,44,58
+188854,American Musical and Dramatic Academy,New York,61,67,55,67.61111111,0,17,19,0,14,0,0,75,61
+191676,Houghton University,New York,61,47,52,27.125,0,7,1,0,6,0,0,31,0
+192749,Manhattanville College,New York,61,63,54,57.48780488,0,10,31,0,3,100,100,59,57
+193353,Mount Saint Mary College,New York,61,50,56,52.42424242,0,8,25,0,0,0,0,35,58
+194310,Pace University,New York,61,64,56,58.06896552,0,9,20,0,10,100,,56,59
+200004,Western Carolina University,North Carolina,61,75,55,52.66666667,1,6,8,0,2,44,33,47,58
+201548,Capital University,Ohio,61,57,45,46.66666667,0,12,6,0,2,67,50,43,54
+213011,Immaculata University,Pennsylvania,61,100,54,44.36842105,0,10,9,0,1,0,,42,47
+214148,Moore College of Art and Design,Pennsylvania,61,100,64,66.66666667,0,16,7,1,0,,100,50,100
+216311,Talmudical Yeshiva of Philadelphia,Pennsylvania,61,,33,URM proportions reported; missing matching grad rates,0,0,0,0,3,,,,
+218964,Winthrop University,South Carolina,61,60,55,53.61538462,0,31,8,0,1,100,,53,56
+221892,Trevecca Nazarene University,Tennessee,61,61,60,35.72727273,0,10,12,0,11,,0,9,58
+230995,Norwich University,Vermont,61,59,49,48.28571429,0,5,9,0,6,67,0,38,54
+232706,Marymount University,Virginia,61,70,60,55.30612245,0,15,34,0,9,50,100,56,55
+233718,Sweet Briar College,Virginia,61,80,55,48.07692308,1,8,5,0,9,,100,40,61
+238032,West Virginia University,West Virginia,61,63,49,44.71428571,0,3,4,0,2,88,100,35,52
+240107,Viterbo University,Wisconsin,61,25,44,24.54545455,0,5,6,0,1,,,0,45
+240462,University of Wisconsin-Platteville,Wisconsin,61,32,52,41.5,0,1,5,0,1,0,,19,46
+240727,University of Wyoming,Wyoming,61,51,45,44.8,1,1,8,0,2,38,0,42,46
+409698,California State University-Monterey Bay,California,61,53,63,64.96363636,0,2,53,0,3,100,50,64,65
 123572,Sonoma State University,California,60,68,57,59.72727273,0,3,41,0,1,60,50,56,60
 123651,Vanguard University of Southern California,California,60,33,56,57.78846154,0,5,47,0,0,0,100,37,60
-123952,Southern California Institute of Architecture,California,81,93,0,50,0,2,12,0,56,,,,50
-123961,University of Southern California,California,92,90,92,89.2173913,0,6,17,0,14,67,100,87,90
-124292,Thomas Aquinas College,California,85,100,77,92,0,0,20,0,6,,,,92
-125727,Westmont College,California,74,78,68,68.4,0,2,23,0,2,20,100,50,70
-125763,Whittier College,California,66,33,65,67.48979592,0,5,44,0,8,100,50,63,68
-125897,Woodbury University,California,55,45,56,58.91891892,1,4,33,0,6,,,17,64
-126614,University of Colorado Boulder,Colorado,75,72,68,67,0,2,13,0,3,57,67,67,67
-126669,Colorado Christian University,Colorado,61,,57,47.37037037,1,12,14,0,0,33,,42,53
-126678,Colorado College,Colorado,86,93,88,76.78571429,0,3,11,0,6,60,,87,74
-126775,Colorado School of Mines,Colorado,82,85,78,75,0,1,12,0,3,50,100,75,75
-126818,Colorado State University-Fort Collins,Colorado,67,73,59,60.21052632,1,2,16,0,2,30,22,61,62
-127060,University of Denver,Colorado,77,79,75,73.47058824,0,3,14,0,3,100,,71,74
-127714,Nazarene Bible College,Colorado,67,,100,0,1,6,8,0,0,,,,0
-127741,University of Northern Colorado,Colorado,52,44,46,44.90322581,0,4,27,0,1,45,11,51,44
-127918,Regis University,Colorado,67,50,57,65.93939394,0,5,28,0,2,100,100,60,67
-128328,United States Air Force Academy,Colorado,100,100,,99.68421053,0,6,12,1,1,100,100,99,100
-128498,Albertus Magnus College,Connecticut,50,50,49,44.12727273,0,31,24,0,4,0,,45,43
-128771,Central Connecticut State University,Connecticut,53,42,47,47,0,13,18,0,2,25,0,47,47
-128780,Charter Oak State College,Connecticut,100,,100,URM proportions reported; missing matching grad rates,0,17,20,0,1,,,,
-128902,Connecticut College,Connecticut,84,87,88,88,0,4,12,0,8,,,88,88
-129020,University of Connecticut,Connecticut,83,79,74,75,0,7,15,0,9,50,100,75,75
 129215,Eastern Connecticut State University,Connecticut,60,50,50,44.40909091,0,9,13,0,0,67,,45,44
-129242,Fairfield University,Connecticut,84,74,75,76.375,0,1,7,0,2,0,,72,77
 129525,University of Hartford,Connecticut,60,61,43,50.21875,0,17,15,0,5,50,0,46,55
-129774,Mitchell College,Connecticut,63,,58,66.64516129,0,14,17,0,0,0,0,48,82
-129941,University of New Haven,Connecticut,62,64,54,51.63333333,0,11,19,0,2,100,50,51,52
-130110,Paier College,Connecticut,50,,50,50,0,21,21,1,0,,,0,100
-130226,Quinnipiac University,Connecticut,77,68,66,66,0,4,11,0,2,100,,55,70
-130253,Sacred Heart University,Connecticut,73,43,58,65.25,0,4,12,0,1,,,54,69
-130314,University of Saint Joseph,Connecticut,61,80,51,48.75862069,0,11,18,0,1,0,,50,48
-130493,Southern Connecticut State University,Connecticut,53,50,49,46.75609756,0,18,23,0,1,0,0,49,45
-130590,Trinity College,Connecticut,84,86,82,81.14285714,0,6,8,0,14,,,68,91
-130624,United States Coast Guard Academy,Connecticut,87,86,,85.85714286,0,3,11,0,3,,,78,88
-130697,Wesleyan University,Connecticut,93,92,96,95.64705882,0,6,11,0,10,50,100,95,96
-130776,Western Connecticut State University,Connecticut,51,0,46,43.25,0,9,27,0,0,100,,44,43
-130794,Yale University,Connecticut,98,98,93,96.04347826,0,8,15,0,10,92,100,98,95
-130943,University of Delaware,Delaware,82,79,69,74.4,0,6,9,0,6,63,100,72,76
-130989,Goldey-Beacom College,Delaware,59,55,51,54.15384615,0,23,16,0,8,,,48,63
-131159,American University,District of Columbia,79,77,80,77.36842105,0,7,12,0,11,100,100,78,77
-131283,The Catholic University of America,District of Columbia,76,75,69,69.16,0,8,17,0,3,,,61,73
-131399,University of the District of Columbia,District of Columbia,54,68,53,53.82051282,0,56,22,0,4,,,51,61
-131469,George Washington University,District of Columbia,85,83,85,82.47619048,0,8,13,0,9,,100,80,84
-131496,Georgetown University,District of Columbia,96,97,90,92.91666667,0,5,7,0,14,,,90,95
-131520,Howard University,District of Columbia,70,86,65,65.45833333,1,65,6,0,4,0,33,69,38
-#N/A,Baptist University of Florida,Florida,56,,47,55.83333333,1,5,3,0,0,0,,67,
-132657,Lynn University,Florida,52,59,51,46.66666667,0,10,20,0,14,50,0,54,43
-132842,Albizu University-Miami,Florida,67,,67,60,0,1,84,0,0,,,,60
-132903,University of Central Florida,Florida,76,61,72,73.75,0,10,30,0,3,67,100,73,74
-133492,Eckerd College,Florida,68,47,54,60.36363636,0,2,9,0,4,100,100,71,58
-133553,Embry-Riddle Aeronautical University-Daytona Beach,Florida,63,62,58,54.66666667,0,4,11,0,9,,50,51,56
 133650,Florida Agricultural and Mechanical University,Florida,60,83,59,60.19354839,0,88,5,0,0,,,61,46
-133669,Florida Atlantic University,Florida,62,57,62,65,0,18,29,0,3,33,100,65,65
+142294,The College of Idaho,Idaho,60,84,53,54.05555556,1,2,14,1,18,50,67,64,52
+143118,Aurora University,Illinois,60,0,56,56.66666667,0,6,39,0,1,0,50,48,58
+147369,Moody Bible Institute,Illinois,60,70,52,49.4,0,6,9,0,10,,100,29,63
+151263,University of Indianapolis,Indiana,60,56,50,46.28571429,0,12,9,0,12,33,0,42,52
+156286,Bellarmine University,Kentucky,60,100,53,57.66666667,0,8,7,0,2,33,100,53,63
+158477,Centenary College of Louisiana,Louisiana,60,100,60,55.17857143,2,17,9,0,3,0,,57,64
+159647,Louisiana Tech University,Louisiana,60,53,47,45.25,0,11,5,0,2,40,,44,48
+163578,Notre Dame of Maryland University,Maryland,60,67,58,60.71428571,0,29,13,0,1,0,,57,69
+166018,Hampshire College,Massachusetts,60,76,59,59.59090909,0,7,15,0,7,,,78,51
+166054,Hellenic College-Holy Cross Greek Orthodox School of Theology,Massachusetts,60,100,50,0,0,3,3,0,3,0,,,0
+168005,Suffolk University,Massachusetts,60,63,60,51.66666667,0,8,16,0,14,,0,51,52
+168263,Westfield State University,Massachusetts,60,100,52,47.66666667,0,6,12,0,1,100,,49,47
+172334,Spring Arbor University,Michigan,60,50,54,36,0,5,5,0,3,,,42,30
+172644,Wayne State University,Michigan,60,59,56,43.04347826,0,16,7,0,2,33,100,40,50
+176789,Calvary University,Missouri,60,,56,0,0,7,6,0,0,0,100,0,
+183974,Centenary University,New Jersey,60,0,66,55.53846154,0,8,18,0,0,100,,59,54
+186432,Saint Peter's University,New Jersey,60,63,59,59.42372881,0,18,41,0,5,,33,49,64
+196158,SUNY at Fredonia,New York,60,29,54,49.05555556,0,7,11,0,2,80,0,46,51
+197197,Wagner College,New York,60,59,59,50.66666667,0,7,14,0,7,,,34,59
+201104,Ashland University,Ohio,60,38,52,42.66666667,0,8,4,0,2,0,100,41,46
+201441,Bowling Green State University-Main Campus,Ohio,60,69,45,46.18181818,0,6,5,0,3,0,50,43,50
+#N/A,Columbus College of Art & Design,Ohio,60,57,46,40.84210526,0,11,8,0,2,,,32,53
+204264,Muskingum University,Ohio,60,77,55,27,0,8,2,0,1,,,15,75
+215053,Pennsylvania College of Art and Design,Pennsylvania,60,,63,33,0,12,2,0,0,50,,33,33
+216694,Waynesburg University,Pennsylvania,60,,49,44.44444444,0,5,4,0,0,,,20,75
+150066,Anderson University,South Carolina,60,11,51,43,0,4,0,0,0,,0,43,58
+217776,Southern Wesleyan University,South Carolina,60,50,62,39.09090909,0,16,6,0,0,,,35,50
+218539,Presbyterian College,South Carolina,60,64,50,48.5,0,18,6,0,4,,,35,89
+219833,Christian Brothers University,Tennessee,60,60,67,52.39285714,1,18,9,0,3,0,,54,55
+221847,Tennessee Technological University,Tennessee,60,57,52,48,0,4,5,0,2,50,,38,56
+222178,Abilene Christian University,Texas,60,39,46,55.96153846,1,7,18,0,4,67,0,44,60
+225201,Hallmark University,Texas,60,,57,51.61290323,1,11,50,1,0,0,,50,53
+232609,University of Lynchburg,Virginia,60,60,49,46.42105263,0,12,7,0,2,100,,42,54
+236452,Saint Martin's University,Washington,60,50,61,57.86111111,1,7,22,6,2,25,50,50,64
+239390,Mount Mary University,Wisconsin,60,100,62,55.15384615,0,20,32,0,1,,,41,64
+384254,Beacon College,Florida,60,100,67,74.83333333,1,14,9,1,1,0,,64,100
+421708,Arizona College of Nursing-Tempe,Arizona,60,,,37.5,2,9,27,1,0,,,0,50
+436614,International Baptist College and Seminary,Arizona,60,,67,URM proportions reported; missing matching grad rates,0,4,7,2,2,100,,,
+436818,University of Connecticut-Waterbury Campus,Connecticut,60,50,60,45.25,0,9,27,0,2,,,52,43
+#N/A,Saint Joseph's University - Lancaster,Pennsylvania,60,,50,0,0,12,17,0,0,,,,0
+443410,DigiPen Institute of Technology,Washington,60,71,57,44.54545455,0,2,9,0,12,100,,20,50
+487524,Husson University,Maine,60,47,52,35.125,1,6,1,0,1,20,,36,45
+105330,Northern Arizona University,Arizona,59,50,52,51.71875,3,3,26,0,2,33,39,42,55
+130989,Goldey-Beacom College,Delaware,59,55,51,54.15384615,0,23,16,0,8,,,48,63
+140553,Morehouse College,Georgia,59,25,53,59,0,98,0,0,0,33,,59,100
+142115,Boise State University,Idaho,59,72,46,52.625,0,2,14,0,1,44,17,50,53
+142887,American Academy of Art College,Illinois,59,,56,64,0,14,36,0,0,,0,,64
+148496,Dominican University,Illinois,59,,54,56.30985915,0,5,66,0,1,0,,34,58
+150066,Anderson University,Indiana,59,50,39,38.25,0,10,6,0,1,33,0,27,57
+168430,Worcester State University,Massachusetts,59,50,48,50.88,0,9,16,0,1,0,,56,48
+168546,Albion College,Michigan,59,100,51,49,0,16,12,0,3,50,,40,61
+171483,Northwestern Michigan College,Michigan,59,,0,0,1,1,5,0,0,0,,,
+175272,Winona State University,Minnesota,59,61,49,44.42857143,0,3,4,0,2,25,,33,53
+179894,Webster University,Missouri,59,71,51,47.14285714,0,15,6,0,4,100,,44,55
+180984,Concordia University-Nebraska,Nebraska,59,50,51,33.8,0,2,8,0,2,100,0,17,38
+181446,Nebraska Wesleyan University,Nebraska,59,0,47,52.25,0,3,9,0,2,0,,20,63
+182634,Colby-Sawyer College,New Hampshire,59,100,51,38.2,0,3,2,0,2,33,,35,43
+183062,Keene State College,New Hampshire,59,,55,44.57142857,0,2,5,0,0,0,100,31,50
+190567,CUNY City College,New York,59,64,58,57.77777778,0,15,39,0,5,67,20,65,55
+190716,D'Youville  University,New York,59,25,57,58,0,15,6,0,6,100,,56,63
+197018,United Talmudical Seminary,New York,59,7,62,URM proportions reported; missing matching grad rates,0,0,0,0,5,,,,75
+#N/A,University of North Carolina Asheville,North Carolina,59,67,55,51.92307692,0,5,8,0,2,0,100,39,60
+215442,Point Park University,Pennsylvania,59,50,54,56,0,12,10,0,3,50,50,56,56
+216047,Saint Charles Borromeo Seminary-Overbrook,Pennsylvania,59,,75,33,0,3,19,0,0,,,,33
+216931,Wilkes University,Pennsylvania,59,57,47,36.66666667,0,5,10,0,6,25,,34,38
+219259,Northern State University,South Dakota,59,40,56,47.57142857,2,2,3,0,3,20,,40,71
+219356,South Dakota State University,South Dakota,59,48,51,34.5,1,2,3,0,3,14,100,41,37
+219383,University of Sioux Falls,South Dakota,59,40,49,60.36363636,1,6,4,0,1,0,,44,100
+227216,University of North Texas,Texas,59,69,59,57.34883721,0,15,28,0,4,60,50,58,57
+238078,Wheeling University,West Virginia,59,0,48,44,1,11,0,0,5,0,0,48,88
+240471,University of Wisconsin-River Falls,Wisconsin,59,45,53,40.66666667,0,2,4,0,1,100,100,26,48
+433660,Florida Gulf Coast University,Florida,59,63,55,56.4,0,6,24,0,2,86,50,58,56
+436827,University of Connecticut-Avery Point,Connecticut,59,,54,29.14285714,0,3,18,0,1,,,42,27
+456959,University of Minnesota-Rochester,Minnesota,59,100,57,54.875,0,15,9,0,1,,,50,63
+484473,University of Florida-Online,Florida,59,,88,0,0,5,23,0,1,,,,0
+142461,Northwest Nazarene University,Idaho,58,71,44,31.93333333,1,2,13,0,1,,,25,33
+145372,Greenville University,Illinois,58,54,55,49.05,0,13,7,0,14,0,0,55,38
+147244,Millikin University,Illinois,58,50,46,31.72727273,0,18,4,0,7,,,27,53
+153001,Buena Vista University,Iowa,58,40,48,54.35714286,1,3,11,0,1,,,8,67
+153126,Clarke University,Iowa,58,,46,40.04545455,0,13,9,0,7,,40,29,56
+160959,College of the Atlantic,Maine,58,85,52,57.14285714,0,1,6,0,23,,,100,50
+162654,Goucher College,Maryland,58,54,66,58.93333333,1,26,4,0,5,,100,60,52
+167260,Nichols College,Massachusetts,58,50,49,37.28571429,0,10,11,0,3,,,42,33
+171571,Oakland University,Michigan,58,58,51,37.71428571,0,9,5,0,2,83,67,32,48
+174127,Minneapolis College of Art and Design,Minnesota,58,100,62,55.75,2,5,11,0,3,,,75,47
+174251,University of Minnesota-Morris,Minnesota,58,29,53,36.68181818,13,3,6,0,3,36,,13,50
+174437,North Central University,Minnesota,58,100,52,39.30434783,1,8,14,0,2,0,,36,44
+177418,Fontbonne University,Missouri,58,25,50,34.25925926,0,25,2,0,2,,,31,75
+179566,Missouri State University-Springfield,Missouri,58,65,46,46.125,0,3,5,0,2,33,0,38,51
+197045,Utica University,New York,58,25,47,45.25,1,10,9,0,1,100,,40,45
+199148,University of North Carolina at Greensboro,North Carolina,58,63,55,59.65909091,0,29,15,0,2,67,67,60,59
+206437,Walsh University,Ohio,58,39,44,46,0,6,3,0,9,0,,40,58
+211024,Clarks Summit University,Pennsylvania,58,,60,43.63636364,1,3,8,0,3,,,0,60
+212984,Holy Family University,Pennsylvania,58,50,51,46.85714286,0,16,12,0,1,,100,49,44
+213321,King's College,Pennsylvania,58,23,55,46.3125,0,5,11,0,1,50,,36,51
+224226,Dallas Baptist University,Texas,58,,43,50.57692308,1,10,15,0,6,100,50,39,55
+225247,Hardin-Simmons University,Texas,58,89,42,39.89473684,1,11,26,0,3,0,,48,38
+231581,Bridgewater College,Virginia,58,64,51,52.05263158,0,12,7,0,2,50,,55,47
+#N/A,Emory & Henry University,Virginia,58,,51,27.88235294,0,14,3,0,1,0,,30,18
+237932,West Liberty University,West Virginia,58,33,51,50,0,4,0,0,3,,100,50,100
+240365,University of Wisconsin-Oshkosh,Wisconsin,58,33,52,49,0,2,6,0,1,40,67,37,53
+375230,Yeshiva Gedolah Imrei Yosef D'spinka,New York,58,,85,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
+440828,Oregon State University-Cascades Campus,Oregon,58,,86,0,1,1,10,0,1,0,,,0
+118693,Menlo College,California,57,58,56,59.10810811,1,4,31,2,22,,63,58,59
 133711,Flagler College,Florida,57,68,51,68.2,0,3,12,0,3,50,0,57,71
-133872,AdventHealth University,Florida,52,100,49,47.90566038,0,16,37,0,4,,,50,47
-133881,Florida Institute of Technology,Florida,67,70,60,68.42105263,0,5,14,0,22,0,50,64,70
-133951,Florida International University,Florida,69,70,70,69.93670886,0,12,67,0,7,33,100,64,71
-134079,Florida Southern College,Florida,68,50,61,59.13636364,1,6,15,0,4,86,,45,63
-134097,Florida State University,Florida,85,77,83,86.25806452,0,8,23,0,2,62,100,87,86
-134130,University of Florida,Florida,90,84,86,87.96551724,0,5,24,0,3,75,100,83,89
+147341,Monmouth College,Illinois,57,57,44,49,0,9,12,0,2,0,,45,52
+149639,VanderCook College of Music,Illinois,57,,45,22.32352941,0,11,23,0,11,,,0,33
+154013,Mount Mercy University,Iowa,57,64,47,52.22222222,0,7,2,0,7,100,,50,60
+169910,Ferris State University,Michigan,57,43,47,35.8125,1,9,7,0,1,,100,38,33
+171456,Northern Michigan University,Michigan,57,63,44,46.28571429,1,2,4,0,1,38,,41,51
+173142,Bethany Lutheran College,Minnesota,57,63,51,10.18181818,1,3,8,0,17,,0,0,14
+175980,Millsaps College,Mississippi,57,85,48,49.64516129,0,27,4,0,3,0,,49,54
+177746,Kansas City Art Institute,Missouri,57,100,48,43.66666667,1,8,15,0,1,67,,42,43
+179557,Southeast Missouri State University,Missouri,57,63,45,40.90909091,0,8,3,0,5,33,,39,46
+180416,Montana Technological University,Montana,57,56,42,50.5,1,1,4,0,2,75,,0,57
+180461,Montana State University,Montana,57,38,46,45.85714286,1,0,6,0,1,33,0,23,48
+191931,Iona University,New York,57,71,49,47,0,9,26,0,3,100,100,47,47
+192864,Marymount Manhattan College,New York,57,50,54,53.79411765,0,11,23,0,2,57,,45,58
+#N/A,University of Mount Saint Vincent,New York,57,100,54,53.82978723,0,14,33,0,2,0,,44,58
+196042,Farmingdale State College,New York,57,50,56,57.72972973,0,10,27,0,2,,100,57,58
+199102,North Carolina A & T State University,North Carolina,57,58,53,57.95454545,0,84,4,0,0,50,,58,57
+199962,Wingate University,North Carolina,57,89,57,50.5,0,24,8,0,8,50,,50,52
+206084,University of Toledo,Ohio,57,71,44,34.2,0,9,6,0,7,0,,31,39
+206525,Wittenberg University,Ohio,57,50,40,38,0,10,6,0,0,0,0,35,43
+207324,Oklahoma Christian University,Oklahoma,57,,50,34.70588235,2,7,8,0,10,33,,28,41
+209506,Oregon Institute of Technology,Oregon,57,64,53,45.05263158,1,2,16,0,1,100,0,50,41
+214041,Millersville University of Pennsylvania,Pennsylvania,57,60,49,44.89473684,0,9,10,0,1,33,,47,43
+217961,Converse University,South Carolina,57,50,56,40.8,3,14,11,0,6,,,43,38
+219198,Mount Marty University,South Dakota,57,,56,25.90909091,2,5,4,0,4,0,0,25,40
+219471,University of South Dakota,South Dakota,57,55,46,37.9,2,3,5,0,2,13,0,46,43
+219639,Baptist Health Sciences University,Tennessee,57,,48,44.32653061,1,44,5,0,0,,,38,100
+219806,Carson-Newman University,Tennessee,57,67,52,44.375,1,9,6,0,5,50,,36,56
+230889,Goddard College,Vermont,57,,67,URM proportions reported; missing matching grad rates,0,5,3,0,0,100,,,
+239309,Milwaukee Institute of Art & Design,Wisconsin,57,67,55,58.77272727,0,5,17,0,0,33,,58,59
+366252,Pennsylvania College of Technology,Pennsylvania,57,,53,25.55555556,0,4,5,0,0,0,100,10,38
+366711,California State University-San Marcos,California,57,52,55,54.34545455,0,4,51,0,1,33,33,46,55
+441937,California State University-Channel Islands,California,57,48,55,53.16129032,0,2,60,0,1,0,0,28,54
+476717,Be'er Yaakov Talmudic Seminary,New York,57,,60,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
+490319,Yeshiva Bais Aharon,New Jersey,57,,,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
+491710,Yeshiva Gedolah of Cliffwood,New Jersey,57,,,URM proportions reported; missing matching grad rates,0,0,0,0,1,,,,
+110556,California State University-Fresno,California,56,49,54,56.0952381,0,3,60,0,2,56,33,38,57
+110608,California State University-Northridge,California,56,53,53,52.01639344,0,5,56,0,3,25,57,41,53
+#N/A,Baptist University of Florida,Florida,56,,47,55.83333333,1,5,3,0,0,0,,67,
+136330,Palm Beach Atlantic University,Florida,56,56,48,47.12,0,8,17,0,6,25,100,24,58
+140696,Oglethorpe University,Georgia,56,62,53,45,0,22,22,0,7,,,48,42
+150145,Bethel University,Indiana,56,50,53,47.47368421,0,8,11,0,6,,,44,50
+#N/A,Indiana University-Indianapolis,Indiana,56,65,47,49.13043478,0,10,13,0,3,100,33,48,50
+154004,Morningside University,Iowa,56,50,41,40.76923077,1,4,8,0,8,50,0,50,35
+165024,Bridgewater State University,Massachusetts,56,75,49,49.35,0,11,9,0,0,50,100,48,51
+165820,Fitchburg State University,Massachusetts,56,67,52,48,0,12,16,0,1,0,,48,48
+167288,Massachusetts College of Liberal Arts,Massachusetts,56,0,54,55,0,10,10,0,0,50,,58,52
+171137,University of Michigan-Dearborn,Michigan,56,67,51,40,0,8,7,0,3,50,50,40,40
+173045,Augsburg University,Minnesota,56,41,54,47.38461538,1,25,13,0,3,33,,44,55
+183211,Rivier University,New Hampshire,56,,54,26.41176471,0,11,6,0,0,100,,25,29
+187444,William Paterson University of New Jersey,New Jersey,56,100,50,49.20754717,0,19,34,0,2,100,100,46,51
+188340,Vaughn College of Aeronautics and Technology,New York,56,67,62,45.33333333,1,16,31,1,4,,100,29,52
+190594,CUNY Hunter College,New York,56,62,56,51.42857143,0,11,31,0,5,67,42,47,53
+190664,CUNY Queens College,New York,56,49,54,48.71052632,0,9,29,0,6,38,67,51,48
+190983,Elmira College,New York,56,63,57,37.09090909,1,4,6,0,7,0,100,36,44
+191621,Hilbert College,New York,56,,49,49.33333333,1,10,4,0,2,100,,36,70
+197692,Yeshivath Shaar Hatorah,New York,56,,100,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
+206862,Southern Nazarene University,Oklahoma,56,40,50,38.33333333,4,14,18,0,3,43,,31,43
+211431,Carlow University,Pennsylvania,56,,49,17.40909091,1,19,3,0,0,,,17,20
+213349,Kutztown University of Pennsylvania,Pennsylvania,56,71,50,37.77777778,0,7,11,0,1,75,,28,44
+215114,Cairn University-Langhorne,Pennsylvania,56,50,45,29.4,0,7,3,0,6,,,33,21
+219347,South Dakota School of Mines and Technology,South Dakota,56,83,49,42.85714286,1,1,5,0,2,0,,50,50
+220181,Fisk University,Tennessee,56,,48,60.70666667,0,73,2,0,16,,,61,50
+227881,Sam Houston State University,Texas,56,64,50,53.52272727,1,16,27,0,1,75,0,48,56
+228149,St. Mary's University,Texas,56,65,60,54.296875,1,3,60,0,7,100,,25,55
+228459,Texas State University,Texas,56,88,49,52.29411765,0,9,42,0,1,67,70,49,53
+239628,Ripon College,Wisconsin,56,36,46,55.86666667,0,4,11,0,1,0,,50,58
+240480,University of Wisconsin-Stevens Point,Wisconsin,56,35,52,38,0,2,4,0,1,40,0,30,42
+377546,Northwest College of Art & Design,Washington,56,,46,9.375,9,5,15,3,0,0,100,0,0
+385619,Everglades University,Florida,56,,54,56.65,2,19,19,0,0,50,100,53,61
+445692,Neumont College of Computer Science,Utah,56,,55,47.92,2,6,16,1,0,0,100,63,45
+454184,The King's College,New York,56,40,46,36.66666667,1,6,11,0,4,0,,44,36
+461759,Simmons College of Kentucky,Kentucky,56,,33,56,0,89,0,0,0,,,56,
+101709,University of Montevallo,Alabama,55,56,47,58.33333333,0,17,7,0,3,0,,56,64
+105589,Prescott College,Arizona,55,100,50,72.22222222,1,4,4,0,1,50,,100,50
+110495,California State University-Stanislaus,California,55,44,54,52.78461538,0,2,62,1,1,67,33,56,53
+122597,San Francisco State University,California,55,55,51,48.73333333,0,6,38,1,4,33,43,48,49
+125897,Woodbury University,California,55,45,56,58.91891892,1,4,33,0,6,,,17,64
+137777,Talmudic College of Florida,Florida,55,67,0,URM proportions reported; missing matching grad rates,0,0,0,0,12,,,,
+139940,Georgia State University,Georgia,55,73,53,56.5,0,42,14,0,3,100,0,56,58
+144892,Eastern Illinois University,Illinois,55,26,47,43.51612903,0,15,16,0,2,50,,43,44
+147013,McKendree University,Illinois,55,58,46,35.82352941,0,11,6,0,13,,,39,30
+147679,North Park University,Illinois,55,,51,47.69767442,0,9,34,0,10,,0,39,50
+152336,University of Saint Francis-Fort Wayne,Indiana,55,100,45,41,0,11,10,0,3,0,,31,52
+155681,Pittsburg State University,Kansas,55,100,43,35.66666667,2,3,7,0,2,38,,24,40
+161253,University of Maine,Maine,55,64,45,36.375,1,2,5,0,2,45,,28,38
+162061,Capitol Technology University,Maryland,55,100,47,46.25,0,23,5,0,1,,,50,29
+165866,Framingham State University,Massachusetts,55,50,48,42.56756757,0,16,21,0,1,0,,42,43
+167729,Salem State University,Massachusetts,55,58,51,52.78787879,0,10,23,0,3,0,,50,54
+167987,University of Massachusetts-Dartmouth,Massachusetts,55,50,48,46.2,0,18,12,0,1,0,,49,42
+172699,Western Michigan University,Michigan,55,77,44,41.5,0,8,8,0,5,73,100,36,47
+174358,Minnesota State University Moorhead,Minnesota,55,50,47,37.72727273,1,5,5,0,4,0,,40,43
+174525,Oak Hills Christian College,Minnesota,55,,40,0,10,12,1,2,3,,,0,
+178402,University of Missouri-Kansas City,Missouri,55,70,45,45,0,12,12,0,3,0,100,40,50
+179964,William Woods University,Missouri,55,60,55,40,0,5,5,0,4,50,,40,40
+181127,Hastings College,Nebraska,55,25,44,38.375,1,6,10,0,7,,0,14,53
+#N/A,Union Adventist University,Nebraska,55,63,53,56.65625,0,7,24,1,6,,0,43,63
+187967,New Mexico Institute of Mining and Technology,New Mexico,55,100,49,48.43181818,3,1,40,0,1,27,,50,50
+189848,Cazenovia College,New York,55,0,53,45.0952381,1,12,8,0,0,67,,38,53
+190549,CUNY Brooklyn College,New York,55,32,56,51.46666667,0,22,23,0,3,100,50,53,50
+190725,Daemen University,New York,55,50,41,28.76470588,1,12,5,0,1,,,27,33
+194091,New York Institute of Technology,New York,55,56,53,44.6875,0,11,21,0,7,100,0,46,44
+195234,The College of Saint Rose,New York,55,73,48,43.42105263,0,14,5,0,5,50,0,45,39
+196033,SUNY College of Agriculture and Technology at Cobleskill,New York,55,,47,35.63636364,0,10,12,0,1,,,22,47
+213358,La Roche University,Pennsylvania,55,41,56,65,0,2,2,2,9,,100,45,50
+112561,Columbia College,South Carolina,55,83,49,54.63829787,1,37,10,0,1,,0,54,57
+220075,East Tennessee State University,Tennessee,55,48,45,32.8,0,6,4,0,1,50,0,34,31
+220978,Middle Tennessee State University,Tennessee,55,52,48,48.04347826,0,15,8,0,2,50,100,47,50
+231651,Regent University,Virginia,55,25,42,46.11111111,0,25,11,0,0,0,,40,60
+494630,Christ Mission College,Texas,55,,,50,0,2,81,0,9,,,,50
+110510,California State University-San Bernardino,California,54,56,53,53.40789474,0,5,71,0,2,50,0,45,54
+110617,California State University-Sacramento,California,54,57,52,51.80434783,0,6,39,1,2,13,58,43,53
+115728,Holy Names University,California,54,50,52,49.4375,0,19,29,2,5,,,44,53
+117627,La Sierra University,California,54,59,50,47.36842105,0,6,51,0,9,,40,8,52
+131399,University of the District of Columbia,District of Columbia,54,68,53,53.82051282,0,56,22,0,4,,,51,61
+139931,Georgia Southern University,Georgia,54,63,48,50.27272727,0,25,8,0,1,45,0,51,48
+148654,University of Illinois Springfield,Illinois,54,69,44,42.08333333,0,13,11,0,4,,,43,41
+156620,Eastern Kentucky University,Kentucky,54,88,44,38.16666667,0,7,5,0,1,75,0,34,44
+157951,Western Kentucky University,Kentucky,54,50,40,38.30769231,0,8,5,0,1,11,50,26,58
+171881,Kuyper College,Michigan,54,100,31,11.53846154,0,10,3,1,10,100,,0,50
+177968,Lindenwood University,Missouri,54,60,46,30.73684211,0,13,5,1,8,75,64,25,39
+181215,University of Nebraska at Kearney,Nebraska,54,49,54,41.25,0,2,14,0,6,0,,22,44
+184773,Georgian Court University,New Jersey,54,100,46,34,0,8,14,0,3,0,,27,38
+190600,CUNY John Jay College of Criminal Justice,New York,54,49,54,52.75757576,0,16,50,0,3,60,44,52,53
+190637,CUNY Lehman College,New York,54,76,54,52.92592593,0,25,56,0,3,25,100,55,52
+195173,St. Francis College,New York,54,65,55,42.46296296,2,25,27,0,16,60,25,34,49
+198136,Campbell University,North Carolina,54,67,44,42.5,0,15,11,0,3,33,,37,50
+199759,Southeastern Baptist Theological Seminary,North Carolina,54,,,100,1,6,7,0,0,,,100,
+203085,Heidelberg University,Ohio,54,33,49,28.07692308,0,10,3,0,1,50,,20,55
+207403,Oklahoma Baptist University,Oklahoma,54,50,47,40.57142857,5,7,2,0,1,48,,26,73
+210331,Corban University,Oregon,54,80,46,28.31578947,1,2,15,1,1,33,100,0,27
+211981,Delaware Valley University,Pennsylvania,54,,45,31.41176471,0,9,8,0,0,50,,22,42
+214272,Neumann University,Pennsylvania,54,86,48,48.54054054,0,29,8,0,1,,,52,36
+218441,North Greenville University,South Carolina,54,0,49,38.76923077,0,8,5,0,1,,0,28,56
+225414,University of Houston-Clear Lake,Texas,54,100,46,54.36363636,0,7,48,0,3,0,,50,55
+228981,Texas Lutheran University,Texas,54,100,46,53.53846154,0,10,42,0,0,,,39,57
+229027,The University of Texas at San Antonio,Texas,54,63,52,54.23188406,0,8,61,0,1,43,50,56,54
+230834,Castleton University,Vermont,54,46,49,23,0,4,4,0,5,0,,13,33
+233277,Radford University,Virginia,54,27,51,48.125,0,15,9,0,1,43,20,50,45
+239512,Northland College,Wisconsin,54,80,46,45.2,2,4,9,0,7,25,,67,40
+243142,University of Puerto Rico-Carolina,Puerto Rico,54,,54,55.85858586,1,4,95,0,0,,,100,54
+377564,University of Washington-Tacoma Campus,Washington,54,50,53,55.92857143,1,11,15,1,2,33,64,64,51
+498562,Commonwealth University of Pennsylvania,Pennsylvania,54,43,45,35.5,0,6,6,0,0,38,,31,40
+128771,Central Connecticut State University,Connecticut,53,42,47,47,0,13,18,0,2,25,0,47,47
+130493,Southern Connecticut State University,Connecticut,53,50,49,46.75609756,0,18,23,0,1,0,0,49,45
 134510,Hobe Sound Bible College,Florida,53,100,73,100,0,4,7,2,1,,,,100
 134945,Jacksonville University,Florida,53,52,48,45.5625,0,17,15,0,6,50,100,39,53
 135081,Keiser University-Ft Lauderdale,Florida,53,63,47,52.64,1,18,31,0,2,40,,51,54
-135726,University of Miami,Florida,84,80,81,82.54545455,0,9,24,0,9,100,0,76,85
-136172,University of North Florida,Florida,63,67,63,62.57142857,0,12,16,0,2,33,100,66,60
-136215,Nova Southeastern University,Florida,62,59,54,58.10204082,0,15,34,0,5,100,,47,63
-136330,Palm Beach Atlantic University,Florida,56,56,48,47.12,0,8,17,0,6,25,100,24,58
-136774,Ringling College of Art and Design,Florida,77,74,72,77.29411765,0,3,14,0,21,100,,88,75
-136950,Rollins College,Florida,78,80,78,74.69565217,0,6,17,0,9,0,,71,76
-137272,St. John Vianney College Seminary,Florida,50,50,50,0,0,7,31,0,26,,,,0
-137351,University of South Florida,Florida,74,79,74,72.26666667,0,8,22,0,9,100,71,73,72
-137546,Stetson University,Florida,64,60,59,57.96774194,0,12,19,0,7,,,69,51
-137777,Talmudic College of Florida,Florida,55,67,0,URM proportions reported; missing matching grad rates,0,0,0,0,12,,,,
-137847,The University of Tampa,Florida,66,68,58,53.2,0,3,12,0,5,100,,58,52
-138309,Rasmussen University-Florida,Florida,50,,100,URM proportions reported; missing matching grad rates,1,23,17,0,0,,,,
 #N/A,University of West Florida,Florida,53,59,51,45.85714286,0,10,11,0,3,25,100,49,43
-138600,Agnes Scott College,Georgia,77,78,76,77.93617021,0,33,14,0,3,,0,83,66
-139144,Berry College,Georgia,65,67,66,71.88888889,0,8,10,0,0,,,73,71
-139393,Covenant College,Georgia,73,75,70,85,1,1,0,0,3,100,,70,50
-139658,Emory University,Georgia,90,87,93,89.57894737,0,8,11,0,18,,,89,90
-139755,Georgia Institute of Technology-Main Campus,Georgia,93,96,88,86,0,8,8,0,10,100,,80,92
-139861,Georgia College & State University,Georgia,62,57,60,68,0,3,6,0,1,0,0,72,66
-139931,Georgia Southern University,Georgia,54,63,48,50.27272727,0,25,8,0,1,45,0,51,48
-139940,Georgia State University,Georgia,55,73,53,56.5,0,42,14,0,3,100,0,56,58
-139959,University of Georgia,Georgia,87,84,82,85.53846154,0,6,7,0,1,67,75,85,86
-140234,LaGrange College,Georgia,51,50,45,43.66666667,0,26,4,0,2,0,,35,100
-140447,Mercer University,Georgia,74,65,69,71.6,0,32,8,0,2,100,100,72,70
-140553,Morehouse College,Georgia,59,25,53,59,0,98,0,0,0,33,,59,100
-140696,Oglethorpe University,Georgia,56,62,53,45,0,22,22,0,7,,,48,42
-140951,Savannah College of Art and Design,Georgia,73,76,64,61.7,1,12,7,0,17,55,67,58,69
-141060,Spelman College,Georgia,74,100,73,73.88372093,1,85,0,0,0,64,,74,
-141486,Chaminade University of Honolulu,Hawaii,66,,59,68.24,0,2,12,11,0,100,70,36,72
-141574,University of Hawaii at Manoa,Hawaii,62,73,59,45.52941176,0,1,14,2,4,13,46,38,46
-142115,Boise State University,Idaho,59,72,46,52.625,0,2,14,0,1,44,17,50,53
-142285,University of Idaho,Idaho,61,74,53,60.07692308,1,1,11,0,4,63,25,36,62
-142294,The College of Idaho,Idaho,60,84,53,54.05555556,1,2,14,1,18,50,67,64,52
-142461,Northwest Nazarene University,Idaho,58,71,44,31.93333333,1,2,13,0,1,,,25,33
-142887,American Academy of Art College,Illinois,59,,56,64,0,14,36,0,0,,0,,64
-143048,School of the Art Institute of Chicago,Illinois,67,77,57,65.06666667,0,4,11,0,30,,,68,64
-143084,Augustana College,Illinois,78,74,63,70.47058824,0,4,13,0,15,,100,72,70
-143118,Aurora University,Illinois,60,0,56,56.66666667,0,6,39,0,1,0,50,48,58
-143358,Bradley University,Illinois,76,65,71,66.86956522,0,9,14,0,2,100,,62,70
-144050,University of Chicago,Illinois,96,98,92,92.82608696,0,7,16,0,16,100,,97,91
-144740,DePaul University,Illinois,69,73,61,59.83333333,0,7,23,0,3,40,67,56,61
-144892,Eastern Illinois University,Illinois,55,26,47,43.51612903,0,15,16,0,2,50,,43,44
-144962,Elmhurst University,Illinois,64,100,59,58.39393939,0,5,28,0,3,100,,27,64
-144971,Eureka College,Illinois,51,100,39,30.66666667,1,12,8,0,1,0,,27,40
-145372,Greenville University,Illinois,58,54,55,49.05,0,13,7,0,14,0,0,55,38
-145600,University of Illinois Chicago,Illinois,62,68,58,52.54545455,0,8,36,0,8,,50,55,52
 145619,Benedictine University,Illinois,53,100,50,41.96428571,1,9,18,0,2,50,50,31,47
-145637,University of Illinois Urbana-Champaign,Illinois,85,88,77,73.78947368,0,6,13,0,15,67,50,69,76
-145646,Illinois Wesleyan University,Illinois,79,81,77,76.875,0,7,9,0,5,,,78,76
-145691,Illinois College,Illinois,67,85,64,55.05263158,0,9,10,0,5,100,,44,65
-145725,Illinois Institute of Technology,Illinois,75,72,74,73.2,0,5,20,0,19,,,74,73
-145813,Illinois State University,Illinois,67,53,53,50.5,0,11,13,0,1,50,50,44,56
 146339,Judson University,Illinois,53,20,39,50.8,0,12,33,0,6,,,42,54
-146427,Knox College,Illinois,75,78,75,74.84210526,0,6,13,0,18,,,68,78
-146481,Lake Forest College,Illinois,78,68,79,79.52173913,0,3,20,0,15,100,,83,79
-146612,Lewis University,Illinois,62,67,55,48.96774194,0,7,24,0,2,,100,42,51
-146667,Lincoln Christian University,Illinois,66,100,56,36.64285714,0,11,3,0,3,,,33,50
-146719,Loyola University Chicago,Illinois,73,71,68,62.11111111,0,6,21,0,3,67,67,59,63
-147013,McKendree University,Illinois,55,58,46,35.82352941,0,11,6,0,13,,,39,30
-147129,Methodist College,Illinois,74,,67,URM proportions reported; missing matching grad rates,0,15,3,0,0,,,,
-147244,Millikin University,Illinois,58,50,46,31.72727273,0,18,4,0,7,,,27,53
-147341,Monmouth College,Illinois,57,57,44,49,0,9,12,0,2,0,,45,52
-147369,Moody Bible Institute,Illinois,60,70,52,49.4,0,6,9,0,10,,100,29,63
-147660,North Central College,Illinois,63,89,55,56.47619048,0,5,16,0,5,,,58,56
-147679,North Park University,Illinois,55,,51,47.69767442,0,9,34,0,10,,0,39,50
 147703,Northern Illinois University,Illinois,53,63,43,40.06666667,0,21,24,0,1,100,0,31,48
-147767,Northwestern University,Illinois,97,93,97,95.33333333,0,7,14,0,10,100,100,92,97
-147828,Olivet Nazarene University,Illinois,67,56,51,50.77272727,0,9,12,1,2,,100,41,54
-148016,Principia College,Illinois,77,85,,75,0,3,6,0,39,,,,75
-148131,Quincy University,Illinois,50,100,36,25.5,0,10,6,0,5,,,21,33
-148496,Dominican University,Illinois,59,,54,56.30985915,0,5,66,0,1,0,,34,58
-148584,University of St Francis,Illinois,65,20,48,61.63157895,0,9,29,0,3,50,,54,64
 148627,Saint Xavier University,Illinois,53,,47,46.81967213,0,12,49,0,0,,,42,48
-148654,University of Illinois Springfield,Illinois,54,69,44,42.08333333,0,13,11,0,4,,,43,41
+161226,University of Maine at Farmington,Maine,53,50,49,27.42857143,1,2,4,0,1,0,,30,33
+174075,University of Minnesota-Crookston,Minnesota,53,0,51,22.11111111,1,4,4,0,3,67,,0,33
+174862,Crown College,Minnesota,53,75,46,30.41666667,0,5,7,0,2,0,,31,30
+176965,University of Central Missouri,Missouri,53,69,45,38.07692308,0,7,6,0,1,50,0,39,37
+178624,Northwest Missouri State University,Missouri,53,29,41,29.44444444,0,4,5,0,2,50,50,25,33
+188641,Alfred University,New York,53,100,47,35.71428571,0,11,10,0,6,0,,40,31
+190761,Dominican University New York,New York,53,75,47,43.59259259,0,14,40,0,3,,100,31,48
+191533,Hartwick College,New York,53,58,48,45.91666667,0,14,10,0,3,63,,43,50
+203128,Hiram College,Ohio,53,67,47,28.5,0,7,7,0,1,,100,37,20
+209807,Portland State University,Oregon,53,47,50,49.44444444,1,5,20,1,3,25,45,53,50
+213020,Indiana University of Pennsylvania-Main Campus,Pennsylvania,53,45,38,31.25,1,10,5,0,2,50,0,24,42
+220710,Maryville College,Tennessee,53,0,42,44.21428571,0,9,5,0,6,100,,41,50
+221768,The University of Tennessee-Martin,Tennessee,53,16,44,45.25,0,12,4,0,1,50,,43,52
+225627,University of the Incarnate Word,Texas,53,57,46,54.1,0,7,63,0,5,0,50,46,55
+227368,The University of Texas Rio Grande Valley,Texas,53,68,52,52,0,0,94,0,2,,50,47,52
+228431,Stephen F Austin State University,Texas,53,8,47,46.5,1,12,21,0,1,27,33,42,50
+228769,The University of Texas at Arlington,Texas,53,67,54,49.71698113,0,15,38,0,4,83,,49,50
+230728,Utah State University,Utah,53,24,46,39.11111111,1,1,7,0,1,40,43,25,41
+235024,Cornish College of the Arts,Washington,53,100,48,40,1,5,3,0,3,33,33,33,54
+237969,West Virginia Wesleyan College,West Virginia,53,41,46,29.15,1,14,5,0,6,100,,27,21
+239071,Maranatha Baptist University,Wisconsin,53,50,49,21.42857143,1,1,6,0,1,,,0,25
+243832,EDP University of Puerto Rico Inc-San Juan,Puerto Rico,53,,42,53,0,0,100,0,0,,,,53
+101480,Jacksonville State University,Alabama,52,49,43,37,0,24,0,0,2,29,0,37,60
+101879,University of North Alabama,Alabama,52,50,39,38.23529412,1,10,6,0,5,70,,31,45
+122728,William Jessup University,California,52,17,41,41.57142857,1,8,24,2,3,67,50,41,40
+127741,University of Northern Colorado,Colorado,52,44,46,44.90322581,0,4,27,0,1,45,11,51,44
+132657,Lynn University,Florida,52,59,51,46.66666667,0,10,20,0,14,50,0,54,43
+133872,AdventHealth University,Florida,52,100,49,47.90566038,0,16,37,0,4,,,50,47
 149231,Southern Illinois University-Edwardsville,Illinois,52,43,40,33.8,0,14,6,0,3,67,50,32,38
-149505,Trinity Christian College,Illinois,69,57,63,39.78125,0,13,19,0,7,50,,0,67
-149514,Trinity International University-Illinois,Illinois,50,50,39,30,0,18,18,1,3,,,10,50
-149639,VanderCook College of Music,Illinois,57,,45,22.32352941,0,11,23,0,11,,,0,33
-149781,Wheaton College,Illinois,88,77,85,79.81818182,0,3,8,0,3,100,,82,79
-150066,Anderson University,Indiana,59,50,39,38.25,0,10,6,0,1,33,0,27,57
-150136,Ball State University,Indiana,64,73,65,59.1875,0,9,7,0,1,,50,57,62
-150145,Bethel University,Indiana,56,50,53,47.47368421,0,8,11,0,6,,,44,50
-150163,Butler University,Indiana,79,64,66,73.4,0,4,6,0,1,100,100,74,73
-150400,DePauw University,Indiana,79,81,78,78,0,6,8,0,21,50,,70,84
-150455,Earlham College,Indiana,75,90,67,61.93333333,0,7,8,0,19,,,71,54
-150534,University of Evansville,Indiana,65,66,51,40.83333333,0,7,5,0,5,,,40,42
-150604,Franklin College,Indiana,63,100,52,47,0,5,5,0,1,0,,44,50
-150668,Goshen College,Indiana,64,100,54,42.32352941,0,5,29,0,11,0,,50,41
-150677,Grace College and Theological Seminary,Indiana,66,75,56,47.8,0,3,7,0,4,,,31,55
-150756,Hanover College,Indiana,69,50,68,68,1,5,3,0,5,0,100,84,64
-150941,Huntington University,Indiana,69,67,63,33.5,1,3,3,0,3,,,0,67
-#N/A,Indiana University-Indianapolis,Indiana,56,65,47,49.13043478,0,10,13,0,3,100,33,48,50
-151263,University of Indianapolis,Indiana,60,56,50,46.28571429,0,12,9,0,12,33,0,42,52
-151306,University of Southern Indiana,Indiana,51,75,40,44,0,4,4,0,1,0,,44,44
-151351,Indiana University-Bloomington,Indiana,81,85,70,74.66666667,0,4,8,0,5,83,100,68,78
-151786,Marian University,Indiana,64,50,51,44.44444444,0,15,12,0,3,0,,40,50
-151801,Indiana Wesleyan University-Marion,Indiana,66,50,55,43.44444444,0,5,4,0,1,,0,39,49
-151962,Mid-America College of Funeral Service,Indiana,100,,,URM proportions reported; missing matching grad rates,0,10,1,1,0,,,,
-152080,University of Notre Dame,Indiana,96,94,93,95.58823529,0,4,13,0,7,,,91,97
-152318,Rose-Hulman Institute of Technology,Indiana,81,89,70,86.11111111,0,4,5,0,8,100,100,100,75
-152336,University of Saint Francis-Fort Wayne,Indiana,55,100,45,41,0,11,10,0,3,0,,31,52
 152381,Saint Mary-of-the-Woods College,Indiana,52,50,45,50,0,8,8,0,1,,,33,67
-152390,Saint Mary's College,Indiana,75,78,77,72.05882353,0,2,15,0,1,100,100,80,71
-152530,Taylor University,Indiana,78,87,66,65,0,3,5,0,4,67,100,60,68
-152567,Trine University,Indiana,65,50,56,46,0,3,6,0,1,0,,32,53
-152600,Valparaiso University,Indiana,70,60,56,53.625,0,6,10,0,4,0,,53,54
-152673,Wabash College,Indiana,75,91,65,59.26666667,0,4,11,0,5,,,60,59
-153001,Buena Vista University,Iowa,58,40,48,54.35714286,1,3,11,0,1,,,8,67
-153108,Central College,Iowa,71,,70,56.25,0,3,5,0,0,50,,25,75
-153126,Clarke University,Iowa,58,,46,40.04545455,0,13,9,0,7,,40,29,56
-153144,Coe College,Iowa,65,75,55,53.91304348,0,10,13,0,3,100,,46,60
-153162,Cornell College,Iowa,63,80,56,60.88235294,1,7,9,0,3,50,,43,76
-153241,Divine Word College,Iowa,100,100,,URM proportions reported; missing matching grad rates,0,0,1,0,85,,,100,
-153250,Dordt University,Iowa,68,66,69,50.25,0,1,3,0,10,100,,33,56
-153269,Drake University,Iowa,75,70,66,59.38461538,0,6,7,0,4,50,,61,58
 153302,Emmaus Bible College,Iowa,52,,52,10,1,6,3,0,3,100,,0,0
 153375,Grand View University,Iowa,52,67,41,37,0,10,10,0,3,50,100,20,54
-153384,Grinnell College,Iowa,88,89,90,91.33333333,0,4,8,0,19,,,80,97
-153603,Iowa State University,Iowa,74,71,64,62.1,0,3,7,0,3,56,75,60,63
-153658,University of Iowa,Iowa,74,78,62,63.5,0,3,9,0,2,45,80,59,65
-153825,Loras College,Iowa,68,75,51,64.66666667,0,5,10,0,4,,,64,65
-153834,Luther College,Iowa,74,83,54,57.63636364,1,3,7,0,11,100,,31,63
-153861,Maharishi International University,Iowa,50,100,40,19.04761905,1,10,11,0,2,,,40,0
-154004,Morningside University,Iowa,56,50,41,40.76923077,1,4,8,0,8,50,0,50,35
-154013,Mount Mercy University,Iowa,57,64,47,52.22222222,0,7,2,0,7,100,,50,60
-154095,University of Northern Iowa,Iowa,64,63,57,52.33333333,0,3,6,0,1,46,50,51,53
-154101,Northwestern College,Iowa,63,67,51,39.11111111,0,2,7,0,4,100,,29,42
-154235,Saint Ambrose University,Iowa,64,67,50,46.33333333,0,5,10,0,3,100,,25,57
-154350,Simpson College,Iowa,67,50,59,53.38461538,0,4,9,0,2,,0,43,58
-154527,Wartburg College,Iowa,67,75,48,35,0,4,4,0,6,,,26,44
-154712,Benedictine College,Kansas,68,50,55,60.35714286,0,3,11,0,1,50,0,25,70
 155025,Emporia State University,Kansas,52,43,42,43.9,1,3,6,0,4,100,0,35,39
-155061,Fort Hays State University,Kansas,50,50,38,32.75,0,3,5,0,2,43,,34,32
-155177,Hesston College,Kansas,82,,80,50,2,8,14,0,18,,,,50
-155317,University of Kansas,Kansas,67,69,52,55.86666667,1,4,10,0,4,36,100,48,61
 155335,Newman University,Kansas,52,57,47,49.75,1,3,16,0,3,33,,22,56
-155399,Kansas State University,Kansas,69,45,60,54.75,0,3,9,0,2,65,43,51,56
-155681,Pittsburg State University,Kansas,55,100,43,35.66666667,2,3,7,0,2,38,,24,40
-156125,Wichita State University,Kansas,51,23,51,50.95454545,1,6,15,0,12,50,0,46,53
-156213,Asbury University,Kentucky,70,93,61,59.72727273,0,4,7,0,5,,,33,75
-156286,Bellarmine University,Kentucky,60,100,53,57.66666667,0,8,7,0,2,33,100,53,63
-156295,Berea College,Kentucky,62,93,60,62.36363636,0,18,15,0,8,,,56,70
-156408,Centre College,Kentucky,87,79,80,82.53846154,0,6,7,0,5,100,,82,83
-156417,Clear Creek Baptist Bible College,Kentucky,50,,50,URM proportions reported; missing matching grad rates,0,5,2,0,0,,,,
-156471,Galen College of Nursing-Louisville,Kentucky,67,,62,50,0,12,12,0,0,,,0,100
-156620,Eastern Kentucky University,Kentucky,54,88,44,38.16666667,0,7,5,0,1,75,0,34,44
-157085,University of Kentucky,Kentucky,69,72,54,57.07692308,0,7,6,0,2,50,100,52,63
-157289,University of Louisville,Kentucky,62,71,53,58.5,0,15,7,0,1,0,0,62,51
-157401,Murray State University,Kentucky,62,56,54,50.66666667,0,6,3,0,5,50,,49,54
 157447,Northern Kentucky University,Kentucky,52,69,38,42.8,0,6,4,0,4,0,100,44,41
-157818,Transylvania University,Kentucky,69,0,60,61.5,0,5,5,0,1,,,73,50
-157951,Western Kentucky University,Kentucky,54,50,40,38.30769231,0,8,5,0,1,11,50,26,58
-158477,Centenary College of Louisiana,Louisiana,60,100,60,55.17857143,2,17,9,0,3,0,,57,64
-159391,Louisiana State University and Agricultural & Mechanical College,Louisiana,67,79,54,59.18518519,1,17,9,0,2,61,57,56,65
-159647,Louisiana Tech University,Louisiana,60,53,47,45.25,0,11,5,0,2,40,,44,48
-159656,Loyola University New Orleans,Louisiana,67,73,63,67.375,0,19,21,0,4,50,,70,65
-159993,University of Louisiana at Monroe,Louisiana,50,68,40,41.76923077,0,23,3,0,4,60,100,42,40
-160409,Saint Joseph Seminary College,Louisiana,50,,0,57,3,0,19,0,0,,,,57
-160658,University of Louisiana at Lafayette,Louisiana,51,50,38,40.72413793,0,24,5,0,1,20,0,39,49
-160755,Tulane University of Louisiana,Louisiana,87,88,83,83.0625,0,7,9,0,7,100,100,78,87
-160959,College of the Atlantic,Maine,58,85,52,57.14285714,0,1,6,0,23,,,100,50
-160977,Bates College,Maine,93,91,89,86.78571429,0,5,9,0,9,,,90,85
-161004,Bowdoin College,Maine,94,100,94,93.47368421,0,6,13,0,7,100,100,88,96
-161086,Colby College,Maine,88,84,90,86.84615385,0,5,8,0,10,100,100,85,88
-161226,University of Maine at Farmington,Maine,53,50,49,27.42857143,1,2,4,0,1,0,,30,33
-161253,University of Maine,Maine,55,64,45,36.375,1,2,5,0,2,45,,28,38
-161299,Maine Maritime Academy,Maine,66,,61,40,1,2,4,0,1,,,0,60
-161457,University of New England,Maine,62,75,51,11.33333333,0,4,2,0,0,0,,17,0
-161518,Saint Joseph's College of Maine,Maine,70,,56,40.8,0,4,6,0,0,0,0,33,46
-#N/A,Unity Environmental University,Maine,51,,44,12.94117647,1,5,11,0,0,0,,0,20
-162061,Capitol Technology University,Maryland,55,100,47,46.25,0,23,5,0,1,,,50,29
-162654,Goucher College,Maryland,58,54,66,58.93333333,1,26,4,0,5,,100,60,52
-162760,Hood College,Maryland,61,67,57,56.10344828,0,17,12,0,2,,,47,69
-162928,Johns Hopkins University,Maryland,94,95,91,92.93103448,0,9,20,0,14,67,80,95,92
-163046,Loyola University Maryland,Maryland,79,44,78,73.5,0,10,14,0,2,75,0,63,81
-163268,University of Maryland-Baltimore County,Maryland,70,68,62,65.40625,0,23,9,0,5,100,,64,69
-163286,University of Maryland-College Park,Maryland,89,87,82,83.86956522,0,13,10,0,4,80,100,83,85
-163295,Maryland Institute College of Art,Maryland,77,78,69,74,0,10,10,0,24,,,71,77
-163462,Mount St. Mary's University,Maryland,65,50,58,60.78787879,0,19,14,0,4,100,100,54,70
-163578,Notre Dame of Maryland University,Maryland,60,67,58,60.71428571,0,29,13,0,1,0,,57,69
-163851,Salisbury University,Maryland,69,71,61,64.33333333,0,14,7,0,1,29,67,62,69
-163912,St. Mary's College of Maryland,Maryland,71,100,65,54.95,0,11,9,1,1,50,,59,50
-163976,St. John's College,Maryland,77,71,82,64.5,0,2,6,0,14,,,33,75
-164076,Towson University,Maryland,70,55,69,66.5,0,30,10,0,2,20,100,67,65
-164155,United States Naval Academy,Maryland,90,88,,85.5,0,6,14,0,1,100,75,75,90
-164173,Stevenson University,Maryland,65,80,57,59.36842105,0,28,10,0,1,0,0,52,80
-164216,Washington College,Maryland,71,56,68,66.7,1,11,9,0,4,,100,73,59
-164270,McDaniel College,Maryland,66,,57,52.57142857,0,25,10,0,2,100,,52,54
-164368,Hult International Business School,Massachusetts,64,,,URM proportions reported; missing matching grad rates,0,1,4,0,76,,,,
-164465,Amherst College,Massachusetts,92,76,93,93.96296296,0,11,16,0,11,33,,91,96
-164562,Assumption University,Massachusetts,72,25,64,64.33333333,0,5,10,0,1,,100,57,68
-164580,Babson College,Massachusetts,93,96,94,88.05263158,0,4,15,0,30,,,92,87
-164739,Bentley University,Massachusetts,88,87,87,83.26666667,0,4,11,0,15,,50,84,83
-164748,Berklee College of Music,Massachusetts,68,74,56,56.66666667,0,6,12,0,29,0,,56,57
-164924,Boston College,Massachusetts,91,91,87,89.5,0,5,11,0,9,100,0,84,92
-164988,Boston University,Massachusetts,89,89,86,85.33333333,0,5,10,0,23,100,100,88,84
-165015,Brandeis University,Massachusetts,87,91,84,81.14285714,0,6,8,0,21,100,100,84,79
-165024,Bridgewater State University,Massachusetts,56,75,49,49.35,0,11,9,0,0,50,100,48,51
-165334,Clark University,Massachusetts,76,74,75,67.66666667,0,5,10,0,7,,,75,64
 165529,Curry College,Massachusetts,52,70,39,40,0,13,9,0,3,,33,49,27
-165662,Emerson College,Massachusetts,77,77,77,78.125,0,5,11,0,16,,0,74,80
-139630,Emmanuel College,Massachusetts,66,100,59,58.33333333,0,6,12,0,1,,,71,52
-165699,Endicott College,Massachusetts,78,85,72,67.83333333,0,1,5,0,1,50,100,42,73
-165820,Fitchburg State University,Massachusetts,56,67,52,48,0,12,16,0,1,0,,48,48
-165866,Framingham State University,Massachusetts,55,50,48,42.56756757,0,16,21,0,1,0,,42,43
-165936,Gordon College,Massachusetts,69,86,63,68.33333333,0,6,12,0,11,,,65,70
-166018,Hampshire College,Massachusetts,60,76,59,59.59090909,0,7,15,0,7,,,78,51
-166027,Harvard University,Massachusetts,98,96,97,98.42105263,0,8,11,0,14,100,,99,98
-166054,Hellenic College-Holy Cross Greek Orthodox School of Theology,Massachusetts,60,100,50,0,0,3,3,0,3,0,,,0
-166124,College of the Holy Cross,Massachusetts,91,90,92,88.5,0,4,12,0,3,,100,84,90
-166391,Lasell University,Massachusetts,61,55,58,49.44,0,11,14,0,2,,,50,49
-166452,Lesley University,Massachusetts,61,71,59,62.75,1,10,17,0,3,100,,62,61
-166513,University of Massachusetts-Lowell,Massachusetts,71,76,65,60.81818182,0,8,14,0,3,,,64,59
-166629,University of Massachusetts-Amherst,Massachusetts,83,81,78,77.30769231,0,5,8,0,7,75,100,81,75
-166638,University of Massachusetts-Boston,Massachusetts,51,53,49,46.11111111,0,17,19,0,6,25,100,44,48
-166656,MCPHS University,Massachusetts,62,53,52,48.5,0,12,12,0,14,,,43,54
-166674,Massachusetts College of Art and Design,Massachusetts,66,74,69,60.64705882,0,3,14,0,4,50,,59,61
-166683,Massachusetts Institute of Technology,Massachusetts,95,91,91,93.65217391,0,8,15,0,11,,,93,94
-166692,Massachusetts Maritime Academy,Massachusetts,79,100,75,65.83333333,1,1,5,0,1,,,40,71
-166850,Merrimack College,Massachusetts,68,62,62,53.84615385,0,4,9,0,2,0,100,58,52
-166911,Montserrat College of Art,Massachusetts,62,,57,65.6,1,3,12,0,1,,,60,67
-166939,Mount Holyoke College,Massachusetts,83,84,79,73.69230769,0,5,8,0,23,,,78,71
-167057,The New England Conservatory of Music,Massachusetts,82,89,87,78.2,0,2,3,0,37,,,83,75
-167260,Nichols College,Massachusetts,58,50,49,37.28571429,0,10,11,0,3,,,42,33
-167288,Massachusetts College of Liberal Arts,Massachusetts,56,0,54,55,0,10,10,0,0,50,,58,52
-167358,Northeastern University,Massachusetts,91,87,89,88.6875,0,5,11,0,14,50,,88,89
-167394,College of Our Lady of the Elms,Massachusetts,75,,64,59.31034483,0,11,18,0,1,,,50,65
-167598,Regis College,Massachusetts,67,100,55,56.27586207,0,10,19,0,1,,,53,58
-167729,Salem State University,Massachusetts,55,58,51,52.78787879,0,10,23,0,3,0,,50,54
-167783,Simmons University,Massachusetts,74,68,69,67.5,0,9,15,0,2,,,70,66
-167835,Smith College,Massachusetts,89,98,86,83.17647059,0,5,12,0,14,,100,86,82
-167899,Springfield College,Massachusetts,73,83,58,54.78571429,0,5,9,0,4,67,,49,58
-167987,University of Massachusetts-Dartmouth,Massachusetts,55,50,48,46.2,0,18,12,0,1,0,,49,42
-167996,Stonehill College,Massachusetts,79,80,73,71.08333333,0,5,7,0,2,,0,88,59
-168005,Suffolk University,Massachusetts,60,63,60,51.66666667,0,8,16,0,14,,0,51,52
-168148,Tufts University,Massachusetts,94,96,92,93.375,0,6,10,0,12,,,94,93
-168218,Wellesley College,Massachusetts,90,89,92,89,0,7,15,0,14,,,89,89
-168227,Wentworth Institute of Technology,Massachusetts,69,67,65,57.15789474,0,7,12,0,5,,100,66,52
-168254,Western New England University,Massachusetts,67,43,54,49,0,5,10,0,2,0,100,41,53
-168263,Westfield State University,Massachusetts,60,100,52,47.66666667,0,6,12,0,1,100,,49,47
-168281,Wheaton College (Massachusetts),Massachusetts,80,75,76,79,0,6,7,0,4,,,79,79
-168342,Williams College,Massachusetts,95,95,91,92.47058824,0,5,12,0,9,,,84,96
-168421,Worcester Polytechnic Institute,Massachusetts,89,87,83,86.25,0,3,9,0,7,57,,78,89
-168430,Worcester State University,Massachusetts,59,50,48,50.88,0,9,16,0,1,0,,56,48
-168546,Albion College,Michigan,59,100,51,49,0,16,12,0,3,50,,40,61
-168591,Alma College,Michigan,62,100,56,43.5,0,4,4,0,3,50,,29,58
-168607,Alpena Community College,Michigan,100,,100,URM proportions reported; missing matching grad rates,3,2,3,0,0,,,,
-168740,Andrews University,Michigan,71,63,61,67.56756757,0,17,20,1,18,,,60,74
-168786,Aquinas College,Michigan,61,63,60,55.2,0,3,7,0,5,100,,44,60
-169080,Calvin University,Michigan,77,80,69,65.5,0,4,4,0,12,0,,68,63
-169248,Central Michigan University,Michigan,62,67,51,50.25,1,10,5,0,2,29,29,51,53
-169442,College for Creative Studies,Michigan,64,50,53,58.73684211,0,13,6,0,7,,,48,82
-169716,University of Detroit Mercy,Michigan,73,57,67,59.94444444,0,11,7,0,24,,100,58,63
-169910,Ferris State University,Michigan,57,43,47,35.8125,1,9,7,0,1,,100,38,33
-169983,Kettering University,Michigan,69,74,68,73.71428571,0,3,4,0,4,33,,80,69
-170037,Cornerstone University,Michigan,63,89,56,37.61538462,0,7,6,0,7,,,21,57
-170082,Grand Valley State University,Michigan,66,45,59,52.91666667,0,5,7,0,1,77,50,50,55
-170286,Hillsdale College,Michigan,87,,,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
-170301,Hope College,Michigan,80,78,71,59.33333333,0,4,8,0,3,,,50,64
-170532,Kalamazoo College,Michigan,80,74,78,77.23809524,0,5,16,0,5,,,78,77
-170675,Lawrence Technological University,Michigan,65,85,49,42.35294118,0,13,4,0,11,,,36,63
-170976,University of Michigan-Ann Arbor,Michigan,93,94,86,86.66666667,0,4,8,0,9,100,75,82,89
-171100,Michigan State University,Michigan,82,79,73,65.92307692,0,7,6,0,6,65,100,65,67
-171128,Michigan Technological University,Michigan,68,53,57,42.5,0,1,3,0,1,14,100,38,44
-171137,University of Michigan-Dearborn,Michigan,56,67,51,40,0,8,7,0,3,50,50,40,40
-171456,Northern Michigan University,Michigan,57,63,44,46.28571429,1,2,4,0,1,38,,41,51
-171483,Northwestern Michigan College,Michigan,59,,0,0,1,1,5,0,0,0,,,
-171492,Northwood University,Michigan,63,50,55,53.66666667,0,8,7,0,2,0,,28,83
-171571,Oakland University,Michigan,58,58,51,37.71428571,0,9,5,0,2,83,67,32,48
-171881,Kuyper College,Michigan,54,100,31,11.53846154,0,10,3,1,10,100,,0,50
-172051,Saginaw Valley State University,Michigan,50,62,40,34.76923077,0,8,5,0,3,25,,24,52
-172264,Siena Heights University,Michigan,51,83,37,32.88888889,1,11,7,0,3,,,29,39
-172334,Spring Arbor University,Michigan,60,50,54,36,0,5,5,0,3,,,42,30
-172644,Wayne State University,Michigan,60,59,56,43.04347826,0,16,7,0,2,33,100,40,50
-172699,Western Michigan University,Michigan,55,77,44,41.5,0,8,8,0,5,73,100,36,47
-172866,Academy College,Minnesota,100,,100,URM proportions reported; missing matching grad rates,0,4,2,1,0,,,,
-173045,Augsburg University,Minnesota,56,41,54,47.38461538,1,25,13,0,3,33,,44,55
-173142,Bethany Lutheran College,Minnesota,57,63,51,10.18181818,1,3,8,0,17,,0,0,14
-150145,Bethel University,Minnesota,75,33,65,45.83333333,0,5,7,0,0,100,100,40,50
-173258,Carleton College,Minnesota,91,92,87,87.58823529,0,7,10,0,10,,,87,88
-173300,Concordia College at Moorhead,Minnesota,69,44,53,48.75,1,4,3,0,7,33,,36,71
-173328,Concordia University-Saint Paul,Minnesota,51,43,38,34.73913043,0,14,9,0,1,,,41,25
-173452,Martin Luther College,Minnesota,74,75,69,26.66666667,0,1,2,0,2,0,,0,40
-173647,Gustavus Adolphus College,Minnesota,76,56,78,62.625,0,3,5,0,4,100,,57,66
-173665,Hamline University,Minnesota,69,100,60,56.64,1,12,12,0,1,0,,59,59
-173902,Macalester College,Minnesota,88,91,85,83.29411765,0,6,10,1,13,0,100,76,86
 173920,Minnesota State University-Mankato,Minnesota,52,51,40,39.5,0,6,6,0,9,29,0,40,39
-174066,University of Minnesota-Twin Cities,Minnesota,84,85,75,77.57142857,0,8,6,0,5,50,80,78,77
-174075,University of Minnesota-Crookston,Minnesota,53,0,51,22.11111111,1,4,4,0,3,67,,0,33
-174127,Minneapolis College of Art and Design,Minnesota,58,100,62,55.75,2,5,11,0,3,,,75,47
-174233,University of Minnesota-Duluth,Minnesota,62,63,51,53.4,0,2,3,0,1,43,100,57,51
-174251,University of Minnesota-Morris,Minnesota,58,29,53,36.68181818,13,3,6,0,3,36,,13,50
-174358,Minnesota State University Moorhead,Minnesota,55,50,47,37.72727273,1,5,5,0,4,0,,40,43
-174437,North Central University,Minnesota,58,100,52,39.30434783,1,8,14,0,2,0,,36,44
-174491,University of Northwestern-St Paul,Minnesota,70,,63,36.5,0,4,4,0,1,50,0,29,44
-174525,Oak Hills Christian College,Minnesota,55,,40,0,10,12,1,2,3,,,0,
-174747,College of Saint Benedict,Minnesota,78,43,70,52.25,0,3,9,0,3,75,100,38,57
-174792,Saint Johns University,Minnesota,76,85,64,58.66666667,1,4,7,0,3,100,100,46,60
-174817,Saint Mary's University of Minnesota,Minnesota,65,67,64,44.55555556,1,7,10,0,3,50,,36,50
-174844,St Olaf College,Minnesota,85,85,84,73.75,0,3,9,0,10,,,67,76
-174862,Crown College,Minnesota,53,75,46,30.41666667,0,5,7,0,2,0,,31,30
-174899,The College of Saint Scholastica,Minnesota,67,65,58,54.72727273,2,5,4,0,3,67,0,40,67
-174914,University of St Thomas,Minnesota,80,44,71,66.85714286,0,6,8,0,4,67,,60,72
-175005,St Catherine University,Minnesota,64,50,59,60.07407407,0,14,13,0,0,,0,49,72
-175272,Winona State University,Minnesota,59,61,49,44.42857143,0,3,4,0,2,25,,33,53
-175980,Millsaps College,Mississippi,57,85,48,49.64516129,0,27,4,0,3,0,,49,54
-176017,University of Mississippi,Mississippi,68,83,53,53.375,0,11,5,0,2,71,0,49,63
-176053,Mississippi College,Mississippi,62,32,46,47,0,15,3,0,4,50,50,43,67
-176080,Mississippi State University,Mississippi,63,65,47,46.3,1,15,4,0,1,38,75,44,57
-176336,Southeastern Baptist College,Mississippi,100,,100,100,1,52,2,0,0,,,100,
 176372,University of Southern Mississippi,Mississippi,52,43,43,42.625,0,28,4,0,2,50,,41,54
-176628,Avila University,Missouri,51,14,42,40.30434783,1,27,17,1,2,0,0,46,36
-176770,Cox College,Missouri,100,,100,URM proportions reported; missing matching grad rates,1,1,5,0,0,,,,
-176789,Calvary University,Missouri,60,,56,0,0,7,6,0,0,0,100,0,
-176965,University of Central Missouri,Missouri,53,69,45,38.07692308,0,7,6,0,1,50,0,39,37
 177117,Cottey College,Missouri,52,100,56,57.89473684,2,5,12,0,6,0,,100,50
-177214,Drury University,Missouri,64,64,53,55.75,2,3,2,1,7,67,0,62,63
-177339,Evangel University,Missouri,61,0,53,60.41666667,1,5,7,0,2,,,54,65
-177418,Fontbonne University,Missouri,58,25,50,34.25925926,0,25,2,0,2,,,31,75
-177746,Kansas City Art Institute,Missouri,57,100,48,43.66666667,1,8,15,0,1,67,,42,43
-177816,Kenrick Glennon Seminary,Missouri,83,,,No URM enrollment,,,,,,,,,100
-177968,Lindenwood University,Missouri,54,60,46,30.73684211,0,13,5,1,8,75,64,25,39
-178059,Maryville University of Saint Louis,Missouri,67,37,59,49.5,1,13,8,0,3,100,,49,44
-178396,University of Missouri-Columbia,Missouri,75,79,63,66.09090909,0,5,6,0,1,69,50,65,67
-178402,University of Missouri-Kansas City,Missouri,55,70,45,45,0,12,12,0,3,0,100,40,50
-178411,Missouri University of Science and Technology,Missouri,62,57,49,57.5,0,3,5,0,2,50,,50,62
 178420,University of Missouri-St Louis,Missouri,52,71,40,37.76470588,0,13,4,0,1,50,,34,50
-178615,Truman State University,Missouri,71,54,59,71.33333333,0,2,4,0,8,89,50,62,76
-178624,Northwest Missouri State University,Missouri,53,29,41,29.44444444,0,4,5,0,2,50,50,25,33
-178679,Ozark Christian College,Missouri,51,,43,29.36363636,2,2,7,0,2,67,,0,27
-178697,College of the Ozarks,Missouri,63,100,61,70,1,1,5,0,2,100,0,40,70
-178767,Stevens-The Institute of Business & Arts,Missouri,100,,,URM proportions reported; missing matching grad rates,0,55,3,0,0,,,,
-179043,Rockhurst University,Missouri,77,100,60,58.71428571,0,8,13,0,2,67,,55,61
-179159,Saint Louis University,Missouri,81,65,72,76,0,6,6,0,3,60,,75,77
-179265,University of Health Sciences and Pharmacy in St. Louis,Missouri,73,60,54,88.33333333,1,10,2,1,4,,,86,100
-179557,Southeast Missouri State University,Missouri,57,63,45,40.90909091,0,8,3,0,5,33,,39,46
-179566,Missouri State University-Springfield,Missouri,58,65,46,46.125,0,3,5,0,2,33,0,38,51
-179867,Washington University in St Louis,Missouri,94,93,91,93.14285714,0,9,12,0,8,100,,92,94
-179894,Webster University,Missouri,59,71,51,47.14285714,0,15,6,0,4,100,,44,55
-179946,Westminster College,Missouri,64,83,45,58.5,1,7,4,0,2,0,,50,88
-179955,William Jewell College,Missouri,62,67,48,56.42105263,1,8,11,0,3,,100,46,64
-179964,William Woods University,Missouri,55,60,55,40,0,5,5,0,4,50,,40,40
-180106,Carroll College,Montana,70,25,66,34.16666667,0,1,5,0,1,0,,0,41
-180416,Montana Technological University,Montana,57,56,42,50.5,1,1,4,0,2,75,,0,57
-180461,Montana State University,Montana,57,38,46,45.85714286,1,0,6,0,1,33,0,23,48
-180832,Clarkson College,Nebraska,73,,63,100,0,8,6,0,0,,,,100
-180878,Bryan College of Health Sciences,Nebraska,72,,82,URM proportions reported; missing matching grad rates,1,3,3,0,0,,,,
-180984,Concordia University-Nebraska,Nebraska,59,50,51,33.8,0,2,8,0,2,100,0,17,38
-181002,Creighton University,Nebraska,78,64,71,60.83333333,0,2,10,0,2,100,33,75,58
-181020,Doane University,Nebraska,61,75,49,35.875,0,5,11,0,3,,100,29,39
-181127,Hastings College,Nebraska,55,25,44,38.375,1,6,10,0,7,,0,14,53
-181215,University of Nebraska at Kearney,Nebraska,54,49,54,41.25,0,2,14,0,6,0,,22,44
-181297,Nebraska Methodist College of Nursing & Allied Health,Nebraska,65,,80,0,0,5,9,0,0,,,,0
 181394,University of Nebraska at Omaha,Nebraska,52,71,44,43.72,0,8,17,0,4,25,33,41,45
-181446,Nebraska Wesleyan University,Nebraska,59,0,47,52.25,0,3,9,0,2,0,,20,63
-181464,University of Nebraska-Lincoln,Nebraska,65,72,52,51.25,0,3,9,0,4,54,100,46,53
-181543,Summit Christian College,Nebraska,67,,50,URM proportions reported; missing matching grad rates,0,0,5,0,0,,,,
-181604,College of Saint Mary,Nebraska,67,,56,44.53333333,0,7,23,0,2,50,,43,45
-#N/A,Union Adventist University,Nebraska,55,63,53,56.65625,0,7,24,1,6,,0,43,63
-181783,Wayne State College,Nebraska,51,,41,32.125,1,3,12,0,3,100,,30,27
-182290,University of Nevada-Reno,Nevada,62,46,53,58.4137931,1,4,24,0,1,62,47,60,58
-182634,Colby-Sawyer College,New Hampshire,59,100,51,38.2,0,3,2,0,2,33,,35,43
-182670,Dartmouth College,New Hampshire,95,91,92,93.29411765,1,6,10,0,14,56,100,90,99
 182795,Franklin Pierce University,New Hampshire,52,43,42,39.5625,0,7,9,0,4,25,,30,47
-182917,Magdalen College,New Hampshire,79,,100,67,0,2,2,0,0,,,,67
-183044,University of New Hampshire-Main Campus,New Hampshire,78,63,76,72.4,0,1,4,0,1,83,,70,73
-183062,Keene State College,New Hampshire,59,,55,44.57142857,0,2,5,0,0,0,100,31,50
-183071,University of New Hampshire at Manchester,New Hampshire,69,,62,38.46153846,0,3,10,0,0,,,0,50
-183080,Plymouth State University,New Hampshire,51,32,45,38.28571429,0,2,5,0,2,56,0,34,40
-183211,Rivier University,New Hampshire,56,,54,26.41176471,0,11,6,0,0,100,,25,29
-183239,Saint Anselm College,New Hampshire,85,100,83,80.8,0,1,4,0,1,0,,88,79
-183275,Thomas More College of Liberal Arts,New Hampshire,70,,70,100,2,0,6,0,2,,,,100
-183910,Caldwell University,New Jersey,68,85,55,53.58333333,0,17,31,0,15,,,51,55
-183974,Centenary University,New Jersey,60,0,66,55.53846154,0,8,18,0,0,100,,59,54
-184348,Drew University,New Jersey,74,73,77,66.25,0,9,3,0,15,,,65,70
 184612,Felician University,New Jersey,52,25,46,45,0,20,40,0,4,67,100,43,46
-184694,Fairleigh Dickinson University-Florham Campus,New Jersey,61,67,57,54,0,10,25,0,0,100,,44,58
-184773,Georgian Court University,New Jersey,54,100,46,34,0,8,14,0,3,0,,27,38
-184782,Rowan University,New Jersey,68,53,61,54.5,0,11,13,0,2,50,100,48,60
-185262,Kean University,New Jersey,51,47,47,46.81818182,0,20,35,0,4,50,0,43,49
-185572,Monmouth University,New Jersey,68,25,64,62.27272727,0,5,17,0,1,0,,53,65
-185590,Montclair State University,New Jersey,65,57,63,61.20408163,0,13,36,0,1,50,50,59,62
-185828,New Jersey Institute of Technology,New Jersey,74,70,74,66.42857143,0,10,25,0,6,100,,65,67
-186131,Princeton University,New Jersey,98,97,97,97.88888889,0,8,10,0,13,100,100,99,97
-186201,Ramapo College of New Jersey,New Jersey,70,57,62,66.51724138,0,6,23,0,1,71,,57,69
-186283,Rider University,New Jersey,67,43,60,59.25,0,14,18,0,4,67,,57,61
-186371,Rutgers University-Camden,New Jersey,65,63,58,53.525,0,19,21,0,2,100,100,53,54
-186380,Rutgers University-New Brunswick,New Jersey,84,84,80,76.59090909,0,7,15,0,7,50,84,80,75
-186399,Rutgers University-Newark,New Jersey,66,71,64,60.28301887,0,19,34,0,2,0,33,59,61
-186432,Saint Peter's University,New Jersey,60,63,59,59.42372881,0,18,41,0,5,,33,49,64
-186584,Seton Hall University,New Jersey,72,72,64,60.91428571,0,11,24,0,1,100,,52,65
-186867,Stevens Institute of Technology,New Jersey,88,78,78,82.94117647,0,2,15,0,3,,,75,84
-186876,Stockton University,New Jersey,76,,69,70.34482759,0,10,19,0,1,33,100,71,70
-187134,The College of New Jersey,New Jersey,86,100,80,79.56521739,0,5,18,0,1,,,78,80
-187444,William Paterson University of New Jersey,New Jersey,56,100,50,49.20754717,0,19,34,0,2,100,100,46,51
-187967,New Mexico Institute of Mining and Technology,New Mexico,55,100,49,48.43181818,3,1,40,0,1,27,,50,50
-187985,University of New Mexico-Main Campus,New Mexico,51,60,42,46.61016949,6,3,50,0,2,29,86,42,49
-188030,New Mexico State University-Main Campus,New Mexico,51,64,45,49.26086957,2,3,64,0,3,38,,41,50
-188340,Vaughn College of Aeronautics and Technology,New York,56,67,62,45.33333333,1,16,31,1,4,,100,29,52
-188429,Adelphi University,New York,68,71,60,55.51724138,0,9,20,0,6,0,,50,58
-188526,Albany College of Pharmacy and Health Sciences,New York,76,100,50,100,1,9,10,0,5,,,,100
-188641,Alfred University,New York,53,100,47,35.71428571,0,11,10,0,6,0,,40,31
-188854,American Musical and Dramatic Academy,New York,61,67,55,67.61111111,0,17,19,0,14,0,0,75,61
-189088,Bard College,New York,72,72,71,72,0,12,12,0,14,0,,71,73
-189097,Barnard College,New York,92,91,95,93.72222222,0,5,13,0,12,100,,93,94
-#N/A,Mount Sinai Phillips School of Nursing,New York,100,,,URM proportions reported; missing matching grad rates,0,21,16,2,0,,,,
-#N/A,Canisius University,New York,66,82,55,50.29411765,0,11,6,0,6,33,50,45,60
-189848,Cazenovia College,New York,55,0,53,45.0952381,1,12,8,0,0,67,,38,53
-190044,Clarkson University,New York,73,71,61,52.66666667,0,3,6,0,5,0,,42,58
-190099,Colgate University,New York,91,92,87,91.57142857,0,5,9,0,9,,,89,93
-190150,Columbia University in the City of New York,New York,95,95,93,93.31818182,0,7,15,0,19,86,100,94,93
-190372,The Cooper Union for the Advancement of Science and Art,New York,83,78,87,85.29411765,0,5,12,0,13,,,86,85
-190415,Cornell University,New York,95,95,93,92.04545455,0,7,15,0,10,71,100,90,93
-190512,CUNY Bernard M Baruch College,New York,74,71,74,69.5,0,9,27,0,7,100,50,56,74
-190549,CUNY Brooklyn College,New York,55,32,56,51.46666667,0,22,23,0,3,100,50,53,50
-190558,College of Staten Island CUNY,New York,51,43,47,44.6,0,14,26,0,2,,100,42,46
-190567,CUNY City College,New York,59,64,58,57.77777778,0,15,39,0,5,67,20,65,55
-190594,CUNY Hunter College,New York,56,62,56,51.42857143,0,11,31,0,5,67,42,47,53
-190600,CUNY John Jay College of Criminal Justice,New York,54,49,54,52.75757576,0,16,50,0,3,60,44,52,53
-190637,CUNY Lehman College,New York,54,76,54,52.92592593,0,25,56,0,3,25,100,55,52
-190664,CUNY Queens College,New York,56,49,54,48.71052632,0,9,29,0,6,38,67,51,48
-190716,D'Youville  University,New York,59,25,57,58,0,15,6,0,6,100,,56,63
-190725,Daemen University,New York,55,50,41,28.76470588,1,12,5,0,1,,,27,33
-190761,Dominican University New York,New York,53,75,47,43.59259259,0,14,40,0,3,,100,31,48
-190983,Elmira College,New York,56,63,57,37.09090909,1,4,6,0,7,0,100,36,44
-191241,Fordham University,New York,83,75,86,80,0,6,18,0,7,100,,74,82
-191515,Hamilton College,New York,92,90,92,91.84615385,0,3,10,0,7,,,88,93
-191533,Hartwick College,New York,53,58,48,45.91666667,0,14,10,0,3,63,,43,50
-191621,Hilbert College,New York,56,,49,49.33333333,1,10,4,0,2,100,,36,70
-191630,Hobart William Smith Colleges,New York,74,71,69,61.4375,0,7,9,0,8,100,100,53,68
-191649,Hofstra University,New York,68,67,58,58.72,0,9,16,0,4,50,60,60,58
-191676,Houghton University,New York,61,47,52,27.125,0,7,1,0,6,0,0,31,0
-191931,Iona University,New York,57,71,49,47,0,9,26,0,3,100,100,47,47
-191968,Ithaca College,New York,74,76,64,65.66666667,0,5,10,0,3,50,,71,63
-192040,Jewish Theological Seminary of America,New York,81,,,100,0,0,5,0,2,,,,100
-192110,The Juilliard School,New York,89,92,89,91.42857143,0,6,8,0,25,,,80,100
-192165,Kehilath Yakov Rabbinical Seminary,New York,50,,63,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
 192192,Keuka College,New York,52,50,41,48,1,5,6,0,1,100,0,40,46
-192271,LIM College,New York,51,41,49,66.22727273,1,22,21,0,9,100,100,42,90
-192323,Le Moyne College,New York,72,88,66,59.35294118,0,8,9,0,2,100,,53,65
-192703,Manhattan College,New York,72,52,86,65.65714286,0,6,29,0,3,,,64,66
-192712,Manhattan School of Music,New York,79,88,44,91.17647059,0,6,11,0,36,,,75,100
-192749,Manhattanville College,New York,61,63,54,57.48780488,0,10,31,0,3,100,100,59,57
-192785,Maria College of Albany,New York,50,,40,100,0,17,8,0,4,,,100,
-192819,Marist College,New York,81,76,78,77.4,0,3,12,0,2,100,0,75,78
-192864,Marymount Manhattan College,New York,57,50,54,53.79411765,0,11,23,0,2,57,,45,58
-193292,Molloy College,New York,70,0,58,59.28571429,0,10,25,0,1,33,100,45,65
-193308,Monroe College,New York,69,55,70,71.65822785,0,42,37,0,10,100,,74,69
-193353,Mount Saint Mary College,New York,61,50,56,52.42424242,0,8,25,0,0,0,0,35,58
-#N/A,University of Mount Saint Vincent,New York,57,100,54,53.82978723,0,14,33,0,2,0,,44,58
-#N/A,Nazareth University,New York,69,60,60,56.25,0,5,7,0,1,,,58,55
-193654,The New School,New York,69,84,58,58.71428571,0,4,10,0,33,100,67,53,61
-193900,New York University,New York,87,88,86,86,0,8,16,0,26,88,67,86,86
-193973,Niagara University,New York,72,71,66,52.6,0,6,4,0,22,67,,51,55
-194091,New York Institute of Technology,New York,55,56,53,44.6875,0,11,21,0,7,100,0,46,44
-194116,New York School of Interior Design,New York,83,0,100,100,0,5,14,0,11,,,,100
-194310,Pace University,New York,61,64,56,58.06896552,0,9,20,0,10,100,,56,59
-194578,Pratt Institute-Main,New York,76,86,67,61.33333333,0,4,11,0,32,,100,43,68
-194666,Rabbinical College Bobover Yeshiva Bnei Zion,New York,88,,89,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
-194824,Rensselaer Polytechnic Institute,New York,84,90,78,74.625,0,5,11,0,12,50,100,65,79
-194958,Roberts Wesleyan University,New York,68,65,60,57.39130435,1,14,9,0,3,,,57,58
-195003,Rochester Institute of Technology,New York,74,71,70,70.57142857,0,5,9,0,4,50,100,68,72
-195030,University of Rochester,New York,90,93,86,85.46153846,0,5,8,0,24,100,100,83,87
-195128,Russell Sage College,New York,69,100,60,55.54166667,1,11,12,0,1,100,,51,56
-195164,St Bonaventure University,New York,73,62,71,67.27272727,0,5,6,0,4,,,58,75
-195173,St. Francis College,New York,54,65,55,42.46296296,2,25,27,0,16,60,25,34,49
-195216,St Lawrence University,New York,83,89,76,68.33333333,0,3,6,0,10,0,,71,67
-195234,The College of Saint Rose,New York,55,73,48,43.42105263,0,14,5,0,5,50,0,45,39
 195243,St. Thomas Aquinas College,New York,52,58,50,42.61290323,0,12,19,0,4,,,42,43
-195304,Sarah Lawrence College,New York,72,79,72,68.42857143,0,4,10,0,6,,,72,67
-195438,Sh'or Yoshuv Rabbinical College,New York,50,,50,URM proportions reported; missing matching grad rates,0,0,0,0,4,,,,
-195474,Siena College,New York,76,56,72,70.15384615,0,4,9,0,3,,50,66,72
-195526,Skidmore College,New York,84,82,89,86.42857143,0,4,10,0,9,,,90,85
-195544,St. Joseph's University-New York,New York,69,,56,61.3,0,9,21,0,2,,100,55,64
-195720,St. John Fisher University,New York,72,,68,64.58333333,0,5,7,0,1,75,,57,70
-195809,St. John's University-New York,New York,69,62,62,65.33333333,0,10,20,0,2,71,75,60,68
-196033,SUNY College of Agriculture and Technology at Cobleskill,New York,55,,47,35.63636364,0,10,12,0,1,,,22,47
-196042,Farmingdale State College,New York,57,50,56,57.72972973,0,10,27,0,2,,100,57,58
-#N/A,University at Albany,New York,66,60,64,66.75609756,0,22,19,0,3,17,25,70,63
-196079,Binghamton University,New York,83,76,79,80.05555556,0,5,13,0,4,75,,75,82
-196088,University at Buffalo,New York,74,79,71,63.5,0,9,9,0,13,56,100,64,63
-196097,Stony Brook University,New York,78,72,80,74.71428571,0,6,15,0,10,50,100,74,75
-196103,SUNY College of Environmental Science and Forestry,New York,71,89,63,55.25,0,3,9,0,2,,0,50,57
-196112,SUNY Polytechnic Institute,New York,62,,54,51.33333333,0,8,10,0,1,,0,58,46
-196121,SUNY Brockport,New York,63,63,58,53.28571429,0,12,9,0,1,50,0,55,51
-#N/A,State University of New York at Cortland,New York,69,100,66,66.22222222,0,5,13,0,1,33,,59,69
-196158,SUNY at Fredonia,New York,60,29,54,49.05555556,0,7,11,0,2,80,0,46,51
-196167,SUNY College at Geneseo,New York,74,54,71,62.90909091,0,4,7,0,1,,,61,64
-196176,State University of New York at New Paltz,New York,73,80,70,73.4,0,7,23,0,1,,0,78,72
-196185,SUNY Oneonta,New York,75,67,66,66.18181818,0,5,17,0,0,80,100,60,68
-196194,State University of New York at Oswego,New York,64,66,61,54.44,0,11,14,0,4,71,0,55,54
-196200,SUNY College at Potsdam,New York,50,67,45,44.52631579,1,8,10,0,1,60,0,47,41
-196219,SUNY at Purchase College,New York,67,93,63,61.66666667,0,13,26,0,1,,50,71,57
-#N/A,State University of New York at Plattsburgh,New York,65,75,58,56.53846154,0,12,14,0,4,100,,56,57
-196291,SUNY Maritime College,New York,73,100,63,67.5,0,5,15,0,2,,,42,76
-196413,Syracuse University,New York,83,78,79,80.10526316,1,7,11,0,13,36,100,85,81
-196440,Talmudical Institute of Upstate New York,New York,100,,100,URM proportions reported; missing matching grad rates,0,0,0,0,7,,,,
-196592,Touro University,New York,69,63,64,77.61904762,0,11,10,0,2,0,,100,53
-157863,Union College,New York,85,83,86,86.15384615,0,4,9,0,10,,,82,88
-197018,United Talmudical Seminary,New York,59,7,62,URM proportions reported; missing matching grad rates,0,0,0,0,5,,,,75
-197027,United States Merchant Marine Academy,New York,77,50,72,71.5,0,2,6,0,0,75,100,100,62
-197036,United States Military Academy,New York,88,93,,82.88,1,11,12,1,1,85,50,79,89
-197045,Utica University,New York,58,25,47,45.25,1,10,9,0,1,100,,40,45
-197133,Vassar College,New York,92,95,91,88.25,0,4,12,0,8,,,89,88
-197151,School of Visual Arts,New York,74,84,62,54.25,0,3,9,0,54,,,61,52
-197197,Wagner College,New York,60,59,59,50.66666667,0,7,14,0,7,,,34,59
-197221,Webb Institute,New York,89,,100,100,0,0,9,0,0,,,,100
-197230,Wells College,New York,51,,39,49.9047619,1,8,13,0,1,,,40,56
-197692,Yeshivath Shaar Hatorah,New York,56,,100,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
-197708,Yeshiva University,New York,85,89,76,86,0,0,2,0,7,,,100,86
-197735,Yeshivath Viznitz,New York,74,38,80,URM proportions reported; missing matching grad rates,0,0,0,0,2,,,,
-197869,Appalachian State University,North Carolina,75,82,73,70.27272727,0,3,8,0,1,46,100,71,70
-198136,Campbell University,North Carolina,54,67,44,42.5,0,15,11,0,3,33,,37,50
 198215,Catawba College,North Carolina,52,0,46,47,0,20,10,0,6,100,,45,51
-198385,Davidson College,North Carolina,92,91,94,94.375,0,6,10,0,10,67,,95,94
-198419,Duke University,North Carolina,97,90,96,95.85,0,9,11,0,10,77,,92,99
-198464,East Carolina University,North Carolina,65,67,61,61.34615385,0,17,9,0,1,54,86,61,62
-198516,Elon University,North Carolina,83,95,78,79.5,0,6,6,0,2,100,,77,82
 198561,Gardner-Webb University,North Carolina,52,,41,49,1,17,4,0,0,33,0,45,70
-198695,High Point University,North Carolina,68,62,57,63,0,7,7,0,1,50,,62,64
-198835,Lenoir-Rhyne University,North Carolina,51,83,39,31.33333333,0,14,4,0,6,25,,28,43
-198950,Meredith College,North Carolina,68,75,60,55.82608696,1,9,13,0,1,50,,62,52
-199102,North Carolina A & T State University,North Carolina,57,58,53,57.95454545,0,84,4,0,0,50,,58,57
-#N/A,University of North Carolina Asheville,North Carolina,59,67,55,51.92307692,0,5,8,0,2,0,100,39,60
-199120,University of North Carolina at Chapel Hill,North Carolina,91,88,88,89.55555556,0,8,10,0,5,85,,89,90
-199139,University of North Carolina at Charlotte,North Carolina,70,71,66,69.74193548,0,17,14,0,2,60,100,72,67
-199148,University of North Carolina at Greensboro,North Carolina,58,63,55,59.65909091,0,29,15,0,2,67,67,60,59
-199184,University of North Carolina School of the Arts,North Carolina,82,100,82,89.5,0,10,14,0,3,100,,93,87
-199193,North Carolina State University at Raleigh,North Carolina,86,88,81,81.42857143,0,6,8,0,3,78,67,78,84
-199218,University of North Carolina Wilmington,North Carolina,74,60,71,71,0,4,8,0,2,50,67,69,72
-199412,Queens University of Charlotte,North Carolina,69,61,64,63.5,0,14,14,0,13,,100,59,68
-199607,Salem College,North Carolina,62,50,55,59.0625,0,14,18,0,1,,,54,63
-199759,Southeastern Baptist Theological Seminary,North Carolina,54,,,100,1,6,7,0,0,,,100,
-199847,Wake Forest University,North Carolina,90,84,93,88,0,6,9,0,9,50,100,91,86
-199962,Wingate University,North Carolina,57,89,57,50.5,0,24,8,0,8,50,,50,52
-199999,Winston-Salem State University,North Carolina,50,50,48,51.52941176,0,81,4,0,1,0,,52,42
-200004,Western Carolina University,North Carolina,61,75,55,52.66666667,1,6,8,0,2,44,33,47,58
-200013,Rasmussen University-North Dakota,North Dakota,100,,100,URM proportions reported; missing matching grad rates,3,25,4,0,0,,,,
-200217,University of Mary,North Dakota,64,100,53,59.66666667,1,2,0,0,0,29,,75,60
-200280,University of North Dakota,North Dakota,63,39,53,51,1,2,5,0,4,40,,39,58
-200332,North Dakota State University-Main Campus,North Dakota,63,73,53,42,0,3,3,0,1,50,50,36,48
 200800,University of Akron Main Campus,Ohio,52,60,39,29,0,11,4,0,1,0,,25,40
-201104,Ashland University,Ohio,60,38,52,42.66666667,0,8,4,0,2,0,100,41,46
-201195,Baldwin Wallace University,Ohio,65,67,60,54,0,7,7,0,1,50,,47,61
-201441,Bowling Green State University-Main Campus,Ohio,60,69,45,46.18181818,0,6,5,0,3,0,50,43,50
-201548,Capital University,Ohio,61,57,45,46.66666667,0,12,6,0,2,67,50,43,54
-201645,Case Western Reserve University,Ohio,86,79,84,88.23529412,0,6,11,0,14,100,0,96,84
-201654,Cedarville University,Ohio,75,100,64,61,0,1,3,0,2,100,,40,68
-201885,University of Cincinnati-Main Campus,Ohio,72,75,59,63.66666667,0,8,4,0,5,50,50,62,67
-202046,Cleveland Institute of Art,Ohio,73,78,56,51.5,0,10,10,0,2,50,100,36,67
-202073,Cleveland Institute of Music,Ohio,83,81,100,66.66666667,2,4,8,0,15,,,100,50
-#N/A,Columbus College of Art & Design,Ohio,60,57,46,40.84210526,0,11,8,0,2,,,32,53
-202480,University of Dayton,Ohio,81,56,73,76.58333333,0,5,7,0,3,100,,76,77
-202523,Denison University,Ohio,85,89,83,88.61538462,0,6,7,0,17,,,94,84
-202763,The University of Findlay,Ohio,66,,56,25.6,0,4,1,0,3,0,,18,56
-202903,Gods Bible School and College,Ohio,80,80,83,100,0,5,5,0,10,,,100,
-203085,Heidelberg University,Ohio,54,33,49,28.07692308,0,10,3,0,1,50,,20,55
-203128,Hiram College,Ohio,53,67,47,28.5,0,7,7,0,1,,100,37,20
-203368,John Carroll University,Ohio,78,77,71,71,0,5,5,0,2,50,,59,83
-203517,Kent State University at Kent,Ohio,65,60,56,56.15384615,0,9,4,0,3,57,67,54,61
-203535,Kenyon College,Ohio,87,93,82,78.36363636,0,3,8,0,12,,,90,74
-203544,Kettering College,Ohio,50,50,60,35.71428571,0,9,5,0,8,,,0,100
-203757,Lourdes University,Ohio,50,60,45,39,1,13,3,0,0,,,36,52
-203775,Malone University,Ohio,51,100,38,20.9,0,7,3,0,2,,,20,23
-203845,Marietta College,Ohio,50,61,37,27.71428571,0,4,3,0,2,0,0,11,50
-204024,Miami University-Oxford,Ohio,81,71,74,77.375,0,3,5,0,5,44,100,68,83
-204176,Mount Carmel College of Nursing,Ohio,65,,41,53.33333333,1,24,3,0,0,,,60,0
-204185,University of Mount Union,Ohio,62,40,53,33.3,0,7,3,0,3,33,50,27,48
-204194,Mount Vernon Nazarene University,Ohio,68,100,60,57.6,0,2,3,0,1,,,54,60
-#N/A,Mount St. Joseph University,Ohio,51,,41,30.92307692,0,9,4,0,0,0,,30,33
-204264,Muskingum University,Ohio,60,77,55,27,0,8,2,0,1,,,15,75
-204501,Oberlin College,Ohio,83,85,82,84,0,5,8,0,10,,,84,84
-204617,Ohio Dominican University,Ohio,50,43,41,44.05882353,1,26,7,0,5,100,,43,40
-204635,Ohio Northern University,Ohio,67,100,61,44,0,3,0,0,2,0,,44,50
-204796,Ohio State University-Main Campus,Ohio,88,88,81,79.46153846,0,8,5,0,7,100,100,76,85
-204857,Ohio University-Main Campus,Ohio,65,57,56,59.6,0,6,4,0,1,40,,58,62
-204909,Ohio Wesleyan University,Ohio,66,75,61,66.91666667,0,7,5,0,7,,50,69,64
-204936,Otterbein University,Ohio,70,75,56,64,0,9,6,1,0,100,,58,73
-205957,Franciscan University of Steubenville,Ohio,76,50,71,71.75,0,1,19,0,1,50,,67,72
-206084,University of Toledo,Ohio,57,71,44,34.2,0,9,6,0,7,0,,31,39
-206279,Union Institute & University,Ohio,50,,44,50,1,18,31,0,0,,,50,
-206437,Walsh University,Ohio,58,39,44,46,0,6,3,0,9,0,,40,58
-206507,Wilmington College,Ohio,51,56,39,21.14285714,0,10,4,0,2,,,24,14
-206525,Wittenberg University,Ohio,57,50,40,38,0,10,6,0,0,0,0,35,43
-206589,The College of Wooster,Ohio,74,74,78,73.375,0,10,6,0,15,,0,76,69
-206622,Xavier University,Ohio,74,68,68,55.94117647,0,11,6,0,1,,100,45,76
-206862,Southern Nazarene University,Oklahoma,56,40,50,38.33333333,4,14,18,0,3,43,,31,43
-207324,Oklahoma Christian University,Oklahoma,57,,50,34.70588235,2,7,8,0,10,33,,28,41
-207388,Oklahoma State University-Main Campus,Oklahoma,65,78,53,54.72222222,5,4,9,0,2,58,33,50,55
-207403,Oklahoma Baptist University,Oklahoma,54,50,47,40.57142857,5,7,2,0,1,48,,26,73
-207458,Oklahoma City University,Oklahoma,69,77,63,57.45,2,5,13,0,4,67,,60,55
-207500,University of Oklahoma-Norman Campus,Oklahoma,76,74,68,69.9047619,3,5,13,0,3,63,100,66,73
-207582,Oral Roberts University,Oklahoma,63,71,53,51.96428571,3,12,13,0,15,40,,56,51
-207971,University of Tulsa,Oklahoma,72,65,63,63.58333333,3,8,13,0,6,68,0,45,74
-208822,George Fox University,Oregon,71,71,60,67.58823529,0,2,15,0,0,50,67,57,69
-209056,Lewis & Clark College,Oregon,73,100,77,74.85714286,0,3,11,0,5,56,80,78,74
-209065,Linfield University,Oregon,71,89,73,63.7826087,1,1,20,1,2,67,60,0,67
 209409,Bushnell University,Oregon,52,,55,57.65,1,4,12,3,3,25,100,57,50
-209506,Oregon Institute of Technology,Oregon,57,64,53,45.05263158,1,2,16,0,1,100,0,50,41
-209542,Oregon State University,Oregon,70,63,61,59.86666667,1,2,12,0,4,50,54,46,63
-209551,University of Oregon,Oregon,73,80,65,66.5,0,3,15,0,2,62,58,59,68
-209612,Pacific University,Oregon,66,100,64,55.2173913,0,2,19,2,2,33,60,43,56
-209807,Portland State University,Oregon,53,47,50,49.44444444,1,5,20,1,3,25,45,53,50
-209825,University of Portland,Oregon,79,86,71,78.25,0,2,17,1,3,20,71,67,80
-209922,Reed College,Oregon,80,78,76,76.61538462,0,1,12,0,9,0,,60,78
-210331,Corban University,Oregon,54,80,46,28.31578947,1,2,15,1,1,33,100,0,27
-210401,Willamette University,Oregon,76,80,69,61.22222222,1,2,14,1,3,67,67,43,63
-210669,Allegheny College,Pennsylvania,68,58,63,57.5,0,8,8,0,5,0,,53,62
-210739,DeSales University,Pennsylvania,68,0,60,52.44444444,0,5,13,0,0,,,38,58
-210775,Alvernia University,Pennsylvania,63,33,52,42.16,0,11,14,0,4,,0,36,47
-211024,Clarks Summit University,Pennsylvania,58,,60,43.63636364,1,3,8,0,3,,,0,60
-211088,Arcadia University,Pennsylvania,64,17,55,51.65217391,0,13,10,0,5,100,,46,59
-211273,Bryn Mawr College,Pennsylvania,83,88,77,76.33333333,0,5,10,0,14,,,83,73
-211291,Bucknell University,Pennsylvania,87,86,83,84.45454545,0,4,7,0,5,,,80,87
-211352,Cabrini University,Pennsylvania,51,40,43,35.54545455,0,21,12,0,2,0,,29,47
-211431,Carlow University,Pennsylvania,56,,49,17.40909091,1,19,3,0,0,,,17,20
-211440,Carnegie Mellon University,Pennsylvania,92,94,88,83.71428571,0,4,10,0,19,,0,88,82
-211468,Cedar Crest College,Pennsylvania,62,40,54,48,0,9,15,0,5,100,,53,45
-211556,Chatham University,Pennsylvania,68,0,66,62.5,0,5,5,0,4,,100,62,63
-211583,Chestnut Hill College,Pennsylvania,62,100,52,52,0,28,13,0,3,,,52,52
-211893,Curtis Institute of Music,Pennsylvania,92,100,100,83.5,0,3,3,0,44,,,67,100
-211981,Delaware Valley University,Pennsylvania,54,,45,31.41176471,0,9,8,0,0,50,,22,42
-212009,Dickinson College,Pennsylvania,84,90,84,80.90909091,0,4,7,0,13,100,100,86,78
-212054,Drexel University,Pennsylvania,78,72,75,71,0,8,8,0,9,67,33,67,75
-212106,Duquesne University,Pennsylvania,76,65,76,66.5,0,5,5,0,2,50,100,57,76
-212133,Eastern University,Pennsylvania,63,50,56,49.23255814,0,28,15,0,3,,,44,59
-212197,Elizabethtown College,Pennsylvania,76,55,69,51.8,0,3,7,0,2,100,,70,44
-212577,Franklin and Marshall College,Pennsylvania,86,86,82,82.33333333,0,5,10,0,19,100,,79,84
-212601,Gannon University,Pennsylvania,70,63,58,51.5,0,5,5,0,12,100,,50,53
-212656,Geneva College,Pennsylvania,69,50,65,54.33333333,0,6,3,0,2,,,40,83
-212674,Gettysburg College,Pennsylvania,82,74,83,84.88235294,0,5,12,0,8,100,,87,84
-212805,Grove City College,Pennsylvania,81,100,,88,0,0,1,0,1,,,100,88
-212832,Gwynedd Mercy University,Pennsylvania,66,,54,33.42857143,0,15,6,0,0,,,20,67
-212911,Haverford College,Pennsylvania,91,95,93,88.05555556,0,5,13,0,11,,,96,85
-212984,Holy Family University,Pennsylvania,58,50,51,46.85714286,0,16,12,0,1,,100,49,44
-212993,Hussian College-Philadelphia,Pennsylvania,50,,,URM proportions reported; missing matching grad rates,1,53,14,0,1,,,,
-213011,Immaculata University,Pennsylvania,61,100,54,44.36842105,0,10,9,0,1,0,,42,47
-213020,Indiana University of Pennsylvania-Main Campus,Pennsylvania,53,45,38,31.25,1,10,5,0,2,50,0,24,42
-213251,Juniata College,Pennsylvania,71,63,66,66.66666667,0,4,8,0,11,,,38,81
-213321,King's College,Pennsylvania,58,23,55,46.3125,0,5,11,0,1,50,,36,51
-213349,Kutztown University of Pennsylvania,Pennsylvania,56,71,50,37.77777778,0,7,11,0,1,75,,28,44
-213358,La Roche University,Pennsylvania,55,41,56,65,0,2,2,2,9,,100,45,50
-213367,La Salle University,Pennsylvania,65,58,58,54.66666667,0,25,17,0,4,100,67,49,63
-213385,Lafayette College,Pennsylvania,89,85,89,90.30769231,0,5,8,0,8,,,86,93
-213400,Lancaster Bible College,Pennsylvania,67,,52,48.69565217,0,20,3,0,0,,,50,40
-213507,Lebanon Valley College,Pennsylvania,68,100,56,37,0,3,6,0,1,,100,25,43
-213543,Lehigh University,Pennsylvania,91,94,91,86,0,5,10,0,8,100,100,82,88
-213668,Lycoming College,Pennsylvania,64,63,64,58.15384615,0,12,14,0,3,,,49,66
-213826,Marywood University,Pennsylvania,76,67,66,78.25,0,3,9,0,1,,,43,90
-213987,Mercyhurst University,Pennsylvania,68,82,58,54.5,0,5,5,0,4,100,,46,63
-213996,Messiah University,Pennsylvania,78,77,71,68.63636364,0,3,8,0,3,100,,57,73
-214041,Millersville University of Pennsylvania,Pennsylvania,57,60,49,44.89473684,0,9,10,0,1,33,,47,43
-214069,Misericordia University,Pennsylvania,75,,62,55.375,0,3,5,0,0,0,0,41,64
-214148,Moore College of Art and Design,Pennsylvania,61,100,64,66.66666667,0,16,7,1,0,,100,50,100
-214157,Moravian University,Pennsylvania,70,58,58,59.25,0,5,15,0,1,100,,48,63
-214175,Muhlenberg College,Pennsylvania,83,74,92,81.86666667,0,4,11,0,1,,,87,80
-214272,Neumann University,Pennsylvania,54,86,48,48.54054054,0,29,8,0,1,,,52,36
-214777,Pennsylvania State University-Main Campus,Pennsylvania,83,84,73,73.33333333,0,4,8,0,11,63,50,68,76
-214883,Peirce College,Pennsylvania,100,100,,URM proportions reported; missing matching grad rates,1,52,14,0,0,,,,
-214971,Pennsylvania Academy of the Fine Arts,Pennsylvania,50,50,67,63.66666667,1,10,11,0,10,,,60,67
-215053,Pennsylvania College of Art and Design,Pennsylvania,60,,63,33,0,12,2,0,0,50,,33,33
-215062,University of Pennsylvania,Pennsylvania,96,95,93,93.11111111,0,8,10,0,14,100,,92,94
-#N/A,University of the Arts,Pennsylvania,66,65,63,68,0,21,14,0,2,100,,68,68
-215114,Cairn University-Langhorne,Pennsylvania,56,50,45,29.4,0,7,3,0,6,,,33,21
-215293,University of Pittsburgh-Pittsburgh Campus,Pennsylvania,84,77,77,75.18181818,0,5,6,0,4,100,,79,72
-215442,Point Park University,Pennsylvania,59,50,54,56,0,12,10,0,3,50,50,56,56
-215637,Walnut Hill College,Pennsylvania,87,,98,72.25,0,27,9,0,0,,,63,100
-215655,Robert Morris University,Pennsylvania,65,75,60,26.25,0,6,2,0,5,100,,35,0
-215743,Saint Francis University,Pennsylvania,72,50,65,67,0,4,1,0,0,50,,68,63
-215770,Saint Joseph's University,Pennsylvania,82,80,73,72.875,0,7,9,0,2,100,80,65,79
-215798,Saint Vincent College,Pennsylvania,76,100,70,43,0,5,5,0,2,,100,40,46
-215929,University of Scranton,Pennsylvania,80,73,73,77.75,0,4,12,0,1,100,60,71,80
-215947,Seton Hill University,Pennsylvania,72,67,56,44.81818182,0,7,4,0,2,,,47,41
-216010,Shippensburg University of Pennsylvania,Pennsylvania,50,50,37,30.26315789,0,12,7,0,1,0,0,24,41
-216038,Slippery Rock University of Pennsylvania,Pennsylvania,66,25,57,51,0,4,3,0,2,17,100,45,59
-216047,Saint Charles Borromeo Seminary-Overbrook,Pennsylvania,59,,75,33,0,3,19,0,0,,,,33
-216278,Susquehanna University,Pennsylvania,76,100,67,70,0,6,6,0,1,0,,61,79
-216287,Swarthmore College,Pennsylvania,94,88,95,92.7826087,0,9,14,0,14,100,,94,92
-216311,Talmudical Yeshiva of Philadelphia,Pennsylvania,61,,33,URM proportions reported; missing matching grad rates,0,0,0,0,3,,,,
-216339,Temple University,Pennsylvania,78,78,70,68.08,0,16,9,0,4,80,83,67,70
-216366,Thomas Jefferson University,Pennsylvania,68,38,59,54.92307692,0,14,12,0,2,,,48,63
-216524,Ursinus College,Pennsylvania,73,25,71,67,0,7,7,0,1,100,,76,58
-216597,Villanova University,Pennsylvania,91,96,90,87.70588235,0,6,11,0,2,,,89,87
-216667,Washington & Jefferson College,Pennsylvania,74,88,70,62.58333333,0,7,5,0,2,0,,63,62
-216694,Waynesburg University,Pennsylvania,60,,49,44.44444444,0,5,4,0,0,,,20,75
-216764,West Chester University of Pennsylvania,Pennsylvania,72,80,63,57.38888889,0,11,7,0,0,,50,57,58
-179946,Westminster College,Pennsylvania,62,50,51,48,0,6,4,0,0,67,,42,57
-216852,Widener University,Pennsylvania,68,55,58,51,0,18,6,0,2,50,,53,45
-216931,Wilkes University,Pennsylvania,59,57,47,36.66666667,0,5,10,0,6,25,,34,38
-217013,Wilson College,Pennsylvania,50,50,36,20.83333333,0,7,5,0,2,,,20,22
-217059,York College of Pennsylvania,Pennsylvania,64,100,55,57.71428571,0,6,8,0,1,,,60,56
-217156,Brown University,Rhode Island,95,96,90,89.89473684,0,8,11,0,14,67,100,87,92
-217165,Bryant University,Rhode Island,83,85,72,81.45454545,0,4,7,0,5,100,,77,84
 217235,Johnson & Wales University-Providence,Rhode Island,52,71,44,43.22222222,0,11,16,0,4,31,,45,42
-217402,Providence College,Rhode Island,86,72,82,81.28571429,0,4,10,0,2,100,100,82,81
-217484,University of Rhode Island,Rhode Island,71,67,61,58,0,5,11,0,1,57,0,58,58
-217493,Rhode Island School of Design,Rhode Island,91,91,87,85,0,4,8,0,34,100,,79,88
-217518,Roger Williams University,Rhode Island,67,45,61,63.46153846,0,3,10,0,1,0,0,65,63
-217536,Salve Regina University,Rhode Island,76,73,71,59.54545455,0,2,9,0,3,,,71,57
-150066,Anderson University,South Carolina,60,11,51,43,0,4,0,0,0,,0,43,58
-217749,Bob Jones University,South Carolina,69,79,65,64.66666667,0,2,7,0,6,0,50,11,80
-217776,Southern Wesleyan University,South Carolina,60,50,62,39.09090909,0,16,6,0,0,,,35,50
-217819,College of Charleston,South Carolina,65,63,55,59.07692308,0,6,7,0,1,70,67,58,60
-217864,Citadel Military College of South Carolina,South Carolina,70,50,64,61.33333333,0,7,8,0,1,83,50,56,66
-217873,Claflin University,South Carolina,50,100,48,51.21978022,1,89,1,0,2,33,100,52,0
-217882,Clemson University,South Carolina,85,78,79,73.30769231,0,5,8,0,1,100,,69,76
-217925,Columbia International University,South Carolina,68,100,66,25.73684211,0,17,2,0,5,,,17,100
-112561,Columbia College,South Carolina,55,83,49,54.63829787,1,37,10,0,1,,0,54,57
-217961,Converse University,South Carolina,57,50,56,40.8,3,14,11,0,6,,,43,38
-218070,Furman University,South Carolina,85,50,82,87.5,0,6,6,0,4,75,,90,85
-218441,North Greenville University,South Carolina,54,0,49,38.76923077,0,8,5,0,1,,0,28,56
-218539,Presbyterian College,South Carolina,60,64,50,48.5,0,18,6,0,4,,,35,89
-218663,University of South Carolina-Columbia,South Carolina,78,79,67,76,0,9,6,0,3,60,71,74,79
-218964,Winthrop University,South Carolina,61,60,55,53.61538462,0,31,8,0,1,100,,53,56
-218973,Wofford College,South Carolina,83,100,71,83.84615385,0,7,6,0,2,,,76,93
-219000,Augustana University,South Dakota,76,77,67,60,1,3,4,0,10,50,,54,67
-219198,Mount Marty University,South Dakota,57,,56,25.90909091,2,5,4,0,4,0,0,25,40
-219259,Northern State University,South Dakota,59,40,56,47.57142857,2,2,3,0,3,20,,40,71
-219347,South Dakota School of Mines and Technology,South Dakota,56,83,49,42.85714286,1,1,5,0,2,0,,50,50
-219356,South Dakota State University,South Dakota,59,48,51,34.5,1,2,3,0,3,14,100,41,37
-219383,University of Sioux Falls,South Dakota,59,40,49,60.36363636,1,6,4,0,1,0,,44,100
-219471,University of South Dakota,South Dakota,57,55,46,37.9,2,3,5,0,2,13,0,46,43
-219639,Baptist Health Sciences University,Tennessee,57,,48,44.32653061,1,44,5,0,0,,,38,100
-219709,Belmont University,Tennessee,72,67,66,64.84615385,0,5,8,0,1,57,,63,66
-219790,Bryan College-Dayton,Tennessee,51,75,36,40.5,0,4,4,0,2,50,,10,71
-219806,Carson-Newman University,Tennessee,57,67,52,44.375,1,9,6,0,5,50,,36,56
-219833,Christian Brothers University,Tennessee,60,60,67,52.39285714,1,18,9,0,3,0,,54,55
-219976,Lipscomb University,Tennessee,69,80,63,57.70588235,0,7,10,0,3,50,,63,54
-220075,East Tennessee State University,Tennessee,55,48,45,32.8,0,6,4,0,1,50,0,34,31
-220181,Fisk University,Tennessee,56,,48,60.70666667,0,73,2,0,16,,,61,50
-220206,Welch College,Tennessee,51,,64,19.8,0,6,4,0,1,,,33,0
-220215,Freed-Hardeman University,Tennessee,70,47,56,53.6,1,4,0,0,2,100,100,42,80
-220473,Johnson University,Tennessee,62,100,60,78.57142857,0,4,3,0,2,,,100,50
-220613,Lee University,Tennessee,63,64,53,45.6,0,4,1,0,2,50,100,32,100
-220631,Lincoln Memorial University,Tennessee,50,50,48,36.83333333,1,6,5,0,6,25,,32,45
-220710,Maryville College,Tennessee,53,0,42,44.21428571,0,9,5,0,6,100,,41,50
-220978,Middle Tennessee State University,Tennessee,55,52,48,48.04347826,0,15,8,0,2,50,100,47,50
-221351,Rhodes College,Tennessee,85,86,73,76.5,0,10,6,0,7,33,,78,74
-221519,The University of the South,Tennessee,81,83,84,78.4,0,4,6,0,5,100,,79,78
-221661,Southern Adventist University,Tennessee,62,83,48,56.81818182,0,6,27,0,6,,100,47,59
-221731,Tennessee Wesleyan University,Tennessee,50,54,46,53.5,0,7,5,0,7,,,56,50
 221740,The University of Tennessee-Chattanooga,Tennessee,52,50,43,46,0,10,6,0,1,33,0,46,46
-221759,The University of Tennessee-Knoxville,Tennessee,73,76,60,63.18181818,0,5,6,0,1,55,83,61,65
-221768,The University of Tennessee-Martin,Tennessee,53,16,44,45.25,0,12,4,0,1,50,,43,52
-221847,Tennessee Technological University,Tennessee,60,57,52,48,0,4,5,0,2,50,,38,56
-221892,Trevecca Nazarene University,Tennessee,61,61,60,35.72727273,0,10,12,0,11,,0,9,58
-221971,Union University,Tennessee,67,40,62,39,0,13,1,0,2,,,36,78
-221999,Vanderbilt University,Tennessee,93,86,87,90.42857143,0,10,11,0,10,100,100,92,89
-222178,Abilene Christian University,Texas,60,39,46,55.96153846,1,7,18,0,4,67,0,44,60
-222983,Austin College,Texas,73,71,74,68.35294118,1,7,26,0,1,67,100,81,65
-223232,Baylor University,Texas,81,72,71,74.23809524,0,5,16,0,4,89,50,75,74
-224226,Dallas Baptist University,Texas,58,,43,50.57692308,1,10,15,0,6,100,50,39,55
-224323,University of Dallas,Texas,72,56,62,58.78571429,0,2,26,0,2,0,50,30,61
-225201,Hallmark University,Texas,60,,57,51.61290323,1,11,50,1,0,0,,50,53
-225247,Hardin-Simmons University,Texas,58,89,42,39.89473684,1,11,26,0,3,0,,48,38
-225414,University of Houston-Clear Lake,Texas,54,100,46,54.36363636,0,7,48,0,3,0,,50,55
-225511,University of Houston,Texas,63,66,62,57.54166667,0,11,37,0,5,0,100,56,58
-225627,University of the Incarnate Word,Texas,53,57,46,54.1,0,7,63,0,5,0,50,46,55
-226231,LeTourneau University,Texas,67,60,55,59,1,3,9,0,4,50,,38,67
-226471,University of Mary Hardin-Baylor,Texas,50,0,40,38.17948718,0,14,25,0,1,78,50,26,45
-227216,University of North Texas,Texas,59,69,59,57.34883721,0,15,28,0,4,60,50,58,57
-227368,The University of Texas Rio Grande Valley,Texas,53,68,52,52,0,0,94,0,2,,50,47,52
-227757,Rice University,Texas,94,93,94,89.86956522,0,8,15,0,13,100,100,84,93
-227845,Saint Edward's University,Texas,65,70,70,66.41818182,0,4,51,0,7,100,100,59,67
-174914,University of St Thomas,Texas,66,54,67,66.125,0,7,49,0,4,0,,60,67
-227881,Sam Houston State University,Texas,56,64,50,53.52272727,1,16,27,0,1,75,0,48,56
-228042,Schreiner University,Texas,50,100,41,51.55555556,0,5,40,0,1,0,,80,48
-228149,St. Mary's University,Texas,56,65,60,54.296875,1,3,60,0,7,100,,25,55
-228246,Southern Methodist University,Texas,82,89,79,77.25,0,5,15,0,4,100,,69,80
 #N/A,Nelson University,Texas,52,,54,52.85714286,3,14,25,0,1,38,0,29,68
-228343,Southwestern University,Texas,72,33,61,67.81818182,0,6,27,0,2,17,100,67,68
-228431,Stephen F Austin State University,Texas,53,8,47,46.5,1,12,21,0,1,27,33,42,50
-228459,Texas State University,Texas,56,88,49,52.29411765,0,9,42,0,1,67,70,49,53
-228468,Southwestern Adventist University,Texas,50,50,39,45.88461538,0,11,41,0,4,,20,38,48
-228486,Southwestern Christian College,Texas,50,,0,50,0,95,3,0,0,,,50,
-228723,Texas A & M University-College Station,Texas,84,88,75,77.48148148,0,2,25,0,1,95,67,71,78
-228769,The University of Texas at Arlington,Texas,53,67,54,49.71698113,0,15,38,0,4,83,,49,50
-228778,The University of Texas at Austin,Texas,88,87,81,82.3030303,0,5,28,0,5,79,80,84,82
-228787,The University of Texas at Dallas,Texas,70,37,69,61.2173913,0,5,18,0,4,50,67,62,61
-228875,Texas Christian University,Texas,84,87,76,79.71428571,0,4,17,0,5,82,33,70,82
-228981,Texas Lutheran University,Texas,54,100,46,53.53846154,0,10,42,0,0,,,39,57
-229027,The University of Texas at San Antonio,Texas,54,63,52,54.23188406,0,8,61,0,1,43,50,56,54
-229115,Texas Tech University,Texas,64,70,57,59.02857143,0,6,29,0,2,62,38,64,58
-229267,Trinity University,Texas,76,85,73,73.14285714,0,4,24,0,5,100,,62,75
-230038,Brigham Young University,Utah,79,77,72,71.33333333,0,0,8,1,3,67,58,80,73
-230047,Brigham Young University-Hawaii,Hawaii,50,79,55,50.66666667,0,0,5,7,49,0,59,,39
-230728,Utah State University,Utah,53,24,46,39.11111111,1,1,7,0,1,40,43,25,41
-230764,University of Utah,Utah,65,72,54,56.4,0,1,14,0,6,44,33,62,56
-#N/A,Westminster University,Utah,65,75,62,67.125,0,2,13,1,5,40,0,56,74
-230816,Bennington College,Vermont,69,76,72,77.14285714,1,3,10,0,15,100,,100,68
-230834,Castleton University,Vermont,54,46,49,23,0,4,4,0,5,0,,13,33
-230852,Champlain College,Vermont,64,67,52,55.75,0,6,10,0,0,100,,47,61
-230889,Goddard College,Vermont,57,,67,URM proportions reported; missing matching grad rates,0,5,3,0,0,100,,,
-230959,Middlebury College,Vermont,94,96,86,85.17647059,0,5,12,0,12,,,88,84
-230995,Norwich University,Vermont,61,59,49,48.28571429,0,5,9,0,6,67,0,38,54
-231059,Saint Michael's College,Vermont,74,56,74,70.625,0,3,5,0,4,50,,70,71
-231174,University of Vermont,Vermont,76,63,72,67.66666667,0,1,5,0,1,,,71,67
-231581,Bridgewater College,Virginia,58,64,51,52.05263158,0,12,7,0,2,50,,55,47
-231624,William & Mary,Virginia,91,81,84,88.6,0,6,9,0,4,100,,85,91
-231651,Regent University,Virginia,55,25,42,46.11111111,0,25,11,0,0,0,,40,60
-231712,Christopher Newport University,Virginia,76,71,70,70.5,0,8,8,0,0,67,100,72,69
-#N/A,Emory & Henry University,Virginia,58,,51,27.88235294,0,14,3,0,1,0,,30,18
-232043,Eastern Mennonite University,Virginia,63,44,49,46.71428571,0,11,10,0,5,0,,41,53
-232186,George Mason University,Virginia,71,69,68,69,0,12,17,0,5,100,50,69,69
-232256,Hampden-Sydney College,Virginia,75,,63,58.85714286,0,8,6,0,0,50,,43,80
-232308,Hollins University,Virginia,62,83,53,50.25,0,15,9,0,8,67,100,33,79
-232423,James Madison University,Virginia,81,71,26,78,0,4,8,0,1,100,100,78,78
-232557,Liberty University,Virginia,67,66,52,46.5625,0,9,7,0,1,43,17,40,55
-232566,Longwood University,Virginia,67,14,55,63.88888889,0,11,7,0,1,50,100,60,70
-232609,University of Lynchburg,Virginia,60,60,49,46.42105263,0,12,7,0,2,100,,42,54
-232681,University of Mary Washington,Virginia,69,50,64,59.2,0,8,12,0,2,,0,46,68
-232706,Marymount University,Virginia,61,70,60,55.30612245,0,15,34,0,9,50,100,56,55
-233277,Radford University,Virginia,54,27,51,48.125,0,15,9,0,1,43,20,50,45
-233295,Randolph-Macon College,Virginia,74,75,71,71.07142857,0,9,5,0,2,100,100,80,55
-233301,Randolph College,Virginia,50,69,45,43.7,0,21,8,1,4,,50,41,50
-233374,University of Richmond,Virginia,88,88,83,89.125,0,6,10,0,12,,,91,88
-233426,Roanoke College,Virginia,71,78,65,69.36363636,0,5,6,0,3,0,,65,73
-233541,Shenandoah University,Virginia,62,60,55,37.8,2,8,10,0,0,25,,37,41
-233718,Sweet Briar College,Virginia,61,80,55,48.07692308,1,8,5,0,9,,100,40,61
-233921,Virginia Polytechnic Institute and State University,Virginia,87,77,83,82.25,0,6,10,0,5,75,100,81,83
-234030,Virginia Commonwealth University,Virginia,65,56,61,61.625,0,21,11,0,2,60,33,63,59
-234076,University of Virginia-Main Campus,Virginia,95,93,92,91.5,0,7,7,0,5,100,100,88,95
-234085,Virginia Military Institute,Virginia,77,67,75,70.26666667,0,7,8,0,2,60,50,74,67
-234207,Washington and Lee University,Virginia,95,92,85,96.66666667,0,4,8,0,6,,,100,95
 234827,Central Washington University,Washington,52,78,47,48.07407407,1,5,20,1,3,38,25,35,53
-235024,Cornish College of the Arts,Washington,53,100,48,40,1,5,3,0,3,33,33,33,54
-235097,Eastern Washington University,Washington,50,55,47,43.4,1,4,19,1,1,35,8,42,46
-235316,Gonzaga University,Washington,88,91,82,80.57142857,0,1,13,0,4,90,100,75,81
-236133,Northwest University,Washington,68,80,61,61.21052632,0,5,13,1,10,50,50,64,61
-236230,Pacific Lutheran University,Washington,72,75,62,63.92,1,4,18,2,2,50,40,52,70
-236328,University of Puget Sound,Washington,76,25,68,70.125,0,3,12,1,1,100,33,63,75
-236452,Saint Martin's University,Washington,60,50,61,57.86111111,1,7,22,6,2,25,50,50,64
-236577,Seattle Pacific University,Washington,65,73,50,59.4,0,7,17,1,6,25,56,56,61
-236595,Seattle University,Washington,74,62,69,75.23809524,0,5,15,1,9,80,100,86,70
-236896,Walla Walla University,Washington,62,71,52,64.04,0,3,22,0,7,25,50,57,65
-236939,Washington State University,Washington,62,64,53,53.04761905,1,3,16,1,3,47,40,49,55
-236948,University of Washington-Seattle Campus,Washington,84,89,79,77.18181818,0,3,8,0,12,74,74,75,78
-237011,Western Washington University,Washington,65,80,55,60.84615385,0,2,11,0,1,54,43,60,61
-237057,Whitman College,Washington,90,93,83,73.5,0,3,9,0,12,100,100,57,79
-237066,Whitworth University,Washington,76,88,72,70.9375,0,3,13,2,6,100,,62,73
 237136,Appalachian Bible College,West Virginia,52,,38,URM proportions reported; missing matching grad rates,0,2,0,0,3,,,,
-237358,Davis & Elkins College,West Virginia,51,35,54,52.77777778,1,5,4,0,8,,,55,50
-237525,Marshall University,West Virginia,50,71,40,40.57142857,0,5,2,0,1,82,100,38,47
-237932,West Liberty University,West Virginia,58,33,51,50,0,4,0,0,3,,100,50,100
-237969,West Virginia Wesleyan College,West Virginia,53,41,46,29.15,1,14,5,0,6,100,,27,21
-238032,West Virginia University,West Virginia,61,63,49,44.71428571,0,3,4,0,2,88,100,35,52
-238078,Wheeling University,West Virginia,59,0,48,44,1,11,0,0,5,0,0,48,88
 238193,Alverno College,Wisconsin,52,0,46,44.09090909,0,17,38,0,1,,0,13,58
-238324,Bellin College,Wisconsin,76,,100,URM proportions reported; missing matching grad rates,1,1,2,0,0,,,,
-238333,Beloit College,Wisconsin,71,72,62,63.64,0,9,16,0,15,0,,63,64
 238430,Cardinal Stritch University,Wisconsin,52,59,45,45.8,0,12,18,0,16,100,100,35,53
-238458,Carroll University,Wisconsin,67,42,62,52.76923077,0,2,11,0,2,100,100,35,56
-238476,Carthage College,Wisconsin,65,80,52,49,0,5,15,0,1,57,100,46,50
-238616,Concordia University-Wisconsin,Wisconsin,67,69,62,40.42857143,0,8,6,0,7,,,43,37
-238661,Edgewood College,Wisconsin,62,50,56,65.4,0,4,11,0,1,,,50,71
-238980,Lakeland University,Wisconsin,51,100,38,43.125,1,6,9,0,1,0,,19,64
-239017,Lawrence University,Wisconsin,78,86,66,73.2,0,4,11,0,12,0,100,71,74
-239071,Maranatha Baptist University,Wisconsin,53,50,49,21.42857143,1,1,6,0,1,,,0,25
-151786,Marian University,Wisconsin,51,100,43,35.8,1,5,9,0,5,0,100,21,48
-239105,Marquette University,Wisconsin,83,76,75,72.5,0,5,15,0,2,33,100,68,74
-239309,Milwaukee Institute of Art & Design,Wisconsin,57,67,55,58.77272727,0,5,17,0,0,33,,58,59
-239318,Milwaukee School of Engineering,Wisconsin,71,31,69,60.75,0,3,9,0,4,,,36,69
-239390,Mount Mary University,Wisconsin,60,100,62,55.15384615,0,20,32,0,1,,,41,64
-239512,Northland College,Wisconsin,54,80,46,45.2,2,4,9,0,7,25,,67,40
-239628,Ripon College,Wisconsin,56,36,46,55.86666667,0,4,11,0,1,0,,50,58
-239716,Saint Norbert College,Wisconsin,72,69,70,61.33333333,0,1,5,0,2,17,100,78,58
-240107,Viterbo University,Wisconsin,61,25,44,24.54545455,0,5,6,0,1,,,0,45
-240189,University of Wisconsin-Whitewater,Wisconsin,62,43,52,48.15384615,0,4,9,0,1,0,0,35,54
-240268,University of Wisconsin-Eau Claire,Wisconsin,65,50,56,50.8,0,1,4,0,2,80,,50,51
 240277,University of Wisconsin-Green Bay,Wisconsin,52,47,43,42.63636364,1,2,8,0,1,33,,18,50
-240329,University of Wisconsin-La Crosse,Wisconsin,70,71,60,52,0,0,4,0,1,100,,65,52
-240338,Wisconsin Lutheran College,Wisconsin,67,,58,36,0,5,10,0,1,,,0,54
-240365,University of Wisconsin-Oshkosh,Wisconsin,58,33,52,49,0,2,6,0,1,40,67,37,53
 240417,University of Wisconsin-Stout,Wisconsin,52,38,38,32,0,1,4,0,2,50,100,24,34
-240444,University of Wisconsin-Madison,Wisconsin,89,92,84,81.77777778,0,2,7,0,11,55,86,81,82
-240462,University of Wisconsin-Platteville,Wisconsin,61,32,52,41.5,0,1,5,0,1,0,,19,46
-240471,University of Wisconsin-River Falls,Wisconsin,59,45,53,40.66666667,0,2,4,0,1,100,100,26,48
-240480,University of Wisconsin-Stevens Point,Wisconsin,56,35,52,38,0,2,4,0,1,40,0,30,42
-240727,University of Wyoming,Wyoming,61,51,45,44.8,1,1,8,0,2,38,0,42,46
-240736,American Samoa Community College,American Samoa,100,,100,100,0,0,0,88,11,,100,,
-241331,Albizu University-San Juan,Puerto Rico,71,,70,71,0,0,99,0,0,,,,71
-241766,Puerto Rico Conservatory of Music,Puerto Rico,74,100,64,70,0,0,97,0,3,,,,70
-243115,University of Puerto Rico-Arecibo,Puerto Rico,50,,50,50,0,0,100,0,0,,,,50
-243142,University of Puerto Rico-Carolina,Puerto Rico,54,,54,55.85858586,1,4,95,0,0,,,100,54
-243744,Stanford University,California,95,95,90,93.22222222,1,8,18,0,11,89,100,92,94
-243780,Purdue University-Main Campus,Indiana,83,86,76,78.11111111,0,2,7,0,11,100,56,82,77
-243823,Parker University,Texas,100,,100,100,2,28,3,0,0,,,100,
-243832,EDP University of Puerto Rico Inc-San Juan,Puerto Rico,53,,42,53,0,0,100,0,0,,,,53
-163976,St. John's College,New Mexico,72,67,71,83,0,2,11,0,13,,,,83
-247773,Yeshiva Gedolah of Greater Detroit,Michigan,77,,100,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
-262129,New College of Florida,Florida,63,60,57,49.76190476,0,4,17,0,4,,,70,45
-366252,Pennsylvania College of Technology,Pennsylvania,57,,53,25.55555556,0,4,5,0,0,0,100,10,38
-366711,California State University-San Marcos,California,57,52,55,54.34545455,0,4,51,0,1,33,33,46,55
-368443,Hussian College-Daymar College Clarksville,Tennessee,88,,92,74.13513514,2,29,8,1,1,,,67,100
-375230,Yeshiva Gedolah Imrei Yosef D'spinka,New York,58,,85,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
-376224,CEM College-Humacao,Puerto Rico,63,,60,63,0,0,100,0,0,,,,63
-376385,Universal Technology College of Puerto Rico,Puerto Rico,50,,50,50,0,0,100,0,0,,,,50
-377546,Northwest College of Art & Design,Washington,56,,46,9.375,9,5,15,3,0,0,100,0,0
-377555,University of Washington-Bothell Campus,Washington,69,65,70,65,0,10,10,0,4,100,75,69,61
-377564,University of Washington-Tacoma Campus,Washington,54,50,53,55.92857143,1,11,15,1,2,33,64,64,51
-384254,Beacon College,Florida,60,100,67,74.83333333,1,14,9,1,1,0,,64,100
-384412,University of the Potomac-Washington DC Campus,District of Columbia,50,60,14,41.55555556,1,17,4,0,22,0,,44,
-385619,Everglades University,Florida,56,,54,56.65,2,19,19,0,0,50,100,53,61
-386472,Herzing University-Orlando,Florida,67,,67,100,0,40,25,0,0,,,,100
-399911,Soka University of America,California,88,89,85,97.33333333,0,2,13,0,53,,100,80,100
-406033,Galen College of Nursing-San Antonio,Texas,74,,83,82.8125,0,11,53,0,0,,0,0,100
-409698,California State University-Monterey Bay,California,61,53,63,64.96363636,0,2,53,0,3,100,50,64,65
-412599,Remington College-Memphis Campus,Tennessee,71,,67,71,0,95,1,0,0,,,71,
-421708,Arizona College of Nursing-Tempe,Arizona,60,,,37.5,2,9,27,1,0,,,0,50
-430670,San Juan Bautista School of Medicine,Puerto Rico,50,,100,50,0,0,100,0,0,,,,50
-433004,American University of Health Sciences,California,67,,67,URM proportions reported; missing matching grad rates,3,10,31,4,0,,,,
-433420,California Aeronautical University,California,67,,,100,0,8,33,2,0,,,,100
-433660,Florida Gulf Coast University,Florida,59,63,55,56.4,0,6,24,0,2,86,50,58,56
-436614,International Baptist College and Seminary,Arizona,60,,67,URM proportions reported; missing matching grad rates,0,4,7,2,2,100,,,
-436818,University of Connecticut-Waterbury Campus,Connecticut,60,50,60,45.25,0,9,27,0,2,,,52,43
-436827,University of Connecticut-Avery Point,Connecticut,59,,54,29.14285714,0,3,18,0,1,,,42,27
-436836,University of Connecticut-Stamford,Connecticut,64,65,62,55.16326531,0,15,34,0,5,,,51,57
-437097,University of Management and Technology,Virginia,100,,,URM proportions reported; missing matching grad rates,0,7,2,0,0,,,,
-439394,East West College of Natural Medicine,Florida,100,,100,No URM enrollment,,,,,,,,100,100
-439701,The King's University,Texas,67,,75,50,2,9,13,0,1,,,,50
-439862,Pacific Islands University,Guam,100,,100,100,0,2,5,86,2,,100,,
-440396,New Saint Andrews College,Idaho,81,50,,URM proportions reported; missing matching grad rates,1,1,5,0,0,,,,
-440828,Oregon State University-Cascades Campus,Oregon,58,,86,0,1,1,10,0,1,0,,,0
-441229,Smith Chason College,California,62,,100,57,1,8,44,2,0,,,,57
-441937,California State University-Channel Islands,California,57,48,55,53.16129032,0,2,60,0,1,0,0,28,54
-441982,Franklin W Olin College of Engineering,Massachusetts,94,100,100,77,0,3,9,0,8,,,50,86
-#N/A,Saint Joseph's University - Lancaster,Pennsylvania,60,,50,0,0,12,17,0,0,,,,0
-442426,St Louis College of Health Careers-Fenton,Missouri,62,,63,100,0,53,2,0,0,,,100,
-443331,West Coast University-Los Angeles,California,100,,100,URM proportions reported; missing matching grad rates,0,4,33,1,0,,,,
-443410,DigiPen Institute of Technology,Washington,60,71,57,44.54545455,0,2,9,0,12,100,,20,50
-443784,Strayer University-Pennsylvania,Pennsylvania,50,,100,0,0,50,15,0,0,,,0,
-444088,Brookline College-Albuquerque,New Mexico,50,,50,50,7,6,58,0,0,,,,50
-445188,University of California-Merced,California,67,66,68,65.16666667,0,5,55,0,5,,75,78,64
-445203,Remington College-North Houston Campus,Texas,50,,0,38.20224719,1,55,34,0,0,,,0,100
-445692,Neumont College of Computer Science,Utah,56,,55,47.92,2,6,16,1,0,0,100,63,45
-446604,Uta Mesivta of Kiryas Joel,New York,85,,100,URM proportions reported; missing matching grad rates,0,0,0,0,1,,,,67
-447263,Joyce University of Nursing and Health Sciences,Utah,100,,,URM proportions reported; missing matching grad rates,0,2,10,1,0,,,,
-447421,Eagle Gate College-Layton,Utah,50,,50,33,0,4,14,1,0,,,,33
-451103,Miami Regional University,Florida,67,,50,67,0,8,90,0,0,,,,67
-451404,Talmudical Seminary of Bobov,New York,100,,100,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
-451556,Southwest University at El Paso,Texas,75,,76,76.90217391,0,7,85,0,0,,0,100,75
-451866,Remington College-Shreveport Campus,Louisiana,67,,100,50,0,83,0,0,0,,,50,
-451927,Patrick Henry College,Virginia,65,,,75,0,0,6,0,0,,,,75
-454184,The King's College,New York,56,40,46,36.66666667,1,6,11,0,4,0,,44,36
-455257,Yeshiva of Machzikai Hadas,New York,66,,69,URM proportions reported; missing matching grad rates,0,0,0,0,3,,,,
-456959,University of Minnesota-Rochester,Minnesota,59,100,57,54.875,0,15,9,0,1,,,50,63
-457484,Pacific Rim Christian University,Hawaii,100,,,100,0,3,18,14,1,,,,100
-458210,West Coast University-Orange County,California,73,,100,52.77777778,0,3,32,1,0,,0,100,50
-458229,West Coast University-Ontario,California,64,,75,25,1,6,47,1,0,,,,25
-459727,Touro University Worldwide,California,50,,43,URM proportions reported; missing matching grad rates,0,24,7,1,0,,,,
-459851,Herzing University-Brookfield,Wisconsin,100,,100,URM proportions reported; missing matching grad rates,0,31,13,0,0,,,,
-460871,Chamberlain University-Virginia,Virginia,100,,100,100,0,54,20,0,1,,,100,100
-461148,New York Film Academy,California,68,,55,64.60869565,0,9,14,0,48,50,,50,74
-461759,Simmons College of Kentucky,Kentucky,56,,33,56,0,89,0,0,0,,,56,
-462354,John Paul the Great Catholic University,California,73,100,65,65,0,1,31,1,0,,,,65
-463056,University of Connecticut-Hartford Campus,Connecticut,62,89,61,48.66666667,0,14,19,0,2,50,,55,44
-466930,Chamberlain University-Texas,Texas,75,,100,100,0,40,25,0,0,,,100,
-475608,Criswell College,Texas,70,,67,URM proportions reported; missing matching grad rates,0,12,14,0,0,,,,
-475732,Chamberlain University-Georgia,Georgia,100,,,100,1,63,9,0,0,,,,100
-475741,Chamberlain University-Indiana,Indiana,100,,100,URM proportions reported; missing matching grad rates,0,27,8,0,0,,,,
-476601,Bais HaMedrash and Mesivta of Baltimore,Maryland,85,,100,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
-476717,Be'er Yaakov Talmudic Seminary,New York,57,,60,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
-477039,West Coast University-Dallas,Texas,67,,0,47.27272727,1,29,26,0,3,,,0,100
-480091,Bryant & Stratton College-Online,New York,50,,50,URM proportions reported; missing matching grad rates,1,41,8,0,0,,,,
-481058,Grace Mission University,California,83,,100,URM proportions reported; missing matching grad rates,0,0,19,0,0,,,,
-482149,Augusta University,Georgia,50,69,42,45.62162162,0,27,10,0,1,50,50,44,50
-482565,DeVry University-North Carolina,North Carolina,50,,100,50,0,50,50,0,0,,,50,
 482680,University of North Georgia,Georgia,52,35,43,39.4,0,4,16,0,1,67,50,33,41
 483124,Arizona State University Digital Immersion,Arizona,52,,67,100,1,8,23,0,0,,,100,
-#N/A,Washington University of Science and Technology,Virginia,78,78,,URM proportions reported; missing matching grad rates,0,0,1,0,70,,,,
-484473,University of Florida-Online,Florida,59,,88,0,0,5,23,0,1,,,,0
-484844,Minerva University,California,83,84,,67,0,0,1,0,89,,,,67
-485768,Atlantis University,Florida,71,29,62,78.41269841,0,19,44,0,27,,,40,95
-486017,Yeshiva Ohr Yisrael,New York,100,,,URM proportions reported; missing matching grad rates,0,0,0,0,13,,,,
-486239,San Ignacio University,Florida,50,100,100,0,0,0,45,0,54,,,,0
-486488,California Jazz Conservatory,California,100,100,,URM proportions reported; missing matching grad rates,0,4,26,4,0,,,,
-486901,Milligan University,Tennessee,63,67,61,59.91666667,0,5,7,0,7,,,50,67
-486947,Chamberlain University-Michigan,Michigan,100,,,URM proportions reported; missing matching grad rates,0,18,5,0,0,,,,
+106458,Arkansas State University,Arkansas,51,29,43,42.94444444,0,13,5,0,6,43,,41,48
+110592,California State University-Los Angeles,California,51,47,51,50.35,0,4,76,0,1,0,29,38,51
+130776,Western Connecticut State University,Connecticut,51,0,46,43.25,0,9,27,0,0,100,,44,43
+140234,LaGrange College,Georgia,51,50,45,43.66666667,0,26,4,0,2,0,,35,100
+144971,Eureka College,Illinois,51,100,39,30.66666667,1,12,8,0,1,0,,27,40
+151306,University of Southern Indiana,Indiana,51,75,40,44,0,4,4,0,1,0,,44,44
+156125,Wichita State University,Kansas,51,23,51,50.95454545,1,6,15,0,12,50,0,46,53
+160658,University of Louisiana at Lafayette,Louisiana,51,50,38,40.72413793,0,24,5,0,1,20,0,39,49
+#N/A,Unity Environmental University,Maine,51,,44,12.94117647,1,5,11,0,0,0,,0,20
+166638,University of Massachusetts-Boston,Massachusetts,51,53,49,46.11111111,0,17,19,0,6,25,100,44,48
+172264,Siena Heights University,Michigan,51,83,37,32.88888889,1,11,7,0,3,,,29,39
+173328,Concordia University-Saint Paul,Minnesota,51,43,38,34.73913043,0,14,9,0,1,,,41,25
+176628,Avila University,Missouri,51,14,42,40.30434783,1,27,17,1,2,0,0,46,36
+178679,Ozark Christian College,Missouri,51,,43,29.36363636,2,2,7,0,2,67,,0,27
+181783,Wayne State College,Nebraska,51,,41,32.125,1,3,12,0,3,100,,30,27
+183080,Plymouth State University,New Hampshire,51,32,45,38.28571429,0,2,5,0,2,56,0,34,40
+185262,Kean University,New Jersey,51,47,47,46.81818182,0,20,35,0,4,50,0,43,49
+187985,University of New Mexico-Main Campus,New Mexico,51,60,42,46.61016949,6,3,50,0,2,29,86,42,49
+188030,New Mexico State University-Main Campus,New Mexico,51,64,45,49.26086957,2,3,64,0,3,38,,41,50
+190558,College of Staten Island CUNY,New York,51,43,47,44.6,0,14,26,0,2,,100,42,46
+192271,LIM College,New York,51,41,49,66.22727273,1,22,21,0,9,100,100,42,90
+197230,Wells College,New York,51,,39,49.9047619,1,8,13,0,1,,,40,56
+198835,Lenoir-Rhyne University,North Carolina,51,83,39,31.33333333,0,14,4,0,6,25,,28,43
+203775,Malone University,Ohio,51,100,38,20.9,0,7,3,0,2,,,20,23
+#N/A,Mount St. Joseph University,Ohio,51,,41,30.92307692,0,9,4,0,0,0,,30,33
+206507,Wilmington College,Ohio,51,56,39,21.14285714,0,10,4,0,2,,,24,14
+211352,Cabrini University,Pennsylvania,51,40,43,35.54545455,0,21,12,0,2,0,,29,47
+219790,Bryan College-Dayton,Tennessee,51,75,36,40.5,0,4,4,0,2,50,,10,71
+220206,Welch College,Tennessee,51,,64,19.8,0,6,4,0,1,,,33,0
+237358,Davis & Elkins College,West Virginia,51,35,54,52.77777778,1,5,4,0,8,,,55,50
+238980,Lakeland University,Wisconsin,51,100,38,43.125,1,6,9,0,1,0,,19,64
+151786,Marian University,Wisconsin,51,100,43,35.8,1,5,9,0,5,0,100,21,48
 486965,Hussian College-Los Angeles,California,51,25,46,43.22580645,0,10,21,0,3,0,,29,50
-487375,Arizona College of Nursing-Las Vegas,Nevada,75,,100,100,1,16,31,3,0,,,,100
-487524,Husson University,Maine,60,47,52,35.125,1,6,1,0,1,20,,36,45
-489344,Chamberlain University-North Carolina,North Carolina,100,,,URM proportions reported; missing matching grad rates,1,45,12,0,0,,,,
+100690,Amridge University,Alabama,50,,,URM proportions reported; missing matching grad rates,0,66,3,0,0,,,,
+101435,Huntingdon College,Alabama,50,,46,54.12,0,19,6,0,0,,,51,64
+106704,University of Central Arkansas,Arkansas,50,31,41,43.33333333,0,17,7,0,4,56,,41,49
+110486,California State University-Bakersfield,California,50,48,46,48.66666667,0,4,68,0,1,50,0,43,49
+114813,Fresno Pacific University,California,50,0,44,42.30434783,1,6,61,1,3,100,0,53,41
+116846,American Jewish University,California,50,100,50,0,0,2,10,0,0,,,0,
+123280,Shasta Bible College and Graduate School,California,50,,100,URM proportions reported; missing matching grad rates,0,0,17,0,0,,,,
+128498,Albertus Magnus College,Connecticut,50,50,49,44.12727273,0,31,24,0,4,0,,45,43
+130110,Paier College,Connecticut,50,,50,50,0,21,21,1,0,,,0,100
+137272,St. John Vianney College Seminary,Florida,50,50,50,0,0,7,31,0,26,,,,0
+138309,Rasmussen University-Florida,Florida,50,,100,URM proportions reported; missing matching grad rates,1,23,17,0,0,,,,
+148131,Quincy University,Illinois,50,100,36,25.5,0,10,6,0,5,,,21,33
+149514,Trinity International University-Illinois,Illinois,50,50,39,30,0,18,18,1,3,,,10,50
+153861,Maharishi International University,Iowa,50,100,40,19.04761905,1,10,11,0,2,,,40,0
+155061,Fort Hays State University,Kansas,50,50,38,32.75,0,3,5,0,2,43,,34,32
+156417,Clear Creek Baptist Bible College,Kentucky,50,,50,URM proportions reported; missing matching grad rates,0,5,2,0,0,,,,
+159993,University of Louisiana at Monroe,Louisiana,50,68,40,41.76923077,0,23,3,0,4,60,100,42,40
+160409,Saint Joseph Seminary College,Louisiana,50,,0,57,3,0,19,0,0,,,,57
+172051,Saginaw Valley State University,Michigan,50,62,40,34.76923077,0,8,5,0,3,25,,24,52
+192165,Kehilath Yakov Rabbinical Seminary,New York,50,,63,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
+192785,Maria College of Albany,New York,50,,40,100,0,17,8,0,4,,,100,
+195438,Sh'or Yoshuv Rabbinical College,New York,50,,50,URM proportions reported; missing matching grad rates,0,0,0,0,4,,,,
+196200,SUNY College at Potsdam,New York,50,67,45,44.52631579,1,8,10,0,1,60,0,47,41
+199999,Winston-Salem State University,North Carolina,50,50,48,51.52941176,0,81,4,0,1,0,,52,42
+203544,Kettering College,Ohio,50,50,60,35.71428571,0,9,5,0,8,,,0,100
+203757,Lourdes University,Ohio,50,60,45,39,1,13,3,0,0,,,36,52
+203845,Marietta College,Ohio,50,61,37,27.71428571,0,4,3,0,2,0,0,11,50
+204617,Ohio Dominican University,Ohio,50,43,41,44.05882353,1,26,7,0,5,100,,43,40
+206279,Union Institute & University,Ohio,50,,44,50,1,18,31,0,0,,,50,
+212993,Hussian College-Philadelphia,Pennsylvania,50,,,URM proportions reported; missing matching grad rates,1,53,14,0,1,,,,
+214971,Pennsylvania Academy of the Fine Arts,Pennsylvania,50,50,67,63.66666667,1,10,11,0,10,,,60,67
+216010,Shippensburg University of Pennsylvania,Pennsylvania,50,50,37,30.26315789,0,12,7,0,1,0,0,24,41
+217013,Wilson College,Pennsylvania,50,50,36,20.83333333,0,7,5,0,2,,,20,22
+217873,Claflin University,South Carolina,50,100,48,51.21978022,1,89,1,0,2,33,100,52,0
+220631,Lincoln Memorial University,Tennessee,50,50,48,36.83333333,1,6,5,0,6,25,,32,45
+221731,Tennessee Wesleyan University,Tennessee,50,54,46,53.5,0,7,5,0,7,,,56,50
+226471,University of Mary Hardin-Baylor,Texas,50,0,40,38.17948718,0,14,25,0,1,78,50,26,45
+228042,Schreiner University,Texas,50,100,41,51.55555556,0,5,40,0,1,0,,80,48
+228468,Southwestern Adventist University,Texas,50,50,39,45.88461538,0,11,41,0,4,,20,38,48
+228486,Southwestern Christian College,Texas,50,,0,50,0,95,3,0,0,,,50,
+230047,Brigham Young University-Hawaii,Hawaii,50,79,55,50.66666667,0,0,5,7,49,0,59,,39
+233301,Randolph College,Virginia,50,69,45,43.7,0,21,8,1,4,,50,41,50
+235097,Eastern Washington University,Washington,50,55,47,43.4,1,4,19,1,1,35,8,42,46
+237525,Marshall University,West Virginia,50,71,40,40.57142857,0,5,2,0,1,82,100,38,47
+243115,University of Puerto Rico-Arecibo,Puerto Rico,50,,50,50,0,0,100,0,0,,,,50
+376385,Universal Technology College of Puerto Rico,Puerto Rico,50,,50,50,0,0,100,0,0,,,,50
+384412,University of the Potomac-Washington DC Campus,District of Columbia,50,60,14,41.55555556,1,17,4,0,22,0,,44,
+430670,San Juan Bautista School of Medicine,Puerto Rico,50,,100,50,0,0,100,0,0,,,,50
+443784,Strayer University-Pennsylvania,Pennsylvania,50,,100,0,0,50,15,0,0,,,0,
+444088,Brookline College-Albuquerque,New Mexico,50,,50,50,7,6,58,0,0,,,,50
+445203,Remington College-North Houston Campus,Texas,50,,0,38.20224719,1,55,34,0,0,,,0,100
+447421,Eagle Gate College-Layton,Utah,50,,50,33,0,4,14,1,0,,,,33
+459727,Touro University Worldwide,California,50,,43,URM proportions reported; missing matching grad rates,0,24,7,1,0,,,,
+480091,Bryant & Stratton College-Online,New York,50,,50,URM proportions reported; missing matching grad rates,1,41,8,0,0,,,,
+482149,Augusta University,Georgia,50,69,42,45.62162162,0,27,10,0,1,50,50,44,50
+482565,DeVry University-North Carolina,North Carolina,50,,100,50,0,50,50,0,0,,,50,
+486239,San Ignacio University,Florida,50,100,100,0,0,0,45,0,54,,,,0
 490045,Presbyterian Theological Seminary in America,California,50,50,,URM proportions reported; missing matching grad rates,0,0,0,0,22,,,,
-490081,America Evangelical University,California,67,67,100,URM proportions reported; missing matching grad rates,0,0,4,0,61,,,,
-490319,Yeshiva Bais Aharon,New Jersey,57,,,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
-490328,Mechon L'hoyroa,New York,67,,,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
-490504,Yeshiva Ohr Naftoli,New York,67,,50,URM proportions reported; missing matching grad rates,0,0,0,0,3,,,,
 491525,Union Bible College,Indiana,50,,,URM proportions reported; missing matching grad rates,0,1,17,0,0,,,,
-491631,Women's Institute of Torah Seminary and College,Maryland,100,,,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
-491710,Yeshiva Gedolah of Cliffwood,New Jersey,57,,,URM proportions reported; missing matching grad rates,0,0,0,0,1,,,,
-493664,Yeshivat Hechal Shemuel,New York,100,,,URM proportions reported; missing matching grad rates,0,0,0,0,0,,,,
-494630,Christ Mission College,Texas,55,,,50,0,2,81,0,9,,,,50
 494685,Urshan College,Missouri,50,0,,77.77777778,1,4,14,0,0,,,0,100
-496627,California Northstate University,California,76,,,100,0,4,1,0,1,,,,100
-497408,Bridges Christian College,Louisiana,100,,,URM proportions reported; missing matching grad rates,0,26,7,0,0,,,,
-498562,Commonwealth University of Pennsylvania,Pennsylvania,54,43,45,35.5,0,6,6,0,0,38,,31,40
 498571,Pennsylvania Western University,Pennsylvania,50,20,41,31.23076923,0,9,4,0,1,0,67,26,43
 #N/A,,,,,,,,,,,,,,,
 #N/A,,,,,,,,,,,,,,,
