@@ -18,7 +18,7 @@ permalink: /viz/Grad_Map/
   Data: IPEDS 2022. Values show percent of first-time, full-time undergraduates completing within 6 years.
 </p>
 
-<link rel="stylesheet" href="./app.css?v=8" />
+<link rel="stylesheet" href="./app.css?v=9" />
 
 <!-- D3 + TopoJSON + PapaParse (no React) -->
 <script src="https://unpkg.com/d3@7/dist/d3.min.js"></script>
@@ -26,4 +26,4 @@ permalink: /viz/Grad_Map/
 <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
 
 <!-- Your vanilla JS app -->
-<script defer src="./app.js?v=8"></script>
+<script defer src="./app.js?v=9"></script>

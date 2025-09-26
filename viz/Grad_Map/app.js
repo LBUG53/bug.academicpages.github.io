@@ -1,13 +1,13 @@
-/* US Grad Map v8 — default gray states, selectable blue, scrollable table, Scorecard links */
+/* US Grad Map v9 — Scorecard links use "?UNITID-Slug=" format */
 (() => {
-  console.log("%c[Grad_Map] v8 loaded", "color:#2563eb;font-weight:bold");
+  console.log("%c[Grad_Map] v9 loaded", "color:#2563eb;font-weight:bold");
   const mount = document.getElementById("us-gradrate-map");
   if (!mount) return console.error("Missing #us-gradrate-map");
 
   const GEO_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
   const CSV_URL = "./ipeds_gradrate.csv";
 
-  let benchmark = 60; // visible by default
+  let benchmark = 60;
   let selectedState = null;
   let institutions = [];
   let topology = null;
@@ -40,6 +40,16 @@
     return STATE_NAME_TO_CODE[nameKey] || null;
   };
 
+  // Slugify for College Scorecard URLs
+  function slugify(name) {
+    return String(name || "")
+      .trim()
+      .replace(/&/g, "and")
+      .replace(/[^A-Za-z0-9]+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-|-$/g, "");
+  }
+
   // SVG & neighbors
   const svg = d3.select(mount).append("svg")
     .attr("width", "100%")
@@ -49,7 +59,7 @@
   const tooltip = d3.select("body").append("div").attr("class","tooltip").style("display","none");
   const parent = mount.parentElement;
   const stateSummary = d3.select(parent).append("div").attr("class","state-summary");
-  const tableWrap = d3.select(parent).append("div").attr("class","table-wrap"); // scroll container lives here
+  const tableWrap = d3.select(parent).append("div").attr("class","table-wrap");
 
   // Threshold buttons
   const syncButtons = () => {
@@ -79,7 +89,6 @@
   ]).then(([topo, rows]) => {
     topology = topo;
 
-    // Header map
     const sample = rows[0] || {};
     const headerMap = {};
     Object.keys(sample).forEach(k => headerMap[normKey(k)] = k);
@@ -91,16 +100,13 @@
     const nonresKey= pick(["nonres_grad","nonresident grad","nonresident","nonres"]);
     const pellKey  = pick(["pell_grad","pell completion","pell"]);
     const urmKey   = pick(["urm_grad","underrepresented minority grad","minority grad","urm"]);
-    const unitKey  = pick(["unitid","ipeds id","ipeds_unitid","unit id","unit-id","ipedsid"]); // <-- detect UNITID
+    const unitKey  = pick(["unitid","ipeds id","ipeds_unitid","unit id","unit-id","ipedsid"]);
 
-    console.log("[Grad_Map v8] headers:", { nameKey, stateKey, totKey, unitKey });
-
-    // Normalize rows
     institutions = rows.map(r => {
       const name = (nameKey ? r[nameKey] : (r.INSTNM||r.name||r.college||"")) || "";
       const rawState = (stateKey ? r[stateKey] : (r.state||r.STABBR||r.State||"")) || "";
       const state = toStateCode(rawState);
-      const id = unitKey ? (r[unitKey] ?? "").toString().trim() : null; // store UNITID if present
+      const id = unitKey ? (r[unitKey] ?? "").toString().trim() : null;
       return {
         name: String(name).trim(),
         state,
@@ -120,7 +126,7 @@
     d3.select(mount).append("div").style("color","#b91c1c").text("Failed to load map or data.");
   });
 
-  // Utilities
+  // Helpers
   function containerSize() {
     const w = Math.max(320, mount.clientWidth || mount.getBoundingClientRect().width || 980);
     const h = Math.round(w * 0.6);
@@ -136,7 +142,6 @@
     return out;
   }
 
-  // Map draw
   function drawMap() {
     if (!topology) return;
     const { w, h } = containerSize();
@@ -151,7 +156,7 @@
       enter => enter.append("path")
         .attr("class","state")
         .attr("d", path)
-        .attr("fill", "#E5E7EB")      // default gray
+        .attr("fill", "#E5E7EB")
         .attr("stroke", "#9CA3AF")
         .attr("stroke-width", 0.6)
         .style("pointer-events","all")
@@ -166,7 +171,7 @@
         .on("mouseleave", () => tooltip.style("display","none"))
         .on("click", (event, d) => {
           const code = STATE_NAME_TO_CODE[d.properties.name] || null;
-          selectedState = (selectedState === code) ? null : code; // toggle selection
+          selectedState = (selectedState === code) ? null : code;
           render();
         }),
       update => update.attr("d", path),
@@ -174,11 +179,9 @@
     );
   }
 
-  // Render summary + table + selected color
   function render() {
     const counts = byState();
 
-    // Only selected state is blue; others gray
     g.selectAll("path.state")
       .attr("fill", d => {
         const code = STATE_NAME_TO_CODE[d.properties.name];
@@ -186,7 +189,6 @@
         return active ? "#2563EB" : "#E5E7EB";
       });
 
-    // Summary
     const rows = selectedState ? (counts[selectedState] || []) : [];
     stateSummary.html("");
     if (selectedState) {
@@ -199,7 +201,6 @@
         .text("Select a state to see institutions with total six-year graduation rates at or above the chosen threshold.");
     }
 
-    // Table (scrolls inside its own container; header sticks via CSS)
     tableWrap.html("");
     if (selectedState) {
       const scroller = tableWrap.append("div").attr("class","table-scroll");
@@ -216,12 +217,15 @@
       } else {
         const tr = tbody.selectAll("tr").data(rows).join("tr");
 
-        // Institution name → College Scorecard link
         const nameTd = tr.append("td");
         nameTd.append("a")
-          .attr("href", d => d.id
-            ? `https://collegescorecard.ed.gov/school/?id=${encodeURIComponent(d.id)}`
-            : `https://collegescorecard.ed.gov/search/?name=${encodeURIComponent(d.name)}`)
+          .attr("href", d => {
+            if (d.id) {
+              const slug = slugify(d.name);
+              return `https://collegescorecard.ed.gov/school/?${encodeURIComponent(d.id)}-${slug}=`;
+            }
+            return `https://collegescorecard.ed.gov/search/?name=${encodeURIComponent(d.name)}`;
+          })
           .attr("target", "_blank")
           .attr("rel", "noopener")
           .text(d => d.name);
