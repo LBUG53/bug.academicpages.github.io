@@ -1,26 +1,48 @@
 ---
-layout: splash
-title: "Lucian Bessmer, PhD"
-subtitle: "Higher-ed scholarship · Institutional analysis · Data storytelling"
-permalink: /
-
-header:
-  overlay_image: "https://lucianbessmer.com/images/hero_looking_wide.jpg?v=4"  # bump v=#
-  overlay_filter: 0.10
-
-excerpt: "Higher Ed Scholar, Historian, Strategist"
-
-feature_row:
-  - title: "Scholarship"
-    excerpt: "Publications, essays, and research agenda."
-    url: "/posts/"
-  - title: "Teaching"
-    excerpt: "Courses, materials, and mentorship."
-    url: "/portfolio/"
-  - title: "Engagement"
-    excerpt: "Applied research and advising for institutions."
-    url: "/engagement/"
-
-sidebar: false
+layout: home
+author_profile: false
 ---
-{% include feature_row id="feature_row" %}
+
+<!-- Custom Feature Row (linked titles, no Learn More buttons) -->
+<div class="feature__wrapper">
+
+  <div class="feature__item">
+    <div class="archive__item">
+      <div class="archive__item-body">
+        <h2 class="archive__item-title">
+          <a href="/scholarship/">Scholarship</a>
+        </h2>
+        <div class="archive__item-excerpt">
+          <p>Book project, publications, conference talks, and works in progress.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature__item">
+    <div class="archive__item">
+      <div class="archive__item-body">
+        <h2 class="archive__item-title">
+          <a href="/portfolio/">Teaching</a>
+        </h2>
+        <div class="archive__item-excerpt">
+          <p>Course syllabi and teaching philosophy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature__item">
+    <div class="archive__item">
+      <div class="archive__item-body">
+        <h2 class="archive__item-title">
+          <a href="/higheredissues/">Higher Ed Issues</a>
+        </h2>
+        <div class="archive__item-excerpt">
+          <p>Explaining higher ed issues the way I’d want them explained to me.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

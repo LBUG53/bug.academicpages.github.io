@@ -1,9 +1,9 @@
-# Welcome to Jekyll! — Minimal Mistakes / Academic Pages configuration
+# Minimal Mistakes / Academic Pages configuration
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "air"                # Academic Pages skin: "default" or "air"
-minimal_mistakes_skin    : "air"                # MM skin key (harmless if unused)
+site_theme               : "air"
+minimal_mistakes_skin    : "air"
 title                    : "Lucian Bessmer, PhD"
 title_separator          : "-"
 name                     : &name "Home"
@@ -14,7 +14,7 @@ logo                     : /images/favicon.png
 repository               : "LBUG53/bug.academicpages.github.io"
 image_path               : ""
 
-# Site Author (no avatar configured to avoid lookups)
+# Site Author (no avatar to avoid lookups)
 author:
   name    : "Lucian Bessmer"
   bio     : "Higher Ed Scholar, Historian, and Strategist."
@@ -22,6 +22,18 @@ author:
     - label: "Email"
       icon: "fas fa-envelope"
       url : "mailto:lucianbessmer@gmail.com"
+
+# Feature Row (used by the homepage)
+feature_row:
+  - title: "Scholarship"
+    url: "/scholarship/"
+    excerpt: "Book project, publications, conference talks, and works in progress."
+  - title: "Teaching"
+    url: "/portfolio/"
+    excerpt: "Course syllabi and teaching philosophy."
+  - title: "Higher Ed Issues"
+    url: "/higheredissues/"
+    excerpt: "Explaining higher ed issues the way I’d want them explained to me."
 
 # Publication Category
 publication_category:
@@ -50,7 +62,7 @@ comments:
     num_posts            :
     colorscheme          :
 staticman:
-  allowedFields          : ['name', 'email,', 'url', 'message']
+  allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : "gh-pages"
   commitMessage          : "New comment."
   filename               : comment-{@timestamp}
@@ -155,7 +167,7 @@ collections:
     output    : true
     permalink : /:collection/:path/
 
-# Defaults — disable all sidebars site-wide (author box + ToC)
+# Defaults — turn off sidebars site-wide (author box + ToC)
 defaults:
   - scope:
       path  : ""
