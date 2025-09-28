@@ -10,20 +10,18 @@ name                     : &name "Home"
 description              : &description "Higher-ed scholarship, history, and strategy."
 url                      : "https://lucianbessmer.com"
 baseurl                  : ""
-logo: /images/favicon.png
+logo                     : /images/favicon.png
 repository               : "LBUG53/bug.academicpages.github.io"
-image_path: ""
+image_path               : ""
 
-# Site Author
+# Site Author (no avatar configured to avoid lookups)
 author:
   name    : "Lucian Bessmer"
-  avatar  : "/images/avatar_mountain.jpg"                # add this file (square headshot)
   bio     : "Higher Ed Scholar, Historian, and Strategist."
   links:
     - label: "Email"
       icon: "fas fa-envelope"
-      url: "mailto:lucianbessmer@gmail.com"
-
+      url : "mailto:lucianbessmer@gmail.com"
 
 # Publication Category
 publication_category:
@@ -35,7 +33,7 @@ publication_category:
     title: "Engagement"
 
 # Site Settings
-teaser                   :                      
+teaser                   :
 breadcrumbs              : false
 words_per_minute         : 160
 future                   : true
@@ -52,7 +50,7 @@ comments:
     num_posts            :
     colorscheme          :
 staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
+  allowedFields          : ['name', 'email,', 'url', 'message']
   branch                 : "gh-pages"
   commitMessage          : "New comment."
   filename               : comment-{@timestamp}
@@ -72,7 +70,7 @@ atom_feed:
   path                   :
 
 # SEO / Social
-og_image: "https://lucianbessmer.com/images/favicon.png"
+og_image                 : "https://lucianbessmer.com/images/favicon.png"
 og_description           :
 social:
   type                   : Person
@@ -157,55 +155,72 @@ collections:
     output    : true
     permalink : /:collection/:path/
 
-# Defaults
+# Defaults — disable all sidebars site-wide (author box + ToC)
 defaults:
   - scope:
       path  : ""
       type  : posts
     values:
       layout         : single
-      author_profile : true
+      author_profile : false
       read_time      : true
       comments       : true
       share          : true
       related        : true
+      toc            : false
+      toc_sticky     : false
+
   - scope:
       path  : ""
       type  : pages
     values:
       layout         : single
-      author_profile : false        # cleaner default for standalone pages
+      author_profile : false
+      toc            : false
+      toc_sticky     : false
+
   - scope:
       path  : ""
       type  : teaching
     values:
       layout         : single
-      author_profile : true
+      author_profile : false
       share          : true
       comments       : true
+      toc            : false
+      toc_sticky     : false
+
   - scope:
       path  : ""
       type  : publications
     values:
       layout         : single
-      author_profile : true
+      author_profile : false
       share          : true
       comments       : true
+      toc            : false
+      toc_sticky     : false
+
   - scope:
       path  : ""
       type  : portfolio
     values:
       layout         : single
-      author_profile : true
+      author_profile : false
       share          : true
-      comment        : true
+      comments       : true
+      toc            : false
+      toc_sticky     : false
+
   - scope:
       path  : ""
       type  : talks
     values:
       layout         : talk
-      author_profile : true
+      author_profile : false
       share          : true
+      toc            : false
+      toc_sticky     : false
 
 # Sass/SCSS
 sass:
@@ -249,8 +264,3 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
-# --- site author avatar (added by setup) ---
-author:
-  name: "Lucian Bessmer"
-  avatar: "/images/avatar_mountain.jpg"
