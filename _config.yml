@@ -10,11 +10,11 @@ name                     : &name "Home"
 description              : &description "Higher-ed scholarship, history, and strategy."
 url                      : "https://lucianbessmer.com"
 baseurl                  : ""
-logo                     : /images/favicon.png
+logo                     : favicon.png
 repository               : "LBUG53/bug.academicpages.github.io"
-image_path               : ""
+image_path               : "/images"
 
-# Site Author (no avatar to avoid lookups)
+# Site Author (no avatar)
 author:
   name    : "Lucian Bessmer"
   bio     : "Higher Ed Scholar, Historian, and Strategist."
@@ -23,7 +23,7 @@ author:
       icon: "fas fa-envelope"
       url : "mailto:lucianbessmer@gmail.com"
 
-# Feature Row (used by the homepage)
+# Feature Row
 feature_row:
   - title: "Scholarship"
     url: "/scholarship/"
@@ -50,107 +50,24 @@ breadcrumbs              : false
 words_per_minute         : 160
 future                   : true
 read_more                : "disabled"
-talkmap_link             : false
-comments:
-  provider               :
-  disqus:
-    shortname            :
-  discourse:
-    server               :
-  facebook:
-    appid                :
-    num_posts            :
-    colorscheme          :
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601"
-atom_feed:
-  hide                   : false
-  path                   :
 
 # SEO / Social
-og_image                 : "https://lucianbessmer.com/images/favicon.png"
-og_description           :
+og_image                 : "https://lucianbessmer.com/images/hero_looking_wide.jpg"
 social:
   type                   : Person
   name                   : "Lucian Bessmer"
   links:
     - "mailto:lucianbessmer@gmail.com"
 
-# Analytics
-analytics:
-  provider               : "false"
-  google:
-    tracking_id          :
-
 # Reading Files
 include:
   - .htaccess
   - _pages
   - files
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .github
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - CHANGELOG
-  - Capfile
-  - config
-  - Dockerfile
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - local
-  - log
-  - node_modules
-  - package.json*
-  - Rakefile
-  - README
-  - tmp
-  - vendor
-keep_files:
-  - .git
-  - .svn
-encoding                 : "utf-8"
-markdown_ext             : "markdown,mkdown,mkdn,mkd,md"
 
 # Conversion
 markdown                 : kramdown
 highlighter              : rouge
-lsi                      : false
-excerpt_separator        : "\n\n"
-incremental              : false
-
-# Markdown Processing
-kramdown:
-  input                  : GFM
-  hard_wrap              : false
-  auto_ids               : true
-  footnote_nr            : 1
-  entity_output          : as_char
-  toc_levels             : 1..6
-  smart_quotes           : lsquo,rsquo,ldquo,rdquo
-  enable_coderay         : false
 
 # Collections
 collections:
@@ -167,7 +84,7 @@ collections:
     output    : true
     permalink : /:collection/:path/
 
-# Defaults — turn off sidebars site-wide (author box + ToC)
+# Defaults — no sidebars anywhere
 defaults:
   - scope:
       path  : ""
@@ -175,13 +92,8 @@ defaults:
     values:
       layout         : single
       author_profile : false
-      read_time      : true
-      comments       : true
-      share          : true
-      related        : true
       toc            : false
       toc_sticky     : false
-
   - scope:
       path  : ""
       type  : pages
@@ -190,89 +102,41 @@ defaults:
       author_profile : false
       toc            : false
       toc_sticky     : false
-
   - scope:
       path  : ""
       type  : teaching
     values:
       layout         : single
       author_profile : false
-      share          : true
-      comments       : true
       toc            : false
       toc_sticky     : false
-
   - scope:
       path  : ""
       type  : publications
     values:
       layout         : single
       author_profile : false
-      share          : true
-      comments       : true
       toc            : false
       toc_sticky     : false
-
   - scope:
       path  : ""
       type  : portfolio
     values:
       layout         : single
       author_profile : false
-      share          : true
-      comments       : true
       toc            : false
       toc_sticky     : false
-
   - scope:
       path  : ""
       type  : talks
     values:
       layout         : talk
       author_profile : false
-      share          : true
       toc            : false
       toc_sticky     : false
-
-# Sass/SCSS
-sass:
-  sass_dir : _sass
-  style    : compressed
-
-# Outputting
-permalink : /:categories/:title/
-timezone  : America/New_York
 
 # Plugins
 plugins:
   - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-redirect-from
   - jemoji
-  - jekyll-include-cache
-
-# Mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
-  - jekyll-include-cache
-
-# Archives
-category_archive:
-  type : liquid
-  path : /categories/
-tag_archive:
-  type : liquid
-  path : /tags/
-
-# HTML Compression
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
