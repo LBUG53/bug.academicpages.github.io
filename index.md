@@ -2,13 +2,15 @@
 layout: splash
 author_profile: false
 title: "Lucian Bessmer, PhD"
-subtitle: "Higher-ed scholarship, history, and strategy."
+
+# This line appears under your name in the hero:
+excerpt: "Scholar, Historian, and Strategist of Higher Education."
 
 header:
-  overlay_image: hero_looking_wide.jpg
+  overlay_image: /images/hero_looking_wide.jpg
   overlay_filter: 0.25
   caption: ""
-  og_image: hero_looking_wide.jpg
+  og_image: /images/hero_looking_wide.jpg
 
 intro:
   - excerpt: ""
