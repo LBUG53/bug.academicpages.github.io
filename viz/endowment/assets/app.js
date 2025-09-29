@@ -103,76 +103,95 @@
     };
   }
 
-  // ---------- compute 1-yr and 10-yr ----------
+  // ---------- compute (REAL sustainability lens) ----------
   function compute(){
     const { payoutPct, returnPct, inflPct, unresPct, committedPct, taxPct } = assumptions();
     const sel = selections();
 
     const U0 = TOTAL_ENDOWMENT * (unresPct/100);     // unrestricted principal
-    const payoutY0 = U0 * (payoutPct/100);           // this year's payout capacity
-    const baselineCommitted = committedPct/100;      // share of payout earmarked for existing ops
 
+    // Effective returns
+    const r_nom  = (returnPct/100) * (1 - (taxPct/100));     // after-tax nominal
+    const r      = (1 + r_nom) / (1 + inflPct/100) - 1;      // REAL (inflation-adjusted)
+
+    // Year 1 payout capacity & baseline usage
+    const payoutY0          = U0 * (payoutPct/100);
+    const baselineCommitted = committedPct/100;
+    const baselineNeedY0    = baselineCommitted * payoutY0;
+
+    // Toggle totals
     const oneTimeSum   = sel.oneTime.reduce((s,x)=>s + x.amount, 0);
     const recurringSum = sel.recurring.reduce((s,x)=>s + x.amount, 0);
     const permFedY1    = sel.policy.fedPermanent ? 684e6 : 0;
 
-    // Year 0 needs include “business as usual” claims on payout
-    const baselineNeedY0 = baselineCommitted * payoutY0;
+    // --- Year 1 totals ---
     const plannedThisYear = baselineNeedY0 + oneTimeSum + recurringSum + permFedY1;
-    const drawY0 = Math.max(0, plannedThisYear - payoutY0); // principal draw this year
 
-    // Effective after-tax return on net investment income
-    const r = (returnPct/100) * (1 - (taxPct/100));
+    // Principal consumed in Year 1 (REAL): needs not covered by real return
+    const returnY0_real = r * U0;
+    const principalConsumedY1 = Math.max(0, plannedThisYear - returnY0_real);
 
-    // 1-yr end principal (end of current year)
-    const U1 = Math.max(0, U0 + r*U0 - drawY0);
+    // End-of-year 1 principal in REAL terms: Start + real return − total needs
+    const U1 = Math.max(0, U0 + returnY0_real - plannedThisYear);
 
-    // ----- 10-yr baseline (no draws) -----
+    // ----- 10-yr baseline (no extra needs), used for payout-capacity comparison -----
     let U_base = U0;
     let cumPayoutBase = 0;
 
-    // ----- 10-yr scenario (with draws) -----
+    // ----- 10-yr scenario (subtract all needs each year) -----
     let U = U0;
-    let cumulativeDraw = 0;
+    let cumulativeDraw = 0;              // legacy metric (“beyond payout”)
+    let principalConsumed10 = 0;         // REAL principal consumed across 10 yrs
     let permFed = permFedY1;
-    const infl = 1 + inflPct/100;
     let cumPayoutScenario = 0;
+    const infl = 1 + inflPct/100;        // for growing the permanent gap only
 
     for (let year = 1; year <= 10; year++) {
-      // Baseline payout this year (no draws ever)
+      // Baseline: payout policy only (no extra needs)
       const P_base = U_base * (payoutPct/100);
       cumPayoutBase += P_base;
-      U_base = U_base + r * U_base; // grow baseline principal after-tax
+      U_base = U_base + r * U_base;  // grow baseline principal at REAL return
 
-      // Scenario payout this year
+      // Scenario: this year's payout capacity and needs
       const Pt = U * (payoutPct/100);
       cumPayoutScenario += Pt;
 
-      const baselineNeed = baselineCommitted * Pt; // existing ops eat most of payout
+      const baselineNeed = baselineCommitted * Pt;  // “existing ops” use most payout
       const annualRecurring = recurringSum + (sel.policy.fedPermanent ? permFed : 0);
-      const need = baselineNeed + annualRecurring + (year === 1 ? oneTimeSum : 0);
+      const oneTimeThisYear = (year === 1 ? oneTimeSum : 0);
+      const need = baselineNeed + annualRecurring + oneTimeThisYear;
 
+      // REAL consumption this year: needs − real return on current principal
+      const retThisYear_real = r * U;
+      const consumedThisYear = Math.max(0, need - retThisYear_real);
+      principalConsumed10 += consumedThisYear;
+
+      // For continuity with legacy label, “draw beyond payout” this year:
       const draw = Math.max(0, need - Pt);
       cumulativeDraw += draw;
 
-      // End-of-year principal after draw and after-tax return
-      U = Math.max(0, U + r * U - draw);
+      // End-of-year principal in REAL terms
+      U = Math.max(0, U + retThisYear_real - need);
 
-      if (sel.policy.fedPermanent) permFed *= infl; // grow permanent gap for next year
+      if (sel.policy.fedPermanent) permFed *= infl; // grow the permanent gap
     }
 
     return {
       U0,                   // starting unrestricted principal
-      U1,                   // end of year 1 principal
-      U10: U,               // end of year 10 principal
-      payoutY0,             // this year's payout capacity
-      drawY0,               // principal draw this year
-      cumulativeDraw,       // 10-yr total principal drawn
+      U1,                   // end of year 1 principal (REAL accounting)
+      U10: U,               // end of year 10 principal (REAL accounting)
+      payoutY0,             // Year 1 payout capacity (info)
+      drawY0: Math.max(0, plannedThisYear - payoutY0), // “beyond payout” gap (info)
+      cumulativeDraw,       // 10-yr sum of “beyond payout” gaps (info)
 
-      // 10-year payout comparison (baseline vs scenario)
-      cumPayoutBase,        // cumulative payout over 10 yrs with NO draws
-      cumPayoutScenario,    // cumulative payout over 10 yrs with your scenario (draws allowed)
-      cumPayoutDelta: cumPayoutScenario - cumPayoutBase, // negative if scenario pays out less
+      // Donut drivers (REAL principal actually eaten)
+      principalConsumedY1,
+      principalConsumed10,
+
+      // 10-yr payout-capacity comparison (baseline vs scenario; both evolved in REAL terms)
+      cumPayoutBase,
+      cumPayoutScenario,
+      cumPayoutDelta: cumPayoutScenario - cumPayoutBase,
 
       components: {
         oneTime: sel.oneTime,
@@ -213,13 +232,16 @@
     }).on('mouseout', ()=> tip.style('opacity',0));
   }
 
-  // ---------- Donuts (gray -> blue as loss grows) ----------
+  // ---------- Donuts (REAL consumption: gray -> blue as principal is eaten) ----------
   function renderDonuts(res){
-    drawDonut('#donut1',  '#donut1-metrics',  res.U0, res.U1,  `1-yr principal draw: ${fmt(res.drawY0)}`);
-    drawDonut('#donut10', '#donut10-metrics', res.U0, res.U10, `10-yr cumulative draw: ${fmt(res.cumulativeDraw)}`);
+    drawConsumptionDonut('#donut1',  '#donut1-metrics', res.U0, res.principalConsumedY1,
+      `Y1 real principal consumed: ${fmt(res.principalConsumedY1)}`);
+
+    drawConsumptionDonut('#donut10', '#donut10-metrics', res.U0, res.principalConsumed10,
+      `10-yr real principal consumed: ${fmt(res.principalConsumed10)}`);
   }
 
-  function drawDonut(svgSel, centerSel, start, end, note){
+  function drawConsumptionDonut(svgSel, centerSel, start, consumed, note){
     const svg = d3.select(svgSel);
     svg.selectAll('*').remove();
     const w = +svg.attr('width'), h = +svg.attr('height');
@@ -227,24 +249,22 @@
     const g = svg.append('g').attr('transform', `translate(${w/2},${h/2})`);
     const arc = d3.arc().innerRadius(rInner).outerRadius(rOuter);
 
-    // Start fully gray; the "Lost" portion turns blue as principal is eaten
-    const remaining = Math.max(0, Math.min(end, start));
-    const lost = Math.max(0, start - end);
-    const total = Math.max(1, start); // avoid div-by-zero
-
+    const loss = Math.max(0, Math.min(consumed, start));
+    const remaining = Math.max(0, start - loss);
     const pie = d3.pie().sort(null).value(d => d.value);
     const data = [
-      {name:'Remaining', value: remaining/total}, // gray
-      {name:'Lost',      value: lost/total}       // blue
+      {name:'Remaining', value: remaining}, // gray
+      {name:'Consumed',  value: loss}       // blue
     ];
 
     g.selectAll('path').data(pie(data)).enter().append('path')
       .attr('d', arc)
       .attr('fill', (d,i)=> i===0 ? '#334155' : '#3b82f6');
 
-    const delta = end - start;
+    const end = start - loss;
+    const delta = end - start; // negative
     $(centerSel).innerHTML = `<div><strong>${fmt(end)}</strong></div>
-                              <div class="muted">${delta>=0?'+':''}${d3.format('$.2s')(delta).replace('G','B')} vs start</div>
+                              <div class="muted">${d3.format('$.2s')(delta).replace('G','B')} vs start</div>
                               <div class="muted">${note||''}</div>`;
   }
 

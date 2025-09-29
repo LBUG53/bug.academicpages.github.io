@@ -6,23 +6,16 @@
   <title>An endowment is not a piggy bank</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles.css?v=2025-09-29c" />
+  <link rel="stylesheet" href="./assets/styles.css?v=real2" />
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
   <div class="page">
-    <header class="header">
-      <h1>An endowment is not a piggy bank</h1>
-      <p class="subhead">
-        The $53.2B headline is a <strong>stock</strong>. The flexible <strong>flow</strong> is the annual payout from a much smaller unrestricted pool.
-        If you spend beyond the payout, you must <strong>draw principal</strong>, which reduces future payout.
-      </p>
-    </header>
 
     <!-- Row A: stock treemap (kept) -->
     <section class="row single">
       <div class="card" id="stock-card">
-        <h2>Endowment (Stock Today)</h2>
+        
 
         <!-- Preface text block -->
         <div class="preface">
@@ -34,7 +27,7 @@
 
         <div id="stock-treemap"></div>
         <p class="caption">
-          Hover tiles for details. <span class="chip chip-blue"></span> Blue = Unrestricted (your fixed share). Gray = donor-restricted purposes.
+          Hover tiles for details. <span class="chip chip-blue"></span> Blue = Unrestricted. Gray = donor-restricted purposes.
         </p>
       </div>
     </section>
@@ -57,7 +50,7 @@
 
           <div class="subgroup">
             <h4>One-time (capital)</h4>
-            <label><input type="checkbox" id="chkHouse" /> House Renewal phase</label>
+            <label><input type="checkbox" id="chkHouse" /> Dorm Renewal phase</label>
             <div class="slider-row">
               <input type="range" id="rngHouse" min="300" max="500" step="10" value="400" />
               <span class="value">$<span id="lblHouse">400</span>M</span>
@@ -173,12 +166,12 @@
         </div>
 
         <p class="caption small">
-          1-yr: End = Start + (return × Start) − principal draw. &nbsp;10-yr: Repeat annually; permanent gaps grow with inflation; shortfalls become draws; return applies to remaining principal.
+          Donuts show <strong>real (inflation-adjusted) principal consumed</strong>: each year we compare total needs to the portfolio’s after-tax return <em>after</em> inflation. If needs exceed real return, the blue wedge grows. Over 10 years, we sum the real principal consumed.
         </p>
       </div>
     </section>
   </div>
 
-  <script src="./assets/app.js?v=2025-09-29c"></script>
+  <script src="./assets/app.js?v=real2"></script>
 </body>
 </html>
