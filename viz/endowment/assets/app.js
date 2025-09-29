@@ -1,13 +1,12 @@
 (function(){
   // --------- constants / assumptions ----------
   const TOTAL_ENDOWMENT = 53.2e9;          // $
-  const UNRESTRICTED_PCT = 30;             // fixed, per your spec (top treemap + math use this)
+  const UNRESTRICTED_PCT = 30;             // fixed per your spec
   const DEFAULTS = { payoutPct: 5.5, returnPct: 7, inflPct: 3 };
 
-  // Top treemap pots EXACTLY as you gave
+  // Top treemap pots EXACTLY as provided
   const POTS = [
     { key:"unr",  name:"Unrestricted",                  share:30, desc:"Donor-unrestricted endowment." },
-
     { key:"con",  name:"Construction",                  share:1,  desc:"Capital construction funds." },
     { key:"fac",  name:"Faculty & Teaching",            share:3,  desc:"Instructional support and teaching." },
     { key:"lib",  name:"Library & Museums",             share:3,  desc:"Libraries, museums, preservation." },
@@ -18,34 +17,34 @@
     { key:"sch",  name:"Scholarship & Student Support", share:20, desc:"Financial aid & student support." }
   ];
 
-  // Illustrative breakdown for reduced flexible payout (edit if you like).
-  // These weights sum to 1.0 and allocate the *payout delta* across areas.
+  // Illustrative breakdown for reduced flexible payout (10-yr)
   const IMPACT_WEIGHTS = [
-    { name:"Libraries & Museums",    w:0.20 },
-    { name:"Student services",       w:0.30 },
-    { name:"Academic programs",      w:0.20 },
-    { name:"Facilities & operations",w:0.20 },
-    { name:"Other central support",  w:0.10 }
+    { name:"Libraries & Museums",     w:0.20 },
+    { name:"Student services",        w:0.30 },
+    { name:"Academic programs",       w:0.20 },
+    { name:"Facilities & operations", w:0.20 },
+    { name:"Other central support",   w:0.10 }
   ];
 
   const $  = s => document.querySelector(s);
   const $$ = s => Array.from(document.querySelectorAll(s));
+  const fmt = v => d3.format('$,.0f')(v);
 
   // ---------- slider label binders ----------
-  function bindSlider(id, labelId, fmt = v => v){
+  function bindSlider(id, labelId, fmtv = v => v){
     const el = $(id), lbl = $(labelId);
-    const set = () => lbl.textContent = fmt(el.value);
-    if(el && lbl){ el.addEventListener('input', set); set(); }
+    const set = () => { if (lbl && el) lbl.textContent = fmtv(el.value); };
+    if (el && lbl){ el.addEventListener('input', set); set(); }
   }
-  bindSlider('#rngHouse', '#lblHouse', v => (+v).toFixed(0));
-  bindSlider('#rngLabSF', '#lblLabSF', v => (+v).toFixed(0));
-  bindSlider('#rngBeds',  '#lblBeds',  v => (+v).toFixed(0));
-  bindSlider('#rngLibrary','#lblLibrary', v => (+v).toFixed(0));
-  bindSlider('#rngPhD',   '#lblPhD',   v => (+v).toFixed(0));
-  bindSlider('#rngAid',   '#lblAid',   v => (+v).toFixed(0));
-  bindSlider('#rngCyber', '#lblCyber', v => (+v).toFixed(0));
-  bindSlider('#rngDecarbOps','#lblDecarbOps', v => (+v).toFixed(0));
-  bindSlider('#rngFacilities','#lblFacilities', v => (+v).toFixed(0));
+  bindSlider('#rngHouse',     '#lblHouse',     v => (+v).toFixed(0));
+  bindSlider('#rngLabSF',     '#lblLabSF',     v => (+v).toFixed(0));
+  bindSlider('#rngBeds',      '#lblBeds',      v => (+v).toFixed(0));
+  bindSlider('#rngLibrary',   '#lblLibrary',   v => (+v).toFixed(0));
+  bindSlider('#rngPhD',       '#lblPhD',       v => (+v).toFixed(0));
+  bindSlider('#rngAid',       '#lblAid',       v => (+v).toFixed(0));
+  bindSlider('#rngCyber',     '#lblCyber',     v => (+v).toFixed(0));
+  bindSlider('#rngDecarbOps', '#lblDecarbOps', v => (+v).toFixed(0));
+  bindSlider('#rngFacilities','#lblFacilities',v => (+v).toFixed(0));
 
   // ---------- assumptions & selections ----------
   function assumptions(){
@@ -71,27 +70,27 @@
 
     const phdOn   = $('#chkPhD').checked, phdInc = +$('#rngPhD').value, phdCount=4160, phdCost = phdInc*phdCount;
     const aidOn   = $('#chkAid').checked, aidPct = +$('#rngAid').value, aidBase=275e6, aidCost=aidBase*(aidPct/100);
-    const cyberOn = $('#chkCyber').checked, cyberM = +$('#rngCyber').value*1e6;
-    const decopsOn= $('#chkDecarbOps').checked, decopsM = +$('#rngDecarbOps').value*1e6;
-    const facOn   = $('#chkFacilities').checked, facM = +$('#rngFacilities').value*1e6;
+    const cyberOn = $('#chkCyber').checked,   cyberM   = +$('#rngCyber').value*1e6;
+    const decopsOn= $('#chkDecarbOps').checked,decopsM = +$('#rngDecarbOps').value*1e6;
+    const facOn   = $('#chkFacilities').checked, facM  = +$('#rngFacilities').value*1e6;
 
     return {
       policy: { treasuryOneTime, useFedOneTime, fedPermanent },
       oneTime: [
-        houseOn ? {name:'House Renewal phase', amount:houseM}:null,
-        labsOn  ? {name:`Modernize wet-labs (${labSFk}k SF)`, amount:labCost}:null,
-        grfOn   ? {name:'Decarbonization fund top-up (GRF)', amount:grfCost}:null,
-        ghOn    ? {name:`Graduate housing (+${beds} beds)`, amount:ghCost}:null,
-        libOn   ? {name:'Library renovation (phase)', amount:libM}:null,
-        treasuryOneTime ? {name:'One-time $500M Treasury payment', amount:500e6}:null,
-        useFedOneTime ? {name:'One-time backfill federal research', amount:684e6}:null
+        houseOn ? {name:'House Renewal phase', amount:houseM} : null,
+        labsOn  ? {name:`Modernize wet-labs (${labSFk}k SF)`, amount:labCost} : null,
+        grfOn   ? {name:'Decarbonization fund top-up (GRF)', amount:grfCost} : null,
+        ghOn    ? {name:`Graduate housing (+${beds} beds)`, amount:ghCost} : null,
+        libOn   ? {name:'Library renovation (phase)', amount:libM} : null,
+        treasuryOneTime ? {name:'One-time $500M Treasury payment', amount:500e6} : null,
+        useFedOneTime   ? {name:'One-time backfill federal research', amount:684e6} : null
       ].filter(Boolean),
       recurring: [
-        phdOn   ? {name:`Raise all PhD stipends (+$${phdInc.toLocaleString()}/student)`, amount:phdCost}:null,
-        aidOn   ? {name:`Increase undergrad financial aid (+${aidPct}%)`, amount:aidCost}:null,
-        cyberOn ? {name:'Cybersecurity hardening & insurance', amount:cyberM}:null,
-        decopsOn? {name:'Decarbonization operations', amount:decopsM}:null,
-        facOn   ? {name:'Facilities renewal / deferred maintenance', amount:facM}:null
+        phdOn   ? {name:`Raise all PhD stipends (+$${phdInc.toLocaleString()}/student)`, amount:phdCost} : null,
+        aidOn   ? {name:`Increase undergrad financial aid (+${aidPct}%)`, amount:aidCost} : null,
+        cyberOn ? {name:'Cybersecurity hardening & insurance', amount:cyberM} : null,
+        decopsOn? {name:'Decarbonization operations', amount:decopsM} : null,
+        facOn   ? {name:'Facilities renewal / deferred maintenance', amount:facM} : null
       ].filter(Boolean)
     };
   }
@@ -102,53 +101,71 @@
     const sel = selections();
 
     const U0 = TOTAL_ENDOWMENT * (unresPct/100);     // unrestricted principal
-    const payoutY0 = U0 * (payoutPct/100);           // flexible payout this year (info only)
+    const payoutY0 = U0 * (payoutPct/100);           // this year's payout capacity (info)
 
     const oneTimeSum   = sel.oneTime.reduce((s,x)=>s+x.amount,0);
     const recurringSum = sel.recurring.reduce((s,x)=>s+x.amount,0);
     const permFedY1    = sel.policy.fedPermanent ? 684e6 : 0;
 
     const plannedThisYear = oneTimeSum + recurringSum + permFedY1;
-    const drawY0 = Math.max(0, plannedThisYear - payoutY0); // principal draw (this year)
+    const drawY0 = Math.max(0, plannedThisYear - payoutY0); // principal draw this year
 
     const r = returnPct/100;
 
     // 1-yr end principal (end of current year)
     const U1 = Math.max(0, U0 + r*U0 - drawY0);
 
-    // 10-yr path (repeat: payout each year; shortfall => draw; return on remaining principal)
+    // ----- 10-yr baseline (no draws) -----
+    let U_base = U0;
+    let cumPayoutBase = 0;
+
+    // ----- 10-yr scenario (with draws) -----
     let U = U0;
     let cumulativeDraw = 0;
     let permFed = permFedY1;
     const infl = 1 + inflPct/100;
+    let cumPayoutScenario = 0;
 
-    for (let year=1; year<=10; year++){
+    for (let year = 1; year <= 10; year++) {
+      // Baseline payout this year (no draws ever)
+      const P_base = U_base * (payoutPct/100);
+      cumPayoutBase += P_base;
+      U_base = U_base + r * U_base; // grow baseline principal
+
+      // Scenario payout this year
       const Pt = U * (payoutPct/100);
+      cumPayoutScenario += Pt;
+
       const annualRecurring = recurringSum + (sel.policy.fedPermanent ? permFed : 0);
       const need = annualRecurring + (year === 1 ? oneTimeSum : 0);
+
       const draw = Math.max(0, need - Pt);
       cumulativeDraw += draw;
-      U = Math.max(0, U + r*U - draw);
-      if (sel.policy.fedPermanent) permFed *= infl; // grow the permanent gap
+
+      // End-of-year principal after draw and return
+      U = Math.max(0, U + r * U - draw);
+
+      if (sel.policy.fedPermanent) permFed *= infl; // grow permanent gap for next year
     }
 
-    // Baseline vs scenario next-year payout (Year 1 → Year 2)
-    // Baseline (no draw): U_baseline_end = U0 + r*U0
-    // Scenario:            U_scn_end      = U0 + r*U0 - drawY0
-    // Next-year payout uses start-of-year balances:
-    const U_base_next   = U0 + r*U0;
-    const U_scn_next    = U0 + r*U0 - drawY0;
-    const payoutBase    = U_base_next * (payoutPct/100);
-    const payoutScenario= U_scn_next  * (payoutPct/100);
-    const payoutDelta   = payoutScenario - payoutBase;  // will be negative if you drew principal
-
     return {
-      U0, U1, U10: U,
-      payoutY0,
-      drawY0,
-      cumulativeDraw,
-      payoutBase, payoutScenario, payoutDelta,
-      components: { oneTime: sel.oneTime, recurring: sel.recurring, permFedY1 }
+      U0,                   // starting unrestricted principal
+      U1,                   // end of year 1 principal
+      U10: U,               // end of year 10 principal
+      payoutY0,             // this year's payout capacity
+      drawY0,               // principal draw this year
+      cumulativeDraw,       // 10-yr total principal drawn
+
+      // 10-year payout comparison (baseline vs scenario)
+      cumPayoutBase,        // cumulative payout over 10 yrs with NO draws
+      cumPayoutScenario,    // cumulative payout over 10 yrs with your scenario (draws allowed)
+      cumPayoutDelta: cumPayoutScenario - cumPayoutBase, // negative if scenario pays out less
+
+      components: {
+        oneTime: sel.oneTime,
+        recurring: sel.recurring,
+        permFedY1
+      }
     };
   }
 
@@ -183,7 +200,7 @@
     }).on('mouseout', ()=> tip.style('opacity',0));
   }
 
-  // ---------- Donuts (fixed) ----------
+  // ---------- Donuts (gray -> blue as loss grows) ----------
   function renderDonuts(res){
     drawDonut('#donut1',  '#donut1-metrics',  res.U0, res.U1,  `1-yr principal draw: ${fmt(res.drawY0)}`);
     drawDonut('#donut10', '#donut10-metrics', res.U0, res.U10, `10-yr cumulative draw: ${fmt(res.cumulativeDraw)}`);
@@ -197,18 +214,20 @@
     const g = svg.append('g').attr('transform', `translate(${w/2},${h/2})`);
     const arc = d3.arc().innerRadius(rInner).outerRadius(rOuter);
 
-    // Remaining vs Lost relative to START (so adding costs can’t make it look “better”)
+    // Start fully gray; the "Lost" portion turns blue as principal is eaten
     const remaining = Math.max(0, Math.min(end, start));
     const lost = Math.max(0, start - end);
-    const total = Math.max(1, start);
+    const total = Math.max(1, start); // avoid div-by-zero
+
     const pie = d3.pie().sort(null).value(d => d.value);
     const data = [
-      {name:'Remaining', value: remaining/total},
-      {name:'Lost',      value: lost/total}
+      {name:'Remaining', value: remaining/total}, // gray
+      {name:'Lost',      value: lost/total}       // blue
     ];
+
     g.selectAll('path').data(pie(data)).enter().append('path')
       .attr('d', arc)
-      .attr('fill', (d,i)=> i===0 ? '#3b82f6' : '#334155');
+      .attr('fill', (d,i)=> i===0 ? '#334155' : '#3b82f6');
 
     const delta = end - start;
     $(centerSel).innerHTML = `<div><strong>${fmt(end)}</strong></div>
@@ -216,25 +235,24 @@
                               <div class="muted">${note||''}</div>`;
   }
 
-  // ---------- Impact list ----------
+  // ---------- Impact (10-yr payout shortfall allocated to areas) ----------
   function renderImpact(res){
-    $('#lblPayoutBase').textContent = fmt(res.payoutBase);
-    $('#lblPayoutNew').textContent  = fmt(res.payoutScenario);
-    $('#lblPayoutDelta').textContent= (res.payoutDelta>=0?'+':'') + fmt(res.payoutDelta);
+    $('#lblPayoutBase').textContent = fmt(res.cumPayoutBase);
+    $('#lblPayoutNew').textContent  = fmt(res.cumPayoutScenario);
+    $('#lblPayoutDelta').textContent= (res.cumPayoutDelta>=0?'+':'') + fmt(res.cumPayoutDelta);
 
     const list = $('#impactList');
     list.innerHTML = '';
-    const cut = Math.abs(Math.min(0, res.payoutDelta)); // positive $ to distribute when payout shrinks
+
+    // Only allocate if scenario pays out less than baseline
+    const shortfall = Math.abs(Math.min(0, res.cumPayoutDelta));
     IMPACT_WEIGHTS.forEach(({name,w})=>{
-      const amt = cut * w;
+      const amt = shortfall * w;
       const li = document.createElement('li');
       li.innerHTML = `<span>${name}</span><span>${fmt(amt)}</span>`;
       list.appendChild(li);
     });
   }
-
-  // ---------- utils ----------
-  const fmt = v => d3.format('$,.0f')(v);
 
   // ---------- wire events & initial render ----------
   function recomputeAndRender(){
@@ -244,7 +262,7 @@
   }
 
   $$('#chkTreasury, #chkFedOneTime, #chkFedPermanent, #chkHouse, #rngHouse, #chkLabs, #rngLabSF, #chkGRF, #chkGradHousing, #rngBeds, #chkLibrary, #rngLibrary, #chkPhD, #rngPhD, #chkAid, #rngAid, #chkCyber, #rngCyber, #chkDecarbOps, #rngDecarbOps, #chkFacilities, #rngFacilities, #inpPayout, #inpReturn, #inpInfl')
-    .forEach(el => el.addEventListener('input', recomputeAndRender));
+    .forEach(el => el && el.addEventListener('input', recomputeAndRender));
 
   renderStock();
   recomputeAndRender();
