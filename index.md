@@ -3,16 +3,19 @@ layout: splash
 author_profile: false
 title: "Lucian Bessmer, PhD"
 subtitle: "Higher-ed scholarship, history, and strategy."
+
+# HERO
 header:
-  overlay_image: /images/hero_looking_wide.jpg   # path relative to repo root
+  overlay_image: /images/hero_looking_wide.jpg   # must exist in your repo at images/hero_looking_wide.jpg
   overlay_filter: 0.25
   caption: ""
   og_image: /images/hero_looking_wide.jpg
+
 intro:
-  - excerpt: ""
+  - excerpt: ""   # keeps splash spacing tidy
 ---
 
-<!-- Custom Feature Row (linked titles, no Learn More buttons) -->
+<!-- Custom Feature Row (linked titles; no Learn More buttons) -->
 <div class="feature__wrapper">
 
   <div class="feature__item">
