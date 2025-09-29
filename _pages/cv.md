@@ -1,9 +1,9 @@
 ---
-sidebar:false
 layout: single
 title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: false
+sidebar: false
 ---
 
 # Lucian Bessmer, PhD
@@ -38,7 +38,7 @@ Cambridge, MA · [lucian.bessmer@gmail.com](mailto:lucian.bessmer@gmail.com) · 
 ## Teaching Experience
 - **Brown University**, Adjunct Lecturer — *History of American Higher Education* (Spring 2020)  
 - **Harvard University**, Instructor & Teaching Fellow (2015–2023): *Education Schools*; *History of American Higher Education*; *Politics and Education Policy*; *How People Learn*; *Transformational Models in Higher Education*.
-- **University of Michigan**, Adjunct Lecturer - *History of American Higher Education* (Spring 2026)
+- **University of Michigan**, Adjunct Lecturer — *History of American Higher Education* (Spring 2026)
 
 ---
 
@@ -56,7 +56,3 @@ Cambridge, MA · [lucian.bessmer@gmail.com](mailto:lucian.bessmer@gmail.com) · 
 - New England Regional Fellowship Consortium Fellow, 2019–20  
 - Harvard Pforzheimer Fellow, 2018  
 - Fulbright Fellow, Sinop University, Turkey, 2010–11
-
----
-
-
