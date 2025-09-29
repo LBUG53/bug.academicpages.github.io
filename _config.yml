@@ -11,9 +11,14 @@ name                     : &name "Home"
 description              : &description "Higher-ed scholarship, history, and strategy."
 url                      : "https://lucianbessmer.com"
 baseurl                  : ""
-logo                     : /images/favicon.png
 repository               : "LBUG53/bug.academicpages.github.io"
-image_path               : ""        # disable prefixing to avoid /images//images/...
+
+# IMPORTANT: leave empty so nothing auto-prefixes
+image_path               : ""
+
+# Keep these as BARE FILENAMES so includes that prepend "/images/" don't double it
+logo                     : "favicon.png"
+og_image                 : "hero_looking_wide.jpg"
 
 # Site Author (no avatar)
 author:
@@ -53,7 +58,6 @@ future                   : true
 read_more                : "disabled"
 
 # SEO / Social
-og_image                 : "/images/hero_looking_wide.jpg"
 social:
   type                   : Person
   name                   : "Lucian Bessmer"
