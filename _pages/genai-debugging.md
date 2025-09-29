@@ -1,6 +1,7 @@
 ---
 title: "Returning to HTML 30 Years Later"
 layout: single
+permalink: /viz/genai-debugging/
 sidebar: false
 redirect_from:
   - /viz/genai_debugging/
