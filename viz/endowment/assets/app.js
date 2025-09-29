@@ -59,7 +59,7 @@
       returnPct:     +$('#inpReturn')?.value    || DEFAULTS.returnPct,
       inflPct:       +$('#inpInfl')?.value      || DEFAULTS.inflPct,
       committedPct:  +$('#inpCommitted')?.value || DEFAULTS.committedPct,
-      taxPct:        +$('#inpTax')?.value       || DEFAULTS.taxPct,     // NEW
+      taxPct:        +$('#inpTax')?.value       || DEFAULTS.taxPct,
       unresPct:      UNRESTRICTED_PCT
     };
   }
@@ -76,11 +76,11 @@
     const ghOn    = $('#chkGradHousing')?.checked, beds = +$('#rngBeds')?.value, perBed=221000, ghCost=beds*perBed;
     const libOn   = $('#chkLibrary')?.checked, libM = +$('#rngLibrary')?.value*1e6;
 
-    const phdOn   = $('#chkPhD')?.checked, phdInc = +$('#rngPhD')?.value, phdCount=4160, phdCost = phdInc*phdCount;
-    const aidOn   = $('#chkAid')?.checked, aidPct = +$('#rngAid')?.value, aidBase=275e6, aidCost=aidBase*(aidPct/100);
-    const cyberOn = $('#chkCyber')?.checked,   cyberM   = +$('#rngCyber')?.value*1e6;
-    const decopsOn= $('#chkDecarbOps')?.checked,decopsM = +$('#rngDecarbOps')?.value*1e6;
-    const facOn   = $('#chkFacilities')?.checked, facM  = +$('#rngFacilities')?.value*1e6;
+    const phdOn   = $('#chkPhD')?.checked, phdInc = +$('#rngPhD')?.value, phdCount=4160, phdCost = (phdInc||0)*phdCount;
+    const aidOn   = $('#chkAid')?.checked, aidPct = +$('#rngAid')?.value, aidBase=275e6, aidCost=aidBase*((aidPct||0)/100);
+    const cyberOn = $('#chkCyber')?.checked,   cyberM   = (+$('#rngCyber')?.value||0)*1e6;
+    const decopsOn= $('#chkDecarbOps')?.checked,decopsM = (+$('#rngDecarbOps')?.value||0)*1e6;
+    const facOn   = $('#chkFacilities')?.checked, facM  = (+$('#rngFacilities')?.value||0)*1e6;
 
     return {
       policy: { treasuryOneTime, useFedOneTime, fedPermanent },
@@ -122,8 +122,7 @@
     const drawY0 = Math.max(0, plannedThisYear - payoutY0); // principal draw this year
 
     // Effective after-tax return on net investment income
-    const r_gross = returnPct/100;
-    const r = r_gross * (taxPct >= 0 ? (1 - taxPct/100) : 1); // clamp-ish behavior
+    const r = (returnPct/100) * (1 - (taxPct/100));
 
     // 1-yr end principal (end of current year)
     const U1 = Math.max(0, U0 + r*U0 - drawY0);
