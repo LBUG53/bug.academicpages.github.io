@@ -15,33 +15,22 @@
       <h1>An endowment is not a piggy bank</h1>
       <p class="subhead">
         The $53.2B headline is a <strong>stock</strong>. The flexible <strong>flow</strong> is the annual payout from a much smaller unrestricted pool.
-        If you spend beyond the payout, you must <strong>draw principal</strong>.
+        If you spend beyond the payout, you must <strong>draw principal</strong>, which reduces future payout.
       </p>
     </header>
 
-    <!-- Row A: both treemaps side-by-side so the flow chart sits higher -->
-    <section class="row two-wide">
+    <!-- Row A: stock treemap (kept) -->
+    <section class="row single">
       <div class="card" id="stock-card">
         <h2>Endowment (Stock Today)</h2>
         <div id="stock-treemap"></div>
         <p class="caption">
-          Hover tiles for details. Blue = Unrestricted; gray = donor-restricted purposes.
+          Hover tiles for details. <span class="chip chip-blue"></span> Blue = Unrestricted (your fixed share). Gray = donor-restricted purposes.
         </p>
-      </div>
-
-      <div class="card" id="flow-card">
-        <h2>Unrestricted Payout (Flow This Year)</h2>
-        <div class="payoutbar">
-          Payout available: <strong id="lblPayout">$0</strong>.
-          Selected needs: <strong id="lblNeeds">$0</strong>.
-          <span id="lblOver"></span>
-        </div>
-        <div id="flow-treemap"></div>
-        <p class="caption">If needs exceed payout, the red hatched area is a <strong>principal draw</strong>.</p>
       </div>
     </section>
 
-    <!-- Row B: controls (scrollable) + donuts (smaller) -->
+    <!-- Row B: controls + donuts side-by-side -->
     <section class="row">
       <div class="card controls">
         <h2>Scenarios & Options</h2>
@@ -132,28 +121,45 @@
           </div>
           <div class="row2">
             <label>Inflation on permanent backfill <input type="number" id="inpInfl" min="0" max="6" step="0.1" value="3" />%</label>
-            <label>Unrestricted share <input type="number" id="inpUnres" min="5" max="40" step="1" value="20" />%</label>
+            <!-- Unrestricted share is fixed by the stock treemap config; no input here -->
           </div>
         </div>
       </div>
 
-      <div class="card small" id="donuts-card">
+      <div class="card" id="donuts-card">
         <h2>What happens to the unrestricted endowment?</h2>
         <div class="donuts">
           <div class="donut-col">
             <h3>1 Year</h3>
-            <svg id="donut1" width="210" height="210"></svg>
+            <svg id="donut1" width="220" height="220"></svg>
             <div class="center-metrics" id="donut1-metrics"></div>
           </div>
           <div class="donut-col">
             <h3>10 Years</h3>
-            <svg id="donut10" width="210" height="210"></svg>
+            <svg id="donut10" width="220" height="220"></svg>
             <div class="center-metrics" id="donut10-metrics"></div>
           </div>
         </div>
+
+        <div class="impact">
+          <h3>Impact on next year’s payout</h3>
+          <div class="impact-line">
+            Baseline next-year payout (no draws): <strong id="lblPayoutBase">$0</strong>
+          </div>
+          <div class="impact-line">
+            Next-year payout with your scenario: <strong id="lblPayoutNew">$0</strong>
+          </div>
+          <div class="impact-line">
+            Change: <strong id="lblPayoutDelta">$0</strong>
+          </div>
+
+          <h4>Illustrative impact across areas (from reduced flexible payout)</h4>
+          <ul id="impactList" class="impact-list"></ul>
+          <p class="caption small">Breakdown is illustrative (flexible payout often supports libraries, student services, ops, and cross-school subsidies). Edit weights in code if you want a different view.</p>
+        </div>
+
         <p class="caption small">
-          1-yr: End = Start + (return × Start) − principal draw.<br>
-          10-yr: Repeat annually; permanent backfill grows with inflation; shortfalls become draws; return applies to remaining principal.
+          1-yr: End = Start + (return × Start) − principal draw. &nbsp;10-yr: Repeat annually; permanent gaps grow with inflation; shortfalls become draws; return applies to remaining principal.
         </p>
       </div>
     </section>

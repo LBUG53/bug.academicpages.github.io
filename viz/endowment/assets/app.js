@@ -1,24 +1,32 @@
 (function(){
   // --------- constants / assumptions ----------
   const TOTAL_ENDOWMENT = 53.2e9;          // $
-  const DEFAULTS = { unresPct: 30, payoutPct: 5.5, returnPct: 7, inflPct: 3 };
+  const UNRESTRICTED_PCT = 30;             // fixed, per your spec (top treemap + math use this)
+  const DEFAULTS = { payoutPct: 5.5, returnPct: 7, inflPct: 3 };
 
-  // Pots for Treemap 1. One of these is "Unrestricted".
-  // The others represent donor-restricted purposes. Percentages are illustrative;
-  // the code will rescale restricted pots so the Unrestricted slice equals unresPct.
-  const POTS_BASE = [
-  { key: "unr",   name: "Unrestricted",                   share: 30, desc: "Donor-unrestricted endowment." },
+  // Top treemap pots EXACTLY as you gave
+  const POTS = [
+    { key:"unr",  name:"Unrestricted",                  share:30, desc:"Donor-unrestricted endowment." },
 
-  { key: "con",   name: "Construction",                   share: 1,  desc: "Capital construction funds." },
-  { key: "fac",   name: "Faculty & Teaching",             share: 3,  desc: "Instructional support and teaching." },
-  { key: "lib",   name: "Library & Museums",              share: 3,  desc: "Libraries, museums, preservation." },
-  { key: "oth",   name: "Other",                          share: 8,  desc: "Other restricted purposes." },
-  { key: "prof",  name: "Professorships",                 share: 24, desc: "Endowed professorships and chairs." },
-  { key: "prog",  name: "Program Support",                share: 5,  desc: "Centers, initiatives, programmatic funds." },
-  { key: "res",   name: "Research",                       share: 6,  desc: "Restricted research support." },
-  { key: "sch",   name: "Scholarship & Student Support",  share: 20, desc: "Financial aid & student support." }
-];
+    { key:"con",  name:"Construction",                  share:1,  desc:"Capital construction funds." },
+    { key:"fac",  name:"Faculty & Teaching",            share:3,  desc:"Instructional support and teaching." },
+    { key:"lib",  name:"Library & Museums",             share:3,  desc:"Libraries, museums, preservation." },
+    { key:"oth",  name:"Other",                         share:8,  desc:"Other restricted purposes." },
+    { key:"prof", name:"Professorships",                share:24, desc:"Endowed professorships and chairs." },
+    { key:"prog", name:"Program Support",               share:5,  desc:"Centers, initiatives, programmatic funds." },
+    { key:"res",  name:"Research",                      share:6,  desc:"Restricted research support." },
+    { key:"sch",  name:"Scholarship & Student Support", share:20, desc:"Financial aid & student support." }
+  ];
 
+  // Illustrative breakdown for reduced flexible payout (edit if you like).
+  // These weights sum to 1.0 and allocate the *payout delta* across areas.
+  const IMPACT_WEIGHTS = [
+    { name:"Libraries & Museums",    w:0.20 },
+    { name:"Student services",       w:0.30 },
+    { name:"Academic programs",      w:0.20 },
+    { name:"Facilities & operations",w:0.20 },
+    { name:"Other central support",  w:0.10 }
+  ];
 
   const $  = s => document.querySelector(s);
   const $$ = s => Array.from(document.querySelectorAll(s));
@@ -27,7 +35,7 @@
   function bindSlider(id, labelId, fmt = v => v){
     const el = $(id), lbl = $(labelId);
     const set = () => lbl.textContent = fmt(el.value);
-    el.addEventListener('input', set); set();
+    if(el && lbl){ el.addEventListener('input', set); set(); }
   }
   bindSlider('#rngHouse', '#lblHouse', v => (+v).toFixed(0));
   bindSlider('#rngLabSF', '#lblLabSF', v => (+v).toFixed(0));
@@ -40,16 +48,14 @@
   bindSlider('#rngFacilities','#lblFacilities', v => (+v).toFixed(0));
 
   // ---------- assumptions & selections ----------
-function assumptions(){
-  return {
-    payoutPct: +$('#inpPayout').value || DEFAULTS.payoutPct,
-    returnPct: +$('#inpReturn').value || DEFAULTS.returnPct,
-    inflPct:   +$('#inpInfl').value   || DEFAULTS.inflPct,
-    // lock to the Unrestricted slice defined in POTS_BASE
-    unresPct:  POTS_BASE.find(d => d.key === 'unr').share
-  };
-}
-
+  function assumptions(){
+    return {
+      payoutPct: +$('#inpPayout').value || DEFAULTS.payoutPct,
+      returnPct: +$('#inpReturn').value || DEFAULTS.returnPct,
+      inflPct:   +$('#inpInfl').value   || DEFAULTS.inflPct,
+      unresPct:  UNRESTRICTED_PCT
+    };
+  }
 
   function selections(){
     const treasuryOneTime = $('#chkTreasury').checked;
@@ -95,21 +101,24 @@ function assumptions(){
     const { payoutPct, returnPct, inflPct, unresPct } = assumptions();
     const sel = selections();
 
-    const U0 = TOTAL_ENDOWMENT * (unresPct/100);
-    const payout = U0 * (payoutPct/100);
+    const U0 = TOTAL_ENDOWMENT * (unresPct/100);     // unrestricted principal
+    const payoutY0 = U0 * (payoutPct/100);           // flexible payout this year (info only)
 
     const oneTimeSum   = sel.oneTime.reduce((s,x)=>s+x.amount,0);
     const recurringSum = sel.recurring.reduce((s,x)=>s+x.amount,0);
     const permFedY1    = sel.policy.fedPermanent ? 684e6 : 0;
 
     const plannedThisYear = oneTimeSum + recurringSum + permFedY1;
-    const over = Math.max(0, plannedThisYear - payout);
+    const drawY0 = Math.max(0, plannedThisYear - payoutY0); // principal draw (this year)
 
     const r = returnPct/100;
-    const U1 = Math.max(0, U0 + r*U0 - over);
 
-    // Ten-year loop (repeat: payout set on start-of-year balance, shortfall -> draw)
-    let U = U0, cumulativeDraw = 0;
+    // 1-yr end principal (end of current year)
+    const U1 = Math.max(0, U0 + r*U0 - drawY0);
+
+    // 10-yr path (repeat: payout each year; shortfall => draw; return on remaining principal)
+    let U = U0;
+    let cumulativeDraw = 0;
     let permFed = permFedY1;
     const infl = 1 + inflPct/100;
 
@@ -120,32 +129,40 @@ function assumptions(){
       const draw = Math.max(0, need - Pt);
       cumulativeDraw += draw;
       U = Math.max(0, U + r*U - draw);
-      if (sel.policy.fedPermanent) permFed *= infl; // inflate for next year
+      if (sel.policy.fedPermanent) permFed *= infl; // grow the permanent gap
     }
 
-    return { U0, payout, plannedThisYear, over, U1, U10: U, cumulativeDraw, components: {oneTime:sel.oneTime, recurring:sel.recurring, permFedY1} };
+    // Baseline vs scenario next-year payout (Year 1 → Year 2)
+    // Baseline (no draw): U_baseline_end = U0 + r*U0
+    // Scenario:            U_scn_end      = U0 + r*U0 - drawY0
+    // Next-year payout uses start-of-year balances:
+    const U_base_next   = U0 + r*U0;
+    const U_scn_next    = U0 + r*U0 - drawY0;
+    const payoutBase    = U_base_next * (payoutPct/100);
+    const payoutScenario= U_scn_next  * (payoutPct/100);
+    const payoutDelta   = payoutScenario - payoutBase;  // will be negative if you drew principal
+
+    return {
+      U0, U1, U10: U,
+      payoutY0,
+      drawY0,
+      cumulativeDraw,
+      payoutBase, payoutScenario, payoutDelta,
+      components: { oneTime: sel.oneTime, recurring: sel.recurring, permFedY1 }
+    };
   }
 
   // ---------- Treemap 1 (stock) ----------
   const stockSVG = d3.select('#stock-treemap').append('svg')
-    .attr('width','100%').attr('height','100%').attr('viewBox','0 0 600 460');
+    .attr('width','100%').attr('height','100%').attr('viewBox','0 0 900 420');
 
   const tip = d3.select('body').append('div').attr('class','tooltip').style('opacity',0);
 
-  function rescalePotsForUnrestricted(){
-  // Use POTS_BASE shares exactly as defined (your fixed percentages).
-  // Mark the Unrestricted slice for blue fill; others stay gray.
-  return POTS_BASE.map(d => ({ ...d, unrestricted: d.key === 'unr' }));
-}
-
-
   function renderStock(){
     stockSVG.selectAll('*').remove();
-    const { unresPct } = assumptions();
-    const data = rescalePotsForUnrestricted(unresPct).map(d=>({name:d.name, value:d.share, desc:d.desc, unrestricted:d.unrestricted}));
-
-    const root = d3.treemap().size([600,460]).padding(4)(
-      d3.hierarchy({children:data}).sum(d=>d.value)
+    const data = POTS.map(d => ({ ...d, unrestricted: d.key === 'unr' }));
+    const root = d3.treemap().size([900,420]).padding(4)(
+      d3.hierarchy({children:data}).sum(d=>d.share)
     );
 
     const g = stockSVG.append('g');
@@ -157,86 +174,19 @@ function assumptions(){
       .attr('fill',d=> d.data.unrestricted ? '#3b82f6' : '#1e293b')
       .attr('rx',10).attr('ry',10);
 
-    // No in-rect text (per your request) — hover only
+    // hover only (no crowded labels)
     nodes.on('mousemove', (event,d)=>{
       tip.style('opacity',1)
         .style('left',(event.pageX+12)+'px')
         .style('top',(event.pageY+12)+'px')
-        .html(`<strong>${d.data.name}</strong><br/>Share: ${d3.format('.1f')(d.data.value)}%<br/>${d.data.desc}`);
+        .html(`<strong>${d.data.name}</strong><br/>Share: ${d3.format('.1f')(d.data.share)}%<br/>${d.data.desc}`);
     }).on('mouseout', ()=> tip.style('opacity',0));
-  }
-
-  // ---------- Treemap 2 (flow) ----------
-  const flowSVG = d3.select('#flow-treemap').append('svg')
-    .attr('width','100%').attr('height','100%').attr('viewBox','0 0 800 520');
-
-  // hatched pattern for "Over by"
-  const defs = flowSVG.append('defs');
-  const pattern = defs.append('pattern')
-    .attr('id','diagonalHatch').attr('patternUnits','userSpaceOnUse')
-    .attr('width',6).attr('height',6).attr('patternTransform','rotate(45)');
-  pattern.append('rect').attr('width',6).attr('height',6).attr('fill','#f87171');
-  pattern.append('line').attr('x1',0).attr('y1',0).attr('x2',0).attr('y2',6)
-    .attr('stroke','#0b142a').attr('stroke-width',2);
-
-  function renderFlow(){
-    flowSVG.selectAll('*:not(defs)').remove();
-    const res = compute();
-
-    $('#lblPayout').textContent = d3.format('$,.0f')(res.payout);
-    $('#lblNeeds').textContent  = d3.format('$,.0f')(res.plannedThisYear);
-    if (res.over > 0){
-      $('#lblOver').innerHTML = `&nbsp;|&nbsp;<span class="warning">Over by ${d3.format('$,.0f')(res.over)} (principal draw)</span>`;
-    } else {
-      $('#lblOver').innerHTML = `&nbsp;|&nbsp;Uncommitted: ${d3.format('$,.0f')(res.payout - res.plannedThisYear)}`;
-    }
-
-    // Build a simple horizontal proportional layout (clearer than a packed treemap for flows)
-    const items = [];
-    res.components.oneTime.forEach(o=> items.push({name:o.name, value:o.amount, type:'one'}));
-    res.components.recurring.forEach(o=> items.push({name:o.name, value:o.amount, type:'rec'}));
-    if (res.components.permFedY1 > 0) items.push({name:'Permanent backfill (Year 1 slice)', value:res.components.permFedY1, type:'rec'});
-
-    const width = 800, height = 520;
-    const totalPlanned = items.reduce((s,it)=> s+it.value, 0);
-    const domainMax = Math.max(res.payout, totalPlanned, res.payout + res.over);
-    const x = d3.scaleLinear().domain([0, domainMax]).range([0, width]);
-
-    let x0 = 0;
-    const colorOne = '#f59e0b', colorRec = '#ef4444';
-    const g = flowSVG.append('g');
-
-    items.forEach(it=>{
-      const w = x(it.value);
-      g.append('rect').attr('x', x0).attr('y', 0).attr('width', w).attr('height', height)
-        .attr('fill', it.type==='one' ? colorOne : colorRec).attr('opacity', 0.9);
-      // keep labels readable at the top strip
-      g.append('text').attr('x', x0 + Math.max(60,w/2)).attr('y', 26).attr('text-anchor','middle')
-        .attr('class','label').text(it.name + ' — ' + d3.format('$,.0f')(it.value));
-      x0 += w;
-    });
-
-    if (res.over > 0){
-      const overW = x(res.over);
-      g.append('rect').attr('x', x(res.payout)).attr('y', 0).attr('width', overW).attr('height', height)
-        .attr('class','hatched');
-      g.append('text').attr('x', x(res.payout) + overW/2).attr('y', height/2).attr('text-anchor','middle')
-        .attr('class','label').text('Over by ' + d3.format('$,.0f')(res.over) + ' (draws principal)');
-    } else {
-      const slackW = x(res.payout - totalPlanned);
-      g.append('rect').attr('x', x(totalPlanned)).attr('y', 0).attr('width', slackW).attr('height', height)
-        .attr('fill','#0ea5e9').attr('opacity',0.6);
-      g.append('text').attr('x', x(totalPlanned) + slackW/2).attr('y', height/2).attr('text-anchor','middle')
-        .attr('class','label').text('Uncommitted ' + d3.format('$,.0f')(res.payout - totalPlanned));
-    }
-
-    renderDonuts(res);
   }
 
   // ---------- Donuts (fixed) ----------
   function renderDonuts(res){
-    drawDonut('#donut1',  '#donut1-metrics',  res.U0, res.U1,  `1-yr draw: ${d3.format('$,.0f')(res.over)}`);
-    drawDonut('#donut10', '#donut10-metrics', res.U0, res.U10, `10-yr cumulative draw: ${d3.format('$,.0f')(res.cumulativeDraw)}`);
+    drawDonut('#donut1',  '#donut1-metrics',  res.U0, res.U1,  `1-yr principal draw: ${fmt(res.drawY0)}`);
+    drawDonut('#donut10', '#donut10-metrics', res.U0, res.U10, `10-yr cumulative draw: ${fmt(res.cumulativeDraw)}`);
   }
 
   function drawDonut(svgSel, centerSel, start, end, note){
@@ -247,10 +197,10 @@ function assumptions(){
     const g = svg.append('g').attr('transform', `translate(${w/2},${h/2})`);
     const arc = d3.arc().innerRadius(rInner).outerRadius(rOuter);
 
-    // Represent End vs Start as Remaining vs Lost
+    // Remaining vs Lost relative to START (so adding costs can’t make it look “better”)
     const remaining = Math.max(0, Math.min(end, start));
     const lost = Math.max(0, start - end);
-    const total = start > 0 ? start : 1;
+    const total = Math.max(1, start);
     const pie = d3.pie().sort(null).value(d => d.value);
     const data = [
       {name:'Remaining', value: remaining/total},
@@ -261,16 +211,41 @@ function assumptions(){
       .attr('fill', (d,i)=> i===0 ? '#3b82f6' : '#334155');
 
     const delta = end - start;
-    const div = $(centerSel);
-    div.innerHTML = `<div><strong>${d3.format('$,.0f')(end)}</strong></div>
-                     <div class="muted">${delta>=0?'+':''}${d3.format('$.2s')(delta).replace('G','B')} vs start</div>
-                     <div class="muted">${note||''}</div>`;
+    $(centerSel).innerHTML = `<div><strong>${fmt(end)}</strong></div>
+                              <div class="muted">${delta>=0?'+':''}${d3.format('$.2s')(delta).replace('G','B')} vs start</div>
+                              <div class="muted">${note||''}</div>`;
   }
 
+  // ---------- Impact list ----------
+  function renderImpact(res){
+    $('#lblPayoutBase').textContent = fmt(res.payoutBase);
+    $('#lblPayoutNew').textContent  = fmt(res.payoutScenario);
+    $('#lblPayoutDelta').textContent= (res.payoutDelta>=0?'+':'') + fmt(res.payoutDelta);
+
+    const list = $('#impactList');
+    list.innerHTML = '';
+    const cut = Math.abs(Math.min(0, res.payoutDelta)); // positive $ to distribute when payout shrinks
+    IMPACT_WEIGHTS.forEach(({name,w})=>{
+      const amt = cut * w;
+      const li = document.createElement('li');
+      li.innerHTML = `<span>${name}</span><span>${fmt(amt)}</span>`;
+      list.appendChild(li);
+    });
+  }
+
+  // ---------- utils ----------
+  const fmt = v => d3.format('$,.0f')(v);
+
   // ---------- wire events & initial render ----------
-  $$('#chkTreasury, #chkFedOneTime, #chkFedPermanent, #chkHouse, #rngHouse, #chkLabs, #rngLabSF, #chkGRF, #chkGradHousing, #rngBeds, #chkLibrary, #rngLibrary, #chkPhD, #rngPhD, #chkAid, #rngAid, #chkCyber, #rngCyber, #chkDecarbOps, #rngDecarbOps, #chkFacilities, #rngFacilities, #inpPayout, #inpReturn, #inpInfl, #inpUnres')
-    .forEach(el => el.addEventListener('input', ()=> { renderStock(); renderFlow(); }));
+  function recomputeAndRender(){
+    const res = compute();
+    renderDonuts(res);
+    renderImpact(res);
+  }
+
+  $$('#chkTreasury, #chkFedOneTime, #chkFedPermanent, #chkHouse, #rngHouse, #chkLabs, #rngLabSF, #chkGRF, #chkGradHousing, #rngBeds, #chkLibrary, #rngLibrary, #chkPhD, #rngPhD, #chkAid, #rngAid, #chkCyber, #rngCyber, #chkDecarbOps, #rngDecarbOps, #chkFacilities, #rngFacilities, #inpPayout, #inpReturn, #inpInfl')
+    .forEach(el => el.addEventListener('input', recomputeAndRender));
 
   renderStock();
-  renderFlow();
+  recomputeAndRender();
 })();
