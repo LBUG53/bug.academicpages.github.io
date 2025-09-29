@@ -23,6 +23,15 @@
     <section class="row single">
       <div class="card" id="stock-card">
         <h2>Endowment (Stock Today)</h2>
+
+        <!-- Preface text block -->
+        <div class="preface">
+          <p>It seems like every job requires an undergraduate degree now, and the cost to attend college is growing faster than inflation. Why should colleges charge so much for something people need? Why does an institution like Harvard, with a $53 billion endowment, receive so much money from the federal government?</p>
+          <p>These are good questions, and with the Trump administration's multi-pronged assault on Harvard, they are increasingly relevant and have become a prominent part of the national conversation. Higher education leaders and their allies have tried to explain the finances of their institutions, but they struggle to make themselves heard. A part of the problem is the way that they try to communicate these complex issues, largely relying on dense text crafted by the CFO and the General Counsel or graphics pulled from their annual financial statements. This is how I explain it to my friends:</p>
+          <p>Harvard is the richest university in the world, with over $53 billion in endowment and who knows how much else in property and other assets. This endowment grew out of centuries of philanthropic gifts from donors, who gave money to Harvard with the understanding that it would be used for its intended purpose. Let's say a 19th century railroad magnate wanted Harvard to have someone teach the next generation of railroad leaders. The magnate could give Harvard enough money to cover the cost of a professor of railroads in perpetuity, creating what's called an "endowed position." That money, and the interest on that money, cannot be used for anything other than a professor in railroads. If by the 21st century there aren't any scholars who study railroads, that money sits unused.</p>
+          <p>Funds that must be spent on a specific thing or in a specific way are called restricted funds. Most of a college's endowment is restricted. Here is a breakdown of Harvard's endowment, with the unrestricted money in blue.</p>
+        </div>
+
         <div id="stock-treemap"></div>
         <p class="caption">
           Hover tiles for details. <span class="chip chip-blue"></span> Blue = Unrestricted (your fixed share). Gray = donor-restricted purposes.
@@ -121,7 +130,10 @@
           </div>
           <div class="row2">
             <label>Inflation on permanent backfill <input type="number" id="inpInfl" min="0" max="6" step="0.1" value="3" />%</label>
-            <!-- Unrestricted share is fixed by the stock treemap config; no input here -->
+            <label>Earmarked for current use <input type="number" id="inpCommitted" min="0" max="100" step="1" value="90" />%</label>
+          </div>
+          <div class="row2">
+            <label>Endowment investment tax <input type="number" id="inpTax" min="0" max="21" step="0.1" value="8" />%</label>
           </div>
         </div>
       </div>
@@ -142,20 +154,22 @@
         </div>
 
         <div class="impact">
-          <h3>Impact on next year’s payout</h3>
+          <h3>Impact on payout over 10 years</h3>
           <div class="impact-line">
-            Baseline next-year payout (no draws): <strong id="lblPayoutBase">$0</strong>
+            Baseline (no draws): <strong id="lblPayoutBase">$0</strong>
           </div>
           <div class="impact-line">
-            Next-year payout with your scenario: <strong id="lblPayoutNew">$0</strong>
+            Your scenario (with draws): <strong id="lblPayoutNew">$0</strong>
           </div>
           <div class="impact-line">
-            Change: <strong id="lblPayoutDelta">$0</strong>
+            Difference over 10 years: <strong id="lblPayoutDelta">$0</strong>
           </div>
 
-          <h4>Illustrative impact across areas (from reduced flexible payout)</h4>
+          <h4>Illustrative 10-yr impact across areas (from reduced flexible payout)</h4>
           <ul id="impactList" class="impact-list"></ul>
-          <p class="caption small">Breakdown is illustrative (flexible payout often supports libraries, student services, ops, and cross-school subsidies). Edit weights in code if you want a different view.</p>
+          <p class="caption small">
+            We allocate the total 10-yr payout shortfall across areas using illustrative weights. Edit weights in code to match your view.
+          </p>
         </div>
 
         <p class="caption small">

@@ -2,7 +2,13 @@
   // --------- constants / assumptions ----------
   const TOTAL_ENDOWMENT = 53.2e9;          // $
   const UNRESTRICTED_PCT = 30;             // fixed per your spec
-  const DEFAULTS = { payoutPct: 5.5, returnPct: 7, inflPct: 3 };
+  const DEFAULTS = {
+    payoutPct: 5.5,
+    returnPct: 7,
+    inflPct: 3,
+    committedPct: 90,   // % of payout already earmarked for existing operations
+    taxPct: 8           // federal excise tax on endowment net investment income
+  };
 
   // Top treemap pots EXACTLY as provided
   const POTS = [
@@ -49,30 +55,32 @@
   // ---------- assumptions & selections ----------
   function assumptions(){
     return {
-      payoutPct: +$('#inpPayout').value || DEFAULTS.payoutPct,
-      returnPct: +$('#inpReturn').value || DEFAULTS.returnPct,
-      inflPct:   +$('#inpInfl').value   || DEFAULTS.inflPct,
-      unresPct:  UNRESTRICTED_PCT
+      payoutPct:     +$('#inpPayout')?.value    || DEFAULTS.payoutPct,
+      returnPct:     +$('#inpReturn')?.value    || DEFAULTS.returnPct,
+      inflPct:       +$('#inpInfl')?.value      || DEFAULTS.inflPct,
+      committedPct:  +$('#inpCommitted')?.value || DEFAULTS.committedPct,
+      taxPct:        +$('#inpTax')?.value       || DEFAULTS.taxPct,     // NEW
+      unresPct:      UNRESTRICTED_PCT
     };
   }
 
   function selections(){
-    const treasuryOneTime = $('#chkTreasury').checked;
-    const fedOneTime      = $('#chkFedOneTime').checked;
-    const fedPermanent    = $('#chkFedPermanent').checked;
+    const treasuryOneTime = $('#chkTreasury')?.checked;
+    const fedOneTime      = $('#chkFedOneTime')?.checked;
+    const fedPermanent    = $('#chkFedPermanent')?.checked;
     const useFedOneTime   = fedOneTime && !fedPermanent;
 
-    const houseOn = $('#chkHouse').checked, houseM = +$('#rngHouse').value * 1e6;
-    const labsOn  = $('#chkLabs').checked,  labSFk = +$('#rngLabSF').value, labCost = labSFk*1000*1200;
-    const grfOn   = $('#chkGRF').checked,   grfCost = 37e6;
-    const ghOn    = $('#chkGradHousing').checked, beds = +$('#rngBeds').value, perBed=221000, ghCost=beds*perBed;
-    const libOn   = $('#chkLibrary').checked, libM = +$('#rngLibrary').value*1e6;
+    const houseOn = $('#chkHouse')?.checked, houseM = +$('#rngHouse')?.value * 1e6;
+    const labsOn  = $('#chkLabs')?.checked,  labSFk = +$('#rngLabSF')?.value, labCost = labSFk*1000*1200;
+    const grfOn   = $('#chkGRF')?.checked,   grfCost = 37e6;
+    const ghOn    = $('#chkGradHousing')?.checked, beds = +$('#rngBeds')?.value, perBed=221000, ghCost=beds*perBed;
+    const libOn   = $('#chkLibrary')?.checked, libM = +$('#rngLibrary')?.value*1e6;
 
-    const phdOn   = $('#chkPhD').checked, phdInc = +$('#rngPhD').value, phdCount=4160, phdCost = phdInc*phdCount;
-    const aidOn   = $('#chkAid').checked, aidPct = +$('#rngAid').value, aidBase=275e6, aidCost=aidBase*(aidPct/100);
-    const cyberOn = $('#chkCyber').checked,   cyberM   = +$('#rngCyber').value*1e6;
-    const decopsOn= $('#chkDecarbOps').checked,decopsM = +$('#rngDecarbOps').value*1e6;
-    const facOn   = $('#chkFacilities').checked, facM  = +$('#rngFacilities').value*1e6;
+    const phdOn   = $('#chkPhD')?.checked, phdInc = +$('#rngPhD')?.value, phdCount=4160, phdCost = phdInc*phdCount;
+    const aidOn   = $('#chkAid')?.checked, aidPct = +$('#rngAid')?.value, aidBase=275e6, aidCost=aidBase*(aidPct/100);
+    const cyberOn = $('#chkCyber')?.checked,   cyberM   = +$('#rngCyber')?.value*1e6;
+    const decopsOn= $('#chkDecarbOps')?.checked,decopsM = +$('#rngDecarbOps')?.value*1e6;
+    const facOn   = $('#chkFacilities')?.checked, facM  = +$('#rngFacilities')?.value*1e6;
 
     return {
       policy: { treasuryOneTime, useFedOneTime, fedPermanent },
@@ -86,31 +94,36 @@
         useFedOneTime   ? {name:'One-time backfill federal research', amount:684e6} : null
       ].filter(Boolean),
       recurring: [
-        phdOn   ? {name:`Raise all PhD stipends (+$${phdInc.toLocaleString()}/student)`, amount:phdCost} : null,
-        aidOn   ? {name:`Increase undergrad financial aid (+${aidPct}%)`, amount:aidCost} : null,
-        cyberOn ? {name:'Cybersecurity hardening & insurance', amount:cyberM} : null,
-        decopsOn? {name:'Decarbonization operations', amount:decopsM} : null,
-        facOn   ? {name:'Facilities renewal / deferred maintenance', amount:facM} : null
+        phdOn   ? {name:`Raise all PhD stipends (+$${(phdInc||0).toLocaleString()}/student)`, amount:phdCost||0} : null,
+        aidOn   ? {name:`Increase undergrad financial aid (+${aidPct||0}%)`, amount:aidCost||0} : null,
+        cyberOn ? {name:'Cybersecurity hardening & insurance', amount:cyberM||0} : null,
+        decopsOn? {name:'Decarbonization operations', amount:decopsM||0} : null,
+        facOn   ? {name:'Facilities renewal / deferred maintenance', amount:facM||0} : null
       ].filter(Boolean)
     };
   }
 
   // ---------- compute 1-yr and 10-yr ----------
   function compute(){
-    const { payoutPct, returnPct, inflPct, unresPct } = assumptions();
+    const { payoutPct, returnPct, inflPct, unresPct, committedPct, taxPct } = assumptions();
     const sel = selections();
 
     const U0 = TOTAL_ENDOWMENT * (unresPct/100);     // unrestricted principal
-    const payoutY0 = U0 * (payoutPct/100);           // this year's payout capacity (info)
+    const payoutY0 = U0 * (payoutPct/100);           // this year's payout capacity
+    const baselineCommitted = committedPct/100;      // share of payout earmarked for existing ops
 
-    const oneTimeSum   = sel.oneTime.reduce((s,x)=>s+x.amount,0);
-    const recurringSum = sel.recurring.reduce((s,x)=>s+x.amount,0);
+    const oneTimeSum   = sel.oneTime.reduce((s,x)=>s + x.amount, 0);
+    const recurringSum = sel.recurring.reduce((s,x)=>s + x.amount, 0);
     const permFedY1    = sel.policy.fedPermanent ? 684e6 : 0;
 
-    const plannedThisYear = oneTimeSum + recurringSum + permFedY1;
+    // Year 0 needs include “business as usual” claims on payout
+    const baselineNeedY0 = baselineCommitted * payoutY0;
+    const plannedThisYear = baselineNeedY0 + oneTimeSum + recurringSum + permFedY1;
     const drawY0 = Math.max(0, plannedThisYear - payoutY0); // principal draw this year
 
-    const r = returnPct/100;
+    // Effective after-tax return on net investment income
+    const r_gross = returnPct/100;
+    const r = r_gross * (taxPct >= 0 ? (1 - taxPct/100) : 1); // clamp-ish behavior
 
     // 1-yr end principal (end of current year)
     const U1 = Math.max(0, U0 + r*U0 - drawY0);
@@ -130,19 +143,20 @@
       // Baseline payout this year (no draws ever)
       const P_base = U_base * (payoutPct/100);
       cumPayoutBase += P_base;
-      U_base = U_base + r * U_base; // grow baseline principal
+      U_base = U_base + r * U_base; // grow baseline principal after-tax
 
       // Scenario payout this year
       const Pt = U * (payoutPct/100);
       cumPayoutScenario += Pt;
 
+      const baselineNeed = baselineCommitted * Pt; // existing ops eat most of payout
       const annualRecurring = recurringSum + (sel.policy.fedPermanent ? permFed : 0);
-      const need = annualRecurring + (year === 1 ? oneTimeSum : 0);
+      const need = baselineNeed + annualRecurring + (year === 1 ? oneTimeSum : 0);
 
       const draw = Math.max(0, need - Pt);
       cumulativeDraw += draw;
 
-      // End-of-year principal after draw and return
+      // End-of-year principal after draw and after-tax return
       U = Math.max(0, U + r * U - draw);
 
       if (sel.policy.fedPermanent) permFed *= infl; // grow permanent gap for next year
@@ -261,7 +275,7 @@
     renderImpact(res);
   }
 
-  $$('#chkTreasury, #chkFedOneTime, #chkFedPermanent, #chkHouse, #rngHouse, #chkLabs, #rngLabSF, #chkGRF, #chkGradHousing, #rngBeds, #chkLibrary, #rngLibrary, #chkPhD, #rngPhD, #chkAid, #rngAid, #chkCyber, #rngCyber, #chkDecarbOps, #rngDecarbOps, #chkFacilities, #rngFacilities, #inpPayout, #inpReturn, #inpInfl')
+  $$('#chkTreasury, #chkFedOneTime, #chkFedPermanent, #chkHouse, #rngHouse, #chkLabs, #rngLabSF, #chkGRF, #chkGradHousing, #rngBeds, #chkLibrary, #rngLibrary, #chkPhD, #rngPhD, #chkAid, #rngAid, #chkCyber, #rngCyber, #chkDecarbOps, #rngDecarbOps, #chkFacilities, #rngFacilities, #inpPayout, #inpReturn, #inpInfl, #inpCommitted, #inpTax')
     .forEach(el => el && el.addEventListener('input', recomputeAndRender));
 
   renderStock();
