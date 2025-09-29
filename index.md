@@ -1,9 +1,7 @@
 ---
 layout: splash
 author_profile: false
-title: "Lucian Bessmer, PhD"
-
-# This line appears under your name in the hero:
+title: ""   # prevents <title> from doubling with site.title
 excerpt: "Scholar, Historian, and Strategist of Higher Education."
 
 header:

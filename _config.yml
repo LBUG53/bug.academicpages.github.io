@@ -6,13 +6,14 @@ site_theme               : "air"
 minimal_mistakes_skin    : "air"
 title                    : "Lucian Bessmer, PhD"
 title_separator          : "-"
+masthead_title           : "Home"          # navbar brand link text
 name                     : &name "Home"
 description              : &description "Higher-ed scholarship, history, and strategy."
 url                      : "https://lucianbessmer.com"
 baseurl                  : ""
-logo                     : favicon.png
+logo                     : /images/favicon.png
 repository               : "LBUG53/bug.academicpages.github.io"
-image_path               : "/images"
+image_path               : ""        # disable prefixing to avoid /images//images/...
 
 # Site Author (no avatar)
 author:
@@ -52,7 +53,7 @@ future                   : true
 read_more                : "disabled"
 
 # SEO / Social
-og_image                 : "https://lucianbessmer.com/images/hero_looking_wide.jpg"
+og_image                 : "/images/hero_looking_wide.jpg"
 social:
   type                   : Person
   name                   : "Lucian Bessmer"
