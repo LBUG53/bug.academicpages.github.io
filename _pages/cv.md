@@ -1,12 +1,13 @@
 ---
+sidebar:false
 layout: single
 title: "Curriculum Vitae"
 permalink: /cv/
-author_profile: true
+author_profile: false
 ---
 
 # Lucian Bessmer, PhD
-**Higher Education Scholar, Historian, and Strategist**  
+**Abridged CV**  
 Cambridge, MA · [lucian.bessmer@gmail.com](mailto:lucian.bessmer@gmail.com) · (781) 492-7101
 
 ---
@@ -22,15 +23,14 @@ Cambridge, MA · [lucian.bessmer@gmail.com](mailto:lucian.bessmer@gmail.com) · 
 
 ## Professional and Research Experience
 **Harvard University**, Cambridge, MA (2016–Present)  
-- *Consultant, Faculty Senate Planning Body* (2024–Present) — Designed structures for shared governance with faculty across 12 schools; comparative research on peer senates.  
-- *Consultant, Harvard’s Legacy of Slavery Project* (2020) — Student focus groups; curricular recommendations.  
+- *Consultant, Faculty Senate Planning Body* (2024–Present) — Designed structures for shared governance with faculty across 12 schools; comparative research on peer senates. 
 - *Research Lead, History of HGSE* (2020) — Archival research for centennial; co-developed lecture with Howard Gardner.  
 - *Development & Strategy Editor, Harvard Educational Review* (2018–2020) — Guided authors through peer review; trained editors.  
 - *Research Assistant, Sociology of Higher Education* (2016) — Interviews; historical accounts for new course.  
 - *Research Lead, Secondary Field in Education* (2016–2017) — Mapped faculty and resources for Harvard College students.
 
 **Consortium on Financing Higher Education (MIT)**, Cambridge, MA (2014–2017)  
-- *Assistant Director of Research* (2016–2017) — Directed projects; supervised analysts; briefed provosts/presidents.  
+- *Assistant Director of Research* (2016–2017) — Directed projects; supervised analysts; briefed institutional leaders.  
 - *Research & Data Analyst* (2014–2016) — Authored reports; statistical analysis (SPSS, Stata).
 
 ---
@@ -38,6 +38,7 @@ Cambridge, MA · [lucian.bessmer@gmail.com](mailto:lucian.bessmer@gmail.com) · 
 ## Teaching Experience
 - **Brown University**, Adjunct Lecturer — *History of American Higher Education* (Spring 2020)  
 - **Harvard University**, Instructor & Teaching Fellow (2015–2023): *Education Schools*; *History of American Higher Education*; *Politics and Education Policy*; *How People Learn*; *Transformational Models in Higher Education*.
+- **University of Michigan**, Adjunct Lecturer - *History of American Higher Education* (Spring 2026)
 
 ---
 
@@ -58,4 +59,4 @@ Cambridge, MA · [lucian.bessmer@gmail.com](mailto:lucian.bessmer@gmail.com) · 
 
 ---
 
-*Download a printable CV (DOCX) →* `/files/Bessmer_CV_Michigan_LEO_2025.docx`
+
