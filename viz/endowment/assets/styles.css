@@ -10,6 +10,7 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,
 .card h4{color:#cbd5e1;margin:6px 0}
 .controls label{display:block;margin:6px 0;color:#cbd5e1}
 .controls .group{margin-bottom:14px}
+.controls .scroll{max-height:420px;overflow:auto;padding-right:6px}
 .controls .subgroup{padding:8px 10px;border:1px dashed #273449;border-radius:12px;margin:8px 0}
 .slider-row{display:flex;align-items:center;gap:8px;margin:4px 0}
 .value{min-width:84px;display:inline-block;color:#e2e8f0}
@@ -17,17 +18,19 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,
 .muted{color:#64748b}
 .hint{font-size:12px;color:#94a3b8;margin-top:4px}
 .caption{color:#94a3b8;font-size:13px}
-.caption.small{font-size:12px}
 .payoutbar{background:#0b142a;border:1px solid #1e293b;border-radius:10px;padding:8px 12px;color:#cbd5e1;margin-bottom:8px}
-#stock-treemap,#flow-treemap{width:100%;height:360px;border-radius:12px;background:#0b142a;border:1px solid #1e293b;position:relative;overflow:hidden}
+#stock-treemap{width:100%;height:360px;border-radius:12px;background:#0b142a;border:1px solid #1e293b;position:relative;overflow:hidden}
+#flow-treemap{width:100%;height:520px;border-radius:12px;background:#0b142a;border:1px solid #1e293b;position:relative;overflow:hidden}
+.card.tall #flow-treemap.taller{height:560px}
 .treerect{stroke:#0b142a;stroke-width:2}
 .label{font-size:12px;fill:#e2e8f0}
 .label-muted{fill:#94a3b8}
 .hatched{fill:url(#diagonalHatch)}
 .warning{color:#fca5a5}
-.donuts{display:flex;gap:16px;align-items:flex-start}
-.donut-col{background:#0b142a;border:1px solid #1e293b;border-radius:12px;padding:8px 8px 12px;flex:1;text-align:center}
-.center-metrics{margin-top:8px;color:#e2e8f0}
+.donuts{display:flex;gap:12px;align-items:flex-start}
+.donut-col{background:#0b142a;border:1px solid #1e293b;border-radius:12px;padding:6px 6px 10px;flex:1;text-align:center}
+.center-metrics{margin-top:6px;color:#e2e8f0;font-size:12px}
 .sources{color:#94a3b8;font-size:13px;margin-top:8px}
 .row2{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.tooltip{position:absolute;pointer-events:none;background:#111827;color:#e5e7eb;border:1px solid #374151;border-radius:8px;padding:6px 8px;font-size:12px;z-index:10}
 @media (max-width: 1000px){.row{grid-template-columns:1fr}}

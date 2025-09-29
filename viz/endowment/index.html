@@ -24,8 +24,7 @@
         <h2>Harvard Endowment (Stock Today)</h2>
         <div id="stock-treemap"></div>
         <p class="caption">
-          ~20% is donor-unrestricted (blue). Most remaining funds are donor-restricted and cannot be repurposed.
-          Total endowment assumed here: <span id="totalEndowmentLabel"></span>.
+          Hover tiles for what donor-restricted funds support (illustrative shares, editable). Unrestricted shown with blue outline.
         </p>
       </div>
 
@@ -39,7 +38,7 @@
           <div class="hint">If “Permanent” is ON, the one-time federal loss is ignored to avoid double-counting in year 1.</div>
         </div>
 
-        <div class="group">
+        <div class="group scroll">
           <h3>Additional things to fund</h3>
           <div class="subgroup">
             <h4>One-time (capital)</h4>
@@ -123,45 +122,40 @@
     </section>
 
     <section class="row">
-      <div class="card" id="flow-card">
+      <div class="card tall" id="flow-card">
         <h2>Unrestricted Payout (Flow This Year)</h2>
         <div class="payoutbar">
           Payout available this year: <strong id="lblPayout">$0</strong>.
           Selected needs: <strong id="lblNeeds">$0</strong>.
           <span id="lblOver"></span>
         </div>
-        <div id="flow-treemap"></div>
+        <div id="flow-treemap" class="taller"></div>
         <p class="caption">If selected needs exceed the payout, the red hatched area is a <strong>principal draw</strong>.</p>
       </div>
 
-      <div class="card" id="donuts-card">
+      <div class="card small" id="donuts-card">
         <h2>What happens to the unrestricted endowment?</h2>
         <div class="donuts">
           <div class="donut-col">
             <h3>1 Year</h3>
-            <svg id="donut1" width="260" height="260"></svg>
+            <svg id="donut1" width="220" height="220"></svg>
             <div class="center-metrics" id="donut1-metrics"></div>
           </div>
           <div class="donut-col">
             <h3>10 Years</h3>
-            <svg id="donut10" width="260" height="260"></svg>
+            <svg id="donut10" width="220" height="220"></svg>
             <div class="center-metrics" id="donut10-metrics"></div>
           </div>
         </div>
-        <p class="caption small">
-          1-yr: End = Start + (Return × Start) − principal draw.<br/>
-          10-yr: Each year payout is applied first; permanent backfill repeats and grows with inflation; any shortfall becomes a principal draw; return applies to remaining principal.
-        </p>
       </div>
     </section>
 
     <footer class="sources">
       <h3>Notes & sources</h3>
       <ul>
-        <li>Total endowment ≈ $53.2B (FY2024); ~20% donor-unrestricted. Payout policy ~5–6%.</li>
+        <li>Total endowment ≈ $53.2B (FY2024). ~70% of annual distribution donor-directed. Majority of funds restricted by purpose (aid, professorships, research, buildings, etc.).</li>
         <li>Federal sponsored research at risk ≈ $684M in FY2024. Treasury ask modeled as $500M one-time.</li>
-        <li>House Renewal program ≈ $1.4B; phase modeled at $300–$500M. SEC lab project ≈ $1B (scale context). Lab fit-outs ≈ $1,200/SF (Boston/Cambridge). GRF top-up $37M (2024).</li>
-        <li>PhD stipend baseline ≥ $50k; ~4.16k PhDs (→ +$5k ≈ $20.8M/yr). Undergrad aid ≈ $275M/yr (AY25–26 scale). Cybersecurity $5–$10M/yr. Facilities renewal $50–$100M/yr.</li>
+        <li>House Renewal ≈ program scale $1.4B; lab fit-outs ≈ $1,200/SF; GRF top-up $37M; grad housing ≈ $221k/bed; College aid ≈ $275M/yr; GSAS baseline ≥ $50k stipends (~4.16k students).</li>
       </ul>
     </footer>
   </div>
