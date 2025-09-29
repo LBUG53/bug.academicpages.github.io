@@ -6,7 +6,7 @@
     payoutPct: 5.5,
     returnPct: 7,
     inflPct: 3,
-    committedPct: 90,   // % of payout already earmarked for existing operations
+    committedPct: 90,   // % of payout earmarked for existing operations
     taxPct: 8           // federal excise tax on endowment net investment income
   };
 
@@ -103,105 +103,106 @@
     };
   }
 
-  // ---------- compute (REAL sustainability lens) ----------
+  // ---------- compute (Option A: incremental-only, REAL sustainability) ----------
   function compute(){
     const { payoutPct, returnPct, inflPct, unresPct, committedPct, taxPct } = assumptions();
     const sel = selections();
 
-    const U0 = TOTAL_ENDOWMENT * (unresPct/100);     // unrestricted principal
+    const U0 = TOTAL_ENDOWMENT * (unresPct/100); // unrestricted starting principal
 
-    // Effective returns
-    const r_nom  = (returnPct/100) * (1 - (taxPct/100));     // after-tax nominal
-    const r      = (1 + r_nom) / (1 + inflPct/100) - 1;      // REAL (inflation-adjusted)
+    // Returns
+    const r_nom = (returnPct/100) * (1 - (taxPct/100));   // after-tax nominal
+    const r     = (1 + r_nom) / (1 + inflPct/100) - 1;    // REAL (inflation-adjusted)
 
-    // Year 1 payout capacity & baseline usage
+    // Year 1 payout capacity & baseline need
     const payoutY0          = U0 * (payoutPct/100);
     const baselineCommitted = committedPct/100;
     const baselineNeedY0    = baselineCommitted * payoutY0;
+    const slackPayout0      = Math.max(0, payoutY0 - baselineNeedY0);
 
-    // Toggle totals
+    // Extras
     const oneTimeSum   = sel.oneTime.reduce((s,x)=>s + x.amount, 0);
     const recurringSum = sel.recurring.reduce((s,x)=>s + x.amount, 0);
     const permFedY1    = sel.policy.fedPermanent ? 684e6 : 0;
+    const extraY1      = oneTimeSum + recurringSum + permFedY1;
 
-    // --- Year 1 totals ---
-    const plannedThisYear = baselineNeedY0 + oneTimeSum + recurringSum + permFedY1;
+    // Year 1 REAL return
+    const retY0_real = r * U0;
 
-    // Principal consumed in Year 1 (REAL): needs not covered by real return
-    const returnY0_real = r * U0;
-    const principalConsumedY1 = Math.max(0, plannedThisYear - returnY0_real);
+    // Option A: principal consumed counts only EXTRAS beyond (real return + slack payout)
+    const capacityY1 = retY0_real + slackPayout0;
+    const principalConsumedY1 = Math.max(0, extraY1 - capacityY1);
 
-    // End-of-year 1 principal in REAL terms: Start + real return − total needs
-    const U1 = Math.max(0, U0 + returnY0_real - plannedThisYear);
+    // For the donut center, show remaining relative to start under Option A
+    const U1 = Math.max(0, U0 - principalConsumedY1);
 
-    // ----- 10-yr baseline (no extra needs), used for payout-capacity comparison -----
-    let U_base = U0;
+    // Legacy info (beyond-payout draw in accounting terms)
+    const drawY0 = Math.max(0, (baselineNeedY0 + extraY1) - payoutY0);
+
+    // ----- 10-year evolution -----
+    let U_base = U0;              // baseline path (no extras), REAL accounting of baseline use
+    let U_scn  = U0;              // scenario path (with extras)
     let cumPayoutBase = 0;
-
-    // ----- 10-yr scenario (subtract all needs each year) -----
-    let U = U0;
-    let cumulativeDraw = 0;              // legacy metric (“beyond payout”)
-    let principalConsumed10 = 0;         // REAL principal consumed across 10 yrs
-    let permFed = permFedY1;
     let cumPayoutScenario = 0;
-    const infl = 1 + inflPct/100;        // for growing the permanent gap only
+    let principalConsumed10 = 0;  // sum of incremental consumption
+    let cumulativeDraw = 0;       // legacy “beyond payout” accounting metric
+    let permFed = permFedY1;
+    const infl = 1 + inflPct/100;
 
-    for (let year = 1; year <= 10; year++) {
-      // Baseline: payout policy only (no extra needs)
+    for (let year = 1; year <= 10; year++){
+      // ---- Baseline path (no extras): both paths account for baseline use the same way ----
       const P_base = U_base * (payoutPct/100);
+      const baselineNeed_base = baselineCommitted * P_base;
       cumPayoutBase += P_base;
-      U_base = U_base + r * U_base;  // grow baseline principal at REAL return
+      U_base = Math.max(0, U_base + r * U_base - baselineNeed_base);
 
-      // Scenario: this year's payout capacity and needs
-      const Pt = U * (payoutPct/100);
-      cumPayoutScenario += Pt;
+      // ---- Scenario path (with extras) ----
+      const Pt = U_scn * (payoutPct/100);
+      const baselineNeed = baselineCommitted * Pt;
+      const slackPayout  = Math.max(0, Pt - baselineNeed);
 
-      const baselineNeed = baselineCommitted * Pt;  // “existing ops” use most payout
-      const annualRecurring = recurringSum + (sel.policy.fedPermanent ? permFed : 0);
-      const oneTimeThisYear = (year === 1 ? oneTimeSum : 0);
-      const need = baselineNeed + annualRecurring + oneTimeThisYear;
+      const extra = recurringSum + (sel.policy.fedPermanent ? permFed : 0) + (year === 1 ? oneTimeSum : 0);
+      const retReal = r * U_scn;
 
-      // REAL consumption this year: needs − real return on current principal
-      const retThisYear_real = r * U;
-      const consumedThisYear = Math.max(0, need - retThisYear_real);
+      // Incremental consumption this year (Option A)
+      const capacity = retReal + slackPayout;
+      const consumedThisYear = Math.max(0, extra - capacity);
       principalConsumed10 += consumedThisYear;
 
-      // For continuity with legacy label, “draw beyond payout” this year:
-      const draw = Math.max(0, need - Pt);
+      // Legacy draw metric (accounting): needs beyond payout
+      const draw = Math.max(0, (baselineNeed + extra) - Pt);
       cumulativeDraw += draw;
 
-      // End-of-year principal in REAL terms
-      U = Math.max(0, U + retThisYear_real - need);
+      // REAL principal evolution (both baseline + extras reduce earning power)
+      U_scn = Math.max(0, U_scn + retReal - (baselineNeed + extra));
+      cumPayoutScenario += Pt;
 
-      if (sel.policy.fedPermanent) permFed *= infl; // grow the permanent gap
+      if (sel.policy.fedPermanent) permFed *= infl; // grow permanent gap for next year
     }
 
     return {
-      U0,                   // starting unrestricted principal
-      U1,                   // end of year 1 principal (REAL accounting)
-      U10: U,               // end of year 10 principal (REAL accounting)
-      payoutY0,             // Year 1 payout capacity (info)
-      drawY0: Math.max(0, plannedThisYear - payoutY0), // “beyond payout” gap (info)
-      cumulativeDraw,       // 10-yr sum of “beyond payout” gaps (info)
+      U0,
+      U1,                             // start minus incremental consumption in Y1
+      U10: Math.max(0, U0 - principalConsumed10), // start minus cumulative incremental consumption
 
-      // Donut drivers (REAL principal actually eaten)
+      payoutY0,
+      drawY0,
+      cumulativeDraw,
+
+      // Donut drivers (REAL, incremental-only)
       principalConsumedY1,
       principalConsumed10,
 
-      // 10-yr payout-capacity comparison (baseline vs scenario; both evolved in REAL terms)
+      // 10-yr payout comparison (baseline vs scenario; baseline use treated identically)
       cumPayoutBase,
       cumPayoutScenario,
       cumPayoutDelta: cumPayoutScenario - cumPayoutBase,
 
-      components: {
-        oneTime: sel.oneTime,
-        recurring: sel.recurring,
-        permFedY1
-      }
+      components: { oneTime: sel.oneTime, recurring: sel.recurring, permFedY1 }
     };
   }
 
-  // ---------- Treemap 1 (stock) ----------
+  // ---------- Treemap (stock) ----------
   const stockSVG = d3.select('#stock-treemap').append('svg')
     .attr('width','100%').attr('height','100%').attr('viewBox','0 0 900 420');
 
@@ -232,13 +233,13 @@
     }).on('mouseout', ()=> tip.style('opacity',0));
   }
 
-  // ---------- Donuts (REAL consumption: gray -> blue as principal is eaten) ----------
+  // ---------- Donuts (REAL, incremental-only) ----------
   function renderDonuts(res){
     drawConsumptionDonut('#donut1',  '#donut1-metrics', res.U0, res.principalConsumedY1,
-      `Y1 real principal consumed: ${fmt(res.principalConsumedY1)}`);
+      `Y1 real principal consumed (extras only): ${fmt(res.principalConsumedY1)}`);
 
     drawConsumptionDonut('#donut10', '#donut10-metrics', res.U0, res.principalConsumed10,
-      `10-yr real principal consumed: ${fmt(res.principalConsumed10)}`);
+      `10-yr real principal consumed (extras only): ${fmt(res.principalConsumed10)}`);
   }
 
   function drawConsumptionDonut(svgSel, centerSel, start, consumed, note){
@@ -279,7 +280,8 @@
 
     // Only allocate if scenario pays out less than baseline
     const shortfall = Math.abs(Math.min(0, res.cumPayoutDelta));
-    IMPACT_WEIGHTS.forEach(({name,w})=>{
+    const weights = IMPACT_WEIGHTS;
+    weights.forEach(({name,w})=>{
       const amt = shortfall * w;
       const li = document.createElement('li');
       li.innerHTML = `<span>${name}</span><span>${fmt(amt)}</span>`;

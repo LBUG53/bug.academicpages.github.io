@@ -6,11 +6,12 @@
   <title>An endowment is not a piggy bank</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles.css?v=real2" />
+  <link rel="stylesheet" href="./assets/styles.css?v=optA1" />
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
   <div class="page">
+
 
     <!-- Row A: stock treemap (kept) -->
     <section class="row single">
@@ -27,7 +28,7 @@
 
         <div id="stock-treemap"></div>
         <p class="caption">
-          Hover tiles for details. <span class="chip chip-blue"></span> Blue = Unrestricted. Gray = donor-restricted purposes.
+          Hover tiles for details. <span class="chip chip-blue"></span> Blue = Unrestricted (your fixed share). Gray = donor-restricted purposes.
         </p>
       </div>
     </section>
@@ -50,7 +51,7 @@
 
           <div class="subgroup">
             <h4>One-time (capital)</h4>
-            <label><input type="checkbox" id="chkHouse" /> Dorm Renewal phase</label>
+            <label><input type="checkbox" id="chkHouse" /> House Renewal phase</label>
             <div class="slider-row">
               <input type="range" id="rngHouse" min="300" max="500" step="10" value="400" />
               <span class="value">$<span id="lblHouse">400</span>M</span>
@@ -115,63 +116,4 @@
           </div>
         </div>
 
-        <div class="group assumptions">
-          <h3>Assumptions</h3>
-          <div class="row2">
-            <label>Payout rate <input type="number" id="inpPayout" min="3" max="7" step="0.1" value="5.5" />%</label>
-            <label>Nominal return (10-yr) <input type="number" id="inpReturn" min="0" max="12" step="0.5" value="7" />%</label>
-          </div>
-          <div class="row2">
-            <label>Inflation on permanent backfill <input type="number" id="inpInfl" min="0" max="6" step="0.1" value="3" />%</label>
-            <label>Earmarked for current use <input type="number" id="inpCommitted" min="0" max="100" step="1" value="90" />%</label>
-          </div>
-          <div class="row2">
-            <label>Endowment investment tax <input type="number" id="inpTax" min="0" max="21" step="0.1" value="8" />%</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="card" id="donuts-card">
-        <h2>What happens to the unrestricted endowment?</h2>
-        <div class="donuts">
-          <div class="donut-col">
-            <h3>1 Year</h3>
-            <svg id="donut1" width="220" height="220"></svg>
-            <div class="center-metrics" id="donut1-metrics"></div>
-          </div>
-          <div class="donut-col">
-            <h3>10 Years</h3>
-            <svg id="donut10" width="220" height="220"></svg>
-            <div class="center-metrics" id="donut10-metrics"></div>
-          </div>
-        </div>
-
-        <div class="impact">
-          <h3>Impact on payout over 10 years</h3>
-          <div class="impact-line">
-            Baseline (no draws): <strong id="lblPayoutBase">$0</strong>
-          </div>
-          <div class="impact-line">
-            Your scenario (with draws): <strong id="lblPayoutNew">$0</strong>
-          </div>
-          <div class="impact-line">
-            Difference over 10 years: <strong id="lblPayoutDelta">$0</strong>
-          </div>
-
-          <h4>Illustrative 10-yr impact across areas (from reduced flexible payout)</h4>
-          <ul id="impactList" class="impact-list"></ul>
-          <p class="caption small">
-            We allocate the total 10-yr payout shortfall across areas using illustrative weights. Edit weights in code to match your view.
-          </p>
-        </div>
-
-        <p class="caption small">
-          Donuts show <strong>real (inflation-adjusted) principal consumed</strong>: each year we compare total needs to the portfolio’s after-tax return <em>after</em> inflation. If needs exceed real return, the blue wedge grows. Over 10 years, we sum the real principal consumed.
-        </p>
-      </div>
-    </section>
-  </div>
-
-  <script src="./assets/app.js?v=real2"></script>
-</body>
-</html>
+        <div class="group assum

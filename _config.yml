@@ -99,6 +99,7 @@ defaults:
       author_profile : false
       toc            : false
       toc_sticky     : false
+      sidebar        : false
   - scope:
       path  : ""
       type  : pages
@@ -146,3 +147,9 @@ plugins:
   - jekyll-sitemap
   - jemoji
   - jekyll-redirect-from
+# Analytics
+analytics:
+  provider: "google-analytics"
+  google:
+    tracking_id: "G-Y0Y2E8EK8C"
+    anonymize_ip: false
