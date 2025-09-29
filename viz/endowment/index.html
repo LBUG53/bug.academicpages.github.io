@@ -1,48 +1,171 @@
----
-layout: null
----
-{% raw %}
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Endowment is not a piggy bank</title>
-    <style>
-      :root { --slate-200:#e2e8f0; --slate-300:#cbd5e1; --slate-600:#475569; --slate-800:#1f2937; --blue:#0ea5e9; --red:#ef4444; --amber:#f59e0b; }
-      body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color: var(--slate-800); background:#fafafa; overflow-x:hidden; }
-      .container { max-width: 1800px; margin: 0 auto; padding: 24px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
-      .grid { display: grid; gap: 24px; }
-      .grid-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-      .col-span-3 { grid-column: span 3; }
-      .col-span-2 { grid-column: span 2; }
-      .card { border:1px solid var(--slate-200); border-radius:16px; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,0.04); overflow: visible; }
-      .card-header { padding:16px 16px 0 16px; }
-      .card-title { font-size:20px; font-weight:700; margin:0 0 8px 0; }
-      .card-content { padding:16px; overflow: visible; }
-      .row { display:flex; align-items:center; gap:8px; }
-      .row-between { display:flex; justify-content:space-between; align-items:center; gap:8px; }
-      .muted { color: var(--slate-600); font-size: 14px; }
-      .btn { border:1px solid var(--slate-300); padding:8px 12px; border-radius:12px; background:#fff; cursor:pointer; }
-      .btn.secondary { background:#f8fafc; }
-      .progress { height:10px; background:var(--slate-200); border-radius:999px; overflow:hidden; }
-      .progress > div { height:100%; background:var(--blue); width:0; }
-      .danger { color: var(--red); }
-      .tabular { font-variant-numeric: tabular-nums; }
-      .divider { height:1px; background:var(--slate-200); margin:8px 0; }
-      .kv label { display:block; color: var(--slate-600); font-size: 14px; }
-      .kv div { font-size: 20px; }
-      @media (max-width: 900px) {
-        .grid-5 { grid-template-columns: 1fr; }
-        .col-span-3, .col-span-2 { grid-column: span 1; }
-      }
-    </style>
-    <script type="module" crossorigin src="/viz/endowment/assets/index-DA8_YdDP.js"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>An endowment is not a piggy bank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <h1>An endowment is not a piggy bank</h1>
+      <p class="subhead">
+        The $53.2B headline is a <strong>stock</strong>. The flexible <strong>flow</strong> is the annual payout from a much smaller unrestricted pool.
+        If you spend beyond the payout, you must <strong>draw principal</strong>.
+      </p>
+    </header>
+
+    <section class="row">
+      <div class="card" id="stock-card">
+        <h2>Harvard Endowment (Stock Today)</h2>
+        <div id="stock-treemap"></div>
+        <p class="caption">
+          ~20% is donor-unrestricted (blue). Most remaining funds are donor-restricted and cannot be repurposed.
+          Total endowment assumed here: <span id="totalEndowmentLabel"></span>.
+        </p>
+      </div>
+
+      <div class="card controls">
+        <h2>Scenarios & Options</h2>
+        <div class="group">
+          <h3>Policy toggles</h3>
+          <label><input type="checkbox" id="chkTreasury" /> One-time $500M Treasury payment</label>
+          <label><input type="checkbox" id="chkFedOneTime" /> One-time loss of $684M federal research</label>
+          <label><input type="checkbox" id="chkFedPermanent" /> Permanent loss of $684M (repeats annually, grows with inflation)</label>
+          <div class="hint">If “Permanent” is ON, the one-time federal loss is ignored to avoid double-counting in year 1.</div>
+        </div>
+
+        <div class="group">
+          <h3>Additional things to fund</h3>
+          <div class="subgroup">
+            <h4>One-time (capital)</h4>
+            <label><input type="checkbox" id="chkHouse" /> House Renewal phase</label>
+            <div class="slider-row">
+              <input type="range" id="rngHouse" min="300" max="500" step="10" value="400" />
+              <span class="value">$<span id="lblHouse">400</span>M</span>
+            </div>
+
+            <label><input type="checkbox" id="chkLabs" /> Modernize wet-labs</label>
+            <div class="slider-row">
+              <span>Area:</span>
+              <input type="range" id="rngLabSF" min="50" max="400" step="10" value="200" />
+              <span class="value"><span id="lblLabSF">200</span>k SF</span>
+              <span class="muted">(cost ≈ $1,200/SF)</span>
+            </div>
+
+            <label><input type="checkbox" id="chkGRF" /> Decarbonization fund top-up (GRF)</label>
+            <div class="inline">$37M (one-time)</div>
+
+            <label><input type="checkbox" id="chkGradHousing" /> Graduate housing expansion</label>
+            <div class="slider-row">
+              <input type="range" id="rngBeds" min="200" max="1200" step="50" value="600" />
+              <span class="value"><span id="lblBeds">600</span> beds (~$221k/bed)</span>
+            </div>
+
+            <label><input type="checkbox" id="chkLibrary" /> Library renovation (phase)</label>
+            <div class="slider-row">
+              <input type="range" id="rngLibrary" min="100" max="200" step="10" value="150" />
+              <span class="value">$<span id="lblLibrary">150</span>M</span>
+            </div>
+          </div>
+
+          <div class="subgroup">
+            <h4>Recurring (annual)</h4>
+            <label><input type="checkbox" id="chkPhD" /> Raise all PhD stipends</label>
+            <div class="slider-row">
+              <span>+ $</span><input type="range" id="rngPhD" min="0" max="10000" step="500" value="5000" />
+              <span class="value"><span id="lblPhD">5000</span> per student</span>
+              <span class="muted">(≈4,160 PhDs → $ per year)</span>
+            </div>
+
+            <label><input type="checkbox" id="chkAid" /> Increase undergrad financial aid</label>
+            <div class="slider-row">
+              <span>+ </span><input type="range" id="rngAid" min="0" max="20" step="1" value="0" />
+              <span class="value"><span id="lblAid">0</span>% of $275M/yr</span>
+            </div>
+
+            <label><input type="checkbox" id="chkCyber" /> Cybersecurity hardening & insurance</label>
+            <div class="slider-row">
+              <input type="range" id="rngCyber" min="5" max="10" step="1" value="7" />
+              <span class="value">$<span id="lblCyber">7</span>M/yr</span>
+            </div>
+
+            <label><input type="checkbox" id="chkDecarbOps" /> Decarbonization operations</label>
+            <div class="slider-row">
+              <input type="range" id="rngDecarbOps" min="10" max="20" step="1" value="15" />
+              <span class="value">$<span id="lblDecarbOps">15</span>M/yr</span>
+            </div>
+
+            <label><input type="checkbox" id="chkFacilities" /> Facilities renewal / deferred maintenance</label>
+            <div class="slider-row">
+              <input type="range" id="rngFacilities" min="50" max="100" step="5" value="75" />
+              <span class="value">$<span id="lblFacilities">75</span>M/yr</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="group assumptions">
+          <h3>Assumptions</h3>
+          <div class="row2">
+            <label>Payout rate <input type="number" id="inpPayout" min="3" max="7" step="0.1" value="5.5" />%</label>
+            <label>Nominal return (10-yr) <input type="number" id="inpReturn" min="0" max="12" step="0.5" value="7" />%</label>
+          </div>
+          <div class="row2">
+            <label>Inflation on permanent backfill <input type="number" id="inpInfl" min="0" max="6" step="0.1" value="3" />%</label>
+            <label>Unrestricted share <input type="number" id="inpUnres" min="5" max="40" step="1" value="20" />%</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="card" id="flow-card">
+        <h2>Unrestricted Payout (Flow This Year)</h2>
+        <div class="payoutbar">
+          Payout available this year: <strong id="lblPayout">$0</strong>.
+          Selected needs: <strong id="lblNeeds">$0</strong>.
+          <span id="lblOver"></span>
+        </div>
+        <div id="flow-treemap"></div>
+        <p class="caption">If selected needs exceed the payout, the red hatched area is a <strong>principal draw</strong>.</p>
+      </div>
+
+      <div class="card" id="donuts-card">
+        <h2>What happens to the unrestricted endowment?</h2>
+        <div class="donuts">
+          <div class="donut-col">
+            <h3>1 Year</h3>
+            <svg id="donut1" width="260" height="260"></svg>
+            <div class="center-metrics" id="donut1-metrics"></div>
+          </div>
+          <div class="donut-col">
+            <h3>10 Years</h3>
+            <svg id="donut10" width="260" height="260"></svg>
+            <div class="center-metrics" id="donut10-metrics"></div>
+          </div>
+        </div>
+        <p class="caption small">
+          1-yr: End = Start + (Return × Start) − principal draw.<br/>
+          10-yr: Each year payout is applied first; permanent backfill repeats and grows with inflation; any shortfall becomes a principal draw; return applies to remaining principal.
+        </p>
+      </div>
+    </section>
+
+    <footer class="sources">
+      <h3>Notes & sources</h3>
+      <ul>
+        <li>Total endowment ≈ $53.2B (FY2024); ~20% donor-unrestricted. Payout policy ~5–6%.</li>
+        <li>Federal sponsored research at risk ≈ $684M in FY2024. Treasury ask modeled as $500M one-time.</li>
+        <li>House Renewal program ≈ $1.4B; phase modeled at $300–$500M. SEC lab project ≈ $1B (scale context). Lab fit-outs ≈ $1,200/SF (Boston/Cambridge). GRF top-up $37M (2024).</li>
+        <li>PhD stipend baseline ≥ $50k; ~4.16k PhDs (→ +$5k ≈ $20.8M/yr). Undergrad aid ≈ $275M/yr (AY25–26 scale). Cybersecurity $5–$10M/yr. Facilities renewal $50–$100M/yr.</li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="./assets/app.js"></script>
+</body>
 </html>
-{% endraw %}
