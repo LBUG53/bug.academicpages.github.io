@@ -31,12 +31,12 @@ A quick way to compare completion rates across key student groups and institutio
 
 ---
 
-## The Rules and Regulations that Prevent Harvard from Spending its Endowment
+## Why Can't Harvard Just Spend Some of its $53 Billion?
 [![Endowment Simulator](/images/endowment_thumb.png){: .align-center }](/endowment/)  
 Explains how restricted funds and payout policies affect spending—useful for boards and campus communications.
 
 ---
 
 ## Building this Website and Experimenting with Generative AI 
-A behind-the-scenes write-up on standing up this site with AcademicPages, GitHub Pages, and a lot of targeted debugging prompts.  
+Or how an educator worried about how his students use GenAI used ChatGPT when building this site. 
 [Read the build story →](/viz/genai_debugging/)
