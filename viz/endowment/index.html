@@ -19,27 +19,44 @@
       </p>
     </header>
 
-    <section class="row">
+    <!-- Row A: both treemaps side-by-side so the flow chart sits higher -->
+    <section class="row two-wide">
       <div class="card" id="stock-card">
-        <h2>Harvard Endowment (Stock Today)</h2>
+        <h2>Endowment (Stock Today)</h2>
         <div id="stock-treemap"></div>
         <p class="caption">
-          Hover tiles for what donor-restricted funds support (illustrative shares, editable). Unrestricted shown with blue outline.
+          Hover tiles for details. Blue = Unrestricted; gray = donor-restricted purposes.
         </p>
       </div>
 
+      <div class="card" id="flow-card">
+        <h2>Unrestricted Payout (Flow This Year)</h2>
+        <div class="payoutbar">
+          Payout available: <strong id="lblPayout">$0</strong>.
+          Selected needs: <strong id="lblNeeds">$0</strong>.
+          <span id="lblOver"></span>
+        </div>
+        <div id="flow-treemap"></div>
+        <p class="caption">If needs exceed payout, the red hatched area is a <strong>principal draw</strong>.</p>
+      </div>
+    </section>
+
+    <!-- Row B: controls (scrollable) + donuts (smaller) -->
+    <section class="row">
       <div class="card controls">
         <h2>Scenarios & Options</h2>
+
         <div class="group">
           <h3>Policy toggles</h3>
           <label><input type="checkbox" id="chkTreasury" /> One-time $500M Treasury payment</label>
           <label><input type="checkbox" id="chkFedOneTime" /> One-time loss of $684M federal research</label>
-          <label><input type="checkbox" id="chkFedPermanent" /> Permanent loss of $684M (repeats annually, grows with inflation)</label>
+          <label><input type="checkbox" id="chkFedPermanent" /> Permanent loss of $684M (repeats, grows with inflation)</label>
           <div class="hint">If “Permanent” is ON, the one-time federal loss is ignored to avoid double-counting in year 1.</div>
         </div>
 
         <div class="group scroll">
           <h3>Additional things to fund</h3>
+
           <div class="subgroup">
             <h4>One-time (capital)</h4>
             <label><input type="checkbox" id="chkHouse" /> House Renewal phase</label>
@@ -53,7 +70,7 @@
               <span>Area:</span>
               <input type="range" id="rngLabSF" min="50" max="400" step="10" value="200" />
               <span class="value"><span id="lblLabSF">200</span>k SF</span>
-              <span class="muted">(cost ≈ $1,200/SF)</span>
+              <span class="muted">(≈ $1,200/SF)</span>
             </div>
 
             <label><input type="checkbox" id="chkGRF" /> Decarbonization fund top-up (GRF)</label>
@@ -78,7 +95,7 @@
             <div class="slider-row">
               <span>+ $</span><input type="range" id="rngPhD" min="0" max="10000" step="500" value="5000" />
               <span class="value"><span id="lblPhD">5000</span> per student</span>
-              <span class="muted">(≈4,160 PhDs → $ per year)</span>
+              <span class="muted">(≈4,160 PhDs)</span>
             </div>
 
             <label><input type="checkbox" id="chkAid" /> Increase undergrad financial aid</label>
@@ -119,45 +136,27 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="row">
-      <div class="card tall" id="flow-card">
-        <h2>Unrestricted Payout (Flow This Year)</h2>
-        <div class="payoutbar">
-          Payout available this year: <strong id="lblPayout">$0</strong>.
-          Selected needs: <strong id="lblNeeds">$0</strong>.
-          <span id="lblOver"></span>
-        </div>
-        <div id="flow-treemap" class="taller"></div>
-        <p class="caption">If selected needs exceed the payout, the red hatched area is a <strong>principal draw</strong>.</p>
-      </div>
 
       <div class="card small" id="donuts-card">
         <h2>What happens to the unrestricted endowment?</h2>
         <div class="donuts">
           <div class="donut-col">
             <h3>1 Year</h3>
-            <svg id="donut1" width="220" height="220"></svg>
+            <svg id="donut1" width="210" height="210"></svg>
             <div class="center-metrics" id="donut1-metrics"></div>
           </div>
           <div class="donut-col">
             <h3>10 Years</h3>
-            <svg id="donut10" width="220" height="220"></svg>
+            <svg id="donut10" width="210" height="210"></svg>
             <div class="center-metrics" id="donut10-metrics"></div>
           </div>
         </div>
+        <p class="caption small">
+          1-yr: End = Start + (return × Start) − principal draw.<br>
+          10-yr: Repeat annually; permanent backfill grows with inflation; shortfalls become draws; return applies to remaining principal.
+        </p>
       </div>
     </section>
-
-    <footer class="sources">
-      <h3>Notes & sources</h3>
-      <ul>
-        <li>Total endowment ≈ $53.2B (FY2024). ~70% of annual distribution donor-directed. Majority of funds restricted by purpose (aid, professorships, research, buildings, etc.).</li>
-        <li>Federal sponsored research at risk ≈ $684M in FY2024. Treasury ask modeled as $500M one-time.</li>
-        <li>House Renewal ≈ program scale $1.4B; lab fit-outs ≈ $1,200/SF; GRF top-up $37M; grad housing ≈ $221k/bed; College aid ≈ $275M/yr; GSAS baseline ≥ $50k stipends (~4.16k students).</li>
-      </ul>
-    </footer>
   </div>
 
   <script src="./assets/app.js"></script>
