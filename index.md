@@ -15,9 +15,9 @@ title: ""   # prevents <title> from doubling with site.title
 <!-- Feature Row with linked titles -->
 <div class="feature__wrapper" style="margin-top: 1.25rem;">
 
-  <div class="feature__item" style="margin-left:8px;">
+  <div class="feature__item">
     <div class="archive__item">
-      <div class="archive__item-body">
+      <div class="archive__item-body" style="padding-left:8px;">  <!-- ← only change -->
         <h2 class="archive__item-title">
           <a href="/scholarship/">Scholarship</a>
         </h2>
