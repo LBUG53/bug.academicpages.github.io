@@ -12,8 +12,36 @@ title: ""   # prevents <title> from doubling with site.title
   </div>
 </div>
 
+<!-- Page-local styles: constrain and balance the three feature tiles -->
+<style>
+  /* Center the whole row and keep equal side gutters */
+  #home-features {
+    display: flex;
+    justify-content: space-between;   /* even edges */
+    gap: 1.25rem;                     /* space between tiles */
+    max-width: 1200px;                /* keeps the row from stretching too wide */
+    margin: 1.25rem auto 0;           /* centers the row on the page */
+    flex-wrap: nowrap;                /* stay on one line on desktop */
+  }
+  /* Make exactly three across on desktop */
+  #home-features .feature__item {
+    flex: 0 0 calc(33.333% - 0.85rem);  /* three equal columns with room for gaps */
+  }
+  /* Responsive: stack on small screens */
+  @media (max-width: 900px) {
+    #home-features {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #home-features .feature__item {
+      flex: 1 1 100%;
+      max-width: 700px;
+    }
+  }
+</style>
+
 <!-- Feature Row with linked titles -->
-<div class="feature__wrapper" style="margin-top: 1.25rem; display: flex; justify-content: space-around; flex-wrap: wrap;">
+<div id="home-features">
 
   <div class="feature__item">
     <div class="archive__item">
