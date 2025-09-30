@@ -13,7 +13,7 @@ title: ""   # prevents <title> from doubling with site.title
 </div>
 
 <!-- Feature Row with linked titles -->
-<div class="feature__wrapper" style="margin-top: 1.25rem;">
+<div class="feature__wrapper" style="margin-top: 1.25rem; display: flex; justify-content: space-around; flex-wrap: wrap;">
 
   <div class="feature__item">
     <div class="archive__item">
