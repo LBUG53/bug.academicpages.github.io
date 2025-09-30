@@ -17,7 +17,7 @@ title: ""   # prevents <title> from doubling with site.title
 
   <div class="feature__item">
     <div class="archive__item">
-      <div class="archive__item-body" style="padding-left:8px;">  <!-- ← only change -->
+      <div class="archive__item-body" style="padding-left:8px;">
         <h2 class="archive__item-title">
           <a href="/scholarship/">Scholarship</a>
         </h2>
@@ -30,7 +30,7 @@ title: ""   # prevents <title> from doubling with site.title
 
   <div class="feature__item">
     <div class="archive__item">
-      <div class="archive__item-body">
+      <div class="archive__item-body" style="padding-left:8px;">
         <h2 class="archive__item-title">
           <a href="/portfolio/">Teaching</a>
         </h2>
@@ -43,7 +43,7 @@ title: ""   # prevents <title> from doubling with site.title
 
   <div class="feature__item">
     <div class="archive__item">
-      <div class="archive__item-body">
+      <div class="archive__item-body" style="padding-left:8px;">
         <h2 class="archive__item-title">
           <a href="/higheredissues/">Higher Ed Issues</a>
         </h2>
