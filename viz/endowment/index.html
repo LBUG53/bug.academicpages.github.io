@@ -6,19 +6,31 @@
   <title>An endowment is not a piggy bank</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles.css?v=optA1" />
-  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="./assets/styles.css?v=optA4" />
+
+  <!-- Pin D3 to a specific version (avoid CDN hiccups) -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
+
+  <noscript>
+    <style>body{padding:12px;color:#e5e7eb;background:#0b1020}</style>
+    <div>JavaScript is disabled. The visualization requires JS to run.</div>
+  </noscript>
 </head>
 <body>
   <div class="page">
-
+    <header class="header">
+      <h1>An endowment is not a piggy bank</h1>
+      <p class="subhead">
+        The $53.2B headline is a <strong>stock</strong>. The flexible <strong>flow</strong> is the annual payout from a much smaller unrestricted pool.
+        If you spend beyond the payout, you must <strong>draw principal</strong>, which reduces future payout.
+      </p>
+    </header>
 
     <!-- Row A: stock treemap (kept) -->
     <section class="row single">
       <div class="card" id="stock-card">
-        
+        <h2>Endowment (Stock Today)</h2>
 
-        <!-- Preface text block -->
         <div class="preface">
           <p>It seems like every job requires an undergraduate degree now, and the cost to attend college is growing faster than inflation. Why should colleges charge so much for something people need? Why does an institution like Harvard, with a $53 billion endowment, receive so much money from the federal government?</p>
           <p>These are good questions, and with the Trump administration's multi-pronged assault on Harvard, they are increasingly relevant and have become a prominent part of the national conversation. Higher education leaders and their allies have tried to explain the finances of their institutions, but they struggle to make themselves heard. A part of the problem is the way that they try to communicate these complex issues, largely relying on dense text crafted by the CFO and the General Counsel or graphics pulled from their annual financial statements. This is how I explain it to my friends:</p>
@@ -26,7 +38,9 @@
           <p>Funds that must be spent on a specific thing or in a specific way are called restricted funds. Most of a college's endowment is restricted. Here is a breakdown of Harvard's endowment, with the unrestricted money in blue.</p>
         </div>
 
-        <div id="stock-treemap"></div>
+        <div id="stock-treemap">
+          <!-- Heartbeat will appear here -->
+        </div>
         <p class="caption">
           Hover tiles for details. <span class="chip chip-blue"></span> Blue = Unrestricted (your fixed share). Gray = donor-restricted purposes.
         </p>
@@ -116,4 +130,82 @@
           </div>
         </div>
 
-        <div class="group assum
+        <div class="group assumptions">
+          <h3>Assumptions</h3>
+          <div class="row2">
+            <label>Payout rate <input type="number" id="inpPayout" min="3" max="7" step="0.1" value="5.5" />%</label>
+            <label>Nominal return (10-yr) <input type="number" id="inpReturn" min="0" max="12" step="0.5" value="7" />%</label>
+          </div>
+          <div class="row2">
+            <label>Inflation on permanent backfill <input type="number" id="inpInfl" min="0" max="6" step="0.1" value="3" />%</label>
+            <label>Earmarked for current use <input type="number" id="inpCommitted" min="0" max="100" step="1" value="90" />%</label>
+          </div>
+          <div class="row2">
+            <label>Endowment investment tax <input type="number" id="inpTax" min="0" max="21" step="0.1" value="8" />%</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="donuts-card">
+        <h2>What happens to the unrestricted endowment?</h2>
+        <div class="donuts">
+          <div class="donut-col">
+            <h3>1 Year</h3>
+            <svg id="donut1" width="220" height="220"></svg>
+            <div class="center-metrics" id="donut1-metrics"></div>
+          </div>
+          <div class="donut-col">
+            <h3>10 Years</h3>
+            <svg id="donut10" width="220" height="220"></svg>
+            <div class="center-metrics" id="donut10-metrics"></div>
+          </div>
+        </div>
+
+        <div class="impact">
+          <h3>Impact on payout over 10 years</h3>
+          <div class="impact-line">
+            Baseline (no extras): <strong id="lblPayoutBase">$0</strong>
+          </div>
+          <div class="impact-line">
+            Your scenario (with extras): <strong id="lblPayoutNew">$0</strong>
+          </div>
+          <div class="impact-line">
+            Difference over 10 years: <strong id="lblPayoutDelta">$0</strong>
+          </div>
+
+          <h4>Illustrative 10-yr impact across areas (from reduced flexible payout)</h4>
+          <ul id="impactList" class="impact-list"></ul>
+          <p class="caption small">
+            We allocate the total 10-yr payout shortfall across areas using illustrative weights. Edit weights in code to match your view.
+          </p>
+        </div>
+
+        <p class="caption small">
+          Donuts show <strong>real (inflation-adjusted) principal consumed by extra commitments only</strong>. Baseline use of payout for ongoing operations is treated as given. Each year, extra needs are compared to the portfolio’s real after-tax return plus any unused payout. If extras exceed that capacity, the blue wedge grows; the 10-yr donut sums this.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Load app.js last with cache-bust -->
+  <script src="./assets/app.js?v=optA4"></script>
+
+  <!-- Tiny debug badge -->
+  <div id="viz-debug" style="position:fixed;left:10px;bottom:10px;background:#0b142a;border:1px solid #1e293b;color:#e5e7eb;padding:6px 8px;border-radius:8px;font:12px/1.2 system-ui;opacity:.9;z-index:9999">
+    Viz page loaded. Waiting for D3 & app.js…
+  </div>
+  <script>
+    (function(){
+      const box = document.getElementById('viz-debug');
+      function set(msg){ if(box) box.textContent = msg; }
+      function done(){ if(box) setTimeout(()=>box.remove(), 1200); }
+      window.addEventListener('error', e => set('Error: '+(e.message||'unknown')));
+      const ping = setInterval(()=>{
+        if (!window.d3){ set('D3 not loaded yet…'); return; }
+        if (!window.__VIZ_OK__){ set('D3 loaded. Running app.js…'); return; }
+        set('Viz ready ✔'); clearInterval(ping); done();
+      }, 300);
+    })();
+  </script>
+</body>
+</html>
