@@ -6,7 +6,7 @@
   <title>An endowment is not a piggy bank</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles.css?v=optA5" />
+  <link rel="stylesheet" href="./assets/styles.css?v=optA6" />
   <noscript>
     <style>body{padding:12px;color:#e5e7eb;background:#0b1020}</style>
     <div>JavaScript is disabled. The visualization requires JS to run.</div>
@@ -15,17 +15,11 @@
 <body>
   <div class="page">
     <header class="header">
-      <h1>An endowment is not a piggy bank</h1>
-      <p class="subhead">
-        The $53.2B headline is a <strong>stock</strong>. The flexible <strong>flow</strong> is the annual payout from a much smaller unrestricted pool.
-        If you spend beyond the payout, you must <strong>draw principal</strong>, which reduces future payout.
-      </p>
     </header>
 
-    <!-- Row A: stock treemap (kept) -->
+    <!-- Row A: stock treemap -->
     <section class="row single">
       <div class="card" id="stock-card">
-        <h2>Endowment (Stock Today)</h2>
 
         <div class="preface">
           <p>It seems like every job requires an undergraduate degree now, and the cost to attend college is growing faster than inflation. Why should colleges charge so much for something people need? Why does an institution like Harvard, with a $53 billion endowment, receive so much money from the federal government?</p>
@@ -38,10 +32,28 @@
         <p class="caption">
           Hover tiles for details. <span class="chip chip-blue"></span> Blue = Unrestricted (your fixed share). Gray = donor-restricted purposes.
         </p>
+
+        <!-- TEXT for the second visualization -->
+        <div class="post-treemap-intro" style="margin-top:10px;color:#e2e8f0">
+          <p>
+            OK, so Harvard can’t touch most of the endowment, what about the <strong>$16&nbsp;billion</strong> that is unrestricted?
+            Well, Harvard has been around for almost 400 years, and its leaders need to plan far into the future. The students that are here now matter a great deal, but what if small changes now have much greater long-term impact?
+          </p>
+          <p>
+            Play around with the visualization below to get a sense of what happens when Harvard takes money out of the endowment to cover current needs one year and ten years out. The top three buttons address what happens if the Trump administration continues to target Harvard:
+            a one-time pay out of $500 million, the loss of federal funding this year, and the permanent loss of federal funding.
+          </p>
+          <p>
+            The other buttons are pressing projects that Harvard has either promised to do, or that it has to do. For example, some Harvard buildings are falling apart, grad students will need higher wages over time, and some of the labs need to be modernized. Finally, the assumptions table lets you play with what happens if Harvard’s investments have a bad year, how much of the payout is already earmarked for current use, and what happens if Congress continues to raise the tax on endowment investment. The table on the right shows how much funding is lost over the course of 10 years when you overspend.
+          </p>
+          <p>
+            For you nerds out there, I lay out the math that drives these visualizations at the bottom of the page.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Row B: controls + donuts side-by-side -->
+    <!-- Row B: controls + donuts side-by-side (unchanged) -->
     <section class="row">
       <div class="card controls">
         <h2>Scenarios & Options</h2>
@@ -59,7 +71,7 @@
 
           <div class="subgroup">
             <h4>One-time (capital)</h4>
-            <label><input type="checkbox" id="chkHouse" /> House Renewal phase</label>
+            <label><input type="checkbox" id="chkHouse" /> Dorm Renewal phase</label>
             <div class="slider-row">
               <input type="range" id="rngHouse" min="300" max="500" step="10" value="400" />
               <span class="value">$<span id="lblHouse">400</span>M</span>
@@ -169,9 +181,6 @@
 
           <h4>Illustrative 10-yr impact across areas (from reduced flexible payout)</h4>
           <ul id="impactList" class="impact-list"></ul>
-          <p class="caption small">
-            We allocate the total 10-yr payout shortfall across areas using illustrative weights. Edit weights in code to match your view.
-          </p>
         </div>
 
         <p class="caption small">
@@ -179,14 +188,69 @@
         </p>
       </div>
     </section>
+
+    <!-- Bottom of page: formulas and explanation -->
+    <section class="row single" style="margin-top:16px;">
+      <div class="card">
+        <h2>How the donuts are calculated</h2>
+        <div class="caption" style="line-height:1.6">
+          <p><strong>Symbols:</strong>
+            \(E\)=total endowment, \(u\)=unrestricted share, \(U_0 = E\cdot u\).
+            \(p\)=payout rate, \(r_n\)=nominal return, \(\tau\)=investment tax, \(\pi\)=inflation.
+            \(c\)=share of payout earmarked for existing operations.
+            \(O\)=one-time extras, \(A\)=annual extras, \(F_1\)=permanent federal backfill (year 1 if on).
+          </p>
+
+          <p><strong>Real after-tax return:</strong></p>
+          \[
+            r \;=\; \frac{1 + r_n(1-\tau)}{1+\pi} \;-\; 1
+          \]
+
+          <p><strong>Year 1 (incremental-only sustainability):</strong></p>
+          \[
+            P_0 \;=\; p\,U_0,\quad
+            B_0 \;=\; c\,P_0,\quad
+            S_0 \;=\; \max(0,\,P_0 - B_0),\quad
+            R_0 \;=\; r\,U_0
+          \]
+          \[
+            X_1 \;=\; O + A + F_1,\qquad
+            C_1 \;=\; R_0 + S_0,\qquad
+            \text{Cons}_1 \;=\; \max(0,\,X_1 - C_1)
+          \]
+          <p>
+            Year-1 donut shows “Consumed” \(=\text{Cons}_1\) and “Remaining” \(=U_0-\text{Cons}_1\).
+          </p>
+
+          <p><strong>10-Year (sum of incremental consumption):</strong></p>
+          \[
+            \text{For } t=1,\dots,10:\quad
+            P_t = p\,U,\;\; B_t = c\,P_t,\;\; S_t = \max(0,\,P_t - B_t),\;\; R_t = r\,U
+          \]
+          \[
+            X_t \;=\; A \;+\; \mathbf{1}_{\{t=1\}}\,O \;+\; \mathbf{1}_{\{\text{permFed}\}}\,F,\qquad
+            C_t \;=\; R_t + S_t,\qquad
+            \text{Cons}_t \;=\; \max(0,\,X_t - C_t)
+          \]
+          \[
+            \text{Cons}_{10} \;=\; \sum_{t=1}^{10}\text{Cons}_t,\qquad
+            U \leftarrow \max\!\bigl(0,\; U + R_t - (B_t + X_t)\bigr),\quad
+            F \leftarrow F(1+\pi)\; \text{ if permanent}
+          \]
+          <p>
+            10-year donut shows “Consumed” \(=\text{Cons}_{10}\) and “Remaining” \(=U_0-\text{Cons}_{10}\).
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 
-  <!-- Debug badge -->
+  <!-- Debug badge (kept) -->
   <div id="viz-debug" style="position:fixed;left:10px;bottom:10px;background:#0b142a;border:1px solid #1e293b;color:#e5e7eb;padding:6px 8px;border-radius:8px;font:12px/1.2 system-ui;opacity:.9;z-index:9999">
     Loading D3…
   </div>
 
-  <!-- Robust D3 loader + app boot -->
+  <!-- Robust D3 loader + app boot (kept) -->
   <script>
   (function(){
     var debug = document.getElementById('viz-debug');
@@ -216,13 +280,18 @@
       if (!window.d3){ loadNext(); return; }
       set('D3 loaded. Booting app…');
       var a = document.createElement('script');
-      a.src = './assets/app.js?v=optA5';
+      a.src = './assets/app.js?v=optA6';
       a.onload = function(){ set(window.__VIZ_OK__ ? 'Viz ready ✔' : 'App loaded (no ready flag)'); setTimeout(function(){ if(debug) debug.remove(); }, 1200); };
       a.onerror = function(){ set('ERROR: app.js failed to load.'); };
       document.body.appendChild(a);
     }
     loadNext();
   })();
+  </script>
+
+  <!-- MathJax for equations at bottom -->
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
 </body>
 </html>
