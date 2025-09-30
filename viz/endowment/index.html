@@ -6,11 +6,7 @@
   <title>An endowment is not a piggy bank</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles.css?v=optA4" />
-
-  <!-- Pin D3 to a specific version (avoid CDN hiccups) -->
-  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
-
+  <link rel="stylesheet" href="./assets/styles.css?v=optA5" />
   <noscript>
     <style>body{padding:12px;color:#e5e7eb;background:#0b1020}</style>
     <div>JavaScript is disabled. The visualization requires JS to run.</div>
@@ -38,9 +34,7 @@
           <p>Funds that must be spent on a specific thing or in a specific way are called restricted funds. Most of a college's endowment is restricted. Here is a breakdown of Harvard's endowment, with the unrestricted money in blue.</p>
         </div>
 
-        <div id="stock-treemap">
-          <!-- Heartbeat will appear here -->
-        </div>
+        <div id="stock-treemap"></div>
         <p class="caption">
           Hover tiles for details. <span class="chip chip-blue"></span> Blue = Unrestricted (your fixed share). Gray = donor-restricted purposes.
         </p>
@@ -187,25 +181,48 @@
     </section>
   </div>
 
-  <!-- Load app.js last with cache-bust -->
-  <script src="./assets/app.js?v=optA4"></script>
-
-  <!-- Tiny debug badge -->
+  <!-- Debug badge -->
   <div id="viz-debug" style="position:fixed;left:10px;bottom:10px;background:#0b142a;border:1px solid #1e293b;color:#e5e7eb;padding:6px 8px;border-radius:8px;font:12px/1.2 system-ui;opacity:.9;z-index:9999">
-    Viz page loaded. Waiting for D3 & app.js…
+    Loading D3…
   </div>
+
+  <!-- Robust D3 loader + app boot -->
   <script>
-    (function(){
-      const box = document.getElementById('viz-debug');
-      function set(msg){ if(box) box.textContent = msg; }
-      function done(){ if(box) setTimeout(()=>box.remove(), 1200); }
-      window.addEventListener('error', e => set('Error: '+(e.message||'unknown')));
-      const ping = setInterval(()=>{
-        if (!window.d3){ set('D3 not loaded yet…'); return; }
-        if (!window.__VIZ_OK__){ set('D3 loaded. Running app.js…'); return; }
-        set('Viz ready ✔'); clearInterval(ping); done();
-      }, 300);
-    })();
+  (function(){
+    var debug = document.getElementById('viz-debug');
+    function set(s){ if(debug) debug.textContent = s; }
+
+    var sources = [
+      './assets/vendor/d3.v7.min.js',                                             // local copy
+      'https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js',                // cdnjs
+      'https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js',                     // jsdelivr
+      'https://unpkg.com/d3@7.9.0/dist/d3.min.js'                                 // unpkg
+    ];
+    var i = 0;
+    function loadNext(){
+      if (i >= sources.length){
+        set('ERROR: D3 could not be loaded from any source.');
+        return;
+      }
+      var src = sources[i++];
+      set('Loading D3: ' + src);
+      var s = document.createElement('script');
+      s.src = src;
+      s.onload = boot;
+      s.onerror = loadNext;
+      document.head.appendChild(s);
+    }
+    function boot(){
+      if (!window.d3){ loadNext(); return; }
+      set('D3 loaded. Booting app…');
+      var a = document.createElement('script');
+      a.src = './assets/app.js?v=optA5';
+      a.onload = function(){ set(window.__VIZ_OK__ ? 'Viz ready ✔' : 'App loaded (no ready flag)'); setTimeout(function(){ if(debug) debug.remove(); }, 1200); };
+      a.onerror = function(){ set('ERROR: app.js failed to load.'); };
+      document.body.appendChild(a);
+    }
+    loadNext();
+  })();
   </script>
 </body>
 </html>
