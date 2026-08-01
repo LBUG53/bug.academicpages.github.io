@@ -9,7 +9,7 @@ main:
     url: /higheredissues/
     children:
       - title: "Grad Rate Viz"
-        url: /higheredissues/Grad_Map/
+        url: /viz/Grad_Map/
       - title: "Endowment Viz"
         url: /endowment/
   - title: "Engagement"
