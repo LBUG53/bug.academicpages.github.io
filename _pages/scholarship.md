@@ -20,13 +20,19 @@ By tracing how these distinct identities were forged, tested, and revealed in mo
 
 ---
 
-## Publications and Reviews
+## Public Scholarship
 - **“A call for historically informed decisions.”** *Inside Higher Ed*, June 27, 2025. [Link](https://www.insidehighered.com/opinion/views/2025/06/27/call-historically-informed-decisions-opinion){: target="_blank" rel="noopener noreferrer"}
+
+## Book Reviews
 - Review of *Social Science for What?* by M. Solovey. *History of the Human Sciences*, 2021
 - Review of *The Campus Color Line* by E. Cole. *Harvard Educational Review*, Spring 2021
 - Review of *American Higher Education Since World War II: A History* by R. Geiger. *Harvard Educational Review*, Winter 2020
 - Review of *Why Trust Science?* by N. Oreskes. *Harvard Educational Review*, Fall 2020
-- **We Were Distinguished Misfits: The Invention of the Field of Public Policy** — article manuscript, in progress
+
+---
+
+## Works in Progress
+- **We Were Distinguished Misfits: The Invention of the Field of Public Policy** — article manuscript
 
 ---
 

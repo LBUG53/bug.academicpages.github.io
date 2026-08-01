@@ -21,21 +21,23 @@ sidebar: false
 
 ## Professional & Research Experience
 - **Harvard University**, Cambridge, MA (2016–Present)  
-  - *Strategic Analytics Fellow* (2026–Present) — Helps schools and units build shared definitions and standards for institutional data; supports decision-making, reporting, and analysis across the university.  
-  - *Institutional Governance and Strategy Fellow* (2024–2026) — Designs structures for shared governance across 12 schools; conducts comparative research on peer senates.  
+  - *Strategic Analytics Fellow* (2026–Present) — Leads strategic analysis for university decision-making, building shared definitions and standards for institutional data used in planning and governance.  
+  - *Institutional Governance and Strategy Fellow* (2024–2026) — Designed shared-governance structures across 12 schools; conducted comparative research on peer senates.  
   - *Research Lead, History of HGSE* (2020) — Archival research for centennial; co-developed lecture with Howard Gardner.  
   - *Development & Strategy Editor, Harvard Educational Review* (2018–2020) — Guided authors through peer review; trained editors.  
   - *Research Assistant, Sociology of Higher Education* (2016) — Interviews; historical accounts for new course.  
   - *Research Lead, Secondary Field in Education* (2016–2017) — Mapped faculty and resources for Harvard College students.
 
 - **Consortium on Financing Higher Education (COFHE)**, at MIT (2014–2017)  
-  - *Assistant Director of Research* (2016–2017) — Directed projects; supervised analysts; briefed institutional leaders.  
+  - *Assistant Director of Research* (2016–2017) — Advised senior leaders at 35 colleges and universities on enrollment, financial aid, and student success; directed research projects and supervised analysts.  
   - *Research & Data Analyst* (2014–2016) — Authored reports; statistical analysis (SPSS, Stata).
 
 ---
 
-## Publications & Reviews (selected)
+## Public Scholarship
 - “A call for historically informed decisions.” *Inside Higher Ed*, June 27, 2025.  
+
+## Book Reviews (selected)
 - Review of *Social Science for What?* by Mark Solovey. *History of the Human Sciences*, 2021.  
 - Review of *The Campus Color Line* by Eddie R. Cole. *Harvard Educational Review*, Spring 2021.  
 - Review of *American Higher Education Since World War II: A History* by Roger Geiger. *Harvard Educational Review*, Winter 2020.  
