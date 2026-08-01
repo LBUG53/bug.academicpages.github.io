@@ -37,5 +37,5 @@ My goal is to work with you; I don’t drop a thick report on your desk and leav
 ## Let’s Talk
 
 Let’s talk about how I can help your institution navigate its hardest questions.  
-[Contact Me](mailto:lucianbessmer@gmail.com)
+[Contact Me](mailto:contact@lucianbessmer.com)
 

@@ -27,7 +27,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-envelope"
-      url : "mailto:lucianbessmer@gmail.com"
+      url : "mailto:contact@lucianbessmer.com"
 
 # Feature Row
 feature_row:
@@ -62,7 +62,7 @@ social:
   type                   : Person
   name                   : "Lucian Bessmer"
   links:
-    - "mailto:lucianbessmer@gmail.com"
+    - "mailto:contact@lucianbessmer.com"
 
 # Reading Files
 include:

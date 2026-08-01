@@ -70,5 +70,5 @@ title: ""   # prevents <title> from doubling with site.title
 </div>
 
 <p style="text-align:center; margin-top:1.5rem;">
-  <a href="mailto:lucianbessmer@gmail.com" class="btn btn--primary">Contact me</a>
+  <a href="mailto:contact@lucianbessmer.com" class="btn btn--primary">Contact me</a>
 </p>

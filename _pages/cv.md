@@ -7,7 +7,7 @@ sidebar: false
 ---
 
 # Lucian Bessmer, PhD
-**Cambridge, MA · [lucian.bessmer@gmail.com](mailto:lucian.bessmer@gmail.com) · (781) 492-7101**
+**Cambridge, MA · [contact@lucianbessmer.com](mailto:contact@lucianbessmer.com) · (781) 492-7101**
 
 ---
 
