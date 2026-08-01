@@ -11,7 +11,7 @@ The only thing worse than making decisions without data is making them with the 
 
 I started consulting to do things differently. I pair the clear analysis of a data specialist with the contextual insight of a historian. Colleges and universities are complex institutions, and lasting solutions require more than bar charts in your school’s colors—they require bringing people together and building coalitions for change.
 
-My work has supported leaders from Harvard to the Baltimore public school system, helping decision-makers in very different contexts move forward with clarity and confidence.
+My work has supported leaders from Harvard to Baltimore Public Schools, helping decision-makers across a variety of contexts move forward with clarity and confidence.
 
 ---
 
@@ -26,7 +26,7 @@ My work has supported leaders from Harvard to the Baltimore public school system
 
 ## How I Work
 
-I don’t drop a thick report on your desk and leave. Instead, I:  
+My goal is to work with you; I don’t drop a thick report on your desk and leave. Instead, I:  
 1. Learn your institution’s context first.  
 2. Work with your leadership to define the right questions.  
 3. Build analysis that is clear, accessible, and tailored.  
@@ -37,5 +37,5 @@ I don’t drop a thick report on your desk and leave. Instead, I:
 ## Let’s Talk
 
 Let’s talk about how I can help your institution navigate its hardest questions.  
-[Contact Me](mailto:lucian.bessmer@gmail.com)
+[Contact Me](mailto:lucianbessmer@gmail.com)
 
