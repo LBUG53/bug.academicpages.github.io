@@ -17,7 +17,7 @@ title: ""   # prevents <title> from doubling with site.title
 
   <div class="feature__item">
     <div class="archive__item">
-      <div class="archive__item-body" style="padding-left:8px;">
+      <div class="archive__item-body" style="padding-left:16px;">
         <h2 class="archive__item-title">
           <a href="/scholarship/">Scholarship</a>
         </h2>
@@ -30,7 +30,7 @@ title: ""   # prevents <title> from doubling with site.title
 
   <div class="feature__item">
     <div class="archive__item">
-      <div class="archive__item-body" style="padding-left:8px;">
+      <div class="archive__item-body" style="padding-left:16px;">
         <h2 class="archive__item-title">
           <a href="/portfolio/">Teaching</a>
         </h2>
@@ -43,7 +43,7 @@ title: ""   # prevents <title> from doubling with site.title
 
   <div class="feature__item">
     <div class="archive__item">
-      <div class="archive__item-body" style="padding-left:8px;">
+      <div class="archive__item-body" style="padding-left:16px;">
         <h2 class="archive__item-title">
           <a href="/higheredissues/">Higher Ed Issues</a>
         </h2>
@@ -54,4 +54,21 @@ title: ""   # prevents <title> from doubling with site.title
     </div>
   </div>
 
+  <div class="feature__item">
+    <div class="archive__item">
+      <div class="archive__item-body" style="padding-left:16px;">
+        <h2 class="archive__item-title">
+          <a href="/engagement/">Consulting</a>
+        </h2>
+        <div class="archive__item-excerpt">
+          <p>Pairing historical context with data analysis to help higher ed leaders make decisions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+<p style="text-align:center; margin-top:1.5rem;">
+  <a href="mailto:lucianbessmer@gmail.com" class="btn btn--primary">Contact me</a>
+</p>
