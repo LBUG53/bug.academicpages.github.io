@@ -1,23 +1,53 @@
 {% include base_path %}
 
-{% if page.header.image contains "://" %}
-  {% capture img_path %}{{ page.header.image }}{% endcapture %}
-{% else %}
-  {% capture img_path %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endcapture %}
+{%- comment -%}
+  Resolve header.image -> img_path
+  - If absolute (contains "://"): use as-is
+  - If starts with "/": just prepend base_path
+  - Else: assume filename and prepend "/images/" then base_path
+{%- endcomment -%}
+{% if page.header.image %}
+  {% assign img = page.header.image %}
+  {% assign img_first = img | slice: 0, 1 %}
+  {% if img contains "://" %}
+    {% capture img_path %}{{ img }}{% endcapture %}
+  {% elsif img_first == "/" %}
+    {% capture img_path %}{{ img | prepend: base_path }}{% endcapture %}
+  {% else %}
+    {% capture img_path %}{{ img | prepend: "/images/" | prepend: base_path }}{% endcapture %}
+  {% endif %}
 {% endif %}
 
+{%- comment -%}
+  Resolve CTA URL -> cta_path (this logic is fine as-is)
+{%- endcomment -%}
 {% if page.header.cta_url contains "://" %}
   {% capture cta_path %}{{ page.header.cta_url }}{% endcapture %}
-{% else %}
+{% elsif page.header.cta_url %}
   {% capture cta_path %}{{ page.header.cta_url | prepend: base_path }}{% endcapture %}
 {% endif %}
 
-{% if page.header.overlay_image contains "://" %}
-  {% capture overlay_img_path %}{{ page.header.overlay_image }}{% endcapture %}
-{% elsif page.header.overlay_image %}
-  {% capture overlay_img_path %}{{ page.header.overlay_image | prepend: "/images/" | prepend: base_path }}{% endcapture %}
+{%- comment -%}
+  Resolve header.overlay_image -> overlay_img_path
+  - If absolute (contains "://"): use as-is
+  - If starts with "/": just prepend base_path
+  - Else: assume filename and prepend "/images/" then base_path
+{%- endcomment -%}
+{% if page.header.overlay_image %}
+  {% assign oi = page.header.overlay_image %}
+  {% assign oi_first = oi | slice: 0, 1 %}
+  {% if oi contains "://" %}
+    {% capture overlay_img_path %}{{ oi }}{% endcapture %}
+  {% elsif oi_first == "/" %}
+    {% capture overlay_img_path %}{{ oi | prepend: base_path }}{% endcapture %}
+  {% else %}
+    {% capture overlay_img_path %}{{ oi | prepend: "/images/" | prepend: base_path }}{% endcapture %}
+  {% endif %}
 {% endif %}
 
+{%- comment -%}
+  Overlay filter (unchanged)
+{%- endcomment -%}
 {% if page.header.overlay_filter contains "rgba" %}
   {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
 {% elsif page.header.overlay_filter %}
@@ -25,8 +55,7 @@
 {% endif %}
 
 <div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
-  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
->
+  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %}{% if overlay_img_path %} background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}">
   {% if page.header.overlay_color or page.header.overlay_image %}
     <div class="wrapper">
       <h1 class="page__title" itemprop="headline">
@@ -47,7 +76,9 @@
       {% endif %}
     </div>
   {% else %}
-    <img src="{{ img_path }}" alt="{{ page.title }}" class="page__hero-image">
+    {% if img_path %}
+      <img src="{{ img_path }}" alt="{{ page.title }}" class="page__hero-image">
+    {% endif %}
   {% endif %}
   {% if page.header.caption %}
     <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
