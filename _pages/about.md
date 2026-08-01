@@ -14,11 +14,15 @@ The more I learned, the more I believed I needed to dedicate myself to making Am
 ## Scholarship
 My research shows how traditional histories of higher education are often internal stories, leaving out community members and local stakeholders. In my Harvard PhD dissertation, I focused on graduate schools of education, institutions deeply tied to their communities. By centering those outside of the ivory tower, I found that the story of these schools—and of higher education more broadly—changes dramatically. This work challenges long-held assumptions about who matters in higher education.
 
+[Read more →](/scholarship/)
+
 ---
 
 ## Consulting
 In short, I learned that historical context matters, but to convince leaders of this, I knew it had to be paired with forms of analysis they already trust. That’s why I sought to learn how to use quantitative methods to inform decision-making. As Assistant Director of Research at the Consortium on Financing Higher Education (COFHE), I advised leaders at 35 colleges and universities on issues ranging from student mental health to enrollment, financial aid, and how to better support low-income students. I worked directly with senior administrators and staff across admissions, student services, financial aid, and finance offices.  
 I founded Red Brick Advising to bring that combination of historical perspective and data expertise to colleges and universities across the country. For more on this work, see my Inside Higher Ed article, “A Call for Historically Informed Decisions”.
+
+[Read more →](/engagement/)
 
 ---
 
@@ -29,3 +33,5 @@ No matter the level or subject, my teaching holds three things constant:
 - Learning is richer when we include a wider range of perspectives.  
 - We should approach those perspectives with the assumption that they come from a place of positive intent.  
 - The world is a better place when we strive to be curious and kind.  
+
+[Read more →](/portfolio/)
