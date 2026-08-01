@@ -1,8 +1,12 @@
 /*
-* Greedy Navigation
+* Greedy Navigation (simplified to a binary state)
 *
-* http://codepen.io/lukejacksonn/pen/PwmwWV
-*
+* Originally based on http://codepen.io/lukejacksonn/pen/PwmwWV, which greedily
+* moves individual overflowing items into the hamburger menu one at a time,
+* leaving a hybrid state where some sections sit in the bar and others sit in
+* the dropdown. This version instead collapses ALL non-persistent sections
+* into the hamburger as soon as the full list stops fitting, so opening the
+* menu always shows every section rather than only the ones pushed off.
 */
 
 var $nav = $('#site-nav');
@@ -11,52 +15,36 @@ var $vlinks = $('#site-nav .visible-links');
 var $vlinks_persist_tail = $vlinks.children("*.persist.tail");
 var $hlinks = $('#site-nav .hidden-links');
 
-var breaks = [];
+function restoreAll() {
+  while ($hlinks.children().length > 0) {
+    if ($vlinks_persist_tail.children().length > 0) {
+      $hlinks.children().first().insertBefore($vlinks_persist_tail);
+    } else {
+      $hlinks.children().first().appendTo($vlinks);
+    }
+  }
+}
+
+function collapseAll() {
+  $vlinks.children("*:not(.persist)").each(function () {
+    $(this).appendTo($hlinks);
+  });
+}
 
 function updateNav() {
 
-  var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
+  // Start from the fully-expanded state so we can measure whether
+  // everything actually fits before deciding to collapse.
+  restoreAll();
 
-  // The visible list is overflowing the nav
-  if ($vlinks.width() > availableSpace) {
-
-    while ($vlinks.width() > availableSpace && $vlinks.children("*:not(.persist)").length > 0) {
-      // Record the width of the list
-      breaks.push($vlinks.width());
-
-      // Move item to the hidden list
-      $vlinks.children("*:not(.persist)").last().prependTo($hlinks);
-
-      availableSpace = $btn.hasClass("hidden") ? $nav.width() : $nav.width() - $btn.width() - 30;
-
-      // Show the dropdown btn
-      $btn.removeClass("hidden");
-    }
-
-    // The visible list is not overflowing
+  if ($vlinks.width() > $nav.width()) {
+    collapseAll();
+    $btn.removeClass('hidden');
   } else {
-
-    // There is space for another item in the nav
-    while (breaks.length > 0 && availableSpace > breaks[breaks.length - 1]) {
-      // Move the item to the visible list
-      if ($vlinks_persist_tail.children().length > 0) {
-        $hlinks.children().first().insertBefore($vlinks_persist_tail);
-      } else {
-        $hlinks.children().first().appendTo($vlinks);
-      }
-      breaks.pop();
-    }
-
-    // Hide the dropdown btn if hidden list is empty
-    if (breaks.length < 1) {
-      $btn.addClass('hidden');
-      $btn.removeClass('close');
-      $hlinks.addClass('hidden');
-    }
+    $btn.addClass('hidden');
+    $btn.removeClass('close');
+    $hlinks.addClass('hidden');
   }
-
-  // Keep counter updated
-  $btn.attr("count", breaks.length);
 
   // update masthead height and the body/sidebar top padding
   var mastheadHeight = $('.masthead').height();
