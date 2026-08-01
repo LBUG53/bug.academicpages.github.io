@@ -12,20 +12,21 @@ Here you’ll find my current book project, selected publications, reviews, and 
 
 ## Book Project
 **Anchors of Identity: The Many Paths to Prestige in the American University**  
-The history of the American graduate school of education is, by most accounts, a history of failure. The dominant narrative, solidified by a handful of foundational works, claims that these institutions, caught between the impossible demands of training teachers, producing research, and shaping policy, inevitably retreat into the ivory tower, chasing academic prestige at the expense of their profession.
+The history of the American graduate school of education is, by most accounts, told as a history of failure. The dominant narrative, solidified by a handful of foundational works, claims that these institutions were caught between the impossible demands of training teachers, producing research, and shaping policy, inevitably retreat into the ivory tower, chasing academic prestige at the expense of their profession.
 
 *Anchors of Identity* challenges this story. Through a comparative history of three of the nation’s most influential graduate schools of education—Harvard (HGSE), Penn (PennGSE), and Teachers College, Columbia (TC)—the book argues that the canonical narrative is incomplete. Drawing on newly available archival materials, it introduces the concept of **anchors of identity**: durable, historically shaped commitments to specific constituencies and reputational strategies that provide institutional continuity, especially in times of crisis.
 
-By tracing how these distinct identities were forged, tested, and revealed in moments of crisis, *Anchors of Identity* demonstrates that academic prestige is not the only measure that matters. Each form of service—research, regional influence, or comprehensive practitioner training—brought its own form of prestige. This book not only corrects the history of education schools but also offers a new way of writing the history of the American university.
+By tracing how these distinct identities were forged, tested, and revealed in moments of crisis, *Anchors of Identity* demonstrates that academic prestige is not the only measure that matters. Each form of service—research, regional influence, or comprehensive practitioner training—brings its own form of prestige. This book not only corrects the prevailing history of education schools, but also offers a new way of understanding the history of the American university.
 
 ---
 
 ## Publications and Reviews
-- **“A call for historically informed decisions.”** *Inside Higher Ed*, June 27, 2025. [Link](https://www.insidehighered.com/opinion/views/2025/06/27/call-historically-informed-decisions-opinion)
+- **“A call for historically informed decisions.”** *Inside Higher Ed*, June 27, 2025. [Link](https://www.insidehighered.com/opinion/views/2025/06/27/call-historically-informed-decisions-opinion){: target="_blank" rel="noopener noreferrer"}
 - Review of *Social Science for What?* by M. Solovey. *History of the Human Sciences*, 2021
 - Review of *The Campus Color Line* by E. Cole. *Harvard Educational Review*, Spring 2021
 - Review of *American Higher Education Since World War II: A History* by R. Geiger. *Harvard Educational Review*, Winter 2020
 - Review of *Why Trust Science?* by N. Oreskes. *Harvard Educational Review*, Fall 2020
+- **We Were Distinguished Misfits: The Invention of the Field of Public Policy** — article manuscript, in progress
 
 ---
 
@@ -35,11 +36,6 @@ By tracing how these distinct identities were forged, tested, and revealed in mo
 - *Field Goals: Three Elite Graduate Schools of Education and their Visions for the Future.* History of Recent Social Science Conference, University of Toronto, Summer 2022
 - *What is a Profession? The Harvard Kennedy School 1940-1980.* History of Science Modern Sciences Working Group, Harvard University, Spring 2019
 - *Low-Income Students at Highly Selective Institutions.* Consortium on Financing Higher Education Assembly, Yale University, Spring 2016
-
----
-
-## In Progress
-- **We Were Distinguished Misfits: The Invention of the Field of Public Policy** — article manuscript
 
 ---
 
