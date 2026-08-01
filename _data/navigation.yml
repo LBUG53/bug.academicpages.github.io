@@ -12,7 +12,7 @@ main:
         url: /viz/Grad_Map/
       - title: "Endowment Viz"
         url: /endowment/
-  - title: "Engagement"
-    url: /engagement/
+  - title: "Advising"
+    url: /advising/
   - title: "CV"
     url: /cv/

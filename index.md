@@ -8,7 +8,7 @@ title: ""   # prevents <title> from doubling with site.title
 <div class="page__hero--overlay" style="background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('/images/hero_looking_wide.jpg');">
   <div class="wrapper">
     <h1 class="page__title">Lucian Bessmer, PhD</h1>
-    <p class="page__lead">Scholar, Historian, and Strategist of Higher Education.</p>
+    <p class="page__lead">Historian of American higher education studying how universities decide what they are for.</p>
   </div>
 </div>
 
@@ -58,10 +58,10 @@ title: ""   # prevents <title> from doubling with site.title
     <div class="archive__item">
       <div class="archive__item-body" style="padding-left:16px;">
         <h2 class="archive__item-title">
-          <a href="/engagement/">Consulting</a>
+          <a href="/advising/">Advising</a>
         </h2>
         <div class="archive__item-excerpt">
-          <p>Pairing historical context with data analysis to help higher ed leaders make decisions.</p>
+          <p>Advising university leaders on institutional identity, strategy, and governance.</p>
         </div>
       </div>
     </div>

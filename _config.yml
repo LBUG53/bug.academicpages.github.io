@@ -8,7 +8,7 @@ title                    : "Lucian Bessmer, PhD"
 title_separator          : "-"
 masthead_title           : "Home"          # navbar brand link text
 name                     : &name "Home"
-description              : &description "Higher-ed scholarship, history, and strategy."
+description              : &description "Historian of American higher education studying how universities decide what they are for."
 url                      : "https://lucianbessmer.com"
 baseurl                  : ""
 repository               : "LBUG53/bug.academicpages.github.io"
@@ -23,32 +23,11 @@ og_image                 : "hero_looking_wide.jpg"
 # Site Author (no avatar)
 author:
   name    : "Lucian Bessmer"
-  bio     : "Higher Ed Scholar, Historian, and Strategist."
+  bio     : "Historian of higher education who works inside the institutions he studies."
   links:
     - label: "Email"
       icon: "fas fa-envelope"
       url : "mailto:contact@lucianbessmer.com"
-
-# Feature Row
-feature_row:
-  - title: "Scholarship"
-    url: "/scholarship/"
-    excerpt: "Book project, publications, conference talks, and works in progress."
-  - title: "Teaching"
-    url: "/portfolio/"
-    excerpt: "Course syllabi and teaching philosophy."
-  - title: "Higher Ed Issues"
-    url: "/higheredissues/"
-    excerpt: "Explaining higher ed issues the way I’d want them explained to me."
-
-# Publication Category
-publication_category:
-  scholarship:
-    title: "Scholarship"
-  teaching:
-    title: "Teaching"
-  consulting:
-    title: "Engagement"
 
 # Site Settings
 teaser                   :

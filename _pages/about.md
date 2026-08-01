@@ -9,30 +9,25 @@ sidebar: false
 I first began thinking about what shapes education in third grade, when I was sent to the principal’s office for asking why our lesson on Columbus left out all of the people his expedition killed. Later, I went to the University of Massachusetts at Amherst to prepare to be a history teacher so I could learn how to teach in the ways my eight-year-old self had needed. But my history and education courses had assumptions embedded in them that made me deeply uncomfortable.  
 The more I learned, the more I came to believe that the best way I could contribute to education was by working to make American higher education better – not only through teaching and research, but also by helping institutional leaders make more informed and thoughtful decisions.
 
+I am a historian of American higher education who studies how universities construct identity and legitimacy. My book project, a comparative history of the graduate schools of education at Harvard, Penn, and Teachers College, argues that academic prestige is only one of several paths to durable institutional success; schools have built lasting identities around research, regional influence, and practitioner training. I bring an unusual second vantage point to these questions: I have advised presidents and senior leaders at 35 selective colleges and universities as Assistant Director of Research at COFHE, designed shared-governance structures across Harvard’s schools, and currently lead strategic analysis for university decision-making at Harvard. I hold a PhD from Harvard and have taught courses at Brown, Harvard, and the University of Michigan.
+
 ---
 
 ## Scholarship
-My research shows how traditional histories of higher education are often inwardly focused, leaving out the perspectives of community members and local stakeholders. In my Harvard PhD dissertation I focused specifically on graduate schools of education, institutions whose work is embedded in their communities. By centering those outside of the ivory tower, I found that the story of these schools—and of higher education more broadly—changes dramatically. This work challenges long-held assumptions about who matters in higher education.
+My dissertation and book project examine how graduate schools of education construct institutional identity and legitimacy — and what that reveals about higher education more broadly.
 
 [Read more →](/scholarship/)
 
 ---
 
-## Consulting
-Alongside my scholarship, I bring a historian's perspective to present-day decision-making. I currently serve as a Strategic Analytics Fellow at Harvard, where I help the university's schools and units build shared definitions and standards for how institutional data is understood and used. This work supports decision-making, reporting, and analysis across the university. Earlier in my career, at the Consortium on Financing Higher Education (COFHE), I advised leaders at 35 colleges and universities on issues ranging from student mental health to enrollment, financial aid, and support for low-income students.
+## Advising
+I advise university leaders on institutional identity, strategy, and governance, drawing on the same questions I study as a historian.
 
-This is why my consulting work combines historical perspective with data analysis. For more, see my Inside Higher Ed article, [“A Call for Historically Informed Decisions.”](https://www.insidehighered.com/opinion/views/2025/06/27/call-historically-informed-decisions-opinion)
-
-[Read more →](/engagement/)
+[Read more →](/advising/)
 
 ---
 
 ## Teaching
-I’ve wanted to be an educator from an early age, and I’m grateful it remains a central part of my work. I’ve taught science to 5th and 6th graders in California, English to grad students in Turkey, and higher education courses to undergraduates, master’s students, and PhD students at Brown, Harvard, and the University of Michigan.  
-No matter the level or subject, my teaching holds three things constant:
-
-- Learning is richer when we include a wider range of perspectives.  
-- We should approach those perspectives with the assumption that they come from a place of positive intent.  
-- The world is a better place when we strive to be curious and kind.  
+I’ve taught the history of American higher education to undergraduates, master’s students, and PhD students at Brown, Harvard, and the University of Michigan.
 
 [Read more →](/portfolio/)
