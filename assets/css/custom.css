@@ -9,10 +9,13 @@
   background-position: center 30%; /* adjust to move visible slice */
 }
 
-/* No backdrop “pill” */
+/* No backdrop “pill”, but keep left/right padding aligned with the header */
 .page__hero--overlay .wrapper {
   background: transparent !important;
-  padding: 0 !important;
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
   border-radius: 0 !important;
   text-align: left !important;   /* force left alignment */
 }
