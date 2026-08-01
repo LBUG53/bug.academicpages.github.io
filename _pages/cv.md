@@ -21,7 +21,8 @@ sidebar: false
 
 ## Professional & Research Experience
 - **Harvard University**, Cambridge, MA (2016–Present)  
-  - *Consultant, Faculty Senate Planning Body* (2024–Present) — Designed structures for shared governance across 12 schools; conducted comparative research on peer senates.  
+  - *Strategic Analytics Fellow* (2026–Present) — Helps schools and units build shared definitions and standards for institutional data; supports decision-making, reporting, and analysis across the university.  
+  - *Institutional Governance and Strategy Fellow* (2024–2026) — Designs structures for shared governance across 12 schools; conducts comparative research on peer senates.  
   - *Research Lead, History of HGSE* (2020) — Archival research for centennial; co-developed lecture with Howard Gardner.  
   - *Development & Strategy Editor, Harvard Educational Review* (2018–2020) — Guided authors through peer review; trained editors.  
   - *Research Assistant, Sociology of Higher Education* (2016) — Interviews; historical accounts for new course.  
@@ -63,10 +64,14 @@ sidebar: false
 ---
 
 ## Teaching
-**Instructor of Record**  
-- University of Michigan, Ann Arbor — *History of American Higher Education* (Spring 2026) — Forthcoming.  
-- Harvard University — *Education Schools: Purpose, Expectations, and Impact* (Fall 2021).  
-- Brown University — *History of American Higher Education* (Spring 2020).  
+**Instructor of Record**
+
+- **University of Michigan, Ann Arbor** — *History of American Higher Education* (Spring 2026)  
+  PhD-level seminar on the history of American higher education.
+- **Harvard University** — *Education Schools: Purpose, Expectations, and Impact* (Fall 2021)  
+  Graduate seminar on the history and purpose of schools of education.
+- **Brown University** — *History of American Higher Education* (Spring 2020)  
+  Undergraduate course tracing the history of American higher education.
 
 **Head Teaching Fellow, Harvard University** — Why Can’t Higher Education Change? (Sp 2023); Redesigning Colleges and Universities for Equitable Student Success (Fa 2022); Transformational Models in Higher Education (Sp 2022); The Future of the Liberal Arts College (Sp 2021); History of American Higher Education (Fa 2017–Fa 2019); Using Data to Support Decisionmaking and Improvement in Higher Education (Sp 2015–Sp 2018).  
 
@@ -74,8 +79,21 @@ sidebar: false
 
 ---
 
-## Honors & Fellowships
-- AERA Division F (History of Education) Seed Funding, 2023–2024.  
-- New England Regional Fellowship Consortium Fellow, 2019–2020.  
-- Harvard University, Pforzheimer Fellow, 2018.  
-- Fulbright Fellow, Sinop University, Turkey, 2010–2011.  
+## Honors & Awards
+
+**Harvard University**
+- EVP Artificial Intelligence Innovation Program (AIIP) Grantee  
+- Strategic Analytics Fellow, 2026–Present  
+- Institutional Governance and Strategy Fellow, 2024–2026  
+
+**American Educational Research Association**
+- Division F (History of Education) Seed Funding, 2023–2024  
+
+**New England Regional Fellowship Consortium**
+- Fellow, 2019–2020  
+
+**Harvard University**
+- Pforzheimer Fellow, 2018  
+
+**The Fulbright Program**
+- Fellow, Sinop University, Turkey, 2010–2011  
