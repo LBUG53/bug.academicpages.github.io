@@ -5,7 +5,7 @@ title: ""   # prevents <title> from doubling with site.title
 ---
 
 <!-- Manual HERO (bypasses theme header logic) -->
-<div class="page__hero--overlay" style="background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('/images/hero_looking_wide.jpg');">
+<div class="page__hero--overlay" style="background-image: linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.38)), url('/images/hero_looking_wide.jpg');">
   <div class="wrapper">
     <h1 class="page__title">Lucian Bessmer, PhD</h1>
     <p class="page__lead">Historian of American higher education studying how universities decide what they are for.</p>

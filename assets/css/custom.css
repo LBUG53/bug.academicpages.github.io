@@ -20,10 +20,23 @@
   text-align: left !important;   /* force left alignment */
 }
 
-/* Subtle text shadow for readability over bright areas */
+/* Headings: modern sans-serif, no text shadow (hero readability comes from the image overlay) */
+h1, h2, h3, h4, h5, h6,
 .page__title,
-.page__lead {
-  text-shadow:
-    0 1px 2px rgba(0,0,0,0.35),
-    0 2px 6px rgba(0,0,0,0.25);
+.masthead__menu-item--lg a,
+.archive__item-title {
+  font-family: "Inter", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.01em;
+  text-shadow: none;
 }
+.page__lead { text-shadow: none; }
+
+/* ========
+   Masthead navigation
+   ======== */
+
+/* Let the full link row fit on laptop-width screens before collapsing to the hamburger.
+   The inner wrap was capped at 925px until 1280px wide, but the links need ~917px plus padding. */
+.masthead .masthead__inner-wrap { max-width: 1280px; }
+.greedy-nav a { margin: 0 0.75rem; }
+.masthead__menu-item--lg { padding-right: 1.25em; }
