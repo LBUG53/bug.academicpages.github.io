@@ -8,15 +8,15 @@ toc: false
 toc_sticky: false
 ---
 
-Here you’ll find my current book project, publications, reviews, and works in progress.
+I am a historian of American higher education. I study which programs, relationships, and measures of success university leaders defend when resources run short, and why institutions facing the same pressures defend different priorities. My work has three strands: testing the dominant “prestige” narrative in institutional archives, bringing that historical perspective to the people who make decisions today, and studying how institutional governance works.
 
 ## Book Project
 **Anchors of Identity: The Many Paths to Prestige in the American University**  
-The history of the American graduate school of education is, by most accounts, told as a history of failure. The dominant narrative, solidified by a handful of foundational works, claims that these institutions were caught between the impossible demands of training teachers, producing research, and shaping policy, inevitably retreat into the ivory tower, chasing academic prestige at the expense of their profession.
+Histories of the professional schools written in the 1960s and 1970s argued that these schools won legitimacy in the academy by claiming scientific knowledge that was inaccessible without extensive training. Extended to schools of education, that argument became a story about failure: unable to win the same recognition from their academic peers, schools of education are said to have chased scholarly prestige at the expense of their profession. Almost forty years later, very little scholarship has challenged the assumption underneath it, that academic prestige is the driving ambition of faculty.
 
-*Anchors of Identity* challenges this story. Through a comparative history of three of the nation’s most influential graduate schools of education—Harvard (HGSE), Penn (PennGSE), and Teachers College, Columbia (TC)—the book argues that the canonical narrative is incomplete. Drawing on newly available archival materials, it introduces the concept of **anchors of identity**: durable, historically shaped commitments to specific constituencies and reputational strategies that provide institutional continuity, especially in times of crisis.
+*Anchors of Identity* returns to the archives of three schools at the center of that narrative—Harvard (HGSE), Penn (PennGSE), and Teachers College, Columbia (TC)—to test it. Drawing on collections that required special dispensation to access, including the correspondence of rank-and-file faculty, faculty committee minutes, campus and local newspapers, and presentations to accreditors and patrons, the book asks why three schools facing the same pressures made such different choices about what to defend. It finds that each developed an **anchor of identity**: a durable set of commitments organized around the audiences it addressed, the patrons it pursued, and the standards of evaluation it applied to its own work.
 
-By tracing how these distinct identities were forged, tested, and revealed in moments of crisis, *Anchors of Identity* demonstrates that academic prestige is not the only measure that matters. Each form of service—research, regional influence, or comprehensive practitioner training—brings its own form of prestige. This book not only corrects the prevailing history of education schools, but also offers a new way of understanding the history of the American university.
+Following the schools through four inflection points—their foundings, their reorganizations in the Great Depression, the funding boom of the 1950s and 1960s, and the loss of funding in the 1970s—the book shows that regional obligations and large practitioner programs, long treated as limitations, were sources of authority that faculty chose to defend, often at real reputational cost. Legitimacy has never been a single or stable measure. The choices these schools faced resemble the ones universities face today, and the history shows that the stakeholders an institution has cultivated can shape which programs survive.
 
 *Status: invited to submit for peer review at Cornell University Press; revising in response to editorial feedback.*
 
@@ -56,6 +56,11 @@ By tracing how these distinct identities were forged, tested, and revealed in mo
 - *Field Goals: Three Elite Graduate Schools of Education and their Visions for the Future.* History of Recent Social Science Conference, University of Toronto, Summer 2022
 - *What is a Profession? The Harvard Kennedy School 1940-1980.* History of Science Modern Sciences Working Group, Harvard University, Spring 2019
 - *Low-Income Students at Highly Selective Institutions.* Consortium on Financing Higher Education Assembly, Yale University, Spring 2016
+
+---
+
+## Research Methods
+My historical scholarship rests on archival research across institutional collections, including committee minutes, faculty and administrative correspondence, and newspapers. My administrative work pairs interviews and focus groups with quantitative analysis, including statistical work on enrollment, financial aid, and student outcomes across the 35 institutions in the Consortium on Financing Higher Education. I am also principal investigator on a Harvard Artificial Intelligence Innovation Program grant to build a handwritten text recognition tool with the Harvard University Archives for the papers of President Charles W. Eliot.
 
 ---
 
