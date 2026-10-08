@@ -9,6 +9,8 @@ sidebar: false
 # Lucian Bessmer, PhD
 **Cambridge, MA · [contact@lucianbessmer.com](mailto:contact@lucianbessmer.com) · (781) 492-7101**
 
+[Download CV (PDF)](/files/Bessmer_CV.pdf){: .btn .btn--primary target="_blank" rel="noopener"}
+
 ---
 
 ## Education
