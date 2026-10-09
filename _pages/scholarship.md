@@ -18,8 +18,6 @@ Histories of the professional schools written in the 1960s and 1970s argued that
 
 Following the schools through four inflection points—their foundings, their reorganizations in the Great Depression, the funding boom of the 1950s and 1960s, and the loss of funding in the 1970s—the book shows that regional obligations and large practitioner programs, long treated as limitations, were sources of authority that faculty chose to defend, often at real reputational cost. Legitimacy has never been a single or stable measure. The choices these schools faced resemble the ones universities face today, and the history shows that the stakeholders an institution has cultivated can shape which programs survive.
 
-*Status: invited to submit for peer review at Cornell University Press; revising in response to editorial feedback.*
-
 ---
 
 ## Publications
@@ -50,8 +48,8 @@ Following the schools through four inflection points—their foundings, their re
 ---
 
 ## Conference Presentations
-- **“Making Public Service Academic: Harvard and the Origins of the Kennedy School of Government.”** History of Education Society, Fall 2025
-- **“We Were Distinguished Misfits”: The Clash of Two Knowledge Cultures at the Harvard Kennedy School of Government.** History of Recent Social Science Conference, Spring 2025
+- “Making Public Service Academic: Harvard and the Origins of the Kennedy School of Government.” History of Education Society, Fall 2025
+- “We Were Distinguished Misfits”: The Clash of Two Knowledge Cultures at the Harvard Kennedy School of Government. History of Recent Social Science Conference, Spring 2025
 - *Multiple Paths to Prestige: A Re-Examination of the Historical Narratives about Elite Graduate Schools of Education.* History of Education Society, Chicago, Fall 2024
 - *Field Goals: Three Elite Graduate Schools of Education and their Visions for the Future.* History of Recent Social Science Conference, University of Toronto, Summer 2022
 - *What is a Profession? The Harvard Kennedy School 1940-1980.* History of Science Modern Sciences Working Group, Harvard University, Spring 2019

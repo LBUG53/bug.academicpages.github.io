@@ -8,7 +8,7 @@ title                    : "Lucian Bessmer, PhD"
 title_separator          : "-"
 masthead_title           : "Home"          # navbar brand link text
 name                     : &name "Home"
-description              : &description "Historian of American higher education studying how universities decide what they are for."
+description              : &description "Historian of American higher education and Strategic Analytics Fellow at Harvard."
 url                      : "https://lucianbessmer.com"
 baseurl                  : ""
 repository               : "LBUG53/bug.academicpages.github.io"

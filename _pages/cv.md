@@ -85,7 +85,7 @@ sidebar: false
 **Course Development**
 
 - **Harvard University** — *Data Fluency* (Fall 2026)  
-  Course for university staff and administrators; member of the development team with the Harvard Teaching and Learning Lab. Pilot overenrolled with a waiting list.
+  Course for university staff and administrators; member of the development team with the Harvard Teaching and Learning Lab.
 
 **Head Teaching Fellow, Harvard Graduate School of Education** — Why Can’t Higher Education Change? (Spring 2023); Redesigning Colleges and Universities for Equitable Student Success (Fall 2022); Transformational Models in Higher Education (Spring 2022); The Future of the Liberal Arts College (Spring 2021); History of American Higher Education (Fall 2017–Fall 2019); Using Data to Support Decisionmaking in Higher Education (Spring 2015–Spring 2018).
 
